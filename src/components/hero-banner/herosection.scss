@@ -275,7 +275,7 @@ $bp-sm: 480px;
     }
 
     &:hover {
-        background: darken($orange, 8%);
+        // background: darken($orange, 8%);
         transform: translateY(-2px);
         box-shadow: 0 12px 32px rgba(244, 124, 32, 0.5);
     }
