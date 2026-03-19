@@ -1,0 +1,19 @@
+
+.dgm-about-thumb-wrap {
+    margin-left: 80px;
+    padding-bottom: 90px;
+}
+.p-relative {
+    position: relative;
+}
+
+.social_marketing_ad{
+    span{
+        svg{
+            position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+        }
+    }
+}

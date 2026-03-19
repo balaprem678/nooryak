@@ -397,6 +397,7 @@ $bp-sm: 480px;
             object-fit: cover;
             object-position: center;
             display: block;
+            border-radius: 25px;
         }
 
         &::after {
@@ -422,7 +423,7 @@ $bp-sm: 480px;
         animation: floatCard 1.2s cubic-bezier(.22, 1, .36, 1) .7s both;
 
         p {
-            font-size: 17px;
+            font-size: 22px;
             font-weight: 700;
             color: $dark;
             line-height: 1.35;

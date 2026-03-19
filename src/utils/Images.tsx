@@ -10,6 +10,8 @@ import youtube from "../../public/assets/images/common/youtube.png";
 
 // Home Images Import Here
 import herobanner from "../../public/assets/images/home/herobanner.jpeg";
+import about_1 from "../../public/assets/images/home/about-1.webp";
+import about_2 from "../../public/assets/images/home/about-2.webp";
 
 export const Images = {
 
@@ -17,6 +19,6 @@ export const Images = {
     logo, gmail, instagram, whatsapp, twitter, facebook, linkedin, youtube,
 
     // Home Images Import here
-    herobanner,
+    herobanner, about_1, about_2
 
 };
