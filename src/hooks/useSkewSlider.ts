@@ -1,7 +1,7 @@
 import { preloadImages } from '@/utils/animationUtils';
 import { useEffect, useRef } from 'react';
-import { Observer } from 'gsap/Observer';
 import { gsap } from 'gsap';
+// import { Observer } from 'gsap/Observer';
 
 if (typeof window !== 'undefined') {
   gsap.registerPlugin(Observer);
