@@ -48,30 +48,59 @@ export default function HomeMainHero() {
     const [charIndex, setCharIndex] = useState(0);
     const [isDeleting, setIsDeleting] = useState(false);
 
-    useEffect(() => {
-        const currentText = texts[textIndex];
+    // useEffect(() => {
+    //     const currentText = texts[textIndex];
 
-        const timeout = setTimeout(() => {
-            if (!isDeleting) {
-                setDisplayText(currentText.substring(0, charIndex + 1));
-                setCharIndex(charIndex + 1);
+    //     const timeout = setTimeout(() => {
+    //         if (!isDeleting) {
+    //             setDisplayText(currentText.substring(0, charIndex + 1));
+    //             setCharIndex(charIndex + 1);
 
-                if (charIndex + 1 === currentText.length) {
-                    setIsDeleting(true);
-                }
-            } else {
-                setDisplayText(currentText.substring(0, charIndex - 1));
-                setCharIndex(charIndex - 1);
+    //             if (charIndex + 1 === currentText.length) {
+    //                 setIsDeleting(true);
+    //             }
+    //         } else {
+    //             setDisplayText(currentText.substring(0, charIndex - 1));
+    //             setCharIndex(charIndex - 1);
 
-                if (charIndex === 0) {
-                    setIsDeleting(false);
-                    setTextIndex((textIndex + 1) % texts.length);
-                }
-            }
-        }, isDeleting ? 50 : 100);
+    //             if (charIndex === 0) {
+    //                 setIsDeleting(false);
+    //                 setTextIndex((textIndex + 1) % texts.length);
+    //             }
+    //         }
+    //     }, isDeleting ? 0 : 100);
 
-        return () => clearTimeout(timeout);
-    }, [charIndex, isDeleting, textIndex]);
+    //     return () => clearTimeout(timeout);
+    // }, [charIndex, isDeleting, textIndex]);
+      useEffect(() => {
+    const currentText = texts[textIndex];
+    let timeout;
+
+    // ✅ Pause after full typing (10s)
+    if (!isDeleting && charIndex === currentText.length) {
+      timeout = setTimeout(() => {
+        setIsDeleting(true);
+      }, 10000);
+    } else {
+      timeout = setTimeout(() => {
+        if (!isDeleting) {
+          setDisplayText(currentText.substring(0, charIndex + 1));
+          setCharIndex(charIndex + 1);
+        } else {
+          setDisplayText(currentText.substring(0, charIndex - 1));
+          setCharIndex(charIndex - 1);
+
+          if (charIndex === 0) {
+            setIsDeleting(false);
+            setTextIndex((textIndex + 1) % texts.length);
+          }
+        }
+      }, isDeleting ? 50 : 100);
+    }
+
+    return () => clearTimeout(timeout);
+  }, [charIndex, isDeleting, textIndex]);
+
 
     return (
         <section className="hero" style={{ position: "relative", overflow: "hidden" }}>

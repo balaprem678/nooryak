@@ -15,6 +15,7 @@ import HomeMainFooter from '@/layouts/footers/HomeMainFooter';
 import HomeMainAbout from '@/components/about/HomeMainAbout';
 import HomeMainHeader from '@/layouts/headers/HomeMainHeader';
 import HomeMainWork from '@/components/work/HomeMainWork';
+import ClientSlider from '@/components/clientslider/clientslider';
 
 const HomeMain = () => {
     return (
@@ -32,6 +33,7 @@ const HomeMain = () => {
                             {/* Main Content Sections */}
                             <main>
                                 <HomeMainHero />
+                                <ClientSlider />
                                 <HomeMainAbout />
                                 <HomeMainBanner />
                                 <HomeMainTextSlider />

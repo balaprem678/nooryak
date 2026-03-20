@@ -1,5 +1,6 @@
 // Common Images Import Here
 import logo from "../../public/assets/images/common/Logo.png";
+import Logo_blue from "../../public/assets/images/common/Logo-blue.png";
 import gmail from "../../public/assets/images/common/gmail.png";
 import instagram from "../../public/assets/images/common/instagram.png";
 import whatsapp from "../../public/assets/images/common/whatsapp.png";
@@ -16,7 +17,8 @@ import about_2 from "../../public/assets/images/home/about-2.webp";
 export const Images = {
 
     // Common Images Import Here
-    logo, gmail, instagram, whatsapp, twitter, facebook, linkedin, youtube,
+    
+    logo,Logo_blue, gmail, instagram, whatsapp, twitter, facebook, linkedin, youtube,
 
     // Home Images Import here
     herobanner, about_1, about_2

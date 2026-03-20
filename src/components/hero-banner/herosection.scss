@@ -15,17 +15,12 @@ $bp-md: 768px;
 $bp-sm: 480px;
 
 .hero {
-    position: relative;
-    width: 97%;
-    min-height: 100vh;
     background: #fff4e978;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    padding-top: 80px;
-    margin: 20px auto;
     border-radius: 24px;
-
+    width: 96%;
+    margin: 20px auto;
+    position: relative;
+    overflow: hidden;
 
     @media (max-width: $bp-lg) {
         padding-top: 60px;
@@ -57,6 +52,7 @@ $bp-sm: 480px;
     display: flex;
     flex: 1;
     position: relative;
+    align-items: end;
 
     @media (max-width: $bp-md) {
         flex-direction: column-reverse;
@@ -65,14 +61,12 @@ $bp-sm: 480px;
 
 /* ── LEFT SIDE ── */
 .left {
-    flex: 0 0 56%;
-    padding: 20px 60px 60px 110px;
-    display: flex;
     flex-direction: column;
+    flex: 0 0 56%;
     justify-content: space-between;
+    padding: 20px 40px 30px 100px;
+    display: flex;
     position: relative;
-    z-index: 2;
-
     background-image: url("../../../public/assets/images/home/circelanimation.png");
     background-repeat: no-repeat;
     background-position: left bottom;
@@ -227,7 +221,7 @@ $bp-sm: 480px;
     animation: fadeUp 0.9s ease both;
     animation-delay: 0.25s;
     line-height: 1.2;
-    font-family: serif;
+    font-family: 'Space Grotesk';
 
     span {
         display: block;

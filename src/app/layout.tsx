@@ -96,14 +96,17 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="no-js agntix-light" suppressHydrationWarning={true}>
-      <body  suppressHydrationWarning={true} className={`tp-magic-cursor ${inter.variable}
+      <head>
+        <link rel="icon" href="../../public/assets/images/common/Logo-blue.png" />
+      </head>
+      <body suppressHydrationWarning={true} className={`tp-magic-cursor ${inter.variable}
      ${besley.variable} ${spaceGrotesk.variable} ${playfairDisplay.variable}
       ${satisfy.variable} ${teko.variable} ${phudu.variable} ${poppins.variable}
        ${onest.variable}`}>
         <AppProvider>
           <Wrapper>
             <VideoProvider>
-                {children}
+              {children}
             </VideoProvider>
             <GlobalVideoModal />
           </Wrapper>
