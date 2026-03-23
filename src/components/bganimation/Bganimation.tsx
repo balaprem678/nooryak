@@ -157,7 +157,7 @@ export default function Bganimation() {
                 position: "absolute",
                 top: 0,
                 left: 0,
-                zIndex: 4,
+                zIndex: 2,
                 background: "transparent", // ✅ removed blue bg
             }}
         />

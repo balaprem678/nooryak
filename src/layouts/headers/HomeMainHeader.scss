@@ -38,9 +38,9 @@
 
     .menu {
         &.d-none.d-xl-block {
-            -webkit-backdrop-filter: blur(12px);
-            backdrop-filter: blur(12px);
-            background: #ffffff14;
+            // -webkit-backdrop-filter: blur(12px);
+            // backdrop-filter: blur(12px);
+            background: #ffffff69;
             border: 1px solid #ffffff26;
             border-radius: 50px;
             justify-content: space-between;
@@ -96,6 +96,13 @@
                     color: #ff5722;
                 }
             }
+
+            .tp-megamenu-list {
+
+                ul {
+                    display: block;
+                }
+            }
         }
     }
 
@@ -146,3 +153,11 @@
         }
     }
 }
+
+header li.has-dropdown.p-static.active .tp-megamenu-wrapper.mega-menu.megamenu-white-bg {
+    visibility: visible !important;
+    opacity: 1 !important;
+    top: 30px !important;
+    transform: unset !important;
+}
+
