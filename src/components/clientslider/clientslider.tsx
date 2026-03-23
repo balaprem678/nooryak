@@ -1,31 +1,59 @@
+"use client";
 import React from 'react';
 import "./clientslider.scss";
+import Image from 'next/image';
+import { Images } from '@/utils/Images';
 
-export default function ClientSlider() {
+const sliderImageUrl = [
+    {
+        url: Images.Logo_blue
+    },
+    {
+        url: Images.Logo_blue
+    },
+    {
+        url: Images.Logo_blue
+    },
+    {
+        url: Images.Logo_blue
+    },
+    {
+        url: Images.Logo_blue
+    },
+    {
+        url: Images.Logo_blue
+    },
+    {
+        url: Images.Logo_blue
+    },
+    {
+        url: Images.Logo_blue
+    }
+];
+
+const ClientSlider = () => {
+    // Duplicate items for seamless infinite loop
+    const duplicatedItems = [...sliderImageUrl, ...sliderImageUrl];
+
     return (
-        <div className='clientslider'>
-            <div className="logos">
+        <div className="logos-container">
+            <div className="logos-wrapper">
                 <div className="logos-slide">
-                    <img src="https://raw.githubusercontent.com/Coding-with-Robby/infinite-logo-carousel/adb1f11a3736ae0b1df43d48bbbb7c1339a77b86/logos/3m.svg" />
-                    <img src="https://raw.githubusercontent.com/Coding-with-Robby/infinite-logo-carousel/adb1f11a3736ae0b1df43d48bbbb7c1339a77b86/logos/barstool-store.svg" />
-                    <img src="https://raw.githubusercontent.com/Coding-with-Robby/infinite-logo-carousel/adb1f11a3736ae0b1df43d48bbbb7c1339a77b86/logos/budweiser.svg" />
-                    <img src="https://raw.githubusercontent.com/Coding-with-Robby/infinite-logo-carousel/adb1f11a3736ae0b1df43d48bbbb7c1339a77b86/logos/buzzfeed.svg" />
-                    <img src="https://raw.githubusercontent.com/Coding-with-Robby/infinite-logo-carousel/adb1f11a3736ae0b1df43d48bbbb7c1339a77b86/logos/forbes.svg" />
-                    <img src="https://raw.githubusercontent.com/Coding-with-Robby/infinite-logo-carousel/adb1f11a3736ae0b1df43d48bbbb7c1339a77b86/logos/macys.svg" />
-                    <img src="https://raw.githubusercontent.com/Coding-with-Robby/infinite-logo-carousel/adb1f11a3736ae0b1df43d48bbbb7c1339a77b86/logos/menshealth.svg" />
-                    <img src="https://raw.githubusercontent.com/Coding-with-Robby/infinite-logo-carousel/adb1f11a3736ae0b1df43d48bbbb7c1339a77b86/logos/mrbeast.svg" />
-                </div>
-                <div className="logos-slide">
-                    <img src="https://raw.githubusercontent.com/Coding-with-Robby/infinite-logo-carousel/adb1f11a3736ae0b1df43d48bbbb7c1339a77b86/logos/3m.svg" />
-                    <img src="https://raw.githubusercontent.com/Coding-with-Robby/infinite-logo-carousel/adb1f11a3736ae0b1df43d48bbbb7c1339a77b86/logos/barstool-store.svg" />
-                    <img src="https://raw.githubusercontent.com/Coding-with-Robby/infinite-logo-carousel/adb1f11a3736ae0b1df43d48bbbb7c1339a77b86/logos/budweiser.svg" />
-                    <img src="https://raw.githubusercontent.com/Coding-with-Robby/infinite-logo-carousel/adb1f11a3736ae0b1df43d48bbbb7c1339a77b86/logos/buzzfeed.svg" />
-                    <img src="https://raw.githubusercontent.com/Coding-with-Robby/infinite-logo-carousel/adb1f11a3736ae0b1df43d48bbbb7c1339a77b86/logos/forbes.svg" />
-                    <img src="https://raw.githubusercontent.com/Coding-with-Robby/infinite-logo-carousel/adb1f11a3736ae0b1df43d48bbbb7c1339a77b86/logos/macys.svg" />
-                    <img src="https://raw.githubusercontent.com/Coding-with-Robby/infinite-logo-carousel/adb1f11a3736ae0b1df43d48bbbb7c1339a77b86/logos/menshealth.svg" />
-                    <img src="https://raw.githubusercontent.com/Coding-with-Robby/infinite-logo-carousel/adb1f11a3736ae0b1df43d48bbbb7c1339a77b86/logos/mrbeast.svg" />
+                    {duplicatedItems.map((item, index) => (
+                        <div className="logo-item" key={index}>
+                            <Image 
+                                src={item.url} 
+                                alt="client" 
+                                width={120} 
+                                height={80}
+                                objectFit="contain"
+                            />
+                        </div>
+                    ))}
                 </div>
             </div>
         </div>
     );
-}
+};
+
+export default ClientSlider;

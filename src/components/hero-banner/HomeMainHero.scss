@@ -1,5 +1,3 @@
-// herosection.scss
-
 @import url('https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Inter:wght@400;500;600&display=swap');
 
 $orange: #f47c20;
@@ -14,6 +12,114 @@ $bp-lg: 1024px;
 $bp-md: 768px;
 $bp-sm: 480px;
 
+/* ── DESKTOP BG ANIMATION CANVAS ── */
+@keyframes floatOrb1 {
+    0% {
+        transform: translate(0, 0) scale(1);
+        opacity: 0.55;
+    }
+
+    33% {
+        transform: translate(60px, -80px) scale(1.15);
+        opacity: 0.7;
+    }
+
+    66% {
+        transform: translate(-40px, 50px) scale(0.9);
+        opacity: 0.5;
+    }
+
+    100% {
+        transform: translate(0, 0) scale(1);
+        opacity: 0.55;
+    }
+}
+
+@keyframes floatOrb2 {
+    0% {
+        transform: translate(0, 0) scale(1);
+        opacity: 0.4;
+    }
+
+    40% {
+        transform: translate(-70px, 60px) scale(1.2);
+        opacity: 0.6;
+    }
+
+    80% {
+        transform: translate(50px, -40px) scale(0.85);
+        opacity: 0.35;
+    }
+
+    100% {
+        transform: translate(0, 0) scale(1);
+        opacity: 0.4;
+    }
+}
+
+@keyframes floatOrb3 {
+    0% {
+        transform: translate(0, 0) scale(1);
+        opacity: 0.3;
+    }
+
+    50% {
+        transform: translate(80px, 80px) scale(1.1);
+        opacity: 0.5;
+    }
+
+    100% {
+        transform: translate(0, 0) scale(1);
+        opacity: 0.3;
+    }
+}
+
+@keyframes drift {
+
+    0%,
+    100% {
+        transform: translateY(0px) translateX(0px);
+    }
+
+    25% {
+        transform: translateY(-12px) translateX(8px);
+    }
+
+    50% {
+        transform: translateY(-6px) translateX(-10px);
+    }
+
+    75% {
+        transform: translateY(10px) translateX(5px);
+    }
+}
+
+@keyframes sparkle {
+
+    0%,
+    100% {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes gridFade {
+
+    0%,
+    100% {
+        opacity: 0.04;
+    }
+
+    50% {
+        opacity: 0.08;
+    }
+}
+
 .hero {
     background: #fff4e978;
     border-radius: 24px;
@@ -21,6 +127,40 @@ $bp-sm: 480px;
     margin: 20px auto;
     position: relative;
     overflow: hidden;
+
+    // ── Desktop animated background elements ──
+    @media (min-width: calc($bp-md + 1px)) {
+
+        // Orb 1 – large warm orange blob top-right
+        &::before {
+            content: '';
+            position: absolute;
+            top: -80px;
+            right: -60px;
+            width: 420px;
+            height: 420px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(244, 124, 32, 0.22) 0%, rgba(249, 160, 90, 0.12) 50%, transparent 75%);
+            animation: floatOrb1 12s ease-in-out infinite;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        // Orb 2 – medium pale orange blob bottom-left
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: -60px;
+            left: 60px;
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(244, 124, 32, 0.15) 0%, rgba(253, 233, 208, 0.2) 50%, transparent 72%);
+            animation: floatOrb2 16s ease-in-out infinite;
+            pointer-events: none;
+            z-index: 0;
+        }
+    }
 
     @media (max-width: $bp-lg) {
         padding-top: 60px;
@@ -30,20 +170,99 @@ $bp-sm: 480px;
     }
 
     @media (max-width: $bp-md) {
-        padding-top: 40px;
+        padding-top: 0;
         margin: 8px auto;
         border-radius: 14px;
         min-height: auto;
-        background-size: 70%;
-        background-position: left bottom -20px;
+        background: none; // remove the light bg — image will take over
     }
 
     @media (max-width: $bp-sm) {
-        padding-top: 32px;
         margin: 0;
         width: 100%;
         border-radius: 0;
-        background-size: 90%;
+    }
+}
+
+/* ── Extra desktop animated orb (3rd) via a wrapper pseudo ── */
+.hero .bgOrb3 {
+    display: none;
+
+    @media (min-width: calc($bp-md + 1px)) {
+        display: block;
+        position: absolute;
+        top: 40%;
+        left: 35%;
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        background: radial-gradient(circle, rgba(244, 124, 32, 0.1) 0%, transparent 70%);
+        animation: floatOrb3 20s ease-in-out infinite;
+        pointer-events: none;
+        z-index: 0;
+    }
+}
+
+/* Animated dot-grid overlay for desktop */
+.hero .bgGrid {
+    display: none;
+
+    @media (min-width: calc($bp-md + 1px)) {
+        display: block;
+        position: absolute;
+        inset: 0;
+        background-image:
+            radial-gradient(circle, rgba(244, 124, 32, 0.35) 1px, transparent 1px);
+        background-size: 40px 40px;
+        animation: gridFade 8s ease-in-out infinite;
+        pointer-events: none;
+        z-index: 0;
+    }
+}
+
+/* Floating sparkle dots for desktop */
+.hero .spark {
+    display: none;
+
+    @media (min-width: calc($bp-md + 1px)) {
+        display: block;
+        position: absolute;
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background: $orange;
+        pointer-events: none;
+        z-index: 0;
+
+        &:nth-child(1) {
+            top: 18%;
+            left: 22%;
+            animation: sparkle 3.5s ease-in-out 0s infinite, drift 9s ease-in-out 0s infinite;
+        }
+
+        &:nth-child(2) {
+            top: 72%;
+            left: 48%;
+            animation: sparkle 4s ease-in-out 1s infinite, drift 11s ease-in-out 0.5s infinite;
+        }
+
+        &:nth-child(3) {
+            top: 35%;
+            left: 78%;
+            animation: sparkle 3s ease-in-out 2s infinite, drift 8s ease-in-out 1s infinite;
+        }
+
+        &:nth-child(4) {
+            top: 82%;
+            left: 15%;
+            animation: sparkle 5s ease-in-out 0.5s infinite, drift 13s ease-in-out 2s infinite;
+        }
+
+        &:nth-child(5) {
+            top: 12%;
+            left: 60%;
+            animation: sparkle 3.8s ease-in-out 1.5s infinite, drift 10s ease-in-out 0.3s infinite;
+        }
     }
 }
 
@@ -53,9 +272,13 @@ $bp-sm: 480px;
     flex: 1;
     position: relative;
     align-items: end;
+    z-index: 2;
 
     @media (max-width: $bp-md) {
-        flex-direction: column-reverse;
+        flex-direction: column;
+        min-height: 88vh;
+        // The right image becomes the full background
+        position: relative;
     }
 }
 
@@ -71,6 +294,7 @@ $bp-sm: 480px;
     background-repeat: no-repeat;
     background-position: left bottom;
     background-size: 40%;
+    z-index: 2;
 
     @media (max-width: $bp-xl) {
         padding: 20px 40px 50px 90px;
@@ -84,12 +308,28 @@ $bp-sm: 480px;
     @media (max-width: $bp-md) {
         flex: none;
         width: 100%;
-        padding: 24px 24px 36px 24px;
-        order: 2;
+        padding: 80px 24px 40px 24px;
+        order: 1;
+        // On tablet/mobile the left sits ON TOP of the bg image
+        background-image: none; // remove circle animation png so it doesn't muddy the dark photo bg
+        position: relative;
+        z-index: 3;
+
+        // Semi-transparent gradient overlay so text is readable
+        &::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to bottom,
+                    rgba(0, 0, 0, 0.55) 0%,
+                    rgba(0, 0, 0, 0.35) 60%,
+                    rgba(0, 0, 0, 0.6) 100%);
+            z-index: -1;
+        }
     }
 
     @media (max-width: $bp-sm) {
-        padding: 20px 16px 28px 16px;
+        padding: 72px 16px 36px 16px;
     }
 }
 
@@ -110,7 +350,6 @@ $bp-sm: 480px;
     }
 
     @media (max-width: $bp-md) {
-        // Switch to horizontal row at the top on tablet/mobile
         position: static;
         flex-direction: row;
         transform: none;
@@ -136,6 +375,7 @@ $bp-sm: 480px;
             margin-right: 4px;
             font-size: 9px;
             letter-spacing: 2px;
+            color: rgba(255, 255, 255, 0.75); // white on image bg
         }
     }
 
@@ -150,6 +390,15 @@ $bp-sm: 480px;
         &:hover {
             opacity: 1;
             transform: scale(1.2);
+        }
+
+        @media (max-width: $bp-md) {
+            color: #fff; // white icons on image bg
+            opacity: 0.85;
+
+            &:hover {
+                opacity: 1;
+            }
         }
 
         @media (max-width: $bp-sm) {
@@ -167,6 +416,10 @@ $bp-sm: 480px;
     border-radius: 50%;
     margin-bottom: 12px;
     animation: pulse 2s ease-in-out infinite;
+
+    @media (max-width: $bp-md) {
+        background: #fff; // white on image bg
+    }
 
     @media (max-width: $bp-sm) {
         width: 8px;
@@ -200,6 +453,7 @@ $bp-sm: 480px;
     animation-delay: 0.1s;
 
     @media (max-width: $bp-md) {
+        color: rgba(255, 255, 255, 0.8); // white on image bg
         font-size: 10px;
         letter-spacing: 1.5px;
         margin-bottom: 12px;
@@ -222,6 +476,7 @@ $bp-sm: 480px;
     animation-delay: 0.25s;
     line-height: 1.2;
     font-family: 'Space Grotesk';
+    font-size: 48px;
 
     span {
         display: block;
@@ -233,9 +488,15 @@ $bp-sm: 480px;
     }
 
     @media (max-width: $bp-md) {
+        color: #fff; // white on image bg
         font-size: clamp(30px, 6vw, 42px);
         line-height: 1.15;
         margin-bottom: 20px;
+
+        // cursor blink line also white
+        span {
+            border-color: #fff !important;
+        }
     }
 
     @media (max-width: $bp-sm) {
@@ -269,7 +530,6 @@ $bp-sm: 480px;
     }
 
     &:hover {
-        // background: darken($orange, 8%);
         transform: translateY(-2px);
         box-shadow: 0 12px 32px rgba(244, 124, 32, 0.5);
     }
@@ -292,10 +552,7 @@ $bp-sm: 480px;
         &:not(:last-child) {
             margin-right: 5px;
         }
-
     }
-
-
 }
 
 /* ── STATS ── */
@@ -327,6 +584,7 @@ $bp-sm: 480px;
             margin-bottom: 6px;
 
             @media (max-width: $bp-md) {
+                color: #fff; // white on image bg
                 font-size: clamp(26px, 5vw, 38px);
             }
 
@@ -345,6 +603,10 @@ $bp-sm: 480px;
             color: $text-gray;
             line-height: 1.5;
             max-width: 140px;
+
+            @media (max-width: $bp-md) {
+                color: rgba(255, 255, 255, 0.75); // white on image bg
+            }
 
             @media (max-width: $bp-sm) {
                 font-size: 11px;
@@ -366,17 +628,21 @@ $bp-sm: 480px;
         min-height: 420px;
     }
 
+    // ── TABLET & MOBILE: image becomes FULL background ──
     @media (max-width: $bp-md) {
-        flex: none;
+        position: absolute;
+        inset: 0;
         width: 100%;
-        min-height: 320px;
-        order: 1;
-        border-radius: 12px 12px 0 0;
+        height: 100%;
+        min-height: unset;
+        order: 0; // sits behind everything
+        z-index: 1;
+        border-radius: 14px;
         overflow: hidden;
     }
 
     @media (max-width: $bp-sm) {
-        min-height: 260px;
+        border-radius: 0;
     }
 
     .imageWrap {
@@ -389,9 +655,18 @@ $bp-sm: 480px;
             width: 100%;
             height: 100%;
             object-fit: cover;
-            object-position: center;
+            object-position: center top;
             display: block;
             border-radius: 25px;
+
+            @media (max-width: $bp-md) {
+                border-radius: 14px;
+                object-position: center center;
+            }
+
+            @media (max-width: $bp-sm) {
+                border-radius: 0;
+            }
         }
 
         &::after {
@@ -399,10 +674,18 @@ $bp-sm: 480px;
             position: absolute;
             inset: 0;
             background: linear-gradient(to right, rgba(255, 255, 255, 0.08) 0%, transparent 30%);
+
+            @media (max-width: $bp-md) {
+                // On mobile, gradient fades from bottom so text at bottom is readable
+                background: linear-gradient(to top,
+                        rgba(0, 0, 0, 0.7) 0%,
+                        rgba(0, 0, 0, 0.3) 50%,
+                        rgba(0, 0, 0, 0.15) 100%);
+            }
         }
     }
 
-    /* ── Floating Card ── */
+    /* ── Floating Card – hide on mobile (content now overlaid on full bg) ── */
     .floatingCard {
         border-radius: 16px;
         box-shadow: 0 20px 60px rgba(0, 0, 0, 0.18);
@@ -435,24 +718,7 @@ $bp-sm: 480px;
         }
 
         @media (max-width: $bp-md) {
-            bottom: 20px;
-            left: 12px;
-            padding: 14px 16px;
-            border-radius: 12px;
-
-            p {
-                font-size: 13px;
-            }
-        }
-
-        @media (max-width: $bp-sm) {
-            bottom: 12px;
-            left: 10px;
-            padding: 12px 14px;
-
-            p {
-                font-size: 12px;
-            }
+            display: none; // hide floatingCard — replaced by text-over-bg layout
         }
 
         .cardIcon {
@@ -504,20 +770,7 @@ $bp-sm: 480px;
         }
 
         @media (max-width: $bp-md) {
-            // Move to bottom-right corner, horizontal
-            position: absolute;
-            right: 12px;
-            bottom: 10px;
-            top: auto;
-            transform: none;
-            rotate: unset;
-            font-size: 8px;
-            letter-spacing: 2px;
-            color: rgba(255, 255, 255, 0.9);
-
-            &::before {
-                width: 18px;
-            }
+            display: none; // hidden in full-bg mode
         }
     }
 }
@@ -625,6 +878,11 @@ $bp-sm: 480px;
 @media (prefers-reduced-motion: reduce) {
 
     .hero,
+    .hero::before,
+    .hero::after,
+    .bgOrb3,
+    .bgGrid,
+    .spark,
     .tagline,
     .heading,
     .ctaBtn,

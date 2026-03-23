@@ -14,6 +14,7 @@ import herobanner from "../../public/assets/images/home/herobanner.jpeg";
 import about_1 from "../../public/assets/images/home/about-1.webp";
 import about_2 from "../../public/assets/images/home/about-2.webp";
 
+
 export const Images = {
 
     // Common Images Import Here
@@ -21,6 +22,7 @@ export const Images = {
     logo,Logo_blue, gmail, instagram, whatsapp, twitter, facebook, linkedin, youtube,
 
     // Home Images Import here
-    herobanner, about_1, about_2
+    herobanner, about_1, about_2,
+
 
 };

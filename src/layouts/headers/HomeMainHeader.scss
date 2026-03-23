@@ -49,67 +49,100 @@
             display: flex;
             box-shadow: 0 8px 30px #0000001a;
         }
+    }
 
-        ul {
+    @media (max-width: 1199.98px) {
+        .header-inner {
+            width: 100%;
+            padding: 0 1rem;
+        }
+
+        .rights {
+            gap: 10px;
+        }
+
+        .header-btn {
+            display: none;
+        }
+
+        .menu-btn {
             display: flex;
-            gap: 30px;
+        }
+    }
 
-            li {
-                list-style: none;
+    @media (max-width: 992px) {
+        width: 100%;
+        position: relative;
+        top: 10px;
+        left: unset;
+        transform: unset;
 
-                a {
-                    font-weight: 500;
-                    color: #000;
-                    transition: 0.3s;
 
-                    &:hover {
-                        color: #ff5722;
-                    }
+    }
+
+    ul {
+        display: flex;
+        gap: 30px;
+
+        li {
+            list-style: none;
+
+            a {
+                font-weight: 500;
+                color: #000;
+                transition: 0.3s;
+
+                &:hover {
+                    color: #ff5722;
                 }
             }
         }
-
     }
 
+}
 
 
-    /* Button */
-    .header-btn {
-        display: flex;
-        align-items: center;
-        gap: 10px;
 
-        padding: 10px 18px;
-        border-radius: 30px;
+/* Button */
+.header-btn {
+    display: flex;
+    align-items: center;
+    gap: 10px;
 
-        background: #ff5722;
-        color: #fff;
-        font-weight: 500;
+    padding: 10px 18px;
+    border-radius: 30px;
 
-        transition: 0.3s;
+    background: #ff5722;
+    color: #fff;
+    font-weight: 500;
 
-        &:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(255, 87, 34, 0.4);
-        }
+    transition: 0.3s;
 
-        .btn-icon {
-            display: flex;
-        }
+    &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(255, 87, 34, 0.4);
     }
 
-    /* Mobile menu button */
-    .menu-btn {
+    .btn-icon {
         display: flex;
-        flex-direction: column;
-        gap: 4px;
-        background: none;
-        border: none;
+    }
+}
 
-        span {
-            width: 22px;
-            height: 2px;
-            background: #000;
+/* Mobile menu button */
+.menu-btn {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    background: none;
+    border: none;
+
+    span {
+        width: 22px;
+        height: 2px;
+        background: #000;
+
+        @media screen and (max-width:1200px) {
+            background: #fff;
         }
     }
 }

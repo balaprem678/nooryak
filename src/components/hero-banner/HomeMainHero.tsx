@@ -1,8 +1,9 @@
 "use client";
 
-import { useEffect, useState, useCallback } from "react";
-import "./herosection.scss";
+import { useEffect, useState } from "react";
+import "./HomeMainHero.scss";
 import { Images } from "@/utils/Images";
+import Bganimation from "../bganimation/Bganimation";
 
 /* ── TEXTS ── */
 const texts = [
@@ -48,62 +49,55 @@ export default function HomeMainHero() {
     const [charIndex, setCharIndex] = useState(0);
     const [isDeleting, setIsDeleting] = useState(false);
 
-    // useEffect(() => {
-    //     const currentText = texts[textIndex];
+    useEffect(() => {
+        const currentText = texts[textIndex];
+        let timeout;
 
-    //     const timeout = setTimeout(() => {
-    //         if (!isDeleting) {
-    //             setDisplayText(currentText.substring(0, charIndex + 1));
-    //             setCharIndex(charIndex + 1);
-
-    //             if (charIndex + 1 === currentText.length) {
-    //                 setIsDeleting(true);
-    //             }
-    //         } else {
-    //             setDisplayText(currentText.substring(0, charIndex - 1));
-    //             setCharIndex(charIndex - 1);
-
-    //             if (charIndex === 0) {
-    //                 setIsDeleting(false);
-    //                 setTextIndex((textIndex + 1) % texts.length);
-    //             }
-    //         }
-    //     }, isDeleting ? 0 : 100);
-
-    //     return () => clearTimeout(timeout);
-    // }, [charIndex, isDeleting, textIndex]);
-      useEffect(() => {
-    const currentText = texts[textIndex];
-    let timeout;
-
-    // ✅ Pause after full typing (10s)
-    if (!isDeleting && charIndex === currentText.length) {
-      timeout = setTimeout(() => {
-        setIsDeleting(true);
-      }, 10000);
-    } else {
-      timeout = setTimeout(() => {
-        if (!isDeleting) {
-          setDisplayText(currentText.substring(0, charIndex + 1));
-          setCharIndex(charIndex + 1);
+        // Pause after full typing (10s)
+        if (!isDeleting && charIndex === currentText.length) {
+            timeout = setTimeout(() => {
+                setIsDeleting(true);
+            }, 10000);
         } else {
-          setDisplayText(currentText.substring(0, charIndex - 1));
-          setCharIndex(charIndex - 1);
+            timeout = setTimeout(() => {
+                if (!isDeleting) {
+                    setDisplayText(currentText.substring(0, charIndex + 1));
+                    setCharIndex(charIndex + 1);
+                } else {
+                    setDisplayText(currentText.substring(0, charIndex - 1));
+                    setCharIndex(charIndex - 1);
 
-          if (charIndex === 0) {
-            setIsDeleting(false);
-            setTextIndex((textIndex + 1) % texts.length);
-          }
+                    if (charIndex === 0) {
+                        setIsDeleting(false);
+                        setTextIndex((textIndex + 1) % texts.length);
+                    }
+                }
+            }, isDeleting ? 50 : 100);
         }
-      }, isDeleting ? 50 : 100);
-    }
 
-    return () => clearTimeout(timeout);
-  }, [charIndex, isDeleting, textIndex]);
+        return () => clearTimeout(timeout);
+    }, [charIndex, isDeleting, textIndex]);
 
 
     return (
+
         <section className="hero" style={{ position: "relative", overflow: "hidden" }}>
+            <Bganimation/>
+
+            {/* ── DESKTOP BG ANIMATION ELEMENTS ── */}
+            {/* Third floating orb */}
+            <div className="bgOrb3" />
+
+            {/* Animated dot-grid */}
+            <div className="bgGrid" />
+
+            {/* Sparkle dots */}
+            <div className="spark" />
+            <div className="spark" />
+            <div className="spark" />
+            <div className="spark" />
+            <div className="spark" />
+
             {/* 🔥 MAIN CONTENT */}
             <div className="main" style={{ position: "relative", zIndex: 2 }}>
 
@@ -121,7 +115,7 @@ export default function HomeMainHero() {
                         <div className="dotIndicator" />
                         <p className="tagline">AI Powered Digital Agency</p>
 
-                        <h1 className="heading" style={{ fontSize: "48px", fontWeight: "700", height: "117px" }}>
+                        <h1 className="heading" style={{  fontWeight: "700", height: "117px" }}>
                             {displayText}
                             <span style={{ borderRight: "3px solid #ff5722", marginLeft: "5px" }} />
                         </h1>
@@ -148,7 +142,7 @@ export default function HomeMainHero() {
                     </div>
                 </div>
 
-                {/* RIGHT */}
+                {/* RIGHT — desktop: panel image | tablet+mobile: full bg image */}
                 <div className="right">
                     <div className="imageWrap">
                         <img src={Images.herobanner.src} alt="Hero" />

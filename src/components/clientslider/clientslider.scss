@@ -1,51 +1,123 @@
 
 
-.logos {
+.logos-container {
   overflow: hidden;
-  padding: 60px 0;
+  // padding: 60px 20px;
   background: white;
-  white-space: nowrap;
   position: relative;
+  width: 100%;
+
+  @media (max-width: 768px) {
+    padding: 40px 16px;
+  }
+
+  @media (max-width: 480px) {
+    padding: 30px 12px;
+  }
 }
 
-.logos:before,
-.logos:after {
-  position: absolute;
-  top: 0;
-  width: 250px;
-  height: 100%;
-  content: "";
-  z-index: 2;
-}
+.logos-wrapper {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
 
-.logos:before {
-  left: 0;
-  background: linear-gradient(to left, rgba(255, 255, 255, 0), white);
-}
+  &::before,
+  &::after {
+    position: absolute;
+    top: 0;
+    width: 100px;
+    height: 100%;
+    content: "";
+    z-index: 2;
+    pointer-events: none;
+  }
 
-.logos:after {
-  right: 0;
-  background: linear-gradient(to right, rgba(255, 255, 255, 0), white);
-}
+  &::before {
+    left: 0;
+    background: linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+  }
 
-.logos:hover .logos-slide {
-  animation-play-state: paused;
+  &::after {
+    right: 0;
+    background: linear-gradient(to left, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+  }
+
+  @media (max-width: 768px) {
+    &::before,
+    &::after {
+      width: 60px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    &::before,
+    &::after {
+      width: 40px;
+    }
+  }
 }
 
 .logos-slide {
-  display: inline-block;
-  animation: 30s slide infinite linear;
-}
-@keyframes slide {
-    from {
-        transform: translateX(0);
-    }
+  display: flex;
+  animation: scroll 40s linear infinite;
+  will-change: transform;
 
-    to {
-        transform: translateX(-100%);
-    }
+  @media (max-width: 768px) {
+    animation: scroll 30s linear infinite;
+  }
+
+  @media (max-width: 480px) {
+    animation: scroll 25s linear infinite;
+  }
 }
-.logos-slide img {
-  height: 50px;
-  margin: 0 40px;
+
+.logos-slide:hover {
+  animation-play-state: paused;
+}
+
+.logo-item {
+  flex: 0 0 auto;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 40px;
+  transition: all 0.3s ease;
+
+  @media (max-width: 768px) {
+    padding: 0 30px;
+    height: 70px;
+  }
+
+  @media (max-width: 480px) {
+    padding: 0 20px;
+    height: 60px;
+  }
+
+  img {
+    max-width: 120px;
+    max-height: 80px;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    filter: grayscale(100%);
+    opacity: 0.8;
+    transition: all 0.3s ease;
+  }
+
+  &:hover img {
+    filter: grayscale(0%);
+    opacity: 1;
+    transform: scale(1.05);
+  }
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
 }
