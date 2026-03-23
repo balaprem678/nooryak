@@ -31,7 +31,7 @@ const HomeMain = () => {
                     <div id="smooth-wrapper">
                         <div id="smooth-content">
                             {/* Main Content Sections */}
-                            <main>
+                            <main style={{ overflowX: "hidden" }}>
                                 <HomeMainHero />
                                 <ClientSlider />
                                 <HomeMainBanner />
