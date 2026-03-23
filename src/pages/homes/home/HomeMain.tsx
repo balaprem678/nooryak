@@ -35,8 +35,8 @@ const HomeMain = () => {
                                 <HomeMainHero />
                                 <ClientSlider />
                                 <HomeMainBanner />
-                                <HomeMainAbout />
                                 <HomeMainTextSlider />
+                                <HomeMainAbout />
                                 <HomeMainService />
                                 <HomeMainVideo />
                                 <HomeMainProject />

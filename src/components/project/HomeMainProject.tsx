@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 const HomeMainProject = () => {
     return (
-        <div className="tp-project-area pt-200 pb-60">
+        <div className="tp-project-area pt-200 pb-60" style={{ overflow: "hidden" }}>
             <div className="container">
                 <div className="tp-project-title-box mb-50">
                     <div className="row">

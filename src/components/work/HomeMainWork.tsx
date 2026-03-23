@@ -1,7 +1,7 @@
 
 const HomeMainWork = () => {
     return (
-        <div className="tp-work-area pt-120 pb-145 tp-panel-pin-area">
+        <div className="tp-work-area pt-120 pb-145 tp-panel-pin-area" style={{ overflow: "hidden" }}>
             <div className="container">
                 <div className="row">
                     <div className="col-lg-6">
