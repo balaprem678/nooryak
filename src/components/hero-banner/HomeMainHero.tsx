@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import "./HomeMainHero.scss";
 import { Images } from "@/utils/Images";
-import Bganimation from "../bganimation/Bganimation";
+// import Bganimation from "../bganimation/Bganimation";
 
 /* ── TEXTS ── */
 const texts = [
@@ -82,7 +82,6 @@ export default function HomeMainHero() {
     return (
 
         <section className="hero" style={{ position: "relative", overflow: "hidden" }}>
-            <Bganimation/>
 
             {/* ── DESKTOP BG ANIMATION ELEMENTS ── */}
             {/* Third floating orb */}
@@ -108,14 +107,12 @@ export default function HomeMainHero() {
                         <FacebookIcon />
                         <XIcon />
                         <InstagramIcon />
-                        <DribbbleIcon />
                     </div>
 
                     <div>
-                        <div className="dotIndicator" />
-                        <p className="tagline">AI Powered Digital Agency</p>
+                        <p className="tagline"><span className="dotIndicator"></span> AI Powered Digital Agency</p>
 
-                        <h1 className="heading" style={{  fontWeight: "700", height: "117px" }}>
+                        <h1 className="heading" style={{ fontWeight: "700", height: "117px" }}>
                             {displayText}
                             <span style={{ borderRight: "3px solid #ff5722", marginLeft: "5px" }} />
                         </h1>
