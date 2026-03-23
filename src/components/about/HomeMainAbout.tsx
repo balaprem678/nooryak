@@ -8,7 +8,7 @@ interface aboutPropsDT {
 
 const HomeMainAbout = ({ bgColur, spacingCls = "pb-120" }: aboutPropsDT) => {
     return (
-        <div className={`mt-5 tp-about-area ${spacingCls} tp-bounce-trigger`} style={{ backgroundColor: bgColur }}>
+        <div className={`mt-5 pt-5 tp-about-area ${spacingCls} tp-bounce-trigger`} style={{ backgroundColor: bgColur }}>
             <div className="container">
                 <div className="row">
 
