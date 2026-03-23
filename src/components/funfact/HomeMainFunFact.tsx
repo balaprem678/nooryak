@@ -5,7 +5,7 @@ import React from 'react';
 
 const HomeMainFunFact: React.FC = () => {
   return (
-    <div className="tp-funfact-area">
+    <div className="tp-funfact-area" style={{overflow: "hidden" }}>
       <div className="tp-funfact-panel-wrap">
         {panelsData.map((panel) => (
           <div className="tp-funfact-panel" key={panel.id}>

@@ -7,7 +7,7 @@ import React from 'react';
 const HomeMainService = () => {
 
   return (
-    <div id="down" className="tp-service-area pt-120">
+    <div id="down" className="tp-service-area pt-120" style={{  overflow: "hidden" }}>
       <div className="container-fluid p-0">
         <div className="row gx-0">
           <div className="col-12">
