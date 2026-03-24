@@ -105,25 +105,21 @@ export default function HomeMainHero() {
                             </h1>
                         </div>
 
-                        <div>
-                            <button className="ctaBtn">
-                                Hire Professional <span className="arrow">↗</span>
-                            </button>
+                        <div className="stats">
+                            <div className="stat">
+                                <button className="ctaBtn">
+                                    Hire Professional <span className="arrow">↗</span>
+                                </button>
+                                <div className="number">98%</div>
+                                <div className="label">Clients Satisfied and Repeating</div>
+                            </div>
 
-                            <button className="ctaBtn">
-                                Start Project <span className="arrow">↗</span>
-                            </button>
-
-                            <div className="stats">
-                                <div className="stat">
-                                    <div className="number">98%</div>
-                                    <div className="label">Clients Satisfied and Repeating</div>
-                                </div>
-
-                                <div className="stat">
-                                    <div className="number">125+</div>
-                                    <div className="label">Projects Completed in 24 Countries</div>
-                                </div>
+                            <div className="stat">
+                                <button className="ctaBtn">
+                                    Start Project <span className="arrow">↗</span>
+                                </button>
+                                <div className="number">125+</div>
+                                <div className="label">Projects Completed in 24 Countries</div>
                             </div>
                         </div>
                     </div>
