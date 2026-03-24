@@ -6,21 +6,21 @@
 
 .tp-banner{
     &-img{
-        height: 900px;
+        // height: 900px;
         overflow: hidden;
         border-top: 16px solid var(--tp-common-red-3);
-        @media #{$xl}{
-            height: 700px;
-        }
-        @media #{$lg}{
-            height: 500px;
-        }
-        @media #{$md}{
-            height: 340px;
-        }
-        @media #{$xs}{
-            height: 200px;
-        }
+        // @media #{$xl}{
+        //     height: 700px;
+        // }
+        // @media #{$lg}{
+        //     height: 500px;
+        // }
+        // @media #{$md}{
+        //     height: 340px;
+        // }
+        // @media #{$xs}{
+        //     height: 200px;
+        // }
         &.pink-style{
             border-color: var(--tp-common-red);
         }
