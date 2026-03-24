@@ -107,7 +107,7 @@ export default function HomeMainHero() {
 
                             <div className="stat">
                                 <button className="ctaBtn">
-                                    A Start Project <span className="arrow">↗</span>
+                                    Start a Project <span className="arrow">↗</span>
                                 </button>
                                 <div className="number">125+</div>
                                 <div className="label">Projects Completed in 24 Countries</div>
