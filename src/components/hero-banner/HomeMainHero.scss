@@ -122,45 +122,14 @@ $bp-sm: 480px;
 
 .hero {
     background: #fff4e978;
-    border-radius: 24px;
     width: 96%;
     margin: 20px auto;
     position: relative;
     overflow: hidden;
+    display: flex;
+    justify-content: center;
 
-    // ── Desktop animated background elements ──
-    @media (min-width: calc($bp-md + 1px)) {
 
-        // Orb 1 – large warm orange blob top-right
-        &::before {
-            content: '';
-            position: absolute;
-            top: -80px;
-            right: -60px;
-            width: 420px;
-            height: 420px;
-            border-radius: 50%;
-            background: radial-gradient(circle, rgba(244, 124, 32, 0.22) 0%, rgba(249, 160, 90, 0.12) 50%, transparent 75%);
-            animation: floatOrb1 12s ease-in-out infinite;
-            pointer-events: none;
-            z-index: 0;
-        }
-
-        // Orb 2 – medium pale orange blob bottom-left
-        &::after {
-            content: '';
-            position: absolute;
-            bottom: -60px;
-            left: 60px;
-            width: 300px;
-            height: 300px;
-            border-radius: 50%;
-            background: radial-gradient(circle, rgba(244, 124, 32, 0.15) 0%, rgba(253, 233, 208, 0.2) 50%, transparent 72%);
-            animation: floatOrb2 16s ease-in-out infinite;
-            pointer-events: none;
-            z-index: 0;
-        }
-    }
 
     @media (max-width: $bp-lg) {
         padding-top: 60px;
@@ -184,87 +153,8 @@ $bp-sm: 480px;
     }
 }
 
-/* ── Extra desktop animated orb (3rd) via a wrapper pseudo ── */
-.hero .bgOrb3 {
-    display: none;
 
-    @media (min-width: calc($bp-md + 1px)) {
-        display: block;
-        position: absolute;
-        top: 40%;
-        left: 35%;
-        width: 200px;
-        height: 200px;
-        border-radius: 50%;
-        background: radial-gradient(circle, rgba(244, 124, 32, 0.1) 0%, transparent 70%);
-        animation: floatOrb3 20s ease-in-out infinite;
-        pointer-events: none;
-        z-index: 0;
-    }
-}
 
-/* Animated dot-grid overlay for desktop */
-.hero .bgGrid {
-    display: none;
-
-    @media (min-width: calc($bp-md + 1px)) {
-        display: block;
-        position: absolute;
-        inset: 0;
-        background-image:
-            radial-gradient(circle, rgba(244, 124, 32, 0.35) 1px, transparent 1px);
-        background-size: 40px 40px;
-        animation: gridFade 8s ease-in-out infinite;
-        pointer-events: none;
-        z-index: 0;
-    }
-}
-
-/* Floating sparkle dots for desktop */
-.hero .spark {
-    display: none;
-
-    @media (min-width: calc($bp-md + 1px)) {
-        display: block;
-        position: absolute;
-        width: 6px;
-        height: 6px;
-        border-radius: 50%;
-        background: $orange;
-        pointer-events: none;
-        z-index: 0;
-
-        &:nth-child(1) {
-            top: 18%;
-            left: 22%;
-            animation: sparkle 3.5s ease-in-out 0s infinite, drift 9s ease-in-out 0s infinite;
-        }
-
-        &:nth-child(2) {
-            top: 72%;
-            left: 48%;
-            animation: sparkle 4s ease-in-out 1s infinite, drift 11s ease-in-out 0.5s infinite;
-        }
-
-        &:nth-child(3) {
-            top: 35%;
-            left: 78%;
-            animation: sparkle 3s ease-in-out 2s infinite, drift 8s ease-in-out 1s infinite;
-        }
-
-        &:nth-child(4) {
-            top: 82%;
-            left: 15%;
-            animation: sparkle 5s ease-in-out 0.5s infinite, drift 13s ease-in-out 2s infinite;
-        }
-
-        &:nth-child(5) {
-            top: 12%;
-            left: 60%;
-            animation: sparkle 3.8s ease-in-out 1.5s infinite, drift 10s ease-in-out 0.3s infinite;
-        }
-    }
-}
 
 /* ── MAIN CONTENT ── */
 .main {
@@ -273,16 +163,19 @@ $bp-sm: 480px;
     position: relative;
     align-items: end;
     z-index: 2;
+    border-radius: 24px;
+    height: 83vh;
+    overflow: hidden;
 
     @media (max-width: $bp-md) {
         flex-direction: column;
-        // min-height: 88vh;
-        // The right image becomes the full background
         position: relative;
+    }
+    @media (max-width: $bp-sm) {
+    border-radius: unset;
     }
 }
 
-/* ── LEFT SIDE ── */
 .left {
     flex-direction: column;
     flex: 0 0 56%;
@@ -406,6 +299,10 @@ $bp-sm: 480px;
             height: 16px;
         }
     }
+
+    @media screen and (max-width:678px) {
+        display: none;
+    }
 }
 
 /* ── DOT INDICATOR ── */
@@ -487,6 +384,7 @@ $bp-sm: 480px;
         display: block;
     }
 
+
     @media (max-width: $bp-lg) {
         font-size: clamp(28px, 3.8vw, 42px);
         margin-bottom: 24px;
@@ -504,9 +402,48 @@ $bp-sm: 480px;
         }
     }
 
+
+
     @media (max-width: $bp-sm) {
-        font-size: clamp(26px, 8vw, 36px);
+        font-size: 22px;
         margin-bottom: 18px;
+    }
+
+    @media screen and (min-width:1500px) {
+        height: 30vh !important;
+        font-size: 60px;
+    }
+
+    @media screen and (min-width:1700px) {
+        height: 30vh !important;
+        font-size: 70px;
+    }
+}
+
+@media screen and (max-width:480px) {
+    .mb_res {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 66vh;
+    }
+}
+
+@media screen and (max-width:375px) {
+    .mb_res {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 66vh;
+    }
+}
+
+@media screen and (max-width:320px) {
+    .mb_res {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 66vh;
     }
 }
 
@@ -550,9 +487,10 @@ $bp-sm: 480px;
 
     @media (max-width: $bp-md) {
         gap: 5px;
-        margin-bottom: 20px;
-        font-size: 13.5px;
-        padding: 5px 8px;
+        margin-bottom: 10px;
+        padding: 1px 6px;
+        font-size: 11.5px;
+        font-weight: 400;
 
         &:not(:last-child) {
             margin-right: 5px;
@@ -575,10 +513,6 @@ $bp-sm: 480px;
         gap: 32px;
     }
 
-    @media (max-width: $bp-sm) {
-        gap: 0;
-        justify-content: space-between;
-    }
 
     .stat {
         .number {
@@ -626,7 +560,7 @@ $bp-sm: 480px;
     flex: 0 0 44%;
     position: relative;
     overflow: hidden;
-    min-height: 480px;
+    height: 100vh;
 
     @media (max-width: $bp-lg) {
         flex: 0 0 46%;
@@ -670,6 +604,9 @@ $bp-sm: 480px;
 
             @media (max-width: $bp-sm) {
                 border-radius: 0;
+            }
+            @media screen and (max-width:325px){
+                object-position: 0 -35px;
             }
         }
 
@@ -899,3 +836,5 @@ $bp-sm: 480px;
         transition: none !important;
     }
 }
+
+

@@ -83,20 +83,6 @@ export default function HomeMainHero() {
 
         <section className="hero" style={{ position: "relative", overflow: "hidden" }}>
 
-            {/* ── DESKTOP BG ANIMATION ELEMENTS ── */}
-            {/* Third floating orb */}
-            <div className="bgOrb3" />
-
-            {/* Animated dot-grid */}
-            <div className="bgGrid" />
-
-            {/* Sparkle dots */}
-            <div className="spark" />
-            <div className="spark" />
-            <div className="spark" />
-            <div className="spark" />
-            <div className="spark" />
-
             {/* 🔥 MAIN CONTENT */}
             <div className="main" style={{ position: "relative", zIndex: 2 }}>
 
@@ -109,31 +95,35 @@ export default function HomeMainHero() {
                         <InstagramIcon />
                     </div>
 
-                    <div>
-                        <p className="tagline"><span className="dotIndicator"></span> AI Powered Digital Agency</p>
+                    <div className="mb_res">
+                        <div>
+                            <p className="tagline"><span className="dotIndicator"></span> AI Powered Digital Agency</p>
 
-                        <h1 className="heading" style={{ fontWeight: "700", height: "117px" }}>
-                            {displayText}
-                            <span style={{ borderRight: "3px solid #ff5722", marginLeft: "5px" }} />
-                        </h1>
+                            <h1 className="heading" style={{ fontWeight: "700", height: "117px" }}>
+                                {displayText}
+                                <span style={{ borderRight: "3px solid #ff5722", marginLeft: "5px" }} />
+                            </h1>
+                        </div>
 
-                        <button className="ctaBtn">
-                            Hire Professional <span className="arrow">↗</span>
-                        </button>
+                        <div>
+                            <button className="ctaBtn">
+                                Hire Professional <span className="arrow">↗</span>
+                            </button>
 
-                        <button className="ctaBtn">
-                            Start Project <span className="arrow">↗</span>
-                        </button>
+                            <button className="ctaBtn">
+                                Start Project <span className="arrow">↗</span>
+                            </button>
 
-                        <div className="stats">
-                            <div className="stat">
-                                <div className="number">98%</div>
-                                <div className="label">Clients Satisfied and Repeating</div>
-                            </div>
+                            <div className="stats">
+                                <div className="stat">
+                                    <div className="number">98%</div>
+                                    <div className="label">Clients Satisfied and Repeating</div>
+                                </div>
 
-                            <div className="stat">
-                                <div className="number">125+</div>
-                                <div className="label">Projects Completed in 24 Countries</div>
+                                <div className="stat">
+                                    <div className="number">125+</div>
+                                    <div className="label">Projects Completed in 24 Countries</div>
+                                </div>
                             </div>
                         </div>
                     </div>

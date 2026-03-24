@@ -11,8 +11,6 @@ const HomeMainAbout = ({ bgColur, spacingCls = "pb-120" }: aboutPropsDT) => {
         <div className={`mt-5 pt-5 tp-about-area ${spacingCls} tp-bounce-trigger`} style={{ backgroundColor: bgColur }}>
             <div className="container">
                 <div className="row">
-
-                    {/* LEFT */}
                     <div className="col-lg-6" style={{  padding: "10px" }}>
                         <div
                             className="dgm-about-thumb-wrap p-relative"
@@ -165,15 +163,6 @@ const HomeMainAbout = ({ bgColur, spacingCls = "pb-120" }: aboutPropsDT) => {
 };
 
 export default HomeMainAbout;
-
-
-
-
-
-
-
-
-
 
 
 // 'use client';

@@ -155,10 +155,10 @@
     }
 }
 
-header li.has-dropdown.p-static.active .tp-megamenu-wrapper.mega-menu.megamenu-white-bg {
-    visibility: visible !important;
-    opacity: 1 !important;
-    top: 30px !important;
-    transform: unset !important;
+header li.has-dropdown.p-static.active:hover .tp-megamenu-wrapper.mega-menu.megamenu-white-bg {
+    visibility: visible;
+    opacity: 1;
+    top: 30px;
+    transform: unset;
 }
 
