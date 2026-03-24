@@ -461,9 +461,10 @@ $bp-sm: 480px;
     align-items: center;
     gap: 10px;
     background: $orange;
+    
     color: #fff;
     border: none;
-    border-radius: 50px;
+    border-radius: 25px;
     padding: 8px 16px;
     font-size: 15px;
     font-weight: 600;
@@ -498,7 +499,7 @@ $bp-sm: 480px;
         margin-bottom: 10px;
         padding: 1px 6px;
         font-weight: 400;
-        font-size: 18px;
+        font-size: 17px;
 
         &:not(:last-child) {
             margin-right: 5px;
