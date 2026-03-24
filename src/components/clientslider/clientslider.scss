@@ -59,16 +59,8 @@
 
 .logos-slide {
   display: flex;
-  animation: scroll 40s linear infinite;
+  animation: scroll 8s linear infinite;
   will-change: transform;
-
-  @media (max-width: 768px) {
-    animation: scroll 30s linear infinite;
-  }
-
-  @media (max-width: 480px) {
-    animation: scroll 25s linear infinite;
-  }
 }
 
 .logos-slide:hover {
