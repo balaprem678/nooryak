@@ -47,27 +47,36 @@ export default function HomeMainHero() {
     const [displayText, setDisplayText] = useState("");
     const [textIndex, setTextIndex] = useState(0);
     const [charIndex, setCharIndex] = useState(0);
+    const [isDeleting, setIsDeleting] = useState(false);
 
     useEffect(() => {
         const currentText = texts[textIndex];
         let timeout;
 
-        if (charIndex < currentText.length) {
+        // Pause after full typing (10s)
+        if (!isDeleting && charIndex === currentText.length) {
             timeout = setTimeout(() => {
-                setDisplayText(currentText.substring(0, charIndex + 1));
-                setCharIndex(charIndex + 1);
-            }, 70);
+                setIsDeleting(true);
+            }, 10000);
         } else {
-            // Pause after full typing (10s), then move to next text
             timeout = setTimeout(() => {
-                setTextIndex((textIndex + 1) % texts.length);
-                setCharIndex(0);
-                setDisplayText("");
-            }, 1000);
+                if (!isDeleting) {
+                    setDisplayText(currentText.substring(0, charIndex + 1));
+                    setCharIndex(charIndex + 1);
+                } else {
+                    setDisplayText(currentText.substring(0, charIndex - 1));
+                    setCharIndex(charIndex - 1);
+
+                    if (charIndex === 0) {
+                        setIsDeleting(false);
+                        setTextIndex((textIndex + 1) % texts.length);
+                    }
+                }
+            }, isDeleting ? 50 : 100);
         }
 
         return () => clearTimeout(timeout);
-    }, [charIndex, textIndex]);
+    }, [charIndex, isDeleting, textIndex]);
 
 
     return (
