@@ -28,7 +28,7 @@ const HomeMainBanner = ({ ColorStyleCls }: { ColorStyleCls?: string }) => {
           playsInline
           style={{
             width: "100%",
-            height: "auto",
+            height: "100",
             objectFit: "cover"
           }}
         />
