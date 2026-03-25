@@ -14,10 +14,10 @@ const HomeMainBanner = ({ ColorStyleCls }: { ColorStyleCls?: string }) => {
   };
 
   return (
-    <div className="tp-banner-area">
-
+    <div className="tp-banner-area" style={{ position: "relative" }}>
+      
       <div className={`tp-banner-img ${ColorStyleCls}`}>
-
+        
         {/* VIDEO */}
         <video
           ref={videoRef}
@@ -26,7 +26,11 @@ const HomeMainBanner = ({ ColorStyleCls }: { ColorStyleCls?: string }) => {
           loop
           muted
           playsInline
-          style={{ width: "100%", height: "auto", objectFit: "cover" }} className="w-100" data-speed=".7"
+          style={{
+            width: "100%",
+            height: "100%",
+            objectFit: "cover"
+          }}
         />
 
         {/* MUTE / UNMUTE BUTTON */}

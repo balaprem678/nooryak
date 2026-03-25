@@ -6,7 +6,8 @@
 
 .tp-banner{
     &-img{
-        height: 700px;
+        // height: 800px;
+        height: auto;
         overflow: hidden;
         border-top: 16px solid var(--tp-common-red-3);
         // @media #{$xl}{
@@ -15,26 +16,26 @@
         // @media #{$lg}{
         //     height: 500px;
         // }
-        @media #{$md}{
-            height: auto;
-        }
+        // @media #{$md}{
+        //     height: 300px;
+        // }
         // @media #{$xs}{
         //     height: 200px;
         // }
-        &.pink-style{
-            border-color: var(--tp-common-red);
-        }
-        & img{
-            margin-top: -370px;
-            @media #{$xxl,$xl,$lg,$md}{
-                margin-top: -70px;
-            }
-            @media #{$xs}{
-                margin-top: -30px;
-                height: 400px;
-                object-fit: cover;
-            }
-        }
+        // &.pink-style{
+        //     border-color: var(--tp-common-red);
+        // }
+        // & img{
+        //     margin-top: -370px;
+        //     @media #{$xxl,$xl,$lg,$md}{
+        //         margin-top: -70px;
+        //     }
+        //     @media #{$xs}{
+        //         margin-top: -30px;
+        //         height: 400px;
+        //         object-fit: cover;
+        //     }
+        // }
     }
 }
 .studio-hero{

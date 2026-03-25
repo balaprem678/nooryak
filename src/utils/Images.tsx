@@ -13,6 +13,7 @@ import youtube from "../../public/assets/images/common/youtube.png";
 import herobanner from "../../public/assets/images/home/herobanner.jpeg";
 import about_1 from "../../public/assets/images/home/about-1.webp";
 import about_2 from "../../public/assets/images/home/about-2.webp";
+import abt_sec from "../../public/assets/images/home/abt_sec.png";
 
 
 export const Images = {
@@ -22,7 +23,7 @@ export const Images = {
     logo,Logo_blue, gmail, instagram, whatsapp, twitter, facebook, linkedin, youtube,
 
     // Home Images Import here
-    herobanner, about_1, about_2,
+    herobanner, about_1, about_2,abt_sec,
 
 
 };
