@@ -14,10 +14,10 @@ const HomeMainBanner = ({ ColorStyleCls }: { ColorStyleCls?: string }) => {
   };
 
   return (
-    <div className="tp-banner-area" style={{ position: "relative" }}>
-      
+    <div className="tp-banner-area">
+
       <div className={`tp-banner-img ${ColorStyleCls}`}>
-        
+
         {/* VIDEO */}
         <video
           ref={videoRef}
@@ -26,11 +26,7 @@ const HomeMainBanner = ({ ColorStyleCls }: { ColorStyleCls?: string }) => {
           loop
           muted
           playsInline
-          style={{
-            width: "100%",
-            height: "100%",
-            objectFit: "cover"
-          }}
+          style={{ width: "100%", height: "auto", objectFit: "cover" }} className="w-100" data-speed=".7"
         />
 
         {/* MUTE / UNMUTE BUTTON */}
@@ -59,3 +55,19 @@ const HomeMainBanner = ({ ColorStyleCls }: { ColorStyleCls?: string }) => {
 };
 
 export default HomeMainBanner;
+
+
+// import bannerImg from "../../../public/assets/img/home-01/banner/banner-1.jpg";
+// import Image from 'next/image';
+
+// const HomeMainBanner = ({ ColorStyleCls }: { ColorStyleCls?: string }) => {
+//     return (
+//         <div className="tp-banner-area">
+//             <div className={`tp-banner-img ${ColorStyleCls}`}>
+//                 <Image style={{ width: "100%", height: "auto" }} className="w-100" data-speed=".7" src={bannerImg} alt="banner-image" />
+//             </div>
+//         </div>
+//     );
+// };
+
+// export default HomeMainBanner;

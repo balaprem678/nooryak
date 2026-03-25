@@ -203,7 +203,7 @@ const headerMenuData: MenuItem[] = [
     // children: true,
     title: "Blog",
     // pluseIncon: true,
-    link: "#",
+    link: "",
     // submenus: [
     //   {
     //     title: "Blog Classic Light",
@@ -247,9 +247,9 @@ const headerMenuData: MenuItem[] = [
     active: true,
     megaMenu: false,
     children: true,
-    title: "Shop",
+    title: "Services",
     pluseIncon: true,
-    link: "/shop-modern-light",
+    link: "",
     // submenus: [
     //   {
     //     title: "Shop Modern",
@@ -293,7 +293,7 @@ const headerMenuData: MenuItem[] = [
     children: true,
     title: "Contact",
     pluseIncon: true,
-    link: "/contact",
+    link: "",
     // submenus: [
     //   {
     //     title: "Contact Me",

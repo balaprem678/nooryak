@@ -6,7 +6,7 @@
 
 .tp-banner{
     &-img{
-        // height: 900px;
+        height: 500px;
         overflow: hidden;
         border-top: 16px solid var(--tp-common-red-3);
         // @media #{$xl}{
@@ -15,9 +15,9 @@
         // @media #{$lg}{
         //     height: 500px;
         // }
-        // @media #{$md}{
-        //     height: 340px;
-        // }
+        @media #{$md}{
+            height: auto;
+        }
         // @media #{$xs}{
         //     height: 200px;
         // }

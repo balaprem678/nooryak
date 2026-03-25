@@ -476,6 +476,8 @@ $bp-sm: 480px;
     background: linear-gradient(135deg, #ff7a18, #ff3d00);
     color: #fff;
     box-shadow: 0 8px 20px rgba(255, 61, 0, 0.35);
+    transition: all 0.3s ease-in-out;
+    border: 1px solid #ff3d00;
 
     &:not(:last-child) {
         margin-right: 10px;
@@ -484,6 +486,9 @@ $bp-sm: 480px;
     &:hover {
         transform: translateY(-2px);
         box-shadow: 0 12px 32px rgba(244, 124, 32, 0.5);
+        background: #fff;
+        color: #ff3d00;
+        
     }
 
     .arrow {

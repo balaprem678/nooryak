@@ -37,104 +37,104 @@ const mobileMenuData: MenuItem[] = [
         title: "Home",
         link: "/",
         megaMenu: true,
-        columns: [
-            {
-                title: "Home Light Version",
-                links: [
-                    { title: "Modern Agency", link: "/", badge: "Popular" },
-                    { title: "Design Studio", link: "/design-studio" },
-                    { title: "Digital Marketing", link: "/digital-marketing", badge: "Trending" },
-                    { title: "Creative Studio", link: "/creative-studio" },
-                    { title: "Design Agency", link: "/design-agency" },
-                    { title: "Creative Agency", link: "/creative-agency" },
-                    { title: "Architecture Hub", link: "/architecture-hub", badge: "Hot" },
-                    { title: "AI Image Genaretor", link: "/unique-ai-image" }
-                ]
-            },
-            {
-                title: "Home Light Version",
-                links: [
-                    { title: "Corporate Agency", link: "/corporate-agency" },
-                    { title: "Mobile App", link: "/mobile-application", badge: "Popular" },
-                    { title: "IT Solutions", link: "/it-solution", badge: "Hot" },
-                    { title: "Cryptocurrency", link: "/cryptocurrency" },
-                    { title: "Startup Agency", link: "/startup-agency", badge: "Popular" },
-                    { title: "Fashion Studio", link: "/fashion-studio" },
-                    { title: "Personal Portfolio", link: "/personal-portfolio" },
-                    { title: "Shop Home", link: "/shop-modern", badge: "Hot", }
-                ]
-            },
-            {
-                title: "Showcases",
-                links: [
-                    { title: "Webgl Showcase", link: "/portfolio-webgl-showcase", badge: "Hot" },
-                    { title: "Coverflow Slider", link: "/portfolio-coverflow-slider-light" },
-                    { title: "Creative Thumb Slider", link: "/portfolio-creative-thumb-slider", badge: "Hot" },
-                    { title: "Creative Skew Slider", link: "/portfolio-creative-skew-slider", badge: "Hot" },
-                    { title: "Creative Text Slider", link: "/portfolio-creative-text-slider" },
-                    { title: "Parallax Slider", link: "/portfolio-parallax-slider" },
-                    { title: "Perspective Showcase", link: "/portfolio-perspective-slider-light", badge: "Hot" },
-                    { title: "Horizontal Showcase", link: "/portfolio-horizontal-showcase-light" }
-                ]
-            },
-            {
-                title: "Showcases",
-                links: [
-                    { title: "Wrapper Slider", link: "/portfolio-wrapper-slider", badge: "Hot" },
-                    { title: "Portfolio slicer", link: "/portfolio-slicer-light", badge: "Hot" },
-                    { title: "Portfolio Showcase", link: "/portfolio-showcase-light" },
-                    { title: "Brand Showcase", link: "/brand-showcase-light" },
-                    { title: "Interactive with hover", link: "/portfolio-interactive-with-hover", badge: "Hot" },
-                    { title: "Interactive with Scroll", link: "/portfolio-interactive-with-scroll" },
-                    { title: "Slider Elegant", link: "/portfolio-slider-elegant-light" }
-                ]
-            }
-        ]
+        // columns: [
+        //     {
+        //         title: "Home Light Version",
+        //         links: [
+        //             { title: "Modern Agency", link: "/", badge: "Popular" },
+        //             { title: "Design Studio", link: "/design-studio" },
+        //             { title: "Digital Marketing", link: "/digital-marketing", badge: "Trending" },
+        //             { title: "Creative Studio", link: "/creative-studio" },
+        //             { title: "Design Agency", link: "/design-agency" },
+        //             { title: "Creative Agency", link: "/creative-agency" },
+        //             { title: "Architecture Hub", link: "/architecture-hub", badge: "Hot" },
+        //             { title: "AI Image Genaretor", link: "/unique-ai-image" }
+        //         ]
+        //     },
+        //     {
+        //         title: "Home Light Version",
+        //         links: [
+        //             { title: "Corporate Agency", link: "/corporate-agency" },
+        //             { title: "Mobile App", link: "/mobile-application", badge: "Popular" },
+        //             { title: "IT Solutions", link: "/it-solution", badge: "Hot" },
+        //             { title: "Cryptocurrency", link: "/cryptocurrency" },
+        //             { title: "Startup Agency", link: "/startup-agency", badge: "Popular" },
+        //             { title: "Fashion Studio", link: "/fashion-studio" },
+        //             { title: "Personal Portfolio", link: "/personal-portfolio" },
+        //             { title: "Shop Home", link: "/shop-modern", badge: "Hot", }
+        //         ]
+        //     },
+        //     {
+        //         title: "Showcases",
+        //         links: [
+        //             { title: "Webgl Showcase", link: "/portfolio-webgl-showcase", badge: "Hot" },
+        //             { title: "Coverflow Slider", link: "/portfolio-coverflow-slider-light" },
+        //             { title: "Creative Thumb Slider", link: "/portfolio-creative-thumb-slider", badge: "Hot" },
+        //             { title: "Creative Skew Slider", link: "/portfolio-creative-skew-slider", badge: "Hot" },
+        //             { title: "Creative Text Slider", link: "/portfolio-creative-text-slider" },
+        //             { title: "Parallax Slider", link: "/portfolio-parallax-slider" },
+        //             { title: "Perspective Showcase", link: "/portfolio-perspective-slider-light", badge: "Hot" },
+        //             { title: "Horizontal Showcase", link: "/portfolio-horizontal-showcase-light" }
+        //         ]
+        //     },
+        //     {
+        //         title: "Showcases",
+        //         links: [
+        //             { title: "Wrapper Slider", link: "/portfolio-wrapper-slider", badge: "Hot" },
+        //             { title: "Portfolio slicer", link: "/portfolio-slicer-light", badge: "Hot" },
+        //             { title: "Portfolio Showcase", link: "/portfolio-showcase-light" },
+        //             { title: "Brand Showcase", link: "/brand-showcase-light" },
+        //             { title: "Interactive with hover", link: "/portfolio-interactive-with-hover", badge: "Hot" },
+        //             { title: "Interactive with Scroll", link: "/portfolio-interactive-with-scroll" },
+        //             { title: "Slider Elegant", link: "/portfolio-slider-elegant-light" }
+        //         ]
+        //     }
+        // ]
     },
     {
         id: 2,
-        title: "Pages",
+        title: "About Us",
         link: "#",
         megaMenu: true,
-        columns: [
-            {
-                title: "About Light Version",
-                links: [
-                    { title: "About Me", link: "/about-me-light" },
-                    { title: "About Us", link: "/about-us-light" },
-                    { title: "Modern About", link: "/about-modern-light" },
-                    { title: "Creative About", link: "/about-creative-light" },
-                    { title: "Startup About", link: "/about-startup-light" },
-                    { title: "Career", link: "/career-light" }
-                ]
-            },
-            {
-                title: "Services Light Version",
-                links: [
-                    { title: "Services", link: "/service-1-light" },
-                    { title: "Corporate Services", link: "/service-2-light" },
-                    { title: "Startup Services", link: "/service-3-light" },
-                    { title: "Modern Services", link: "/service-4-light" },
-                    { title: "Services Details", link: "/service-details-light" },
-                    { title: "Services Details 02", link: "/service-details-2-light" }
-                ]
-            },
-            {
-                title: "Special Pages Light",
-                links: [
-                    { title: "Careers Details", link: "/career-details-light" },
-                    { title: "Pricing", link: "/pricing-light" },
-                    { title: "Team", link: "/team-light" },
-                    { title: "Team Details", link: "/team-details-light" },
-                    { title: "FAQ's", link: "/faq-light" },
-                    { title: "404 Page", link: "/error-light" }
-                ]
-            }
-        ]
+        // columns: [
+        //     {
+        //         title: "About Light Version",
+        //         links: [
+        //             { title: "About Me", link: "/about-me-light" },
+        //             { title: "About Us", link: "/about-us-light" },
+        //             { title: "Modern About", link: "/about-modern-light" },
+        //             { title: "Creative About", link: "/about-creative-light" },
+        //             { title: "Startup About", link: "/about-startup-light" },
+        //             { title: "Career", link: "/career-light" }
+        //         ]
+        //     },
+        //     {
+        //         title: "Services Light Version",
+        //         links: [
+        //             { title: "Services", link: "/service-1-light" },
+        //             { title: "Corporate Services", link: "/service-2-light" },
+        //             { title: "Startup Services", link: "/service-3-light" },
+        //             { title: "Modern Services", link: "/service-4-light" },
+        //             { title: "Services Details", link: "/service-details-light" },
+        //             { title: "Services Details 02", link: "/service-details-2-light" }
+        //         ]
+        //     },
+        //     {
+        //         title: "Special Pages Light",
+        //         links: [
+        //             { title: "Careers Details", link: "/career-details-light" },
+        //             { title: "Pricing", link: "/pricing-light" },
+        //             { title: "Team", link: "/team-light" },
+        //             { title: "Team Details", link: "/team-details-light" },
+        //             { title: "FAQ's", link: "/faq-light" },
+        //             { title: "404 Page", link: "/error-light" }
+        //         ]
+        //     }
+        // ]
     },
     {
         id: 3,
-        title: "Projects",
+        title: "Services",
         link: "/portfolio-metro-light",
         megaMenu: true,
         columns: [
