@@ -32,7 +32,7 @@ const AboutUsLightMain = () => {
                                 <AboutUsHero />
                                 <AboutUsBrand />
                                 <AboutUsBanner />
-                                <HomeMainAbout bgColur='#F6F6F9' spacingCls='pb-140' />
+                                <HomeMainAbout />
                                 <AboutUsService />
                                 <HomeMainFunFact />
                                 <HomeMainWork />
