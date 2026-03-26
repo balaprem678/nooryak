@@ -541,7 +541,7 @@
     /* RESPONSIVE */
     @media (max-width: 992px) {
         .about-wrapper {
-            flex-direction: column;
+            flex-direction: column-reverse;
         }
 
         .about-right h2 {

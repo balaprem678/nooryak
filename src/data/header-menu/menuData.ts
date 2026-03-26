@@ -1,78 +1,12 @@
 import { MenuItem } from "@/types/menu-d-t";
-import MegaMenuThumb from "../../../public/assets/img/menu/menu-1.png";
 
 const headerMenuData: MenuItem[] = [
   // home
   {
     id: 1,
-    hasDropdown: true,
     active: true,
-    children: true,
     title: "Home",
-    pluseIncon: true,
-    megaMenu: true,
     link: "#",
-    submenus: [
-      {
-        title: "Home Light Version",
-        link: "#",
-        pluseIncon: true,
-        megaMenu: [
-          { title: "Modern Agency", link: "/", tag: "Popular", },
-          { title: "Design Studio", link: "/design-studio" },
-          { title: "Digital Marketing", link: "/digital-marketing", tag: "Trending" },
-          { title: "Creative Studio", link: "/creative-studio" },
-          { title: "Design Agency", link: "/design-agency" },
-          { title: "Creative Agency", link: "/creative-agency" },
-          { title: "Architecture Hub", link: "/architecture-hub", tag: "Hot" },
-          { title: "AI Image Generator", link: "/unique-ai-image" }
-        ]
-      },
-      {
-        title: "Home Light Version",
-        link: "#",
-        pluseIncon: true,
-        megaMenu: [
-          { title: "Corporate Agency", link: "/corporate-agency" },
-          { title: "Mobile App", link: "/mobile-application", tag: "Popular" },
-          { title: "IT Solutions", link: "/it-solution", tag: "Hot" },
-          { title: "Cryptocurrency", link: "/cryptocurrency" },
-          { title: "Startup Agency", link: "/startup-agency", tag: "Popular" },
-          { title: "Fashion Studio", link: "/fashion-studio" },
-          { title: "Personal Portfolio", link: "/personal-portfolio" },
-          { title: "Shop Home", link: "/shop-modern", tag: "Hot", }
-        ]
-      },
-      {
-        title: "Showcases",
-        link: "#",
-        pluseIncon: true,
-        megaMenu: [
-          { title: "Webgl Showcase", link: "/portfolio-webgl-showcase", tag: "Hot" },
-          { title: "Coverflow Slider", link: "/portfolio-coverflow-slider-light" },
-          { title: "Creative Thumb Slider", link: "/portfolio-creative-thumb-slider", tag: "Hot" },
-          { title: "Creative Skew Slider", link: "/portfolio-creative-skew-slider", tag: "Hot" },
-          { title: "Creative Text Slider", link: "/portfolio-creative-text-slider" },
-          { title: "Parallax Slider", link: "/portfolio-parallax-slider" },
-          { title: "Perspective Showcase", link: "/portfolio-perspective-slider-light", tag: "Hot" },
-          { title: "Horizontal Showcase", link: "/portfolio-horizontal-showcase-light" }
-        ]
-      },
-      {
-        title: "Showcases",
-        link: "#",
-        pluseIncon: true,
-        megaMenu: [
-          { title: "Wrapper Slider", link: "/portfolio-wrapper-slider", tag: "Hot" },
-          { title: "Portfolio slicer", link: "/portfolio-slicer-light", tag: "Hot" },
-          { title: "Portfolio Showcase", link: "/portfolio-showcase-light" },
-          { title: "Brand Showcase", link: "/brand-showcase-light" },
-          { title: "Interactive with hover", link: "/portfolio-interactive-with-hover", tag: "Hot" },
-          { title: "Interactive with Scroll", link: "/portfolio-interactive-with-scroll" },
-          { title: "Slider Elegant", link: "/portfolio-slider-elegant-light" }
-        ]
-      }
-    ]
   },
   // aboutus
   {
@@ -85,20 +19,6 @@ const headerMenuData: MenuItem[] = [
     smallMenu: true,
     megaMenu: true,
     submenus: [
-      // {
-      //   title: "About Light Version",
-      //   link: "#",
-      //   pluseIncon: true,
-
-      //   megaMenu: [
-      //     { title: "About Me", link: "/about-me-light" },
-      //     { title: "About Us", link: "/about-us-light" },
-      //     { title: "Modern About", link: "/about-modern-light" },
-      //     { title: "Creative About", link: "/about-creative-light" },
-      //     { title: "Startup About", link: "/about-startup-light" },
-      //     { title: "Career", link: "/career-light" }
-      //   ]
-      // },
       {
         title: "Services Light Version",
         link: "#",
@@ -112,19 +32,6 @@ const headerMenuData: MenuItem[] = [
           { title: "Services Details 02", link: "/service-details-2-light" }
         ]
       },
-      // {
-      //   title: "Special Pages Light",
-      //   link: "#",
-      //   pluseIncon: true,
-      //   megaMenu: [
-      //     { title: "Careers Details", link: "/career-details-light" },
-      //     { title: "Pricing", link: "/pricing-light" },
-      //     { title: "Team", link: "/team-light" },
-      //     { title: "Team Details", link: "/team-details-light" },
-      //     { title: "FAQ's", link: "/faq-light" },
-      //     { title: "404 Page", link: "/error-light" }
-      //   ]
-      // },
     ]
   },
 
@@ -138,7 +45,6 @@ const headerMenuData: MenuItem[] = [
     pluseIncon: true,
     mediumMenu: true,
     megaMenu: true,
-
     link: "#",
     submenus: [
       {
@@ -168,9 +74,107 @@ const headerMenuData: MenuItem[] = [
           { title: "Android Application", link: "/android-application" },
           { title: "IOS Application", link: "/ios-application" },
           { title: "React Native", link: "/react-native" },
-          { title: "Flutter App Development", link: "/flutter-app-development" }
+          { title: "Flutter App Development", link: "/flutter-app-development" },
         ]
       },
+      {
+        title: "Digital Marketing",
+        link: "#",
+        pluseIncon: true,
+        megaMenu: [
+          { title: "Search Engine Optimization", link: "/search-engine-optimization" },
+          { title: "Search Engine Marketing", link: "/search-engine-marketing" },
+          { title: "Social Media Marketing", link: "/social-media-marketing" },
+          { title: "SMS Marketing", link: "/sms-marketing" },
+          { title: "Facebook Marketing", link: "/facebook-marketing" },
+          { title: "Content Marketing", link: "/content-marketing" },
+          { title: "On-Page Optimization", link: "/on-page-optimization" },
+          { title: "Off-Page Optimization", link: "/off-page-optimization" },
+          { title: "Technical SEO", link: "/technical-seo" },
+          { title: "Branding", link: "/branding" }
+        ]
+      },
+      {
+        title: "Social Media Marketing",
+        link: "#",
+        pluseIncon: true,
+        megaMenu: [
+          { title: "Facebook Marketing", link: "/facebook-marketing" },
+          { title: "Instagram Marketing", link: "/instagram-marketing" },
+          { title: "Youtube Marketing", link: "/youtube-marketing" },
+          { title: "LinkedIn Marketing", link: "/linkedin-marketing" },
+          { title: "Twitter Marketing", link: "/twitter-marketing" },
+          { title: "Social Media Advertising", link: "/social-media-advertising" },
+          { title: "Social Media Post Scheduling", link: "/social-media-post-scheduling" }
+        ]
+      },
+      {
+        title: "Local SEO",
+        link: "#",
+        pluseIncon: true,
+        megaMenu: [
+          { title: "Google My Business Ranking", link: "/google-my-business-ranking" },
+          { title: "Local Directory Listings", link: "/local-directory-listings" },
+          { title: "Local SEO Tools", link: "/local-seo-tools" }
+        ]
+      },
+      {
+        title: "Pay-Per-Click (PPC)",
+        link: "#",
+        pluseIncon: true,
+        megaMenu: [
+          { title: "Google Ads", link: "/google-ads" },
+          { title: "Facebook Ads", link: "/facebook-ads" },
+          { title: "Display Advertising", link: "/display-advertising" },
+          { title: "Remarketing Campaigns", link: "/remarketing-campaigns" }
+        ]
+      },
+      {
+        title: "Graphic Designing",
+        link: "#",
+        pluseIncon: true,
+        megaMenu: [
+          { title: "Logo Designs", link: "/logo-designs" },
+          { title: "Package Designs", link: "/package-designs" },
+          { title: "Social Media Designs", link: "/social-media-designs" },
+          { title: "Brochure Designs", link: "/brochure-designs" },
+          { title: "Pamphlet Designs", link: "/pamphlet-designs" },
+          { title: "Website Banners", link: "/website-banners" },
+          { title: "Banner Designs", link: "/banner-designs" },
+          { title: "2D & 3D Designs", link: "/2d-3d-designs" },
+          { title: "Standee Designs", link: "/standee-designs" },
+          { title: "Creative Business Card designs", link: "/business-card-designs" },
+          { title: "Annual report design", link: "/annual-report-design" },
+          { title: "End to End Event designs", link: "/event-designs" },
+          { title: "CSR Report design", link: "/csr-report-design" },
+          { title: "Strategy Report Design", link: "/strategy-report-design" },
+          { title: "Catalogue Designs", link: "/catalogue-designs" },
+          { title: "Menu Designs", link: "/menu-designs" },
+          { title: "Marriage Card designs", link: "/marriage-card-designs" },
+          { title: "Hoarding/billboard designs", link: "/hoarding-billboard-designs" },
+          { title: "Illustrations", link: "/illustrations" },
+          { title: "Branding", link: "/branding" }
+        ]
+      },
+      {
+        title: "Video Editing",
+        link: "#",
+        pluseIncon: true,
+        megaMenu: [
+          { title: "Reel Videos", link: "/reel-videos" },
+          { title: "Model Shoot Videos", link: "/model-shoot-videos" },
+          { title: "RealEstate Drone Shots", link: "/realestate-drone-shots" },
+          { title: "Custom Videos", link: "/custom-videos" }
+        ]
+      },
+      {
+        title: "Software Development",
+        link: "/software-development"
+      },
+      {
+        title: "AI Automations",
+        link: "/ai-automations"
+      }
     ],
 
   },
@@ -192,347 +196,48 @@ const headerMenuData: MenuItem[] = [
         link: "#",
         pluseIncon: true,
         megaMenu: [
-          { title: "Two Columns", link: "/portfolio-col-2-light" },
-          { title: "Three Columns", link: "/portfolio-col-3-light" },
-          { title: "Four Columns Wide", link: "/portfolio-col-4-light" },
-          { title: "Masonry", link: "/portfolio-masonry-light" },
-          { title: "Portfolio Metro", link: "/portfolio-metro-light" },
-          { title: "Portfolio Pinterest", link: "/portfolio-pinterest-light" },
-          { title: "Horizontal Showcase", link: "/portfolio-horizontal-showcase-light" }
+          { title: "SAAS WEBSITE BUILDER", link: "" },
+          { title: "SAAS LEAD MANAGEMENT CRM", link: "" },
+          { title: "SAAS INVOICE GENERATOR", link: "" },
         ]
       },
-      {
-        title: "Showcases",
-        link: "#",
-        pluseIncon: true,
-        megaMenu: [
-          { title: "Webgl Showcase", link: "/portfolio-webgl-showcase" },
-          { title: "Coverflow Slider", link: "/portfolio-coverflow-slider-light" },
-          { title: "Creative Thumb Slider", link: "/portfolio-creative-thumb-slider" },
-          { title: "Creative Skew Slider", link: "/portfolio-creative-skew-slider" },
-          { title: "Creative Text Slider", link: "/portfolio-creative-text-slider" },
-          { title: "Parallax Slider", link: "/portfolio-parallax-slider" },
-          { title: "Perspective Showcase", link: "/portfolio-perspective-slider-light" }
-        ]
-      },
-      {
-        title: "Showcases",
-        link: "#",
-        pluseIncon: true,
-        megaMenu: [
-          { title: "Wrapper Slider", link: "/portfolio-wrapper-slider" },
-          { title: "Portfolio slicer", link: "/portfolio-slicer-light" },
-          { title: "Portfolio Showcase", link: "/portfolio-showcase-light" },
-          { title: "Brand Showcase", link: "/brand-showcase-light" },
-          { title: "Interactive with hover", link: "/portfolio-interactive-with-hover" },
-          { title: "Interactive with Scroll", link: "/portfolio-interactive-with-scroll" },
-          { title: "Slider Elegant", link: "/portfolio-slider-elegant-light" }
-        ]
-      },
-      {
-        title: "Single Projects",
-        link: "#",
-        pluseIncon: true,
-        megaMenu: [
-          { title: "Classic Stack", link: "/portfolio-details-classic-stack-light" },
-          { title: "Creative Slider", link: "/portfolio-details-creative-slider-light" },
-          { title: "Gallery", link: "/portfolio-details-gallery-light" },
-          { title: "Modern", link: "/portfolio-details-modern-light" },
-          { title: "Video", link: "/portfolio-details-video-light" },
-          { title: "Image Comparison", link: "/portfolio-details-image-comparison-light" },
-        ]
-      }
     ],
-
   },
   // portfolio
   {
     id: 5,
-    hasDropdown: true,
     active: true,
-    children: true,
     title: "Portfolio",
-    pluseIncon: true,
-    mediumMenu: true,
-    megaMenu: true,
-
     link: "#",
-    // submenus: [
-    //   {
-    //     title: "Portfolio Grid",
-    //     link: "#",
-    //     pluseIncon: true,
-    //     megaMenu: [
-    //       { title: "Two Columns", link: "/portfolio-col-2-light" },
-    //       { title: "Three Columns", link: "/portfolio-col-3-light" },
-    //       { title: "Four Columns Wide", link: "/portfolio-col-4-light" },
-    //       { title: "Masonry", link: "/portfolio-masonry-light" },
-    //       { title: "Portfolio Metro", link: "/portfolio-metro-light" },
-    //       { title: "Portfolio Pinterest", link: "/portfolio-pinterest-light" },
-    //       { title: "Horizontal Showcase", link: "/portfolio-horizontal-showcase-light" }
-    //     ]
-    //   },
-    //   {
-    //     title: "Showcases",
-    //     link: "#",
-    //     pluseIncon: true,
-    //     megaMenu: [
-    //       { title: "Webgl Showcase", link: "/portfolio-webgl-showcase" },
-    //       { title: "Coverflow Slider", link: "/portfolio-coverflow-slider-light" },
-    //       { title: "Creative Thumb Slider", link: "/portfolio-creative-thumb-slider" },
-    //       { title: "Creative Skew Slider", link: "/portfolio-creative-skew-slider" },
-    //       { title: "Creative Text Slider", link: "/portfolio-creative-text-slider" },
-    //       { title: "Parallax Slider", link: "/portfolio-parallax-slider" },
-    //       { title: "Perspective Showcase", link: "/portfolio-perspective-slider-light" }
-    //     ]
-    //   },
-    //   {
-    //     title: "Showcases",
-    //     link: "#",
-    //     pluseIncon: true,
-    //     megaMenu: [
-    //       { title: "Wrapper Slider", link: "/portfolio-wrapper-slider" },
-    //       { title: "Portfolio slicer", link: "/portfolio-slicer-light" },
-    //       { title: "Portfolio Showcase", link: "/portfolio-showcase-light" },
-    //       { title: "Brand Showcase", link: "/brand-showcase-light" },
-    //       { title: "Interactive with hover", link: "/portfolio-interactive-with-hover" },
-    //       { title: "Interactive with Scroll", link: "/portfolio-interactive-with-scroll" },
-    //       { title: "Slider Elegant", link: "/portfolio-slider-elegant-light" }
-    //     ]
-    //   },
-    //   {
-    //     title: "Single Projects",
-    //     link: "#",
-    //     pluseIncon: true,
-    //     megaMenu: [
-    //       { title: "Classic Stack", link: "/portfolio-details-classic-stack-light" },
-    //       { title: "Creative Slider", link: "/portfolio-details-creative-slider-light" },
-    //       { title: "Gallery", link: "/portfolio-details-gallery-light" },
-    //       { title: "Modern", link: "/portfolio-details-modern-light" },
-    //       { title: "Video", link: "/portfolio-details-video-light" },
-    //       { title: "Image Comparison", link: "/portfolio-details-image-comparison-light" },
-    //     ]
-    //   }
-    // ],
-
   },
   // Clients
   {
     id: 6,
-    hasDropdown: true,
     active: true,
-    children: true,
     title: "Clients",
-    pluseIncon: true,
-    mediumMenu: true,
-    megaMenu: true,
-
     link: "#",
-    // submenus: [
-    //   {
-    //     title: "Portfolio Grid",
-    //     link: "#",
-    //     pluseIncon: true,
-    //     megaMenu: [
-    //       { title: "Two Columns", link: "/portfolio-col-2-light" },
-    //       { title: "Three Columns", link: "/portfolio-col-3-light" },
-    //       { title: "Four Columns Wide", link: "/portfolio-col-4-light" },
-    //       { title: "Masonry", link: "/portfolio-masonry-light" },
-    //       { title: "Portfolio Metro", link: "/portfolio-metro-light" },
-    //       { title: "Portfolio Pinterest", link: "/portfolio-pinterest-light" },
-    //       { title: "Horizontal Showcase", link: "/portfolio-horizontal-showcase-light" }
-    //     ]
-    //   },
-    //   {
-    //     title: "Showcases",
-    //     link: "#",
-    //     pluseIncon: true,
-    //     megaMenu: [
-    //       { title: "Webgl Showcase", link: "/portfolio-webgl-showcase" },
-    //       { title: "Coverflow Slider", link: "/portfolio-coverflow-slider-light" },
-    //       { title: "Creative Thumb Slider", link: "/portfolio-creative-thumb-slider" },
-    //       { title: "Creative Skew Slider", link: "/portfolio-creative-skew-slider" },
-    //       { title: "Creative Text Slider", link: "/portfolio-creative-text-slider" },
-    //       { title: "Parallax Slider", link: "/portfolio-parallax-slider" },
-    //       { title: "Perspective Showcase", link: "/portfolio-perspective-slider-light" }
-    //     ]
-    //   },
-    //   {
-    //     title: "Showcases",
-    //     link: "#",
-    //     pluseIncon: true,
-    //     megaMenu: [
-    //       { title: "Wrapper Slider", link: "/portfolio-wrapper-slider" },
-    //       { title: "Portfolio slicer", link: "/portfolio-slicer-light" },
-    //       { title: "Portfolio Showcase", link: "/portfolio-showcase-light" },
-    //       { title: "Brand Showcase", link: "/brand-showcase-light" },
-    //       { title: "Interactive with hover", link: "/portfolio-interactive-with-hover" },
-    //       { title: "Interactive with Scroll", link: "/portfolio-interactive-with-scroll" },
-    //       { title: "Slider Elegant", link: "/portfolio-slider-elegant-light" }
-    //     ]
-    //   },
-    //   {
-    //     title: "Single Projects",
-    //     link: "#",
-    //     pluseIncon: true,
-    //     megaMenu: [
-    //       { title: "Classic Stack", link: "/portfolio-details-classic-stack-light" },
-    //       { title: "Creative Slider", link: "/portfolio-details-creative-slider-light" },
-    //       { title: "Gallery", link: "/portfolio-details-gallery-light" },
-    //       { title: "Modern", link: "/portfolio-details-modern-light" },
-    //       { title: "Video", link: "/portfolio-details-video-light" },
-    //       { title: "Image Comparison", link: "/portfolio-details-image-comparison-light" },
-    //     ]
-    //   }
-    // ],
-
   },
   // Careers
   {
     id: 7,
-    hasDropdown: true,
     active: true,
-    children: true,
     title: "Careers",
-    pluseIncon: true,
-    mediumMenu: true,
-    megaMenu: true,
-
     link: "#",
-    // submenus: [
-    //   {
-    //     title: "Portfolio Grid",
-    //     link: "#",
-    //     pluseIncon: true,
-    //     megaMenu: [
-    //       { title: "Two Columns", link: "/portfolio-col-2-light" },
-    //       { title: "Three Columns", link: "/portfolio-col-3-light" },
-    //       { title: "Four Columns Wide", link: "/portfolio-col-4-light" },
-    //       { title: "Masonry", link: "/portfolio-masonry-light" },
-    //       { title: "Portfolio Metro", link: "/portfolio-metro-light" },
-    //       { title: "Portfolio Pinterest", link: "/portfolio-pinterest-light" },
-    //       { title: "Horizontal Showcase", link: "/portfolio-horizontal-showcase-light" }
-    //     ]
-    //   },
-    //   {
-    //     title: "Showcases",
-    //     link: "#",
-    //     pluseIncon: true,
-    //     megaMenu: [
-    //       { title: "Webgl Showcase", link: "/portfolio-webgl-showcase" },
-    //       { title: "Coverflow Slider", link: "/portfolio-coverflow-slider-light" },
-    //       { title: "Creative Thumb Slider", link: "/portfolio-creative-thumb-slider" },
-    //       { title: "Creative Skew Slider", link: "/portfolio-creative-skew-slider" },
-    //       { title: "Creative Text Slider", link: "/portfolio-creative-text-slider" },
-    //       { title: "Parallax Slider", link: "/portfolio-parallax-slider" },
-    //       { title: "Perspective Showcase", link: "/portfolio-perspective-slider-light" }
-    //     ]
-    //   },
-    //   {
-    //     title: "Showcases",
-    //     link: "#",
-    //     pluseIncon: true,
-    //     megaMenu: [
-    //       { title: "Wrapper Slider", link: "/portfolio-wrapper-slider" },
-    //       { title: "Portfolio slicer", link: "/portfolio-slicer-light" },
-    //       { title: "Portfolio Showcase", link: "/portfolio-showcase-light" },
-    //       { title: "Brand Showcase", link: "/brand-showcase-light" },
-    //       { title: "Interactive with hover", link: "/portfolio-interactive-with-hover" },
-    //       { title: "Interactive with Scroll", link: "/portfolio-interactive-with-scroll" },
-    //       { title: "Slider Elegant", link: "/portfolio-slider-elegant-light" }
-    //     ]
-    //   },
-    //   {
-    //     title: "Single Projects",
-    //     link: "#",
-    //     pluseIncon: true,
-    //     megaMenu: [
-    //       { title: "Classic Stack", link: "/portfolio-details-classic-stack-light" },
-    //       { title: "Creative Slider", link: "/portfolio-details-creative-slider-light" },
-    //       { title: "Gallery", link: "/portfolio-details-gallery-light" },
-    //       { title: "Modern", link: "/portfolio-details-modern-light" },
-    //       { title: "Video", link: "/portfolio-details-video-light" },
-    //       { title: "Image Comparison", link: "/portfolio-details-image-comparison-light" },
-    //     ]
-    //   }
-    // ],
-
   },
   // Blog
   {
     id: 8,
-    hasDropdown: false,
-    // active: true,
-    megaMenu: false,
-    // children: true,
+    active: true,
     title: "Blog",
-    // pluseIncon: true,
     link: "",
-    // submenus: [
-    //   {
-    //     title: "Blog Classic Light",
-    //     link: "/blog-standard-light",
-    //     pluseIncon: false
-    //   },
-    //   {
-    //     title: "Blog Listing Light",
-    //     link: "/blog-list-light",
-    //     pluseIncon: false
-    //   },
-    //   {
-    //     title: "Grid Layout",
-    //     link: "#",
-    //     pluseIncon: true,
-    //     submenus: [
-    //       { title: "2 Columns Light", link: "/blog-grid-2-col-light" },
-    //       { title: "3 Columns Light", link: "/blog-grid-light" },
-    //       { title: "2 Col + sidebar Light", link: "/blog-grid-with-sidebar-light" }
-    //     ]
-    //   },
-    //   {
-    //     title: "Masonry Grid Light",
-    //     link: "/blog-masonry-light",
-    //     pluseIncon: false
-    //   },
-    //   {
-    //     title: "Single Layouts",
-    //     link: "#",
-    //     pluseIncon: true,
-    //     submenus: [
-    //       { title: "Blog Single Post Light", link: "/blog-details-light" },
-    //       { title: "Blog No Sidebar Light", link: "/blog-details-without-sidebar-light" }
-    //     ]
-    //   }
-    // ]
   },
 
   // Contact us
   {
     id: 9,
-    hasDropdown: true,
     active: true,
-    megaMenu: false,
-    children: true,
     title: "Contact",
-    pluseIncon: true,
     link: "",
-    // submenus: [
-    //   {
-    //     title: "Contact Me",
-    //     link: "/contact-me-light",
-    //     pluseIncon: false
-    //   },
-    //   {
-    //     title: "Contact Us",
-    //     link: "/contact-us-light",
-    //     pluseIncon: false
-    //   },
-    //   {
-    //     title: "Get In Touch",
-    //     link: "/contact",
-    //     pluseIncon: false
-    //   },
-    // ]
   }
 ];
 export default headerMenuData;

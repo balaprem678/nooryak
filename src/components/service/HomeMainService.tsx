@@ -8,16 +8,16 @@ import "./HomeMainService.scss"
 const HomeMainService = () => {
 
   return (
-    <div id="down" className="tp-service-area pt-20" style={{ overflow: "hidden" }}>
+    <div id="down" className="tp-service-area pt-20" style={{  overflow: "hidden" }}>
       <div className="container-fluid p-0">
-        <div className="tp-service-pin">
-          <div className="row gx-0">
-            <div className="col-12">
-              <div className="tp-service-title-box">
-                <span className="tp-section-subtitle pre">Services</span>
-              </div>
+        <div className="row gx-0">
+          <div className="col-12">
+            <div className="tp-service-title-box">
+              <span className="tp-section-subtitle pre">Services</span>
             </div>
           </div>
+        </div>
+        <div className="tp-service-pin">
           {servicesData.slice(0, 4).map((service) => {
             return (
               <div key={service.id} className="tp-service-item tp-service-panel">

@@ -3,6 +3,7 @@ import { StaticImageData } from "next/image";
 export interface MenuItem {
   id: number;
   title: string;
+  heading?: string;
   link: string;
   pluseIncon?: boolean;
   megaMenu?: boolean;
@@ -17,6 +18,7 @@ export interface MenuItem {
 
 export interface Submenu {
   title?: string;
+  heading?: string;
   link?: string;
   pluseIncon?: boolean;
   isThumb?: boolean;
@@ -30,6 +32,7 @@ export interface Submenu {
 
 export interface MegaMenuItem {
   title: string;
+  heading?: string;
   link: string;
   tag?: string;
   themeDefault?: string;
@@ -37,6 +40,7 @@ export interface MegaMenuItem {
 
 export interface thumbsDt {
   title: string,
+  heading?: string,
   link: string,
   pluseIncon: boolean,
   isThumb: boolean,
