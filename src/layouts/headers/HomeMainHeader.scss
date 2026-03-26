@@ -95,6 +95,8 @@
                 font-weight: 500;
                 color: #000;
                 transition: 0.3s;
+                padding: 0;
+                padding-bottom: 20px;
 
                 @media screen and (min-width:1500px) {
                     font-size: 18px;
@@ -169,4 +171,6 @@ header li.has-dropdown.p-static.active:hover .tp-megamenu-wrapper.mega-menu.mega
     opacity: 1;
     top: 30px;
     transform: unset;
+    overflow-y: auto;
+    height: 100vh;
 }
