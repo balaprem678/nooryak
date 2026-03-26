@@ -2,7 +2,7 @@ import { MenuItem } from "@/types/menu-d-t";
 import MegaMenuThumb from "../../../public/assets/img/menu/menu-1.png";
 
 const headerMenuData: MenuItem[] = [
-// home
+  // home
   {
     id: 1,
     hasDropdown: true,
@@ -127,50 +127,52 @@ const headerMenuData: MenuItem[] = [
       // },
     ]
   },
-   // Services
+
+  // Services
   {
-    id: 3,
+    id: 4,
     hasDropdown: true,
     active: true,
-    megaMenu: false,
     children: true,
     title: "Services",
     pluseIncon: true,
-    link: "",
+    mediumMenu: true,
+    megaMenu: true,
+
+    link: "#",
     submenus: [
       {
-        title: "Shop Modern",
-        link: "/shop-modern",
-        pluseIncon: false
-      },
-      {
-        title: "Shop With Slider",
-        link: "/shop-with-slider-light",
-        pluseIncon: false
-      },
-      {
-        title: "Shop Page",
+        title: "Web Development",
         link: "#",
         pluseIncon: true,
-        submenus: [
-          { title: "Shop Page", link: "/shop" },
-          { title: "Shop Details", link: "/shop-details" },
+        megaMenu: [
+          { title: "Web Developer", link: "/web-developer" },
+          { title: "Website Development", link: "/website-development" },
+          { title: "WordPress Website", link: "/wordpress-website" },
+          { title: "Ecommerce Website", link: "/ecommerce-website" },
+          { title: "Shopify Website", link: "/shopify-website" },
+          { title: "WooCommerce Website", link: "/woocommerce-website" },
+          { title: "PHP Web Development", link: "/php-web-development" },
+          { title: "React Web Development", link: "/react-web-development" },
+          { title: "Ecommerce Development", link: "/ecommerce-development" },
+          { title: "Shopify Development", link: "/shopify-development" },
+          { title: "Custom Website Development", link: "/custom-website-development" },
+          { title: "Website Design and Development", link: "/website-design-development" }
         ]
       },
       {
-        title: "My Account",
+        title: "App Development",
         link: "#",
         pluseIncon: true,
-        submenus: [
-          { title: "My Account", link: "/my-account" },
-          { title: "Cart", link: "/cart" },
-          { title: "Checkout", link: "/checkout" },
-          { title: "Wishlist", link: "/wishlist" },
-          { title: "LogIn", link: "/login" },
-          { title: "Register", link: "/register" }
+        megaMenu: [
+          { title: "Android Application", link: "/android-application" },
+          { title: "IOS Application", link: "/ios-application" },
+          { title: "React Native", link: "/react-native" },
+          { title: "Flutter App Development", link: "/flutter-app-development" }
         ]
-      }
-    ]
+      },
+    ],
+
   },
   // products
   {
@@ -241,7 +243,7 @@ const headerMenuData: MenuItem[] = [
         ]
       }
     ],
-  
+
   },
   // portfolio
   {
@@ -312,7 +314,7 @@ const headerMenuData: MenuItem[] = [
     //     ]
     //   }
     // ],
-  
+
   },
   // Clients
   {
@@ -383,7 +385,7 @@ const headerMenuData: MenuItem[] = [
     //     ]
     //   }
     // ],
-  
+
   },
   // Careers
   {
@@ -454,7 +456,7 @@ const headerMenuData: MenuItem[] = [
     //     ]
     //   }
     // ],
-  
+
   },
   // Blog
   {
@@ -503,7 +505,7 @@ const headerMenuData: MenuItem[] = [
     //   }
     // ]
   },
- 
+
   // Contact us
   {
     id: 9,
