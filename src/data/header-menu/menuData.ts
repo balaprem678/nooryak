@@ -2,6 +2,7 @@ import { MenuItem } from "@/types/menu-d-t";
 import MegaMenuThumb from "../../../public/assets/img/menu/menu-1.png";
 
 const headerMenuData: MenuItem[] = [
+// home
   {
     id: 1,
     hasDropdown: true,
@@ -73,6 +74,7 @@ const headerMenuData: MenuItem[] = [
       }
     ]
   },
+  // aboutus
   {
     id: 2,
     active: true,
@@ -125,78 +127,338 @@ const headerMenuData: MenuItem[] = [
       // },
     ]
   },
-  // {
-  //   id: 3,
-  //   hasDropdown: true,
-  //   active: true,
-  //   children: true,
-  //   title: "Projects",
-  //   pluseIncon: true,
-  //   mediumMenu: true,
-  //   megaMenu: true,
-
-  //   link: "#",
-  //   submenus: [
-  //     {
-  //       title: "Portfolio Grid",
-  //       link: "#",
-  //       pluseIncon: true,
-  //       megaMenu: [
-  //         { title: "Two Columns", link: "/portfolio-col-2-light" },
-  //         { title: "Three Columns", link: "/portfolio-col-3-light" },
-  //         { title: "Four Columns Wide", link: "/portfolio-col-4-light" },
-  //         { title: "Masonry", link: "/portfolio-masonry-light" },
-  //         { title: "Portfolio Metro", link: "/portfolio-metro-light" },
-  //         { title: "Portfolio Pinterest", link: "/portfolio-pinterest-light" },
-  //         { title: "Horizontal Showcase", link: "/portfolio-horizontal-showcase-light" }
-  //       ]
-  //     },
-  //     {
-  //       title: "Showcases",
-  //       link: "#",
-  //       pluseIncon: true,
-  //       megaMenu: [
-  //         { title: "Webgl Showcase", link: "/portfolio-webgl-showcase" },
-  //         { title: "Coverflow Slider", link: "/portfolio-coverflow-slider-light" },
-  //         { title: "Creative Thumb Slider", link: "/portfolio-creative-thumb-slider" },
-  //         { title: "Creative Skew Slider", link: "/portfolio-creative-skew-slider" },
-  //         { title: "Creative Text Slider", link: "/portfolio-creative-text-slider" },
-  //         { title: "Parallax Slider", link: "/portfolio-parallax-slider" },
-  //         { title: "Perspective Showcase", link: "/portfolio-perspective-slider-light" }
-  //       ]
-  //     },
-  //     {
-  //       title: "Showcases",
-  //       link: "#",
-  //       pluseIncon: true,
-  //       megaMenu: [
-  //         { title: "Wrapper Slider", link: "/portfolio-wrapper-slider" },
-  //         { title: "Portfolio slicer", link: "/portfolio-slicer-light" },
-  //         { title: "Portfolio Showcase", link: "/portfolio-showcase-light" },
-  //         { title: "Brand Showcase", link: "/brand-showcase-light" },
-  //         { title: "Interactive with hover", link: "/portfolio-interactive-with-hover" },
-  //         { title: "Interactive with Scroll", link: "/portfolio-interactive-with-scroll" },
-  //         { title: "Slider Elegant", link: "/portfolio-slider-elegant-light" }
-  //       ]
-  //     },
-  //     {
-  //       title: "Single Projects",
-  //       link: "#",
-  //       pluseIncon: true,
-  //       megaMenu: [
-  //         { title: "Classic Stack", link: "/portfolio-details-classic-stack-light" },
-  //         { title: "Creative Slider", link: "/portfolio-details-creative-slider-light" },
-  //         { title: "Gallery", link: "/portfolio-details-gallery-light" },
-  //         { title: "Modern", link: "/portfolio-details-modern-light" },
-  //         { title: "Video", link: "/portfolio-details-video-light" },
-  //         { title: "Image Comparison", link: "/portfolio-details-image-comparison-light" },
-  //       ]
-  //     }
-  //   ],
-  
-  // },
+   // Services
+  {
+    id: 3,
+    hasDropdown: true,
+    active: true,
+    megaMenu: false,
+    children: true,
+    title: "Services",
+    pluseIncon: true,
+    link: "",
+    // submenus: [
+    //   {
+    //     title: "Shop Modern",
+    //     link: "/shop-modern",
+    //     pluseIncon: false
+    //   },
+    //   {
+    //     title: "Shop With Slider",
+    //     link: "/shop-with-slider-light",
+    //     pluseIncon: false
+    //   },
+    //   {
+    //     title: "Shop Page",
+    //     link: "#",
+    //     pluseIncon: true,
+    //     submenus: [
+    //       { title: "Shop Page", link: "/shop" },
+    //       { title: "Shop Details", link: "/shop-details" },
+    //     ]
+    //   },
+    //   {
+    //     title: "My Account",
+    //     link: "#",
+    //     pluseIncon: true,
+    //     submenus: [
+    //       { title: "My Account", link: "/my-account" },
+    //       { title: "Cart", link: "/cart" },
+    //       { title: "Checkout", link: "/checkout" },
+    //       { title: "Wishlist", link: "/wishlist" },
+    //       { title: "LogIn", link: "/login" },
+    //       { title: "Register", link: "/register" }
+    //     ]
+    //   }
+    // ]
+  },
+  // products
   {
     id: 4,
+    hasDropdown: true,
+    active: true,
+    children: true,
+    title: "Projects",
+    pluseIncon: true,
+    mediumMenu: true,
+    megaMenu: true,
+
+    link: "#",
+    submenus: [
+      {
+        title: "Portfolio Grid",
+        link: "#",
+        pluseIncon: true,
+        megaMenu: [
+          { title: "Two Columns", link: "/portfolio-col-2-light" },
+          { title: "Three Columns", link: "/portfolio-col-3-light" },
+          { title: "Four Columns Wide", link: "/portfolio-col-4-light" },
+          { title: "Masonry", link: "/portfolio-masonry-light" },
+          { title: "Portfolio Metro", link: "/portfolio-metro-light" },
+          { title: "Portfolio Pinterest", link: "/portfolio-pinterest-light" },
+          { title: "Horizontal Showcase", link: "/portfolio-horizontal-showcase-light" }
+        ]
+      },
+      {
+        title: "Showcases",
+        link: "#",
+        pluseIncon: true,
+        megaMenu: [
+          { title: "Webgl Showcase", link: "/portfolio-webgl-showcase" },
+          { title: "Coverflow Slider", link: "/portfolio-coverflow-slider-light" },
+          { title: "Creative Thumb Slider", link: "/portfolio-creative-thumb-slider" },
+          { title: "Creative Skew Slider", link: "/portfolio-creative-skew-slider" },
+          { title: "Creative Text Slider", link: "/portfolio-creative-text-slider" },
+          { title: "Parallax Slider", link: "/portfolio-parallax-slider" },
+          { title: "Perspective Showcase", link: "/portfolio-perspective-slider-light" }
+        ]
+      },
+      {
+        title: "Showcases",
+        link: "#",
+        pluseIncon: true,
+        megaMenu: [
+          { title: "Wrapper Slider", link: "/portfolio-wrapper-slider" },
+          { title: "Portfolio slicer", link: "/portfolio-slicer-light" },
+          { title: "Portfolio Showcase", link: "/portfolio-showcase-light" },
+          { title: "Brand Showcase", link: "/brand-showcase-light" },
+          { title: "Interactive with hover", link: "/portfolio-interactive-with-hover" },
+          { title: "Interactive with Scroll", link: "/portfolio-interactive-with-scroll" },
+          { title: "Slider Elegant", link: "/portfolio-slider-elegant-light" }
+        ]
+      },
+      {
+        title: "Single Projects",
+        link: "#",
+        pluseIncon: true,
+        megaMenu: [
+          { title: "Classic Stack", link: "/portfolio-details-classic-stack-light" },
+          { title: "Creative Slider", link: "/portfolio-details-creative-slider-light" },
+          { title: "Gallery", link: "/portfolio-details-gallery-light" },
+          { title: "Modern", link: "/portfolio-details-modern-light" },
+          { title: "Video", link: "/portfolio-details-video-light" },
+          { title: "Image Comparison", link: "/portfolio-details-image-comparison-light" },
+        ]
+      }
+    ],
+  
+  },
+  // portfolio
+  {
+    id: 5,
+    hasDropdown: true,
+    active: true,
+    children: true,
+    title: "Portfolio",
+    pluseIncon: true,
+    mediumMenu: true,
+    megaMenu: true,
+
+    link: "#",
+    // submenus: [
+    //   {
+    //     title: "Portfolio Grid",
+    //     link: "#",
+    //     pluseIncon: true,
+    //     megaMenu: [
+    //       { title: "Two Columns", link: "/portfolio-col-2-light" },
+    //       { title: "Three Columns", link: "/portfolio-col-3-light" },
+    //       { title: "Four Columns Wide", link: "/portfolio-col-4-light" },
+    //       { title: "Masonry", link: "/portfolio-masonry-light" },
+    //       { title: "Portfolio Metro", link: "/portfolio-metro-light" },
+    //       { title: "Portfolio Pinterest", link: "/portfolio-pinterest-light" },
+    //       { title: "Horizontal Showcase", link: "/portfolio-horizontal-showcase-light" }
+    //     ]
+    //   },
+    //   {
+    //     title: "Showcases",
+    //     link: "#",
+    //     pluseIncon: true,
+    //     megaMenu: [
+    //       { title: "Webgl Showcase", link: "/portfolio-webgl-showcase" },
+    //       { title: "Coverflow Slider", link: "/portfolio-coverflow-slider-light" },
+    //       { title: "Creative Thumb Slider", link: "/portfolio-creative-thumb-slider" },
+    //       { title: "Creative Skew Slider", link: "/portfolio-creative-skew-slider" },
+    //       { title: "Creative Text Slider", link: "/portfolio-creative-text-slider" },
+    //       { title: "Parallax Slider", link: "/portfolio-parallax-slider" },
+    //       { title: "Perspective Showcase", link: "/portfolio-perspective-slider-light" }
+    //     ]
+    //   },
+    //   {
+    //     title: "Showcases",
+    //     link: "#",
+    //     pluseIncon: true,
+    //     megaMenu: [
+    //       { title: "Wrapper Slider", link: "/portfolio-wrapper-slider" },
+    //       { title: "Portfolio slicer", link: "/portfolio-slicer-light" },
+    //       { title: "Portfolio Showcase", link: "/portfolio-showcase-light" },
+    //       { title: "Brand Showcase", link: "/brand-showcase-light" },
+    //       { title: "Interactive with hover", link: "/portfolio-interactive-with-hover" },
+    //       { title: "Interactive with Scroll", link: "/portfolio-interactive-with-scroll" },
+    //       { title: "Slider Elegant", link: "/portfolio-slider-elegant-light" }
+    //     ]
+    //   },
+    //   {
+    //     title: "Single Projects",
+    //     link: "#",
+    //     pluseIncon: true,
+    //     megaMenu: [
+    //       { title: "Classic Stack", link: "/portfolio-details-classic-stack-light" },
+    //       { title: "Creative Slider", link: "/portfolio-details-creative-slider-light" },
+    //       { title: "Gallery", link: "/portfolio-details-gallery-light" },
+    //       { title: "Modern", link: "/portfolio-details-modern-light" },
+    //       { title: "Video", link: "/portfolio-details-video-light" },
+    //       { title: "Image Comparison", link: "/portfolio-details-image-comparison-light" },
+    //     ]
+    //   }
+    // ],
+  
+  },
+  // Clients
+  {
+    id: 6,
+    hasDropdown: true,
+    active: true,
+    children: true,
+    title: "Clients",
+    pluseIncon: true,
+    mediumMenu: true,
+    megaMenu: true,
+
+    link: "#",
+    // submenus: [
+    //   {
+    //     title: "Portfolio Grid",
+    //     link: "#",
+    //     pluseIncon: true,
+    //     megaMenu: [
+    //       { title: "Two Columns", link: "/portfolio-col-2-light" },
+    //       { title: "Three Columns", link: "/portfolio-col-3-light" },
+    //       { title: "Four Columns Wide", link: "/portfolio-col-4-light" },
+    //       { title: "Masonry", link: "/portfolio-masonry-light" },
+    //       { title: "Portfolio Metro", link: "/portfolio-metro-light" },
+    //       { title: "Portfolio Pinterest", link: "/portfolio-pinterest-light" },
+    //       { title: "Horizontal Showcase", link: "/portfolio-horizontal-showcase-light" }
+    //     ]
+    //   },
+    //   {
+    //     title: "Showcases",
+    //     link: "#",
+    //     pluseIncon: true,
+    //     megaMenu: [
+    //       { title: "Webgl Showcase", link: "/portfolio-webgl-showcase" },
+    //       { title: "Coverflow Slider", link: "/portfolio-coverflow-slider-light" },
+    //       { title: "Creative Thumb Slider", link: "/portfolio-creative-thumb-slider" },
+    //       { title: "Creative Skew Slider", link: "/portfolio-creative-skew-slider" },
+    //       { title: "Creative Text Slider", link: "/portfolio-creative-text-slider" },
+    //       { title: "Parallax Slider", link: "/portfolio-parallax-slider" },
+    //       { title: "Perspective Showcase", link: "/portfolio-perspective-slider-light" }
+    //     ]
+    //   },
+    //   {
+    //     title: "Showcases",
+    //     link: "#",
+    //     pluseIncon: true,
+    //     megaMenu: [
+    //       { title: "Wrapper Slider", link: "/portfolio-wrapper-slider" },
+    //       { title: "Portfolio slicer", link: "/portfolio-slicer-light" },
+    //       { title: "Portfolio Showcase", link: "/portfolio-showcase-light" },
+    //       { title: "Brand Showcase", link: "/brand-showcase-light" },
+    //       { title: "Interactive with hover", link: "/portfolio-interactive-with-hover" },
+    //       { title: "Interactive with Scroll", link: "/portfolio-interactive-with-scroll" },
+    //       { title: "Slider Elegant", link: "/portfolio-slider-elegant-light" }
+    //     ]
+    //   },
+    //   {
+    //     title: "Single Projects",
+    //     link: "#",
+    //     pluseIncon: true,
+    //     megaMenu: [
+    //       { title: "Classic Stack", link: "/portfolio-details-classic-stack-light" },
+    //       { title: "Creative Slider", link: "/portfolio-details-creative-slider-light" },
+    //       { title: "Gallery", link: "/portfolio-details-gallery-light" },
+    //       { title: "Modern", link: "/portfolio-details-modern-light" },
+    //       { title: "Video", link: "/portfolio-details-video-light" },
+    //       { title: "Image Comparison", link: "/portfolio-details-image-comparison-light" },
+    //     ]
+    //   }
+    // ],
+  
+  },
+  // Careers
+  {
+    id: 7,
+    hasDropdown: true,
+    active: true,
+    children: true,
+    title: "Careers",
+    pluseIncon: true,
+    mediumMenu: true,
+    megaMenu: true,
+
+    link: "#",
+    // submenus: [
+    //   {
+    //     title: "Portfolio Grid",
+    //     link: "#",
+    //     pluseIncon: true,
+    //     megaMenu: [
+    //       { title: "Two Columns", link: "/portfolio-col-2-light" },
+    //       { title: "Three Columns", link: "/portfolio-col-3-light" },
+    //       { title: "Four Columns Wide", link: "/portfolio-col-4-light" },
+    //       { title: "Masonry", link: "/portfolio-masonry-light" },
+    //       { title: "Portfolio Metro", link: "/portfolio-metro-light" },
+    //       { title: "Portfolio Pinterest", link: "/portfolio-pinterest-light" },
+    //       { title: "Horizontal Showcase", link: "/portfolio-horizontal-showcase-light" }
+    //     ]
+    //   },
+    //   {
+    //     title: "Showcases",
+    //     link: "#",
+    //     pluseIncon: true,
+    //     megaMenu: [
+    //       { title: "Webgl Showcase", link: "/portfolio-webgl-showcase" },
+    //       { title: "Coverflow Slider", link: "/portfolio-coverflow-slider-light" },
+    //       { title: "Creative Thumb Slider", link: "/portfolio-creative-thumb-slider" },
+    //       { title: "Creative Skew Slider", link: "/portfolio-creative-skew-slider" },
+    //       { title: "Creative Text Slider", link: "/portfolio-creative-text-slider" },
+    //       { title: "Parallax Slider", link: "/portfolio-parallax-slider" },
+    //       { title: "Perspective Showcase", link: "/portfolio-perspective-slider-light" }
+    //     ]
+    //   },
+    //   {
+    //     title: "Showcases",
+    //     link: "#",
+    //     pluseIncon: true,
+    //     megaMenu: [
+    //       { title: "Wrapper Slider", link: "/portfolio-wrapper-slider" },
+    //       { title: "Portfolio slicer", link: "/portfolio-slicer-light" },
+    //       { title: "Portfolio Showcase", link: "/portfolio-showcase-light" },
+    //       { title: "Brand Showcase", link: "/brand-showcase-light" },
+    //       { title: "Interactive with hover", link: "/portfolio-interactive-with-hover" },
+    //       { title: "Interactive with Scroll", link: "/portfolio-interactive-with-scroll" },
+    //       { title: "Slider Elegant", link: "/portfolio-slider-elegant-light" }
+    //     ]
+    //   },
+    //   {
+    //     title: "Single Projects",
+    //     link: "#",
+    //     pluseIncon: true,
+    //     megaMenu: [
+    //       { title: "Classic Stack", link: "/portfolio-details-classic-stack-light" },
+    //       { title: "Creative Slider", link: "/portfolio-details-creative-slider-light" },
+    //       { title: "Gallery", link: "/portfolio-details-gallery-light" },
+    //       { title: "Modern", link: "/portfolio-details-modern-light" },
+    //       { title: "Video", link: "/portfolio-details-video-light" },
+    //       { title: "Image Comparison", link: "/portfolio-details-image-comparison-light" },
+    //     ]
+    //   }
+    // ],
+  
+  },
+  // Blog
+  {
+    id: 8,
     hasDropdown: false,
     // active: true,
     megaMenu: false,
@@ -241,52 +503,10 @@ const headerMenuData: MenuItem[] = [
     //   }
     // ]
   },
+ 
+  // Contact us
   {
-    id: 5,
-    hasDropdown: true,
-    active: true,
-    megaMenu: false,
-    children: true,
-    title: "Services",
-    pluseIncon: true,
-    link: "",
-    // submenus: [
-    //   {
-    //     title: "Shop Modern",
-    //     link: "/shop-modern",
-    //     pluseIncon: false
-    //   },
-    //   {
-    //     title: "Shop With Slider",
-    //     link: "/shop-with-slider-light",
-    //     pluseIncon: false
-    //   },
-    //   {
-    //     title: "Shop Page",
-    //     link: "#",
-    //     pluseIncon: true,
-    //     submenus: [
-    //       { title: "Shop Page", link: "/shop" },
-    //       { title: "Shop Details", link: "/shop-details" },
-    //     ]
-    //   },
-    //   {
-    //     title: "My Account",
-    //     link: "#",
-    //     pluseIncon: true,
-    //     submenus: [
-    //       { title: "My Account", link: "/my-account" },
-    //       { title: "Cart", link: "/cart" },
-    //       { title: "Checkout", link: "/checkout" },
-    //       { title: "Wishlist", link: "/wishlist" },
-    //       { title: "LogIn", link: "/login" },
-    //       { title: "Register", link: "/register" }
-    //     ]
-    //   }
-    // ]
-  },
-  {
-    id: 6,
+    id: 9,
     hasDropdown: true,
     active: true,
     megaMenu: false,
