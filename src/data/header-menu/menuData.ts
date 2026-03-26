@@ -137,40 +137,40 @@ const headerMenuData: MenuItem[] = [
     title: "Services",
     pluseIncon: true,
     link: "",
-    // submenus: [
-    //   {
-    //     title: "Shop Modern",
-    //     link: "/shop-modern",
-    //     pluseIncon: false
-    //   },
-    //   {
-    //     title: "Shop With Slider",
-    //     link: "/shop-with-slider-light",
-    //     pluseIncon: false
-    //   },
-    //   {
-    //     title: "Shop Page",
-    //     link: "#",
-    //     pluseIncon: true,
-    //     submenus: [
-    //       { title: "Shop Page", link: "/shop" },
-    //       { title: "Shop Details", link: "/shop-details" },
-    //     ]
-    //   },
-    //   {
-    //     title: "My Account",
-    //     link: "#",
-    //     pluseIncon: true,
-    //     submenus: [
-    //       { title: "My Account", link: "/my-account" },
-    //       { title: "Cart", link: "/cart" },
-    //       { title: "Checkout", link: "/checkout" },
-    //       { title: "Wishlist", link: "/wishlist" },
-    //       { title: "LogIn", link: "/login" },
-    //       { title: "Register", link: "/register" }
-    //     ]
-    //   }
-    // ]
+    submenus: [
+      {
+        title: "Shop Modern",
+        link: "/shop-modern",
+        pluseIncon: false
+      },
+      {
+        title: "Shop With Slider",
+        link: "/shop-with-slider-light",
+        pluseIncon: false
+      },
+      {
+        title: "Shop Page",
+        link: "#",
+        pluseIncon: true,
+        submenus: [
+          { title: "Shop Page", link: "/shop" },
+          { title: "Shop Details", link: "/shop-details" },
+        ]
+      },
+      {
+        title: "My Account",
+        link: "#",
+        pluseIncon: true,
+        submenus: [
+          { title: "My Account", link: "/my-account" },
+          { title: "Cart", link: "/cart" },
+          { title: "Checkout", link: "/checkout" },
+          { title: "Wishlist", link: "/wishlist" },
+          { title: "LogIn", link: "/login" },
+          { title: "Register", link: "/register" }
+        ]
+      }
+    ]
   },
   // products
   {
