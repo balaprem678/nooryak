@@ -1,6 +1,6 @@
 .custom-header {
     z-index: 999;
-    width: 85%;
+    width: 100%;
     transition: all .3s;
     position: fixed;
     top: 30px;
@@ -11,6 +11,8 @@
         justify-content: space-between;
         align-items: center;
         display: flex;
+        width: 95%;
+        margin: auto;
 
         .rights {
             display: flex;
@@ -71,6 +73,10 @@
 
         .menu-btn {
             display: flex;
+            background: linear-gradient(135deg, #ff7a18, #ff3d00);
+            border: 1px solid #ff3d00;
+            padding: 8px;
+            border-radius: 6px;
         }
     }
 
@@ -96,10 +102,12 @@
                 color: #000;
                 transition: 0.3s;
                 padding: 0;
-                
+                display: flex;
+                align-items: center;
+
                 @media screen and (min-width:1500px) {
                     padding: 0;
-                    padding-bottom: 10px;
+                    // padding-bottom: 10px;
                     font-size: 18px;
                 }
 
@@ -108,12 +116,7 @@
                 }
             }
 
-            .tp-megamenu-list {
 
-                ul {
-                    display: block;
-                }
-            }
         }
     }
 }
@@ -132,7 +135,7 @@
     transition: 0.3s;
 
     @media screen and (min-width:1500px) {
-        font-size: 18px;
+        font-size: 16px;
     }
 
 
@@ -173,5 +176,5 @@ header li.has-dropdown.p-static.active:hover .tp-megamenu-wrapper.mega-menu.mega
     top: 30px;
     transform: unset;
     overflow-y: auto;
-    height: 100vh;
+    height: 90vh;
 }

@@ -14,6 +14,8 @@ import { ImageDT } from '@/types/custom-d-t';
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
+import { Images } from "@/utils/Images";
+import "./OffCanvasPanel.scss"
 
 const galleryImages: ImageDT[] = [
     { id: 1, imgSrc: offcanvas1 },
@@ -37,8 +39,8 @@ const OffCanvasPanel: React.FC<IProps> = ({ openOffcanvas, setOpenOffcanvas }) =
                     <div className="tp-offcanvas-top d-flex align-items-center justify-content-between">
                         <div className="tp-offcanvas-logo">
                             <Link href="/">
-                                <Image className="logo-1" width={120} src={logoBlack} alt="logo-black" />
-                                <Image className="logo-2" width={120} src={logoWhite} alt="logo-white" />
+                                <Image className="logo-1" width={120} src={Images.logo} alt="logo-black" />
+                                <Image className="logo-2" width={120} src={Images.logo} alt="logo-white" />
                             </Link>
                         </div>
                         <div className="tp-offcanvas-close">

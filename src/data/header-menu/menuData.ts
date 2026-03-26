@@ -31,8 +31,6 @@ const headerMenuData: MenuItem[] = [
     submenus: [
       {
         title: "Web Development",
-        link: "#",
-        pluseIncon: true,
         megaMenu: [
           { title: "Web Developer", link: "/web-developer" },
           { title: "Website Development", link: "/website-development" },
@@ -57,6 +55,15 @@ const headerMenuData: MenuItem[] = [
           { title: "IOS Application", link: "/ios-application" },
           { title: "React Native", link: "/react-native" },
           { title: "Flutter App Development", link: "/flutter-app-development" },
+          {
+            heading: "Pay-Per-Click (PPC)",
+            title: "",
+            link: ""
+          },
+          { title: "Google Ads", link: "/google-ads" },
+          { title: "Facebook Ads", link: "/facebook-ads" },
+          { title: "Display Advertising", link: "/display-advertising" },
+          { title: "Remarketing Campaigns", link: "/remarketing-campaigns" },
         ]
       },
       {
@@ -73,7 +80,17 @@ const headerMenuData: MenuItem[] = [
           { title: "On-Page Optimization", link: "/on-page-optimization" },
           { title: "Off-Page Optimization", link: "/off-page-optimization" },
           { title: "Technical SEO", link: "/technical-seo" },
-          { title: "Branding", link: "/branding" }
+          { title: "Branding", link: "/branding" },
+
+          {
+            heading: "Local SEO",
+            title: "",
+            link: ""
+          },
+          { title: "Google My Business Ranking", link: "/google-my-business-ranking" },
+          { title: "Local Directory Listings", link: "/local-directory-listings" },
+          { title: "Local SEO Tools", link: "/local-seo-tools" },
+
         ]
       },
       {
@@ -87,30 +104,40 @@ const headerMenuData: MenuItem[] = [
           { title: "LinkedIn Marketing", link: "/linkedin-marketing" },
           { title: "Twitter Marketing", link: "/twitter-marketing" },
           { title: "Social Media Advertising", link: "/social-media-advertising" },
-          { title: "Social Media Post Scheduling", link: "/social-media-post-scheduling" }
+          { title: "Social Media Post Scheduling", link: "/social-media-post-scheduling" },
+          {
+            heading: "Video Editing",
+            title: "",
+            link: ""
+          },
+          { title: "Reel Videos", link: "/reel-videos" },
+          { title: "Model Shoot Videos", link: "/model-shoot-videos" },
+          { title: "RealEstate Drone Shots", link: "/realestate-drone-shots" },
+          { title: "Custom Videos", link: "/custom-videos" },
+
         ]
       },
-      {
-        title: "Local SEO",
-        link: "#",
-        pluseIncon: true,
-        megaMenu: [
-          { title: "Google My Business Ranking", link: "/google-my-business-ranking" },
-          { title: "Local Directory Listings", link: "/local-directory-listings" },
-          { title: "Local SEO Tools", link: "/local-seo-tools" }
-        ]
-      },
-      {
-        title: "Pay-Per-Click (PPC)",
-        link: "#",
-        pluseIncon: true,
-        megaMenu: [
-          { title: "Google Ads", link: "/google-ads" },
-          { title: "Facebook Ads", link: "/facebook-ads" },
-          { title: "Display Advertising", link: "/display-advertising" },
-          { title: "Remarketing Campaigns", link: "/remarketing-campaigns" }
-        ]
-      },
+      // {
+      //   title: "Local SEO",
+      //   link: "#",
+      //   pluseIncon: true,
+      //   megaMenu: [
+      //     { title: "Google My Business Ranking", link: "/google-my-business-ranking" },
+      //     { title: "Local Directory Listings", link: "/local-directory-listings" },
+      //     { title: "Local SEO Tools", link: "/local-seo-tools" }
+      //   ]
+      // },
+      // {
+      //   title: "Pay-Per-Click (PPC)",
+      //   link: "#",
+      //   pluseIncon: true,
+      //   megaMenu: [
+      //     { title: "Google Ads", link: "/google-ads" },
+      //     { title: "Facebook Ads", link: "/facebook-ads" },
+      //     { title: "Display Advertising", link: "/display-advertising" },
+      //     { title: "Remarketing Campaigns", link: "/remarketing-campaigns" }
+      //   ]
+      // },
       {
         title: "Graphic Designing",
         link: "#",
@@ -146,17 +173,43 @@ const headerMenuData: MenuItem[] = [
           { title: "Reel Videos", link: "/reel-videos" },
           { title: "Model Shoot Videos", link: "/model-shoot-videos" },
           { title: "RealEstate Drone Shots", link: "/realestate-drone-shots" },
-          { title: "Custom Videos", link: "/custom-videos" }
+          { title: "Custom Videos", link: "/custom-videos" },
+
+
+           {
+            heading: "Software Development",
+            title: "",
+            link: ""
+          },
+          { title: "Software Development", link: "/software-development" },
+
+          // AI
+          {
+            heading: "AI Automations",
+            title: "",
+            link: ""
+          },
+          { title: "AI Automations", link: "/ai-automations" },
         ]
       },
-      {
-        title: "Software Development",
-        link: "/software-development"
-      },
-      {
-        title: "AI Automations",
-        link: "/ai-automations"
-      }
+      // {
+      //   title: "Software Development",
+      //   link: "/software-development",
+      //   pluseIncon: true,
+      //   megaMenu: [
+      //     { title: "Software Development", link: "/reel-videos" },
+
+      //   ]
+      // },
+      // {
+      //   title: "AI Automations",
+      //   link: "/ai-automations",
+      //   pluseIncon: true,
+      //   megaMenu: [
+      //     { title: "AI Automations", link: "/reel-videos" },
+
+      //   ]
+      // }
     ],
 
   },

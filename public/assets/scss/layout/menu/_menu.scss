@@ -404,14 +404,12 @@
             background: rgba(255, 255, 255, 0.9);
             box-shadow: 0 2px 6px 0 rgba(19, 19, 22, 0.1);
 
-
             & .tp-megamenu-title {
-                color: #111013;
-                border-bottom: 1px solid #F3F3F6;
+                color: #ff5722;
             }
 
             & .tp-megamenu-list ul::after {
-                background-color: #F3F3F6;
+                display: none !important;
             }
 
             & .tp-megamenu-list ul li a {
@@ -432,26 +430,41 @@
     &-title {
         text-align: start;
         text-transform: uppercase;
-        color: var(--tp-common-white);
         border-bottom: 1px solid #ffffff0f;
-        margin-bottom: 0;
-        padding-bottom: 15px;
-        padding-left: 15px;
-        font-size: 18px;
+        margin-bottom: 0 !important;
+        padding-bottom: 15px !important;
+        font-size: 15px;
         font-weight: 700;
         line-height: 1;
+        position: relative;
 
-        @media #{$xxl} {
-            padding-left: 23px;
+        @media screen and (max-width:1400px) {
+            font-size: 13px;
+
         }
 
-        @media #{$xl} {
-            padding-left: 20px;
+        &::after {
+            content: "";
+            background-color: #ff5722;
+            border-radius: 50px;
+            width: 50px;
+            height: 2px;
+            position: absolute;
+            bottom: 10px;
+            left: 0;
         }
 
-        @media #{$lg,$md,$xs} {
-            padding-left: 20px;
-        }
+        // @media #{$xxl} {
+        //     padding-left: 23px;
+        // }
+
+        // @media #{$xl} {
+        //     padding-left: 20px;
+        // }
+
+        // @media #{$lg,$md,$xs} {
+        //     padding-left: 20px;
+        // }
     }
 
     &-list {
@@ -460,8 +473,6 @@
         & ul {
             position: relative;
             height: 100%;
-            padding-top: 18px;
-            padding-bottom: 50px;
 
             &::after {
                 position: absolute;
@@ -484,9 +495,9 @@
                     padding: 0px 10px;
                 }
 
-                &:not(:last-child) {
-                    margin-bottom: 10px;
-                }
+                // &:not(:last-child) {
+                //     margin-bottom: 10px;
+                // }
 
                 & a {
                     position: relative;
@@ -531,9 +542,9 @@
                             padding: 5px 6px;
                         }
 
-                        @media #{$xl,$lg,$md,$xs} {
-                            display: none;
-                        }
+                        // @media #{$xl,$lg,$md,$xs} {
+                        //     display: none;
+                        // }
 
                         &.hot {
                             color: #FF535B;
