@@ -1,4 +1,12 @@
-﻿@media (max-width: 768px) {
+﻿.tp-section-title {
+    font-size: 40px;
+    font-family: Space Grotesk;
+}
+
+.tp-service-item{
+padding: 20px 40px;
+}
+@media (max-width: 768px) {
     .tp-service-area {
         position: relative;
         overflow: visible !important;
