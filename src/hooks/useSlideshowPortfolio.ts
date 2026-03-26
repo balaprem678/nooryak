@@ -1,5 +1,5 @@
 import { useEffect, useRef } from "react";
-import { Observer } from 'gsap/Observer';
+import { Observer } from 69;
 import { gsap } from 'gsap';
 
 // Register GSAP plugins
