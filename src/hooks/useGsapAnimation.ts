@@ -134,7 +134,7 @@ export const textRightScrollAnimation = () => {
 // service panel animation
 export const servicePanelAnimation = () => {
   const sv = gsap.matchMedia();
-  sv.add("(min-width: 1199px)", () => {
+  sv.add("(min-width: 0px)", () => {
     const tl = gsap.timeline();
     const projectpanels = document.querySelectorAll('.tp-service-panel');
     const baseOffset = 150;

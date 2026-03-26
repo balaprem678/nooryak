@@ -235,7 +235,7 @@ export default function HomeMainAbout() {
                     <div className="about-right">
                         <div className="aboutTag">
                             <span className="about1">ABOUT</span>
-                            <span className="brand">NOORYAK</span>
+                            <span className="brand">NOORYAK TECHNOLOGY</span>
 
                             {/* bottom gradient line */}
                             <span className="underline"></span>

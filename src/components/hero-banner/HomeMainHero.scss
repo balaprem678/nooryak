@@ -193,6 +193,20 @@ $bp-sm: 480px;
     background-size: 40%;
     z-index: 2;
 
+    &::after{
+        content: "";
+        background: url("../../../public/assets/images/home/chart.png");
+        background-repeat: no-repeat;
+        background-size: 100%;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+
+        @media screen and (max-width:768px){
+            display: none;
+        }
+    }
+
     @media (max-width: $bp-xl) {
         padding: 20px 40px 50px 90px;
     }
