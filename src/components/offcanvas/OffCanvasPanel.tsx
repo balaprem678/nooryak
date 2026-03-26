@@ -74,7 +74,7 @@ const OffCanvasPanel: React.FC<IProps> = ({ openOffcanvas, setOpenOffcanvas }) =
                             <h3 className="tp-offcanvas-title sm">Information</h3>
                             <ul>
                                 <li><Link href="tel:1245654">+ 4 20 7700 1007</Link></li>
-                                <li><Link href="mailto:hello@diego.com">hello@diego.com</Link></li>
+                                <li><Link href="mailto:hello@diego.com">nooryak@gmail.com</Link></li>
                                 <li><Link href="#">Avenue de Roma 158b, Lisboa</Link></li>
                             </ul>
                         </div>

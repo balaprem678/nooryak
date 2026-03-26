@@ -36,101 +36,13 @@ const mobileMenuData: MenuItem[] = [
         id: 1,
         title: "Home",
         link: "/",
-        megaMenu: true,
-        // columns: [
-        //     {
-        //         title: "Home Light Version",
-        //         links: [
-        //             { title: "Modern Agency", link: "/", badge: "Popular" },
-        //             { title: "Design Studio", link: "/design-studio" },
-        //             { title: "Digital Marketing", link: "/digital-marketing", badge: "Trending" },
-        //             { title: "Creative Studio", link: "/creative-studio" },
-        //             { title: "Design Agency", link: "/design-agency" },
-        //             { title: "Creative Agency", link: "/creative-agency" },
-        //             { title: "Architecture Hub", link: "/architecture-hub", badge: "Hot" },
-        //             { title: "AI Image Genaretor", link: "/unique-ai-image" }
-        //         ]
-        //     },
-        //     {
-        //         title: "Home Light Version",
-        //         links: [
-        //             { title: "Corporate Agency", link: "/corporate-agency" },
-        //             { title: "Mobile App", link: "/mobile-application", badge: "Popular" },
-        //             { title: "IT Solutions", link: "/it-solution", badge: "Hot" },
-        //             { title: "Cryptocurrency", link: "/cryptocurrency" },
-        //             { title: "Startup Agency", link: "/startup-agency", badge: "Popular" },
-        //             { title: "Fashion Studio", link: "/fashion-studio" },
-        //             { title: "Personal Portfolio", link: "/personal-portfolio" },
-        //             { title: "Shop Home", link: "/shop-modern", badge: "Hot", }
-        //         ]
-        //     },
-        //     {
-        //         title: "Showcases",
-        //         links: [
-        //             { title: "Webgl Showcase", link: "/portfolio-webgl-showcase", badge: "Hot" },
-        //             { title: "Coverflow Slider", link: "/portfolio-coverflow-slider-light" },
-        //             { title: "Creative Thumb Slider", link: "/portfolio-creative-thumb-slider", badge: "Hot" },
-        //             { title: "Creative Skew Slider", link: "/portfolio-creative-skew-slider", badge: "Hot" },
-        //             { title: "Creative Text Slider", link: "/portfolio-creative-text-slider" },
-        //             { title: "Parallax Slider", link: "/portfolio-parallax-slider" },
-        //             { title: "Perspective Showcase", link: "/portfolio-perspective-slider-light", badge: "Hot" },
-        //             { title: "Horizontal Showcase", link: "/portfolio-horizontal-showcase-light" }
-        //         ]
-        //     },
-        //     {
-        //         title: "Showcases",
-        //         links: [
-        //             { title: "Wrapper Slider", link: "/portfolio-wrapper-slider", badge: "Hot" },
-        //             { title: "Portfolio slicer", link: "/portfolio-slicer-light", badge: "Hot" },
-        //             { title: "Portfolio Showcase", link: "/portfolio-showcase-light" },
-        //             { title: "Brand Showcase", link: "/brand-showcase-light" },
-        //             { title: "Interactive with hover", link: "/portfolio-interactive-with-hover", badge: "Hot" },
-        //             { title: "Interactive with Scroll", link: "/portfolio-interactive-with-scroll" },
-        //             { title: "Slider Elegant", link: "/portfolio-slider-elegant-light" }
-        //         ]
-        //     }
-        // ]
+        megaMenu: false,
     },
     {
         id: 2,
         title: "About Us",
         link: "#",
-        megaMenu: true,
-        // columns: [
-        //     {
-        //         title: "About Light Version",
-        //         links: [
-        //             { title: "About Me", link: "/about-me-light" },
-        //             { title: "About Us", link: "/about-us-light" },
-        //             { title: "Modern About", link: "/about-modern-light" },
-        //             { title: "Creative About", link: "/about-creative-light" },
-        //             { title: "Startup About", link: "/about-startup-light" },
-        //             { title: "Career", link: "/career-light" }
-        //         ]
-        //     },
-        //     {
-        //         title: "Services Light Version",
-        //         links: [
-        //             { title: "Services", link: "/service-1-light" },
-        //             { title: "Corporate Services", link: "/service-2-light" },
-        //             { title: "Startup Services", link: "/service-3-light" },
-        //             { title: "Modern Services", link: "/service-4-light" },
-        //             { title: "Services Details", link: "/service-details-light" },
-        //             { title: "Services Details 02", link: "/service-details-2-light" }
-        //         ]
-        //     },
-        //     {
-        //         title: "Special Pages Light",
-        //         links: [
-        //             { title: "Careers Details", link: "/career-details-light" },
-        //             { title: "Pricing", link: "/pricing-light" },
-        //             { title: "Team", link: "/team-light" },
-        //             { title: "Team Details", link: "/team-details-light" },
-        //             { title: "FAQ's", link: "/faq-light" },
-        //             { title: "404 Page", link: "/error-light" }
-        //         ]
-        //     }
-        // ]
+        megaMenu: false,
     },
     {
         id: 3,
@@ -139,52 +51,121 @@ const mobileMenuData: MenuItem[] = [
         megaMenu: true,
         columns: [
             {
-                title: "Portfolio Grid",
+                title: "Web Development",
                 links: [
-                    { title: "Two Columns", link: "/portfolio-col-2-light" },
-                    { title: "Three Columns", link: "/portfolio-col-3-light" },
-                    { title: "Four Columns Wide", link: "/portfolio-col-4-light" },
-                    { title: "Masonry", link: "/portfolio-masonry-light" },
-                    { title: "Portfolio Metro", link: "/portfolio-metro-light" },
-                    { title: "Portfolio Pinterest", link: "/portfolio-pinterest-light" },
-                    { title: "Horizontal Showcase", link: "/portfolio-horizontal-showcase-light" }
+                    { title: "Web Developer", link: "/web-developer" },
+                    { title: "Website Development", link: "/website-development" },
+                    { title: "WordPress Website", link: "/wordpress-website" },
+                    { title: "Ecommerce Website", link: "/ecommerce-website" },
+                    { title: "Shopify Website", link: "/shopify-website" },
+                    { title: "WooCommerce Website", link: "/woocommerce-website" },
+                    { title: "PHP Web Development", link: "/php-web-development" },
+                    { title: "React Web Development", link: "/react-web-development" },
+                    { title: "Ecommerce Development", link: "/ecommerce-development" },
+                    { title: "Shopify Development", link: "/shopify-development" },
+                    { title: "Custom Website Development", link: "/custom-website-development" },
+                    { title: "Website Design and Development", link: "/website-design-development" }
                 ]
             },
             {
-                title: "Showcases",
+                title: "App Development",
                 links: [
-                    { title: "Webgl Showcase", link: "/portfolio-webgl-showcase" },
-                    { title: "Coverflow Slider", link: "/portfolio-coverflow-slider-light" },
-                    { title: "Creative Thumb Slider", link: "/portfolio-creative-thumb-slider" },
-                    { title: "Creative Skew Slider", link: "/portfolio-creative-skew-slider" },
-                    { title: "Creative Text Slider", link: "/portfolio-creative-text-slider" },
-                    { title: "Parallax Slider", link: "/portfolio-parallax-slider" },
-                    { title: "Perspective Showcase", link: "/portfolio-perspective-slider-light" }
+                    { title: "Android Application", link: "/android-application" },
+                    { title: "IOS Application", link: "/ios-application" },
+                    { title: "React Native", link: "/react-native" },
+                    { title: "Flutter App Development", link: "/flutter-app-development" },
                 ]
             },
             {
-                title: "Showcases",
+                title: "Digital Marketing",
                 links: [
-                    { title: "Wrapper Slider", link: "/portfolio-wrapper-slider" },
-                    { title: "Portfolio slicer", link: "/portfolio-slicer-light" },
-                    { title: "Portfolio Showcase", link: "/portfolio-showcase-light" },
-                    { title: "Brand Showcase", link: "/brand-showcase-light" },
-                    { title: "Interactive with hover", link: "/portfolio-interactive-with-hover" },
-                    { title: "Interactive with Scroll", link: "/portfolio-interactive-with-scroll" },
-                    { title: "Slider Elegant", link: "/portfolio-slider-elegant-light" }
+                    { title: "Search Engine Optimization", link: "/search-engine-optimization" },
+                    { title: "Search Engine Marketing", link: "/search-engine-marketing" },
+                    { title: "Social Media Marketing", link: "/social-media-marketing" },
+                    { title: "SMS Marketing", link: "/sms-marketing" },
+                    { title: "Facebook Marketing", link: "/facebook-marketing" },
+                    { title: "Content Marketing", link: "/content-marketing" },
+                    { title: "On-Page Optimization", link: "/on-page-optimization" },
+                    { title: "Off-Page Optimization", link: "/off-page-optimization" },
+                    { title: "Technical SEO", link: "/technical-seo" },
+                    { title: "Branding", link: "/branding" }
                 ]
             },
             {
-                title: "Single Projects",
+                title: "Social Media Marketing",
                 links: [
-                    { title: "Classic Stack", link: "/portfolio-details-classic-stack-light" },
-                    { title: "Creative Slider", link: "/portfolio-details-creative-slider-light" },
-                    { title: "Gallery", link: "/portfolio-details-gallery-light" },
-                    { title: "Modern", link: "/portfolio-details-modern-light" },
-                    { title: "Video", link: "/portfolio-details-video-light" },
-                    { title: "Image Comparison", link: "/portfolio-details-image-comparison-light" },
+                    { title: "Facebook Marketing", link: "/facebook-marketing" },
+                    { title: "Instagram Marketing", link: "/instagram-marketing" },
+                    { title: "Youtube Marketing", link: "/youtube-marketing" },
+                    { title: "LinkedIn Marketing", link: "/linkedin-marketing" },
+                    { title: "Twitter Marketing", link: "/twitter-marketing" },
+                    { title: "Social Media Advertising", link: "/social-media-advertising" },
+                    { title: "Social Media Post Scheduling", link: "/social-media-post-scheduling" }
                 ]
-            }
+            },
+            {
+                title: "Local SEO",
+                links: [
+                    { title: "Google My Business Ranking", link: "/google-my-business-ranking" },
+                    { title: "Local Directory Listings", link: "/local-directory-listings" },
+                    { title: "Local SEO Tools", link: "/local-seo-tools" }
+                ]
+            },
+            {
+                title: "Pay-Per-Click (PPC)",
+                links: [
+                    { title: "Google Ads", link: "/google-ads" },
+                    { title: "Facebook Ads", link: "/facebook-ads" },
+                    { title: "Display Advertising", link: "/display-advertising" },
+                    { title: "Remarketing Campaigns", link: "/remarketing-campaigns" }
+                ]
+            },
+            {
+                title: "Graphic Designing",
+                links: [
+                    { title: "Logo Designs", link: "/logo-designs" },
+                    { title: "Package Designs", link: "/package-designs" },
+                    { title: "Social Media Designs", link: "/social-media-designs" },
+                    { title: "Brochure Designs", link: "/brochure-designs" },
+                    { title: "Pamphlet Designs", link: "/pamphlet-designs" },
+                    { title: "Website Banners", link: "/website-banners" },
+                    { title: "Banner Designs", link: "/banner-designs" },
+                    { title: "2D & 3D Designs", link: "/2d-3d-designs" },
+                    { title: "Standee Designs", link: "/standee-designs" },
+                    { title: "Creative Business Card designs", link: "/business-card-designs" },
+                    { title: "Annual report design", link: "/annual-report-design" },
+                    { title: "End to End Event designs", link: "/event-designs" },
+                    { title: "CSR Report design", link: "/csr-report-design" },
+                    { title: "Strategy Report Design", link: "/strategy-report-design" },
+                    { title: "Catalogue Designs", link: "/catalogue-designs" },
+                    { title: "Menu Designs", link: "/menu-designs" },
+                    { title: "Marriage Card designs", link: "/marriage-card-designs" },
+                    { title: "Hoarding/billboard designs", link: "/hoarding-billboard-designs" },
+                    { title: "Illustrations", link: "/illustrations" },
+                    { title: "Branding", link: "/branding" }
+                ]
+            },
+            {
+                title: "Video Editing",
+                links: [
+                    { title: "Reel Videos", link: "/reel-videos" },
+                    { title: "Model Shoot Videos", link: "/model-shoot-videos" },
+                    { title: "RealEstate Drone Shots", link: "/realestate-drone-shots" },
+                    { title: "Custom Videos", link: "/custom-videos" }
+                ]
+            },
+            {
+                title: "Software Development",
+                links: [
+                    { title: "Software Development", link: "/software-development" },
+                ]
+            },
+            {
+                title: "AI Automations",
+                links: [
+                    { title: "AI Automations", link: "/ai-automations" }
+                ]
+            },
         ],
         image: {
             src: menuThumb,
@@ -196,69 +177,18 @@ const mobileMenuData: MenuItem[] = [
         title: "Blog",
         link: "/blog-list-light",
         megaMenu: false,
-        submenu: [
-            { title: "Blog Classic Light", link: "/blog-standard-light" },
-            { title: "Blog Listing Light", link: "/blog-list-light" },
-            {
-                title: "Grid Layout",
-                link: "/blog-grid",
-                submenu: [
-                    { title: "2 Columns Light", link: "/blog-grid-2-col-light" },
-                    { title: "3 Columns Light", link: "/blog-grid-light" },
-                    { title: "2 Col + sidebar Light", link: "/blog-grid-with-sidebar-light" }
-                ]
-            },
-            { title: "Masonry Grid Light", link: "/blog-masonry-light" },
-            {
-                title: "Single Layouts",
-                link: "/blog-details-without-sidebar",
-                submenu: [
-                    { title: "Blog Single Post Light", link: "/blog-details-light" },
-                    { title: "Blog No Sidebar Light", link: "/blog-details-without-sidebar-light" }
-                ]
-            }
-        ]
     },
     {
         id: 5,
         title: "Shop",
         link: "/shop-modern-light",
         megaMenu: false,
-        submenu: [
-            { title: "Shop Modern", link: "/shop-modern-light" },
-            { title: "Shop With Slider", link: "/shop-with-slider-light" },
-            {
-                title: "Shop Page",
-                link: "#",
-                submenu: [
-                    { title: "Shop Page", link: "/shop" },
-                    { title: "Shop Details", link: "/shop-details" }
-                ]
-            },
-            {
-                title: "My Account",
-                link: "#",
-                submenu: [
-                    { title: "My Account", link: "/my-account" },
-                    { title: "Cart", link: "/cart" },
-                    { title: "Checkout", link: "/checkout" },
-                    { title: "Wishlist", link: "/wishlist" },
-                    { title: "LogIn", link: "/login" },
-                    { title: "Register", link: "/register" }
-                ]
-            }
-        ]
     },
     {
         id: 6,
         title: "Contact",
         link: "/contact",
         megaMenu: false,
-        submenu: [
-            { title: "Contact Me", link: "/contact-me-light" },
-            { title: "Contact Us", link: "/contact-us-light" },
-            { title: "Get In Touch", link: "/contact" }
-        ]
     }
 ];
 

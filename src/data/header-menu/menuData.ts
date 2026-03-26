@@ -12,27 +12,9 @@ const headerMenuData: MenuItem[] = [
   {
     id: 2,
     active: true,
-    children: true,
     title: "About Us",
-    pluseIncon: true,
     link: "#",
-    smallMenu: true,
-    megaMenu: true,
-    submenus: [
-      {
-        title: "Services Light Version",
-        link: "#",
-        pluseIncon: true,
-        megaMenu: [
-          { title: "Services", link: "/service-1-light" },
-          { title: "Corporate Services", link: "/service-2-light" },
-          { title: "Startup Services", link: "/service-3-light" },
-          { title: "Modern Services", link: "/service-4-light" },
-          { title: "Services Details", link: "/service-details-light" },
-          { title: "Services Details 02", link: "/service-details-2-light" }
-        ]
-      },
-    ]
+
   },
 
   // Services

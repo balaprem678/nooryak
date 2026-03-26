@@ -419,7 +419,7 @@
             }
 
             & .tp-megamenu-list ul li a:hover {
-                background-color: #f8f8fb;
+                background-color: transparent;
                 color: var(--tp-common-black);
             }
         }
@@ -430,16 +430,16 @@
     }
 
     &-title {
-        font-weight: 600;
-        font-size: 13px;
-        line-height: 1;
-        margin-bottom: 0;
-        padding-left: 40px;
-        padding-bottom: 25px;
         text-align: start;
         text-transform: uppercase;
         color: var(--tp-common-white);
-        border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+        border-bottom: 1px solid #ffffff0f;
+        margin-bottom: 0;
+        padding-bottom: 15px;
+        padding-left: 15px;
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 1;
 
         @media #{$xxl} {
             padding-left: 23px;
