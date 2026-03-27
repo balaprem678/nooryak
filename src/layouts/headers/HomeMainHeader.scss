@@ -1,6 +1,6 @@
 .custom-header {
     z-index: 999;
-    width: 100%;
+    width: 96%;
     transition: all .3s;
     position: fixed;
     top: 30px;
@@ -191,31 +191,47 @@
 // }
 
 /* ✅ INITIAL STATE */
+// header li.has-dropdown.p-static {
+
+//     a {
+
+//         position: relative;
+
+//         &::after {
+//             content: ">";
+//             width: 4px;
+//             height: 40px;
+//             font-size: 12px;
+//             position: absolute;
+//             right: -1px;
+//             transform: rotate(90deg);
+//         }
+//     }
+// }
+
 header li.has-dropdown.p-static.active {
-    transition: all 2s ease-in-out;
+    transition: all 1s ease-in-out;
 }
 
-header .tp-megamenu-wrapper.mega-menu.megamenu-white-bg {
+header .tp-megamenu-wrapper.megamenu-white-bg {
     visibility: hidden;
     opacity: 0;
     transform-origin: top center;
-
-    transition:
-        transform 5s ease,
-        opacity 0.3s ease;
-
+    transition: transform 1s ease;
     pointer-events: none; // prevent hover glitch
+
+    &.small-menu {
+        width: 22%
+    }
 }
 
 /* ✅ HOVER STATE */
-header li.has-dropdown.p-static.active:hover .tp-megamenu-wrapper.mega-menu.megamenu-white-bg {
+header li.has-dropdown.p-static.active:hover .tp-megamenu-wrapper.megamenu-white-bg {
     visibility: visible;
     opacity: 1;
-
     transform: rotateX(0deg) translateY(0);
     pointer-events: auto;
-
-    top: 42px;
+    top: 48px;
     height: auto;
 
     @media screen and (min-width:1500px) {

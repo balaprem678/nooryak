@@ -25,7 +25,6 @@ const headerMenuData: MenuItem[] = [
     children: true,
     title: "Services",
     pluseIncon: true,
-    mediumMenu: true,
     megaMenu: true,
     link: "#",
     submenus: [
@@ -117,27 +116,7 @@ const headerMenuData: MenuItem[] = [
           { title: "Local SEO Tools", link: "/local-seo-tools" },
         ]
       },
-      // {
-      //   title: "Local SEO",
-      //   link: "#",
-      //   pluseIncon: true,
-      //   megaMenu: [
-      //     { title: "Google My Business Ranking", link: "/google-my-business-ranking" },
-      //     { title: "Local Directory Listings", link: "/local-directory-listings" },
-      //     { title: "Local SEO Tools", link: "/local-seo-tools" }
-      //   ]
-      // },
-      // {
-      //   title: "Pay-Per-Click (PPC)",
-      //   link: "#",
-      //   pluseIncon: true,
-      //   megaMenu: [
-      //     { title: "Google Ads", link: "/google-ads" },
-      //     { title: "Facebook Ads", link: "/facebook-ads" },
-      //     { title: "Display Advertising", link: "/display-advertising" },
-      //     { title: "Remarketing Campaigns", link: "/remarketing-campaigns" }
-      //   ]
-      // },
+     
       {
         title: "Graphic Designing",
         link: "#",
@@ -186,24 +165,7 @@ const headerMenuData: MenuItem[] = [
 
         ]
       },
-      // {
-      //   title: "Software Development",
-      //   link: "/software-development",
-      //   pluseIncon: true,
-      //   megaMenu: [
-      //     { title: "Software Development", link: "/reel-videos" },
-
-      //   ]
-      // },
-      // {
-      //   title: "AI Automations",
-      //   link: "/ai-automations",
-      //   pluseIncon: true,
-      //   megaMenu: [
-      //     { title: "AI Automations", link: "/reel-videos" },
-
-      //   ]
-      // }
+    
     ],
 
   },

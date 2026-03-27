@@ -377,7 +377,7 @@
         top: 100%;
         left: 0;
         right: 0;
-        max-width: 1760px;
+        // max-width: 1760px;
         margin: 0 auto;
         overflow: hidden;
         border-radius: 14px;
@@ -385,9 +385,9 @@
         transition-duration: 0.1s;
         @include tp-transform(perspective(300px) rotateX(-18deg));
 
-        @media #{$x3l,$xxl,$xl} {
-            max-width: calc(100% - 40px);
-        }
+        // @media #{$x3l,$xxl,$xl} {
+        //     max-width: calc(100% - 40px);
+        // }
 
         @media #{$lg,$md,$xs} {
             padding-top: 25px;

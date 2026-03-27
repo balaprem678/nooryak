@@ -300,6 +300,7 @@ import {
 } from "lucide-react";
 
 export default function NavMenus() {
+
   const [hoveredMenu, setHoveredMenu] = useState<number | null>(
     headerMenuData[0]?.id || null
   );
@@ -441,9 +442,7 @@ export default function NavMenus() {
         <li
           key={menu.id}
           className={`has-dropdown ${menu.megaMenu || menu.smallMenu || menu.mediumMenu
-            ? "p-static active"
-            : ""
-            } ${hoveredMenu === menu.id ? "active" : ""}`}
+            ? "p-static" : "" } ${hoveredMenu === menu.id ? "active" : ""}`}
           onMouseEnter={() => setHoveredMenu(menu.id)}
           onMouseLeave={() => setHoveredMenu(null)}
         >
@@ -454,11 +453,30 @@ export default function NavMenus() {
 
           {/* ✅ MEGA MENU */}
           {menu.megaMenu || menu.smallMenu || menu.mediumMenu ? (
-            <div className="tp-megamenu-wrapper mega-menu megamenu-white-bg">
+            <div
+              className={`tp-megamenu-wrapper megamenu-white-bg ${menu.megaMenu
+                  ? "mega-menu"
+                  : menu.mediumMenu
+                    ? "medium-menu"
+                    : menu.smallMenu
+                      ? "small-menu"
+                      : ""
+                }`}
+            >
               <div className="gx-0 row">
 
                 {menu?.submenus?.map((submenu: any, i: number) => (
-                  <div key={i} className="col-md-2 tp-megamenu-list">
+                  <div
+                    key={i}
+                    className={`tp-megamenu-list ${menu.megaMenu && !menu.mediumMenu && !menu.smallMenu
+                      ? "col-md-2"   // 🔵 BIG MENU (default mega)
+                      : menu.mediumMenu
+                        ? "col-md-3"   // 🟡 MEDIUM MENU
+                        : menu.smallMenu
+                          ? "col-md-12"   // 🟢 SMALL MENU (optional)
+                          : "col-md-2"
+                      }`}
+                  >
 
                     {submenu.title && (
                       <h4 className="tp-megamenu-title">{submenu.title}</h4>
