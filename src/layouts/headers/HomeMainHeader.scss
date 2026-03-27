@@ -1,11 +1,19 @@
 .custom-header {
     z-index: 999;
-    width: 95%;
+    width: 100%;
     transition: all .3s;
     position: fixed;
     top: 30px;
     left: 50%;
     transform: translateX(-50%);
+
+    @media screen and (min-width:1500px) {
+        width: 100%;
+    }
+
+    @media screen and (min-width:1700px) {
+        width: 96%;
+    }
 
     .header-inner {
         justify-content: space-between;
@@ -20,12 +28,6 @@
             gap: 15px;
         }
     }
-
-    /* Sticky effect */
-    // &.sticky .header-inner {
-    //     background: #ffffff;
-    //     box-shadow: 0 10px 35px rgba(0, 0, 0, 0.12);
-    // }
 
     .logo img {
         height: auto;
@@ -106,8 +108,6 @@
                 align-items: center;
 
                 @media screen and (min-width:1500px) {
-                    padding: 0;
-                    // padding-bottom: 10px;
                     font-size: 18px;
                 }
 
@@ -170,11 +170,55 @@
     }
 }
 
+
+// header .tp-megamenu-wrapper.mega-menu.megamenu-white-bg {
+//     visibility: hidden;
+//     opacity: 0;
+//     transform: rotateX(-20deg) ;
+//     transition: all 3s ease;
+// }
+
+// header li.has-dropdown.p-static.active:hover .tp-megamenu-wrapper.mega-menu.megamenu-white-bg {
+//     visibility: visible;
+//     opacity: 1;
+//     height: auto;
+//     transform: rotateX(0deg);
+//     top: 42px;
+
+//     @media screen and (min-width:1500px) {
+//         top: 50px;
+//     }
+// }
+
+/* ✅ INITIAL STATE */
+header li.has-dropdown.p-static.active {
+    transition: all 2s ease-in-out;
+}
+
+header .tp-megamenu-wrapper.mega-menu.megamenu-white-bg {
+    visibility: hidden;
+    opacity: 0;
+    transform-origin: top center;
+
+    transition:
+        transform 5s ease,
+        opacity 0.3s ease;
+
+    pointer-events: none; // prevent hover glitch
+}
+
+/* ✅ HOVER STATE */
 header li.has-dropdown.p-static.active:hover .tp-megamenu-wrapper.mega-menu.megamenu-white-bg {
     visibility: visible;
     opacity: 1;
-    top: 40px;
-    transform: unset;
-    height: 80vh;
-}
 
+    transform: rotateX(0deg) translateY(0);
+    pointer-events: auto;
+
+    top: 42px;
+    height: auto;
+
+    @media screen and (min-width:1500px) {
+        top: 50px;
+    }
+}

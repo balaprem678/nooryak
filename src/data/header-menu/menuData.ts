@@ -215,9 +215,7 @@ const headerMenuData: MenuItem[] = [
     children: true,
     title: "Products",
     pluseIncon: true,
-    mediumMenu: true,
-    megaMenu: true,
-
+    smallMenu: true,
     link: "#",
     submenus: [
       {

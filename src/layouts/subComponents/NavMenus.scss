@@ -55,15 +55,14 @@
 
   @media screen and (min-width:1300px) {
     font-size: 11px !important;
-
   }
+
   @media screen and (min-width:1500px) {
-    font-size: 12px !important;
-
+    font-size: 12.5px !important;
   }
-  @media screen and (min-width:1700px) {
-    font-size: 13px !important;
 
+  @media screen and (min-width:1700px) {
+    font-size: 14.5px !important;
   }
 }
 
@@ -111,6 +110,13 @@ li.menu-heading {
       }
     }
 
+    a.menu-link {
+      padding: 0 !important;
+    }
+
+    @media screen and (min-width:1500px) {
+      margin-top: 5px;
+    }
 
     // &.tp-megamenu-title {
     //   padding: 0 10px!important;
