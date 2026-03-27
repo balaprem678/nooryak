@@ -47,7 +47,7 @@ const mobileMenuData: MenuItem[] = [
     {
         id: 3,
         title: "Services",
-        link: "/portfolio-metro-light",
+        link: "",
         megaMenu: true,
         columns: [
             {
@@ -174,20 +174,53 @@ const mobileMenuData: MenuItem[] = [
     },
     {
         id: 4,
-        title: "Blog",
-        link: "/blog-list-light",
-        megaMenu: false,
+        title: "Products",
+        link: "",
+        megaMenu: true,
+        columns: [
+            {
+                title: "Web Development",
+                links: [
+                    { title: "SAAS WEBSITE BUILDER", link: "" },
+                    { title: "SAAS LEAD MANAGEMENT CRM", link: "" },
+                    { title: "SAAS INVOICE GENERATOR", link: "" },
+                ]
+            },
+
+        ],
+        image: {
+            src: menuThumb,
+            alt: "menu thumb"
+        }
     },
     {
         id: 5,
-        title: "Shop",
-        link: "/shop-modern-light",
+        title: "Portfolio",
+        link: "",
         megaMenu: false,
     },
     {
         id: 6,
+        title: "Careers",
+        link: "",
+        megaMenu: false,
+    },
+    {
+        id: 7,
+        title: "Clients",
+        link: "",
+        megaMenu: false,
+    },
+    {
+        id: 8,
+        title: "Blog",
+        link: "",
+        megaMenu: false,
+    },
+    {
+        id: 9,
         title: "Contact",
-        link: "/contact",
+        link: "",
         megaMenu: false,
     }
 ];

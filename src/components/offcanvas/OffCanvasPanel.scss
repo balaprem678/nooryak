@@ -9,3 +9,25 @@
         }
     }
 }
+
+.tp-offcanvas-wrapper {
+    height: 100vh;
+    padding: 20px;
+
+    .tp-offcanvas-top {
+        margin-bottom: 20px;
+    }
+
+    .tp-megamenu-wrapper {
+        padding: 6px 2px;
+    }
+
+    .tp-offcanvas-menu .tp-megamenu-list ul li a {
+        padding: 8px 20px;
+        font-size: 14px;
+    }
+    .tp-offcanvas-menu {
+    margin-bottom: 20px;
+}
+}
+

@@ -6,7 +6,7 @@ import logoBlack from '../../../public/assets/img/logo/logo-black.png';
 import logoWhite from '../../../public/assets/img/logo/logo-white.png';
 import PhotoProviderWrapper from '../shared/PhotoProviderWrapper';
 import { CrossIconTwo, DribbleTwo, InstagramSvg } from '@/svg';
-import MainMobileMenu from "../../layouts/subComponents/MainMobileMenu";
+import MainMobileMenu from "@/layouts/subComponents/MainMobileMenu";
 import { BehanceTwoSvg } from "@/svg/social-icons/Behance";
 import { YouTubeSvg } from "@/svg/social-icons/YouTube";
 import { PhotoView } from 'react-photo-view';
@@ -75,9 +75,10 @@ const OffCanvasPanel: React.FC<IProps> = ({ openOffcanvas, setOpenOffcanvas }) =
                         <div className="tp-offcanvas-contact">
                             <h3 className="tp-offcanvas-title sm">Information</h3>
                             <ul>
-                                <li><Link href="tel:1245654">+ 4 20 7700 1007</Link></li>
-                                <li><Link href="mailto:hello@diego.com">nooryak@gmail.com</Link></li>
-                                <li><Link href="#">Avenue de Roma 158b, Lisboa</Link></li>
+                                <li><Link href="tel:6374913298">+91 63749 13298
+                                </Link></li>
+                                <li><Link href="mailto:nooryak@gmail.com">nooryak@gmail.com</Link></li>
+                                <li><Link href="#">194, Dr Natesan Rd, Mirsahibpet, <br /> Triplicane, Chennai, <br />Tamil Nadu 600005, India</Link></li>
                             </ul>
                         </div>
                         <div className="tp-offcanvas-social">
@@ -85,9 +86,6 @@ const OffCanvasPanel: React.FC<IProps> = ({ openOffcanvas, setOpenOffcanvas }) =
                             <ul>
                                 <li>
                                     <Link href="#"><InstagramSvg /></Link>
-                                </li>
-                                <li>
-                                    <Link href="#"> <DribbleTwo /></Link>
                                 </li>
                                 <li>
                                     <Link href="#"><BehanceTwoSvg /></Link>

@@ -441,7 +441,7 @@ export default function NavMenus() {
         <li
           key={menu.id}
           className={`has-dropdown ${menu.megaMenu || menu.smallMenu || menu.mediumMenu
-            ? "p-static active"
+            ? "p-static"
             : ""
             } ${hoveredMenu === menu.id ? "active" : ""}`}
           onMouseEnter={() => setHoveredMenu(menu.id)}
