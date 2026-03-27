@@ -64,6 +64,14 @@ const headerMenuData: MenuItem[] = [
           { title: "Facebook Ads", link: "/facebook-ads" },
           { title: "Display Advertising", link: "/display-advertising" },
           { title: "Remarketing Campaigns", link: "/remarketing-campaigns" },
+
+          {
+            heading: "Software Development",
+            title: "",
+            link: ""
+          },
+          { title: "Software Development", link: "/software-development" },
+          { title: "AI Automations", link: "/ai-automations" },
         ]
       },
       {
@@ -82,14 +90,7 @@ const headerMenuData: MenuItem[] = [
           { title: "Technical SEO", link: "/technical-seo" },
           { title: "Branding", link: "/branding" },
 
-          {
-            heading: "Local SEO",
-            title: "",
-            link: ""
-          },
-          { title: "Google My Business Ranking", link: "/google-my-business-ranking" },
-          { title: "Local Directory Listings", link: "/local-directory-listings" },
-          { title: "Local SEO Tools", link: "/local-seo-tools" },
+
 
         ]
       },
@@ -105,16 +106,15 @@ const headerMenuData: MenuItem[] = [
           { title: "Twitter Marketing", link: "/twitter-marketing" },
           { title: "Social Media Advertising", link: "/social-media-advertising" },
           { title: "Social Media Post Scheduling", link: "/social-media-post-scheduling" },
+
           {
-            heading: "Video Editing",
+            heading: "Local SEO",
             title: "",
             link: ""
           },
-          { title: "Reel Videos", link: "/reel-videos" },
-          { title: "Model Shoot Videos", link: "/model-shoot-videos" },
-          { title: "RealEstate Drone Shots", link: "/realestate-drone-shots" },
-          { title: "Custom Videos", link: "/custom-videos" },
-
+          { title: "Google My Business Ranking", link: "/google-my-business-ranking" },
+          { title: "Local Directory Listings", link: "/local-directory-listings" },
+          { title: "Local SEO Tools", link: "/local-seo-tools" },
         ]
       },
       // {
@@ -156,40 +156,34 @@ const headerMenuData: MenuItem[] = [
           { title: "Annual report design", link: "/annual-report-design" },
           { title: "End to End Event designs", link: "/event-designs" },
           { title: "CSR Report design", link: "/csr-report-design" },
+
+        ]
+      },
+      {
+        title: "",
+        link: "#",
+        pluseIncon: true,
+        megaMenu: [
           { title: "Strategy Report Design", link: "/strategy-report-design" },
           { title: "Catalogue Designs", link: "/catalogue-designs" },
           { title: "Menu Designs", link: "/menu-designs" },
           { title: "Marriage Card designs", link: "/marriage-card-designs" },
           { title: "Hoarding/billboard designs", link: "/hoarding-billboard-designs" },
           { title: "Illustrations", link: "/illustrations" },
-          { title: "Branding", link: "/branding" }
-        ]
-      },
-      {
-        title: "Video Editing",
-        link: "#",
-        pluseIncon: true,
-        megaMenu: [
+          { title: "Branding", link: "/branding" },
+          {
+            heading: "Video Editing",
+            title: "",
+            link: ""
+          },
           { title: "Reel Videos", link: "/reel-videos" },
           { title: "Model Shoot Videos", link: "/model-shoot-videos" },
           { title: "RealEstate Drone Shots", link: "/realestate-drone-shots" },
           { title: "Custom Videos", link: "/custom-videos" },
 
 
-           {
-            heading: "Software Development",
-            title: "",
-            link: ""
-          },
-          { title: "Software Development", link: "/software-development" },
 
-          // AI
-          {
-            heading: "AI Automations",
-            title: "",
-            link: ""
-          },
-          { title: "AI Automations", link: "/ai-automations" },
+
         ]
       },
       // {
@@ -219,7 +213,7 @@ const headerMenuData: MenuItem[] = [
     hasDropdown: true,
     active: true,
     children: true,
-    title: "Projects",
+    title: "Products",
     pluseIncon: true,
     mediumMenu: true,
     megaMenu: true,

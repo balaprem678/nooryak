@@ -158,11 +158,6 @@ const mobileMenuData: MenuItem[] = [
                 title: "Software Development",
                 links: [
                     { title: "Software Development", link: "/software-development" },
-                ]
-            },
-            {
-                title: "AI Automations",
-                links: [
                     { title: "AI Automations", link: "/ai-automations" }
                 ]
             },
