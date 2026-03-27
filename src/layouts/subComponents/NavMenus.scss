@@ -55,7 +55,11 @@
   font-weight: 600 !important;
 
   @media screen and (min-width:1300px) {
-    font-size: 12px !important;
+    font-size: 11.5px !important;
+
+  }
+  @media screen and (min-width:1500px) {
+    font-size: 14px !important;
 
   }
 }
