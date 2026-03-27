@@ -26,8 +26,25 @@
         padding: 8px 20px;
         font-size: 14px;
     }
+
     .tp-offcanvas-menu {
-    margin-bottom: 20px;
-}
+        margin-bottom: 20px;
+    }
+
+    .tp-megamenu-list {
+        margin-top: 20px;
+        ul{
+            li{
+                a{
+                    padding: 8px 0;
+                }
+            }
+        }
+    }
 }
 
+
+
+.tp-offcanvas-menu ul li .submenu+.tp-menu-close {
+    display: none;
+}
