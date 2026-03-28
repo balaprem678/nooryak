@@ -29,7 +29,7 @@ const ContactMain = () => {
                                 <ContactHero />
                                 <InnerMapArea />
                                 <ContactFormArea />
-                                <ContactLocationArea />
+                                {/* <ContactLocationArea /> */}
                             </main>
                             <HomeMainFooter />
                         </div>
