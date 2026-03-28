@@ -47,9 +47,9 @@ export default function CraftingWebsite() {
           </div>
 
           <h1 className="ds-title">
-            Crafting Websites <span className="highlight">with</span>
+            Crafting Websites <span className="highlight">with
             <br />
-            Purpose and Passion
+            Purpose and Passion</span>
           </h1>
 
           <p className="ds-desc">
@@ -81,7 +81,7 @@ export default function CraftingWebsite() {
           </div>
 
           <button className="gra_btn">
-            SCHEDULE A CONSULTATION →
+            Schedule a Consltation →
           </button>
         </div>
       </div>
@@ -95,14 +95,21 @@ export default function CraftingWebsite() {
         <div className="marquee-wrapper">
           <div className="marquee">
             {[...industries, ...industries].map((industry, i) => (   // Duplicate for seamless loop
-              <div key={i} className="ds-chip gra_btn">
-                <Image
-                  src={industry.icon}
+              <div key={i} className="ds-chip">
+                <img
+                  src={Images.abt_sec.src}
                   alt={industry.name}
                   width={28}
                   height={28}
                   className="chip-icon"
                 />
+                {/* <Image
+                  src={industry.icon}
+                  alt={industry.name}
+                  width={28}
+                  height={28}
+                  className="chip-icon"
+                /> */}
                 {industry.name}
               </div>
             ))}

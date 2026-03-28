@@ -119,7 +119,9 @@ export default function HomeMainHero() {
                 {/* RIGHT — desktop: panel image | tablet+mobile: full bg image */}
                 <div className="right">
                     <div className="imageWrap">
-                        <img src={Images.herobanner.src} alt="Hero" />
+                        <img src={Images.herobanner.src} alt="Hero" className="herobanner_1"/>
+                        <img src={Images.herobanner_person.src} alt="Hero" className="herobanner_3"/>
+                        <img src={Images.herobanner1.src} alt="Hero" className="herobanner_2"/>
                     </div>
 
                     <div className="floatingCard">

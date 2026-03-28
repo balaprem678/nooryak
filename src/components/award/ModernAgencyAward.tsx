@@ -33,7 +33,7 @@ const ModernAgencyAward = () => {
                     </div>
                 </div>
                 {/* Award Item */}
-                <AwardItem />
+                {/* <AwardItem /> */}
             </div>
         </div>
     );

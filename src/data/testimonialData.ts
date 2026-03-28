@@ -32,57 +32,57 @@ import userImg7 from "../../public/assets/img/product/product-details-main/desc/
 const testimonialsData: TestimonialDT[] = [
     {
         id: 1,
-        quote: "“Agntix studio ability to create a high quality UI is stands out. It’s something we placed a premium on. A studio with passionate, professional, fun and full creativity.”",
-        name: "Albert Juan",
-        position: "CEO & Founder, Archin Studio",
+        quote: "“We recently partnered with Nooryak Technologies, the leading Ecommerce Website Development Company in Chennai, to design our Luxxrr online store. Though some final refinements are still in progress, their exceptional work quality, responsive support, and commitment to excellence have already impressed us so much that we felt compelled to share this happy review. The stunning, user-friendly ecommerce website they delivered perfectly captures our brand vision, making them truly stand out in the industry.”",
+        name: "Hitesh Cosy",
+        position: "CEO & Founder",
         avatar: avaterOne,
         style: "white-style"
     },
     {
         id: 2,
-        quote: "“Agntix studio ability to create a high quality UI is stands out. It’s something we placed a premium on. A studio with passionate, professional, fun and full creativity.”",
-        name: "Koen Chegg",
-        position: "CEO & Founder, Archin Studio",
+        quote: "“If you’re looking for a reliable Web Development Company, Nooryak Technologies delivers top-quality websites that perform and look amazing. Just How we got a brand new looking professional website before a couple of Months. Thanks.”",
+        name: "Aswini's Cibil Agency",
+        position: "CEO & Founder",
         avatar: avaterTwo,
         style: "green-style"
     },
     {
         id: 3,
-        quote: "“Agntix studio ability to create a high quality UI is stands out. It’s something we placed a premium on. A studio with passionate, professional, fun and full creativity.”",
-        name: "Warren Daniel",
-        position: "CEO & Founder, Archin Studio",
+        quote: "“I recently worked with Nooryak Technologies to develop my ecommerce brand, CosyChic, and I couldn't be more thrilled with the results. They are truly the best website designing agency in Chennai. Their expertise in ecommerce website development, especially in Triplicane, is exceptional. The website they designed for us is stunning, and their video editing works are equally impressive. I highly recommend Nooryak Tech for anyone looking for top-notch ecommerce development in Chennai. Thank you for bringing our vision to life!”",
+        name: "Hitesh Mali",
+        position: "CEO & Founder",
         avatar: avaterThree,
         style: "black-style"
     },
     {
         id: 4,
-        quote: "“Agntix studio ability to create a high quality UI is stands out. It’s something we placed a premium on. A studio with passionate, professional, fun and full creativity.”",
-        name: "Elvin Bond",
-        position: "CEO & Founder, Archin Studio",
+        quote: "“I am thoroughly impressed with the amazing and great work done by Nooryak Technologies on our affiliate e-commerce website, Hish Gadgets! As the best website development company in chennai and the best e-commerce designing agency, they delivered a sleek, user-friendly design that perfectly captures our brand's essence. Highly recommended their services!”",
+        name: "Hisham Hiba",
+        position: "CEO & Founder",
         avatar: avaterFour,
         style: "white-style"
     },
     {
         id: 5,
-        quote: "“Agntix studio ability to create a high quality UI is stands out. It’s something we placed a premium on. A studio with passionate, professional, fun and full creativity.”",
-        name: "Abbas",
-        position: "CEO & Founder, Archin Studio",
+        quote: "“Nooryak Technologies is the best Website Designing Company I’ve worked with — they built a stunning site for my business and boosted my sales massively.”",
+        name: "MOHAMMED YUSUF.M",
+        position: "CEO & Founder",
         avatar: avaterFive,
         style: "grey-style"
     },
     {
         id: 6,
-        quote: "“Agntix studio ability to create a high quality UI is stands out. It’s something we placed a premium on. A studio with passionate, professional, fun and full creativity.”",
-        name: "Jessamine Mumtaz",
-        position: "CEO & Founder, Archin Studio",
+        quote: "“Nooryak Technologies is a Professional Marketing And Web Development Company in Chennai based in Triplicane. Its always unique for its services and gives most greater results for startups, entrepreneurs and business owners.”",
+        name: "Ameen Noor",
+        position: "CEO & Founder",
         avatar: avaterSix,
         style: "green-style"
     },
     {
         id: 7,
-        quote: "“Agntix studio ability to create a high quality UI is stands out. It’s something we placed a premium on. A studio with passionate, professional, fun and full creativity.”",
-        name: "Koen Chegg",
-        position: "CEO & Founder, Archin Studio",
+        quote: "“Best trusted marketing and web development agency in Chennai for startups and entrepreneurs. I suggest Nooryak Technologies for all who seek to empower their business online.”",
+        name: "suriyakumar devaraj",
+        position: "CEO & Founder",
         avatar: avaterTwo,
         style: "black-style"
     },

@@ -577,11 +577,12 @@ $bp-sm: 480px;
         }
 
         .label {
-            font-size: 12px;
+            font-size: 14px;
             color: $text-gray;
             line-height: 1.5;
 
             @media (max-width: $bp-md) {
+                font-size: 12px;
                 color: rgba(255, 255, 255, 0.75); // white on image bg
             }
 
@@ -605,8 +606,11 @@ $bp-sm: 480px;
     overflow: hidden;
     height: 100vh;
 
+
+
     @media screen and (min-width:768px) {
         height: 100%;
+
 
     }
 
@@ -646,16 +650,42 @@ $bp-sm: 480px;
             display: block;
             border-radius: 25px;
 
+            &.herobanner_2,
+            &.herobanner_2 {
+                display: none;
+            }
+
+            @media screen and (max-width:768px) {
+                &.herobanner_1 {
+                    display: none;
+                }
+
+                &.herobanner_2 {
+                    display: block;
+                    position: absolute;
+                    bottom: 0;
+                }
+
+                &.herobanner_3 {
+                    position: absolute;
+                    z-index: 1;
+                    width: 100%;
+                    height: auto;
+                    bottom: 0;
+                    animation: shake 1.5s linear infinite;
+                }
+            }
 
             @media (max-width: $bp-md) {
                 border-radius: 14px;
-                animation: shake 1.5s linear infinite;
             }
 
             @media screen and (max-width:480px) {
                 border-radius: 0;
                 // object-position: 0 -160px;
             }
+
+
         }
 
         &::after {

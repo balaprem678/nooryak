@@ -36,18 +36,18 @@ const HomeMain = () => {
                             <main style={{ overflowX: "hidden" }}>
                                 <HomeMainHero />
                                 <ClientSlider />
-                                <CraftingWebsite />
-                                <Whychoose />
                                 <HomeMainBanner />
                                 <HomeMainTextSlider />
+                                <CraftingWebsite />
                                 <HomeMainAbout />
+                                <Whychoose />
                                 <HomeMainService />
                                 <HomeMainVideo />
                                 <HomeMainProject />
-                                <HomeMainFunFact />
+                                {/* <HomeMainFunFact /> */}
                                 <HomeMainWork />
                                 <HomeMainTestimonial />
-                                <ModernAgencyAward />
+                                {/* <ModernAgencyAward /> */}
                             </main>
                             <HomeMainFooter />
                         </div>

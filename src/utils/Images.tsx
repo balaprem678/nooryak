@@ -11,6 +11,8 @@ import youtube from "../../public/assets/images/common/youtube.png";
 
 // Home Images Import Here
 import herobanner from "../../public/assets/images/home/herobanner.jpeg";
+import herobanner1 from "../../public/assets/images/home/herobanner.jpg";
+import herobanner_person from "../../public/assets/images/home/herobanner_person.png";
 import about_1 from "../../public/assets/images/home/about-1.webp";
 import about_2 from "../../public/assets/images/home/about-2.webp";
 import abt_sec from "../../public/assets/images/home/abt_sec.png";
@@ -33,5 +35,5 @@ export const Images = {
     logo, Logo_blue, gmail, instagram, whatsapp, twitter, facebook, linkedin, youtube,
 
     // Home Images Import here
-    herobanner, about_1, about_2, abt_sec, services_1, services_2, services_3, services_4,craftingwebsite_banner,why_choose_card_icon_1,why_choose_card_icon_2,why_choose_card_icon_3,why_choose_card_icon_4
+    herobanner, herobanner1, herobanner_person, about_1, about_2, abt_sec, services_1, services_2, services_3, services_4,craftingwebsite_banner,why_choose_card_icon_1,why_choose_card_icon_2,why_choose_card_icon_3,why_choose_card_icon_4
 };

@@ -1,6 +1,5 @@
 .design-showcase {
-  padding: 80px 5% 60px;
-  font-family: 'Inter', system-ui, sans-serif;
+
   overflow: hidden;
   background: url("../../../public/assets/images/home/services_bg.png");
   background-repeat: no-repeat;
@@ -13,6 +12,7 @@
   display: flex;
   gap: 5rem;
   align-items: center;
+  padding: 80px 5% 60px;
   max-width: 1400px;
   margin: 0 auto;
 
@@ -70,6 +70,7 @@
   font-weight: 800;
   margin: 1.2rem 0 1.5rem;
   color: #1f2937;
+  font-family: 'Space Grotesk', sans-serif;
 }
 
 .ds-title .highlight {
@@ -118,7 +119,6 @@
 /* INDUSTRIES INFINITE MARQUEE */
 .ds-industries {
   max-width: 1400px;
-  margin: 90px auto 0;
   text-align: center;
   overflow: hidden;
 }
@@ -130,6 +130,30 @@
   margin-bottom: 2.5rem;
   letter-spacing: 3px;
   text-transform: uppercase;
+
+  span {
+    position: relative;
+
+    &::before {
+      content: "";
+      background-color: #fb923c;
+      width: 100px;
+      height: 2px;
+      position: absolute;
+      left: -120px;
+      top: 10px;
+    }
+
+    &::after {
+      content: "";
+      height: 2px;
+      width: 100px;
+      background-color: #fb923c;
+      position: absolute;
+      right: -120px;
+      top: 10px;
+    }
+  }
 }
 
 .marquee-wrapper {
@@ -152,27 +176,7 @@
   /* Pause on hover (nice UX) */
 }
 
-.ds-chip {
-  padding: 14px 28px;
-  border-radius: 12px;
-  font-weight: 600;
-  font-size: 1rem;
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  white-space: nowrap;
-  box-shadow: 0 6px 15px rgba(249, 115, 22, 0.3);
-  flex-shrink: 0;
-  transition: transform 0.3s ease;
-}
 
-.ds-chip:hover {
-  transform: scale(1.05);
-}
-
-.ds-chip .chip-icon {
-  filter: brightness(0) invert(1);
-}
 
 .gra_btn {
   color: #fff;
@@ -186,6 +190,34 @@
   display: flex;
   box-shadow: 0 8px 20px #ff3d0059;
 }
+
+.ds-chip {
+  padding: 8px;
+  border-radius: 30px;
+  font-weight: 600;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  white-space: nowrap;
+  box-shadow: 0 6px 15px rgba(249, 115, 22, 0.3);
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+  border: 1px solid #f97316;
+  color: #ff3d00;
+
+  img {
+    border-radius: 50px;
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.ds-chip:hover {
+  transform: scale(1.05);
+}
+
+
 
 /* Infinite Scroll Animation */
 @keyframes marquee {

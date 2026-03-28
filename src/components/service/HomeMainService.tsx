@@ -13,7 +13,9 @@ const HomeMainService = () => {
         <div className="row gx-0">
           <div className="col-12">
             <div className="tp-service-title-box">
-              <span className="tp-section-subtitle pre">Services</span>
+              <span className="tp-section-subtitle pre">Our Core Services
+                
+              </span>
             </div>
           </div>
         </div>

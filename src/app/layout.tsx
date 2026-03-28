@@ -98,6 +98,7 @@ export default function RootLayout({
     <html lang="en" className="no-js agntix-light" suppressHydrationWarning={true}>
       <head>
         <link rel="icon" href="../../public/assets/images/common/Logo-blue.png" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
       </head>
       <body suppressHydrationWarning={true} className={`tp-magic-cursor ${inter.variable}
      ${besley.variable} ${spaceGrotesk.variable} ${playfairDisplay.variable}
