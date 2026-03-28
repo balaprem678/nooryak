@@ -37,7 +37,7 @@ export default function WhyChoose () {
         <header className="section-header">
           <p className="sub-title">WHY CHOOSE US</p>
           <h2 className="main-title">
-            Why Choose <span>Nooryak Technologies?</span>
+            Why Choose <span>Nooryak <br /> Technologies?</span>
           </h2>
         </header>
 
