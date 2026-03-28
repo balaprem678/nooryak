@@ -1,9 +1,5 @@
-
+import { Images } from "@/utils/Images";
 import { BrandingIcon, BusinessConsultationIcon, BusinessGrowthIcon, ChartIcon, ExpertSupportIcon, HexagonIcon, ImageQualityIcon, LayersIcon, LightningBoltIcon, ProfessionalBusinessIcon, ReliableWxpertIcon, ShieldIcon, ShoppingCartIcon, UIUXDesignIcon, WebDevelopmentIcon } from "@/svg/ServiesIcons";
-import service1 from "../../public/assets/img/home-01/service/service-1.jpg";
-import service2 from "../../public/assets/img/home-01/service/service-2.jpg";
-import service3 from "../../public/assets/img/home-01/service/service-3.jpg";
-import service4 from "../../public/assets/img/home-01/service/service-4.jpg";
 import { servicesDT } from "@/types/service-d-t";
 
 //home-5 design agency light service image
@@ -47,35 +43,35 @@ const servicesData: servicesDT[] = [
     //Home main services data start
     {
         id: 1,
-        title: "Web Design",
-        image: service1,
-        description: "Whether you need stunning visuals for your website, captivating graphics for your marketing materials, or innovative UI/UX designs for your app, our team of experts is here to turn your vision into reality.",
+        title: "Digital Marketing & Ads",
+        image: Images.services_1,
+        description: "We create result-driven digital marketing campaigns that help your brand reach the right audience, generate quality leads, and turn visibility into real business growth. From paid advertising to performance strategy, every campaign is built to maximize reach, engagement, and ROI.",
         categories: ["UX Design", "User Testing", "Motion Design", "Product Prototype"],
-        link: "/service-details-light",
+        link: "",
     },
     {
         id: 2,
-        title: "Product Design",
-        image: service2,
-        description: "Our product design services focus on creating intuitive and aesthetically pleasing products that resonate with your audience and stand out in the market.",
+        title: "Web & App Development",
+        image: Images.services_2,
+        description: "We build fast, scalable, and user-focused websites and applications designed to strengthen your digital presence and support long-term growth. From business websites to custom web and app solutions, our development approach combines performance, functionality, and seamless user experience.",
         categories: ["UX Design", "User Testing", "Product Prototype", "Mobile UI", "Software UI design", "Web app design"],
-        link: "/service-details-light",
+        link: "/",
     },
     {
         id: 3,
-        title: "Web Development",
-        image: service3,
-        description: "From website development and e-commerce platforms to custom software and mobile apps, our development team has the expertise to bring your ideas to life.",
+        title: "Designing & Branding",
+        image: Images.services_3,
+        description: "We craft visually compelling designs and strong brand identities that make your business look professional, memorable, and trustworthy. From UI/UX design to branding assets, we ensure every visual element reflects your value and creates a lasting impression.",
         categories: ["UX Design", "Frontend", "Backend", "E-commerce", "No Code / Low Code"],
-        link: "/service-details-light",
+        link: "/",
     },
     {
         id: 4,
-        title: "Branding",
-        image: service4,
-        description: "It's the core of your company's identity. It guides all business decisions, ensuring a consistent and impactful presence in the market.",
+        title: "Future AI-Automations",
+        image: Images.services_4,
+        description: "We help businesses embrace the future with smart AI-powered automation solutions that simplify workflows, reduce manual effort, and improve efficiency. From intelligent process automation to business-enhancing AI integrations, we create systems that save time and support smarter growth..",
         categories: ["Research & Insights", "Unique Ways", "Value Proposition", "Naming", "Verbal Identity"],
-        link: "/service-details-light",
+        link: "/",
     },
     //Home main services data end
     //Home two services data start
@@ -83,25 +79,25 @@ const servicesData: servicesDT[] = [
         id: 5,
         title: "SEO Marketing",
         description: "We immerse ourselves in your issues and we put our knowledge and expertise at your service",
-        link: "/service-details-light",
+        link: "/",
     },
     {
         id: 6,
         title: "Social Marketing",
         description: "We immerse ourselves in your issues and we put our knowledge and expertise at your service",
-        link: "/service-details-light",
+        link: "/",
     },
     {
         id: 7,
         title: "Content Marketing",
         description: "We immerse ourselves in your issues and we put our knowledge and expertise at your service",
-        link: "/service-details-light",
+        link: "/",
     },
     {
         id: 8,
         title: "Email Marketing",
         description: "We immerse ourselves in your issues and we put our knowledge and expertise at your service",
-        link: "/service-details-light",
+        link: "/",
     },
     //Home two services data end
     {
@@ -274,7 +270,7 @@ const servicesData: servicesDT[] = [
         categories: ["Strategy", "Consultation", "Management"],
         colorClass: "color-1",
         delay: ".3",
-        link: "/service-details-light",
+        link: "/",
     },
     {
         id: 29,
@@ -415,7 +411,7 @@ const servicesData: servicesDT[] = [
     {
         id: 43,
         title: 'Branding',
-        spacingCls:"mb-200",
+        spacingCls: "mb-200",
         text: [
             'Strong branding sets your startup apart, signaling quality and professionalism.',
             'It builds trust with your audience, making you stand out in a crowded market.'
@@ -433,7 +429,7 @@ const servicesData: servicesDT[] = [
     {
         id: 44,
         title: 'Digital Design',
-        spacingCls:"mb-200",
+        spacingCls: "mb-200",
         text: [
             'A process of assumption & validation with a goal of taking into account all the necessary variables, which are always custom and are to be uncovered',
             'Every business has digital potential, and we are here to help you leverage that potential.'
@@ -453,7 +449,7 @@ const servicesData: servicesDT[] = [
     {
         id: 45,
         title: 'Marketing Assets',
-        spacingCls:"mb-200",
+        spacingCls: "mb-200",
         text: [
             'Marketing strategy is proudly responsible for the half of a campaign\'s success, another half relies solely on its implementation.',
             'We focus on creating visuals that communicate your value and engage your audience.'
@@ -472,7 +468,7 @@ const servicesData: servicesDT[] = [
     {
         id: 46,
         title: 'Development',
-        spacingCls:"",
+        spacingCls: "",
         text: [
             'Efficiency and scalability. The two factors which any decision gets filtered out with - programming language, framework, library, each line of code, and server side'
         ],

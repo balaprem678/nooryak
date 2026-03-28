@@ -15,15 +15,19 @@ import about_1 from "../../public/assets/images/home/about-1.webp";
 import about_2 from "../../public/assets/images/home/about-2.webp";
 import abt_sec from "../../public/assets/images/home/abt_sec.png";
 
+import services_1 from "../../public/assets/images/home/services_1.png";
+import services_2 from "../../public/assets/images/home/services_2.png";
+import services_3 from "../../public/assets/images/home/services_3.png";
+import services_4 from "../../public/assets/images/home/services_4.png";
+
+import craftingwebsite_banner from "../../public/assets/images/home/craftingwebsite_banner.png";
+
 
 export const Images = {
 
     // Common Images Import Here
-    
-    logo,Logo_blue, gmail, instagram, whatsapp, twitter, facebook, linkedin, youtube,
+    logo, Logo_blue, gmail, instagram, whatsapp, twitter, facebook, linkedin, youtube,
 
     // Home Images Import here
-    herobanner, about_1, about_2,abt_sec,
-
-
+    herobanner, about_1, about_2, abt_sec, services_1, services_2, services_3, services_4,craftingwebsite_banner
 };

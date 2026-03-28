@@ -16,6 +16,8 @@ import HomeMainAbout from '@/components/about/HomeMainAbout';
 import HomeMainHeader from '@/layouts/headers/HomeMainHeader';
 import HomeMainWork from '@/components/work/HomeMainWork';
 import ClientSlider from '@/components/clientslider/clientslider';
+import CraftingWebsite from '@/components/craftingwebsite/craftingwebsite';
+import Whychoose from '../../../components/whychoose/whychoose';
 
 const HomeMain = () => {
     return (
@@ -34,6 +36,8 @@ const HomeMain = () => {
                             <main style={{ overflowX: "hidden" }}>
                                 <HomeMainHero />
                                 <ClientSlider />
+                                <CraftingWebsite />
+                                <Whychoose />
                                 <HomeMainBanner />
                                 <HomeMainTextSlider />
                                 <HomeMainAbout />
