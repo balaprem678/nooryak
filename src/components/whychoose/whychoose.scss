@@ -286,18 +286,35 @@ $text-light: #555;
     // Background Images
     &:nth-child(1) {
       background: url("../../../public/assets/images/home/why_choose_card_1.png") no-repeat center/100%;
-    }
+      
+      @media screen and (max-width:768px){
+        background: url("../../../public/assets/images/home/why_choose_card_mob_1.png") no-repeat center/100%;
 
+      }
+    }
+    
     &:nth-child(2) {
       background: url("../../../public/assets/images/home/why_choose_card_2.png") no-repeat center/100%;
+      @media screen and (max-width:768px){
+        background: url("../../../public/assets/images/home/why_choose_card_mob_2.png") no-repeat center/100%;
+  
+      }
     }
-
+    
     &:nth-child(3) {
       background: url("../../../public/assets/images/home/why_choose_card_3.png") no-repeat center/100%;
+      @media screen and (max-width:768px){
+        background: url("../../../public/assets/images/home/why_choose_card_mob_3.png") no-repeat center/100%;
+  
+      }
     }
-
+    
     &:nth-child(4) {
       background: url("../../../public/assets/images/home/why_choose_card_4.png") no-repeat center/100%;
+      @media screen and (max-width:768px) {
+  background: url("../../../public/assets/images/home/why_choose_card_mob_4.png") no-repeat center/100%;
+
+}
     }
 
     &:hover {
