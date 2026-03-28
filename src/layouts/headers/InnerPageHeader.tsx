@@ -6,7 +6,7 @@ import NavMenus from '../subComponents/NavMenus';
 import { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-
+import { Images } from '@/utils/Images';
 const InnerPageHeader = ({ containerCls = " container-1750" }) => {
     const [openOffCanvas, setOpenOffCanvas] = useState(false);
     const isSticky = useStickyHeader(20);
@@ -18,10 +18,10 @@ const InnerPageHeader = ({ containerCls = " container-1750" }) => {
                 <div className={`container ${containerCls}`}>
                     <div className="row align-items-center">
                         <div className="col-xl-2 col-lg-6 col-6">
-                            <div className="tp-header-logo">
+                            <div className="tp-header-logo logo" >
                                 <Link href="/">
-                                    <Image priority width={120} className="logo-white" src={logoBlack} alt="logo black" />
-                                    <Image priority width={120} className="logo-black d-none" src={logoBlack} alt="logo black" />
+                                    <Image priority width={120} className="logo-white" src={Images.logo} alt="logo black" />
+                                    <Image priority width={120} className="logo-black d-none" src={Images.logo} alt="logo black" />
                                 </Link>
                             </div>
                         </div>
@@ -51,10 +51,10 @@ const InnerPageHeader = ({ containerCls = " container-1750" }) => {
                         </div>
                     </div>
                 </div>
-            </div>
+            </div >
 
             {/* off canvas */}
-            <OffCanvasPanel openOffcanvas={openOffCanvas} setOpenOffcanvas={setOpenOffCanvas} />
+            < OffCanvasPanel openOffcanvas={openOffCanvas} setOpenOffcanvas={setOpenOffCanvas} />
             {/* off canvas */}
         </>
     );

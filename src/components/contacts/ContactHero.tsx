@@ -53,7 +53,7 @@ const ContactHero = () => {
                                             </div>
                                             <div className="ar-about-funfact-item-content">
                                                 <p> Call Us Directly</p>
-                                                <Link className="tp-line-white" href="tel:2246767430">+(1) 224 676 7430</Link>
+                                                <Link className="tp-line-white" href="tel:6374913298">+91 6374913298</Link>
                                             </div>
                                         </div>
                                         <div className="ar-about-funfact-item d-flex align-items-center">
@@ -62,7 +62,7 @@ const ContactHero = () => {
                                             </div>
                                             <div className="ar-about-funfact-item-content">
                                                 <p>Need Support?</p>
-                                                <Link className="tp-line-white" href="mailto:agntixs@studio.com">agntixs@studio.com</Link>
+                                                <Link className="tp-line-white" href="mailto:contact@nooryak.com">contact@nooryak.com</Link>
                                             </div>
                                         </div>
                                         <div className="ar-about-funfact-item d-flex align-items-center">
@@ -70,7 +70,7 @@ const ContactHero = () => {
                                                 <span><MessageIcon /></span>
                                             </div>
                                             <div className="ar-about-funfact-item-content">
-                                                <Link className="tp-line-white" href="contact.html">Start Chat</Link>
+                                                <Link className="tp-line-white" href="https://wa.link/6sxa6n">Start Chat</Link>
                                             </div>
                                         </div>
                                     </div>

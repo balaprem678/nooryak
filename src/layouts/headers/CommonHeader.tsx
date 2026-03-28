@@ -5,6 +5,7 @@ import MobileOffcanvas from '@/components/offcanvas/MobileOffcanvas';
 import { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { Images } from '@/utils/Images';
 
 const CommonHeader = ({ spacingCls = "mt-40" }) => {
     const [openOffCanvas, setOpenOffCanvas] = useState(false);
@@ -15,9 +16,9 @@ const CommonHeader = ({ spacingCls = "mt-40" }) => {
                 <div className="container container-1750">
                     <div className="row align-items-center">
                         <div className="col-6">
-                            <div className="tp-header-logo">
+                            <div className="tp-header-logo logo 1">
                                 <Link href="/">
-                                    <Image width={140} src={logoWhite} alt="logo-white" />
+                                    <Image width={120} src={Images.logo} alt="logo" />
                                 </Link>
                             </div>
                         </div>

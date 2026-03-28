@@ -16,7 +16,7 @@ const DesignAgencyHeader = () => {
                     <div className="container container-1750">
                         <div className="row align-items-center">
                             <div className="col-6">
-                                <div className="tp-header-logo">
+                                <div className="tp-header-logo 4">
                                     <Link href="/">
                                         <Image width={140} src={logoBlack} alt="logo-black" />
                                     </Link>

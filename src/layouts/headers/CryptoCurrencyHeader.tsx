@@ -25,7 +25,7 @@ const CryptoCurrencyHeader = () => {
                     <div className="container container-1750">
                         <div className="row align-items-center">
                             <div className="col-xl-2 col-lg-5 col-5">
-                                <div className="tp-header-logo">
+                                <div className="tp-header-logo 3">
                                     <Link href="/">
                                         <Image width={120} className="logo-white" src={logoWhite} alt="logo white" />
                                         <Image width={120} className="logo-black d-none" src={logoBlack} alt="logo black" />

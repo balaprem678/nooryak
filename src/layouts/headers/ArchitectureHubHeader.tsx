@@ -34,7 +34,7 @@ const ArchitectureHubHeader = () => {
                                         </div>
                                     </div>
                                     <div className="tp-header-8-middle">
-                                        <div className="tp-header-logo">
+                                        <div className="tp-header-logo 2" >
                                             <Link href="/">
                                                 <Image style={{ width: "100%", height: "auto" }} width={120} src={logoBlack} alt="logo" />
                                             </Link>

@@ -20,7 +20,7 @@ const DigitalMarketingHeader = () => {
                     <div className="container container-1750">
                         <div className="row align-items-center">
                             <div className="col-xl-1 col-lg-5 col-5">
-                                <div className="tp-header-logo">
+                                <div className="tp-header-logo 5">
                                     <Link href="/">
                                         <Image className="logo-white" width={120} src={logoBlack} alt="logo" />
                                     </Link>
