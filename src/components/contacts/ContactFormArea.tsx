@@ -41,8 +41,23 @@ const ContactFormArea = () => {
                                     </div>
                                     <div className="col-lg-12">
                                         <div className="tp-contact-form-input mb-20">
-                                            <label>Website link</label>
+                                            <label>Company</label>
                                             <input name="subject" type="text" />
+                                        </div>
+                                    </div>
+                                    <div className="col-lg-12">
+                                        <div className="tp-contact-form-input mb-20">
+                                            <label>Company</label>
+                                           <select name="" id="">
+                                            <option value="Digital Marketing">Digital Marketing</option>
+                                            <option value="Web Development">Web Development</option>
+                                            <option value="App Development">App Development</option>
+                                            <option value="Google Ads">Google Ads</option>
+                                            <option value="Software Development">Software Development</option>
+                                            <option value="Social Media Marketing">Social Media Marketing</option>
+                                            <option value="Graphic Designing">Graphic Designing</option>
+                                            <option value="Video Editing">Video Editing</option>
+                                           </select>
                                         </div>
                                     </div>
                                     <div className="col-lg-12">

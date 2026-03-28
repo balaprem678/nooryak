@@ -226,7 +226,7 @@ const headerMenuData: MenuItem[] = [
     id: 9,
     active: true,
     title: "Contact",
-    link: "",
+    link: "/contact",
   }
 ];
 export default headerMenuData;
