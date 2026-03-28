@@ -21,6 +21,10 @@ import services_3 from "../../public/assets/images/home/services_3.png";
 import services_4 from "../../public/assets/images/home/services_4.png";
 
 import craftingwebsite_banner from "../../public/assets/images/home/craftingwebsite_banner.png";
+import why_choose_card_icon_1 from "../../public/assets/images/home/why_choose_card_icon_1.png";
+import why_choose_card_icon_2 from "../../public/assets/images/home/why_choose_card_icon_2.png";
+import why_choose_card_icon_3 from "../../public/assets/images/home/why_choose_card_icon_3.png";
+import why_choose_card_icon_4 from "../../public/assets/images/home/why_choose_card_icon_4.png";
 
 
 export const Images = {
@@ -29,5 +33,5 @@ export const Images = {
     logo, Logo_blue, gmail, instagram, whatsapp, twitter, facebook, linkedin, youtube,
 
     // Home Images Import here
-    herobanner, about_1, about_2, abt_sec, services_1, services_2, services_3, services_4,craftingwebsite_banner
+    herobanner, about_1, about_2, abt_sec, services_1, services_2, services_3, services_4,craftingwebsite_banner,why_choose_card_icon_1,why_choose_card_icon_2,why_choose_card_icon_3,why_choose_card_icon_4
 };

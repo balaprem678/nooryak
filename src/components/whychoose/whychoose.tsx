@@ -1,30 +1,30 @@
 import React from 'react';
 import './whychoose.scss';
-
-export default function WhyChoose () {
+import { Images } from "@/utils/Images";
+export default function WhyChoose() {
   const features = [
     {
       title: "Proven Expertise & Innovation",
       desc: "Skilled professionals delivering cutting edge solutions.",
-      icon: "🌐", // Replace with actual SVG or FontAwesome
+      images: Images.why_choose_card_icon_1,
       variant: "orange"
     },
     {
       title: "Customized & Scalable Solutions",
       desc: "Tailored services to meet your business needs.",
-      icon: "⚙️",
+      images: Images.why_choose_card_icon_2,
       variant: "white"
     },
     {
       title: "Seamless Integration & Support",
       desc: "Smooth digital transformation journey.",
-      icon: "🛡️",
+      images: Images.why_choose_card_icon_3,
       variant: "white"
     },
     {
       title: "Quality & Excellence",
       desc: "High-quality results that exceed expectations.",
-      icon: "💬",
+      images: Images.why_choose_card_icon_4,
       variant: "orange"
     }
   ];
@@ -45,10 +45,12 @@ export default function WhyChoose () {
           {features.map((f, index) => (
             <div key={index} className={`feature-card ${f.variant}`}>
               <div className="icon-wrapper">
-                <span className="icon">{f.icon}</span>
+                <img src={f.images.src} alt={f.title} />
               </div>
-              <h3>{f.title}</h3>
-              <p>{f.desc}</p>
+              <div>
+                <h3>{f.title}</h3>
+                <p>{f.desc}</p>
+              </div>
             </div>
           ))}
         </div>
