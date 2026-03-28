@@ -119,3 +119,17 @@
   gap: 20px;
   justify-content: center;
 }
+
+  .logo img {
+        height: auto;
+        background: #0000007a;
+        background: linear-gradient(135deg, #0f172a 60%, #ff5722 140%);
+        border-radius: 50px;
+        width: 150px;
+        height: auto;
+        padding: 2px 12px;
+
+        @media screen and (min-width:1500px) {
+            width: 180px;
+        }
+    }
