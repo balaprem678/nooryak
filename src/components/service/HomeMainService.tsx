@@ -58,7 +58,7 @@ const HomeMainService = () => {
                           </span>
                         </Link>
                       </div>
-                      <div className="tp-service-category">
+                      {/* <div className="tp-service-category">
                         {service.categories?.map((category, catIndex) => (
                           <React.Fragment key={catIndex}>
                             <span>{category}</span>
@@ -67,7 +67,7 @@ const HomeMainService = () => {
                               (catIndex === 2 && service.id === 4) ? <br /> : null}
                           </React.Fragment>
                         ))}
-                      </div>
+                      </div> */}
                     </div>
                   </div>
                   <div className="col-xxl-4 col-xl-4 col-lg-4 col-md-4">
