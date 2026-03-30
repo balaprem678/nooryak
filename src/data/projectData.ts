@@ -63,14 +63,14 @@ import portfolioThumb25 from '../../public/assets/img/home-05/project/project-5.
 export const projectsData: projectsDT[] = [
     {
         id: 1,
-        title: "Really Greatste",
+        title: "S3-INFRASTRUCTURE",
         image: Images.project_1,
-        categories: ["UI/UX Design", "Web Development"],
+        categories: ["Graphic Designing", "Branding", "UI/UX"],
         link: "/portfolio-details-gallery-light",
     },
     {
         id: 2,
-        title: "Taxi Booking",
+        title: "Radiant Consultancy",
         image: Images.project_4,
         categories: ["UI/UX Design", "Web Development"],
         link: "/portfolio-details-gallery-light",

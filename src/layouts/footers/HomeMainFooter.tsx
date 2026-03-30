@@ -94,21 +94,18 @@ const HomeMainFooter: React.FC<IHomeMainFooter> = ({ bgColor, buttonCls, quikLin
                     <span><a href="/privacy-policy">Privacy Policy</a> - <a href="/terms-conditions">Terms & Conditions</a></span>
 
                     <div className="social-wrapper">
-                        <a href="#" className="icon youtube" target="_blank" rel="noreferrer">
-                            <i className="fab fa-youtube"></i>
-                        </a>
-
-                        <a href="#" className="icon instagram" target="_blank" rel="noreferrer">
-                            <i className="fab fa-instagram"></i>
-                        </a>
-
-                        <a href="#" className="icon linkedin" target="_blank" rel="noreferrer">
-                            <i className="fab fa-linkedin-in"></i>
-                        </a>
-
-                        <a href="#" className="icon x" target="_blank" rel="noreferrer">
-                            <i className="fab fa-x-twitter"></i>
-                        </a>
+                        {socials.map((item, index) => (
+                            <a
+                                key={index}
+                                href={item.link}
+                                className={`icon ${item.name}`}
+                                target="_blank"
+                                rel="noreferrer"
+                                aria-label={item.name}
+                            >
+                                <i className={`fab ${item.icon}`}></i>
+                            </a>
+                        ))}
                     </div>
 
                     <span>Copyright © 2026</span>

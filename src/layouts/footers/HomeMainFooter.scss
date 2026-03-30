@@ -137,44 +137,43 @@
 }
 
 
-$bg-dark: #0f172a;
+$size: 40px;
 $white: #fff;
 
-// Brand Colors
 $youtube: #ff0000;
 $instagram: linear-gradient(45deg, #f9ce34, #ee2a7b, #6228d7);
 $linkedin: #0077b5;
 $x: #000;
 
-body {
-    margin: 0;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: $bg-dark;
-    font-family: sans-serif;
-}
-
 .social-wrapper {
     display: flex;
-    gap: 25px;
+    gap: 14px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; // responsive wrap
 
     .icon {
-        position: relative;
-        width: 65px;
-        height: 65px;
-        border-radius: 50%;
+        width: $size;
+        height: $size;
+        min-width: $size;
+        min-height: $size;
+
         display: flex;
-        justify-content: center;
         align-items: center;
+        justify-content: center;
+
+        border-radius: 50%;
         text-decoration: none;
-        font-size: 26px;
         color: $white;
+        font-size: 16px; // icon size inside
+
         background: rgba(255, 255, 255, 0.08);
-        backdrop-filter: blur(10px);
-        transition: 0.4s ease;
+        backdrop-filter: blur(8px);
+
+        position: relative;
         overflow: hidden;
+
+        transition: all 0.3s ease;
 
         i {
             position: relative;
@@ -187,55 +186,44 @@ body {
             inset: 0;
             border-radius: 50%;
             transform: scale(0);
-            transition: 0.4s ease;
+            transition: 0.3s ease;
             z-index: 0;
         }
 
         &:hover {
-            transform: translateY(-10px) scale(1.1);
-            box-shadow: 0 10px 30px rgba(255, 255, 255, 0.2);
+            transform: translateY(-5px) scale(1.08);
 
             &::before {
                 transform: scale(1.2);
             }
         }
 
-        // 🔴 YouTube
+        // Brand Colors
         &.youtube::before {
             background: $youtube;
         }
 
-        // 🟣 Instagram
         &.instagram::before {
             background: $instagram;
         }
 
-        // 🔵 LinkedIn
         &.linkedin::before {
             background: $linkedin;
         }
 
-        // ⚫ X (Twitter)
         &.x::before {
             background: $x;
         }
     }
 }
 
-@keyframes pulseGlow {
-    0% {
-        box-shadow: 0 0 0 rgba(255, 255, 255, 0.2);
-    }
+/* 📱 Mobile Optimization */
+@media (max-width: 480px) {
+    .social-wrapper {
+        gap: 10px;
 
-    50% {
-        box-shadow: 0 0 25px rgba(255, 255, 255, 0.4);
+        .icon {
+            transform: scale(0.95); // slight shrink on small screens
+        }
     }
-
-    100% {
-        box-shadow: 0 0 0 rgba(255, 255, 255, 0.2);
-    }
-}
-
-.icon:hover {
-    animation: pulseGlow 1s infinite;
 }
