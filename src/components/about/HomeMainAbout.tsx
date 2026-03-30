@@ -273,7 +273,7 @@ export default function HomeMainAbout() {
                                 >
 
                                     <div className="dgm-about-review">
-                                        <h4 style={{ margin: 0 }}>4.9</h4>
+                                        <h4 style={{ margin: 0 }}>5</h4>
                                         <span style={{ color: "#777" }}>
                                             ( 60 Reviews )
                                         </span>
