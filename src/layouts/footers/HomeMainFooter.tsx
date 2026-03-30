@@ -71,7 +71,7 @@ const HomeMainFooter: React.FC<IHomeMainFooter> = ({ bgColor, buttonCls, quikLin
                         CONTACT US AND LET’S BRING YOUR VISION TO LIFE
                     </p>
 
-                    <h1 className="main-title">
+                    <a href="/contact" className="main-title">
                         <span>C</span>
                         <span>O</span>
                         <span>N</span>
@@ -81,7 +81,7 @@ const HomeMainFooter: React.FC<IHomeMainFooter> = ({ bgColor, buttonCls, quikLin
                         <span>T</span>
                         <span>U</span>
                         <span>S</span>
-                    </h1>
+                    </a>
                 </div>
 
                 <div className="bottom-bar">

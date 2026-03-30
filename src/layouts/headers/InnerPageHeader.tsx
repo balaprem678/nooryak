@@ -25,7 +25,7 @@ const InnerPageHeader = ({ containerCls = " container-1750" }) => {
                                 </Link>
                             </div>
                         </div>
-                        <div className="col-xl-8 d-none d-xl-block">
+                        <div className="col-xl-10 d-none d-xl-block">
                             <div className="tp-header-box text-center">
                                 <div className="tp-header-menu tp-header-dropdown dropdown-white-bg">
                                     <nav className="tp-mobile-menu-active">
@@ -34,7 +34,7 @@ const InnerPageHeader = ({ containerCls = " container-1750" }) => {
                                 </div>
                             </div>
                         </div>
-                        <div className="col-xl-2 col-lg-6 col-6">
+                        {/* <div className="col-xl-2 col-lg-6 col-6">
                             <div className="tp-header-right text-end">
                                 <div className="tp-header-14-bar-wrap ml-20">
                                     <button onClick={() => setOpenOffCanvas(true)} className="tp-header-8-bar tp-offcanvas-open-btn">
@@ -48,7 +48,7 @@ const InnerPageHeader = ({ containerCls = " container-1750" }) => {
                                     </button>
                                 </div>
                             </div>
-                        </div>
+                        </div> */}
                     </div>
                 </div>
             </div >
