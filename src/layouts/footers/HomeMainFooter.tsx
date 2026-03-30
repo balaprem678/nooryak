@@ -13,6 +13,13 @@ interface IHomeMainFooter {
     socialBtnCls?: string
 }
 
+const socials = [
+    { name: "youtube", icon: "fa-youtube", link: "#" },
+    { name: "instagram", icon: "fa-instagram", link: "#" },
+    { name: "linkedin", icon: "fa-linkedin-in", link: "#" },
+    { name: "x", icon: "fa-x-twitter", link: "#" },
+];
+
 const HomeMainFooter: React.FC<IHomeMainFooter> = ({ bgColor, buttonCls, quikLinkCls = "footer-main", socialBtnCls = "" }) => {
     return (
         <>
@@ -86,29 +93,23 @@ const HomeMainFooter: React.FC<IHomeMainFooter> = ({ bgColor, buttonCls, quikLin
                 <div className="bottom-bar">
                     <span><a href="/privacy-policy">Privacy Policy</a> - <a href="/terms-conditions">Terms & Conditions</a></span>
 
+                    <div className="social-wrapper">
+                        <a href="#" className="icon youtube" target="_blank" rel="noreferrer">
+                            <i className="fab fa-youtube"></i>
+                        </a>
 
-                    {/* <ul id="buttons" className="socialmediaicon">
-                        <li className="fb">
-                            <a href="#facebook" title="Facebook">
-                                <i className="fab fa-facebook-f"></i>
-                            </a>
-                        </li>
-                        <li className="tw">
-                            <a href="#twitter" title="Twitter">
-                                <i className="fab fa-twitter"></i>
-                            </a>
-                        </li>
-                        <li className="in">
-                            <a href="http://instagram.com/ilyasbilgihan" title="Instagram" target="_blank">
-                                <i className="fab fa-instagram"></i>
-                            </a>
-                        </li>
-                        <li className="gh">
-                            <a href="#github" title="Github">
-                                <i className="fab fa-github"></i>
-                            </a>
-                        </li>
-                    </ul> */}
+                        <a href="#" className="icon instagram" target="_blank" rel="noreferrer">
+                            <i className="fab fa-instagram"></i>
+                        </a>
+
+                        <a href="#" className="icon linkedin" target="_blank" rel="noreferrer">
+                            <i className="fab fa-linkedin-in"></i>
+                        </a>
+
+                        <a href="#" className="icon x" target="_blank" rel="noreferrer">
+                            <i className="fab fa-x-twitter"></i>
+                        </a>
+                    </div>
 
                     <span>Copyright © 2026</span>
                 </div>

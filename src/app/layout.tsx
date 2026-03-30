@@ -99,7 +99,6 @@ export default function RootLayout({
       <head>
         <link rel="icon" href="../../public/assets/images/common/Logo-blue.png" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" />
       </head>
       <body suppressHydrationWarning={true} className={`tp-magic-cursor ${inter.variable}
      ${besley.variable} ${spaceGrotesk.variable} ${playfairDisplay.variable}
