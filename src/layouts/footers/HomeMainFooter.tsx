@@ -2,15 +2,14 @@ import HomeFooterCopyright from "./subComponents/HomeFooterCopyright";
 import { FooterSocialIcons } from "./subComponents/FooterSocialIcons";
 import Link from 'next/link';
 import React from 'react';
-
 interface IHomeMainFooter {
     bgColor?: string;
     buttonCls?: string;
-    quikLinkCls?:string;
-    socialBtnCls?:string
+    quikLinkCls?: string;
+    socialBtnCls?: string
 }
 
-const HomeMainFooter:React.FC<IHomeMainFooter> = ({bgColor, buttonCls, quikLinkCls="footer-main", socialBtnCls=""}) => {
+const HomeMainFooter: React.FC<IHomeMainFooter> = ({ bgColor, buttonCls, quikLinkCls = "footer-main", socialBtnCls = "" }) => {
     return (
         <>
             <div className={`tp-footer-area ${buttonCls} pb-35 pt-160`} style={{ backgroundColor: bgColor }}>
@@ -25,7 +24,7 @@ const HomeMainFooter:React.FC<IHomeMainFooter> = ({bgColor, buttonCls, quikLinkC
                         </div>
                         <div className="col-xl-5 col-lg-4 col-md-6">
                             <div className={`tp-footer-widget ${quikLinkCls} tp-footer-col-2 pb-40 tp_fade_anim`} data-delay=".5">
-                                <h4 className="tp-footer-widget-title-sm pre mb-25">Quick links</h4>
+                                <h4 className="tp-footer-widget-title-sm pre mb-25">Quick links 3</h4>
                                 <div className="tp-footer-widget-menu">
                                     <ul>
                                         <li><Link href="#">About</Link></li>{" "}
@@ -55,8 +54,10 @@ const HomeMainFooter:React.FC<IHomeMainFooter> = ({bgColor, buttonCls, quikLinkC
                     </div>
                 </div>
             </div>
+           
+
             {/* footer copyright */}
-            <HomeFooterCopyright bgColor={bgColor}/>
+            <HomeFooterCopyright bgColor={bgColor} />
         </>
     );
 };

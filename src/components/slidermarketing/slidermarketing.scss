@@ -1,0 +1,139 @@
+.idea-section {
+  background: #f3f3f3;
+
+}
+
+/* SLIDER */
+.slider {
+  position: relative;
+  top: 60px;
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+/* TRACK */
+.track {
+  display: inline-flex;
+  gap: 60px;
+  font-weight: 700;
+  animation: scrollText 25s linear infinite;
+}
+
+/* TEXT */
+.outline {
+  font-size: 120px;
+  color: transparent;
+  -webkit-text-stroke: 1px #bbb;
+  opacity: 0.6;
+}
+
+.bold {
+  font-size: 120px;
+  color: #000;
+}
+
+/* ANIMATION */
+@keyframes scrollText {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* CONTENT */
+.content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+}
+
+.content h2 {
+  font-size: 26px;
+  font-weight: 600;
+  color: #111;
+  line-height: 1.5;
+  margin-bottom: 25px;
+}
+
+.highlight {
+  background: linear-gradient(transparent 60%, #ffd54f 60%);
+  padding: 0 4px;
+}
+
+.cta-btn {
+  background: #000;
+  color: #fff;
+  padding: 12px 28px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.cta-btn:hover {
+  background: #222;
+}
+
+/* ========================= */
+/* 📱 RESPONSIVE BREAKPOINTS */
+/* ========================= */
+
+/* Tablet */
+@media (max-width: 992px) {
+  .idea-section {
+    height: 420px;
+  }
+
+  .outline,
+  .bold {
+    font-size: 80px;
+  }
+
+  .track {
+    gap: 40px;
+    animation-duration: 20s;
+  }
+
+  .content h2 {
+    font-size: 22px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .idea-section {
+    height: 380px;
+  }
+
+  .slider {
+    top: 40px;
+  }
+
+  .outline,
+  .bold {
+    font-size: 50px;
+  }
+
+  .track {
+    gap: 25px;
+    animation-duration: 15s;
+  }
+
+  .content {
+    max-width: 90%;
+  }
+
+  .content h2 {
+    font-size: 18px;
+    line-height: 1.4;
+  }
+
+  .cta-btn {
+    padding: 10px 20px;
+    font-size: 13px;
+  }
+}

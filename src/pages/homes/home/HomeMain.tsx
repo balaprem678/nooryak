@@ -18,6 +18,8 @@ import HomeMainWork from '@/components/work/HomeMainWork';
 import ClientSlider from '@/components/clientslider/clientslider';
 import CraftingWebsite from '@/components/craftingwebsite/craftingwebsite';
 import Whychoose from '../../../components/whychoose/whychoose';
+import { Images } from '../../../utils/Images';
+import SliderMarketing from '@/components/slidermarketing/slidermarketing';
 
 const HomeMain = () => {
     return (
@@ -48,6 +50,12 @@ const HomeMain = () => {
                                 <HomeMainWork />
                                 <HomeMainTestimonial />
                                 {/* <ModernAgencyAward /> */}
+                                <div className="foot_floating">
+                                    <img src={Images.whatsapp.src} alt="" />
+                                    <img src={Images.mobile.src} alt="" />
+                                </div>
+                                <SliderMarketing />
+
                             </main>
                             <HomeMainFooter />
                         </div>

@@ -47,7 +47,7 @@ const ContactFormArea = () => {
                                     </div>
                                     <div className="col-lg-12">
                                         <div className="tp-contact-form-input mb-20">
-                                            <label>Company</label>
+                                            <label>Services</label>
                                            <select name="" id="">
                                             <option value="Digital Marketing">Digital Marketing</option>
                                             <option value="Web Development">Web Development</option>

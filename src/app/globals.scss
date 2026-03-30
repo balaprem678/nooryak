@@ -84,13 +84,13 @@
     font-size: 26px;
   }
 
-  @media (max-width: 576px) {
-    font-size: 22px;
-  }
+  // @media (max-width: 576px) {
+  //   font-size: 26px;
+  // }
 
-  @media (max-width: 380px) {
-    font-size: 20px;
-  }
+  // @media (max-width: 380px) {
+  //   font-size: 20px;
+  // }
 }
 
 
@@ -112,6 +112,12 @@
     background: #fff;
     transform: translateY(-5px);
 
+  }
+
+  @media screen and (max-width:500px) {
+    i {
+      display: none;
+    }
   }
 }
 
@@ -135,14 +141,61 @@
   }
 }
 
-.tp-testimonial-item {
-  .tp-testimonial-text {
-    p {
-      display: -webkit-box;
-      -webkit-line-clamp: 6;
-      -webkit-box-orient: vertical;
-      overflow: hidden;
 
+.foot_floating {
+  z-index: 10000;
+  flex-direction: column;
+  gap: 15px;
+  display: flex;
+  position: fixed;
+  bottom: 20px;
+  right: 10px;
+
+  img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+
+    &:hover {
+      transform: scale(1.1);
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
     }
+
+    &:nth-child(1) {
+      animation: movingUp 2s ease-in-out infinite;
+    }
+
+    &:nth-child(2) {
+      animation: shake 2s ease-in-out infinite;
+    }
+  }
+}
+
+@keyframes movingUp {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes shake {
+
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  
+  25% {
+    transform: rotate(10deg);
+  }
+  
+  75% {
+    transform: rotate(0deg);
   }
 }

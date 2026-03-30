@@ -3,7 +3,10 @@
 /*----------------------------------------*/
 /*  2.2 Buttons
 /*----------------------------------------*/
-
+.tp-service-btn{
+    display: flex;
+    gap: 5px;
+}
 .tp-btn {
     &-black {
         position: relative;
@@ -158,6 +161,13 @@ border: 1px solid #ff3d00;
             }
         }
 
+
+        .tp-btn-black-circle{
+            @media screen and (max-width:580px) {
+                display: none;
+                
+            }
+        }
         &-square {
             padding: 20px 34px;
             font-weight: 600;

@@ -26,7 +26,7 @@ const CreativeAgencyFooter: React.FC<FooterProps> = ({ bgColor = "#1b1b1d", clas
                         </div>
                         <div className="col-xl-5 col-lg-4 col-md-6">
                             <div className="tp-footer-widget tp-footer-col-2 pb-40 tp_fade_anim" data-delay=".5">
-                                <h4 className="tp-footer-widget-title-sm pre mb-25">Quick links</h4>
+                                <h4 className="tp-footer-widget-title-sm pre mb-25">Quick links 1</h4>
                                 <div className="tp-footer-widget-menu">
                                     <ul>
                                         <li><Link href="#">About</Link></li>{" "}

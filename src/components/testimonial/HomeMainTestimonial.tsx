@@ -27,7 +27,7 @@ const HomeMainTestimonial = () => {
                                     <Image src={testiLogo} alt="testimonial-logo" />
                                     <div className="tp-testimonial-ratting-info">
                                         <div className="tp-testimonial-ratting-icon">
-                                            <span>4.9/5</span>
+                                            <span>5/5</span>
                                             {Array.from({ length: 5 }, (_, index) => (
                                                 <i key={index}><StarIconThree /></i>
                                             ))}

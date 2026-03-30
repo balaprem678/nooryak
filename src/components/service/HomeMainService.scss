@@ -1,6 +1,10 @@
 ﻿.tp-section-title {
     font-size: 40px;
     font-family: Space Grotesk;
+
+    @media screen and (max-width: 480px) {
+        font-size: 32px;
+    }
 }
 
 .tp-service-item{
@@ -15,4 +19,8 @@ padding: 20px 40px;
 .tp-service-thumb{
     border-radius: 12px;
     overflow: hidden;
+}
+
+.tp-service-title-box{
+    text-align: center;
 }

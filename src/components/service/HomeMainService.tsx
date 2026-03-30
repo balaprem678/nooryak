@@ -8,13 +8,13 @@ import "./HomeMainService.scss"
 const HomeMainService = () => {
 
   return (
-    <div id="down" className="tp-service-area pt-20" style={{  overflow: "hidden" }}>
+    <div id="down" className="tp-service-area pt-20" style={{ overflow: "hidden" }}>
       <div className="container-fluid p-0">
         <div className="row gx-0">
           <div className="col-12">
             <div className="tp-service-title-box">
               <span className="tp-section-subtitle pre">Our Core Services
-                
+
               </span>
             </div>
           </div>
@@ -51,7 +51,19 @@ const HomeMainService = () => {
                           </span>
                           <span className="tp-btn-black-filter d-inline-flex align-items-center"
                             style={{ filter: `url(#buttonFilter${service.id + 1})` }}>
-                            <span className="tp-btn-black-text">See Our Services</span>
+                            <span className="tp-btn-black-text">View Portfolio</span>
+                            <span className="tp-btn-black-circle">
+                              <ArrowSvg />
+                            </span>
+                          </span>
+                        </Link>
+                        <Link href={service.link} className="tp-btn-black btn-red-bg">
+                          <span className="tp-btn-black-filter-blur">
+                            <ButtonBlurFilter filterId={`buttonFilter${service.id + 1}`} />
+                          </span>
+                          <span className="tp-btn-black-filter d-inline-flex align-items-center"
+                            style={{ filter: `url(#buttonFilter${service.id + 1})` }}>
+                            <span className="tp-btn-black-text">Explore Page</span>
                             <span className="tp-btn-black-circle">
                               <ArrowSvg />
                             </span>

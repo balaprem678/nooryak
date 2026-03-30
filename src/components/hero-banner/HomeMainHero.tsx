@@ -102,7 +102,7 @@ export default function HomeMainHero() {
                                     Hire Professional <span className="arrow">↗</span>
                                 </button>
                                 <div className="number">98%</div>
-                                <div className="label">Clients Satisfied and Repeating</div>
+                                <div className="label">Clients Satisfied <br /> and Repeating</div>
                             </div>
 
                             <div className="stat">
@@ -110,7 +110,7 @@ export default function HomeMainHero() {
                                     Start a Project <span className="arrow">↗</span>
                                 </button>
                                 <div className="number">125+</div>
-                                <div className="label">Projects Completed in 24 Countries</div>
+                                <div className="label">Projects Completed in <br /> 24 Countries</div>
                             </div>
                         </div>
                     </div>

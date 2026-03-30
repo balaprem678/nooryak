@@ -8,6 +8,7 @@ import twitter from "../../public/assets/images/common/twitter.png";
 import facebook from "../../public/assets/images/common/facebook.png";
 import linkedin from "../../public/assets/images/common/linkedin.png";
 import youtube from "../../public/assets/images/common/youtube.png";
+import mobile from "../../public/assets/images/mobile.png";
 
 // Home Images Import Here
 import herobanner from "../../public/assets/images/home/herobanner.jpeg";
@@ -32,7 +33,7 @@ import why_choose_card_icon_4 from "../../public/assets/images/home/why_choose_c
 export const Images = {
 
     // Common Images Import Here
-    logo, Logo_blue, gmail, instagram, whatsapp, twitter, facebook, linkedin, youtube,
+    logo, Logo_blue, gmail, instagram, whatsapp, twitter, facebook, linkedin, youtube,mobile,
 
     // Home Images Import here
     herobanner, herobanner1, herobanner_person, about_1, about_2, abt_sec, services_1, services_2, services_3, services_4,craftingwebsite_banner,why_choose_card_icon_1,why_choose_card_icon_2,why_choose_card_icon_3,why_choose_card_icon_4

@@ -1,4 +1,4 @@
-@use '../../utils' as *;
+@use '../../utils'as *;
 
 /*----------------------------------------*/
 /*  7.9 Testimonail Css
@@ -1408,7 +1408,7 @@
                 color: var(--tp-common-brown);
                 text-decoration: underline;
 
-              
+
             }
         }
     }
@@ -1663,6 +1663,19 @@
                 top: -50px;
                 left: 0;
             }
+        }
+    }
+}
+
+.tp-testimonial-item {
+    .tp-testimonial-text {
+        p {
+            -webkit-line-clamp: 6;
+            -webkit-box-orient: vertical;
+            font-size: 18px;
+            display: -webkit-box;
+            overflow: hidden;
+            line-height: 30px;
         }
     }
 }

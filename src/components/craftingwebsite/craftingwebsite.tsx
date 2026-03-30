@@ -43,7 +43,7 @@ export default function CraftingWebsite() {
         {/* RIGHT CONTENT */}
         <div className="ds-right">
           <div className="ds-tag">
-            <span>DRIVEN BY CREATIVITY</span>
+            <span><i className="fa-solid fa-face-smile"></i> DRIVEN BY CREATIVITY</span>
           </div>
 
           <h1 className="ds-title">
