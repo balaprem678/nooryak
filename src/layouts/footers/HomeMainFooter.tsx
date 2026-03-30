@@ -62,7 +62,7 @@ const HomeMainFooter: React.FC<IHomeMainFooter> = ({ bgColor, buttonCls, quikLin
             <section className="contact-hero">
                 <div className="top-bar">
                     <h3 className="">  <Image width={120} src={Images.logo} alt="logo" /></h3>
-                    <span>Creative Grapihic Design</span>
+                    {/* <span>Creative Grapihic Design</span> */}
                 </div>
 
                 <div className="center-content">

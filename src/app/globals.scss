@@ -142,16 +142,19 @@
 }
 
 
+
 .foot_floating {
   z-index: 10000;
   position: fixed;
-  bottom: 120px;
-  right: 50px;
+  bottom: 10px;
+  right: 20px;
+
 
   img {
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     transition: all 0.3s ease;
+    border-radius: 50%;
 
     &:hover {
       transform: scale(1.1);
@@ -197,15 +200,15 @@
   border-radius: 50%;
   justify-content: center;
   align-items: center;
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
   text-decoration: none;
   transition: all .3s;
   animation: 1s linear infinite hoverWave;
   display: flex;
   position: fixed;
-  bottom: 50px;
-  left: 50px;
+  bottom: 10px;
+  left: 20px;
   box-shadow: 0 8px 10px #ff3d004d;
   transform: rotate(90deg);
 }
@@ -219,7 +222,7 @@
   -webkit-animation: 1200ms ease 0s normal none 1 running shake;
   -webkit-animation-iteration-count: infinite;
   color: white;
-  font-size: 25px;
+  font-size: 20px;
   padding-top: 5px;
   transition: .3s all;
 }

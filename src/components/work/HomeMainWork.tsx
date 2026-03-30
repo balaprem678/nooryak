@@ -1,7 +1,7 @@
 
 const HomeMainWork = () => {
     return (
-        <div className="tp-work-area pt-120 pb-145 tp-panel-pin-area" style={{ overflow: "hidden" }}>
+        <div className="tp-work-area pb-145 tp-panel-pin-area" style={{ overflow: "hidden" }}>
             <div className="container">
                 <div className="row">
                     <div className="col-lg-6">
@@ -18,7 +18,7 @@ const HomeMainWork = () => {
                                     <i>01</i>
                                 </div>
                                 <div className="tp-work-content">
-                                    <h4 className="tp-work-title">User Research</h4>
+                                    <h4 className="tp-work-title">App Development</h4>
                                     <p>We listen stories of user to understand pain points and give a rough <br /> estimate about cost and time-frame</p>
                                 </div>
                             </div>
@@ -28,7 +28,7 @@ const HomeMainWork = () => {
                                     <i>02</i>
                                 </div>
                                 <div className="tp-work-content">
-                                    <h4 className="tp-work-title">Define Problems</h4>
+                                    <h4 className="tp-work-title">Digital Marketing</h4>
                                     <p>We listen stories of user to understand pain points and give a rough <br /> estimate about cost and time-frame</p>
                                 </div>
                             </div>
@@ -38,7 +38,7 @@ const HomeMainWork = () => {
                                     <i>03</i>
                                 </div>
                                 <div className="tp-work-content">
-                                    <h4 className="tp-work-title">Design & Prototype</h4>
+                                    <h4 className="tp-work-title">Graphic Designing</h4>
                                     <p>We listen stories of user to understand pain points and give a rough <br /> estimate about cost and time-frame</p>
                                 </div>
                             </div>
@@ -48,7 +48,7 @@ const HomeMainWork = () => {
                                     <i>04</i>
                                 </div>
                                 <div className="tp-work-content">
-                                    <h4 className="tp-work-title">Evaluation & Testing</h4>
+                                    <h4 className="tp-work-title">SEO & Testing</h4>
                                     <p>We listen stories of user to understand pain points and give a rough <br /> estimate about cost and time-frame</p>
                                 </div>
                             </div>

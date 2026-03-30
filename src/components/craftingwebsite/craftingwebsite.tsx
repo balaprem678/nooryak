@@ -48,12 +48,12 @@ export default function CraftingWebsite() {
 
           <h1 className="ds-title">
             Crafting Websites <span className="highlight">with
-            <br />
-            Purpose and Passion</span>
+              <br />
+              Purpose and Passion</span>
           </h1>
 
           <p className="ds-desc">
-           We are a team of designers, developers, and strategists dedicated to transforming ideas into powerful digital experiences. From modern web applications to scalable platforms, we build solutions that drive real business growth.
+            We are a team of designers, developers, and strategists dedicated to transforming ideas into powerful digital experiences. From modern web applications to scalable platforms, we build solutions that drive real business growth.
           </p>
 
           {/* Progress Bars */}
@@ -79,8 +79,12 @@ export default function CraftingWebsite() {
             </div>
           </div>
 
-          <button className="gra_btn">
-            Schedule a Consltation →
+          <button
+            type="button"
+            className="gra_btn"
+            onClick={() => window.open("https://wa.me/916374913298?text=Hello%20Nooryak%20Tech%2C%20I%20would%20like%20to%20discuss%20about%20your%20Digital%20Services", "_blank")}
+          >
+            Schedule a Consultation →
           </button>
         </div>
       </div>

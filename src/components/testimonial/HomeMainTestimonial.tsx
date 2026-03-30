@@ -41,7 +41,7 @@ const HomeMainTestimonial = () => {
                 </div>
             </div>
             <div className='df_c checkwritereview'>
-                <button className='gra_btn'>Check a Review <i className="fa-solid fa-arrow-trend-down"></i></button>
+                <button className='gra_btn'>Check Reviews <i className="fa-solid fa-arrow-trend-down"></i></button>
                 <button className='gra_btn'>Write a Review <i className="fa-solid fa-arrow-trend-up"></i></button>
             </div>
             {/* Testimonial Slider Section */}
