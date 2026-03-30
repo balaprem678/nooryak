@@ -1,4 +1,4 @@
-@use '../../utils'as *;
+@use '../../utils' as *;
 
 /*----------------------------------------*/
 /*  7.5 Service Css
@@ -3412,4 +3412,11 @@
     bottom: 40px;
     left: 50%;
     transform: translateX(-50%);
+    button{
+        white-space: nowrap;
+    }
+
+    @media screen and (max-width:768px) {
+        bottom: 16px;
+    }
 }

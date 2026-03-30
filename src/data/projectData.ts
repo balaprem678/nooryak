@@ -1,13 +1,7 @@
 
 import { projectsDT } from '@/types/project-d-t';
 import { Images } from '@/utils/Images';
-//home main project
-import project1 from "../../public/assets/img/home-01/project/project-1.jpg"
-import project2 from "../../public/assets/img/home-01/project/project-2.jpg"
-import project3 from "../../public/assets/img/home-01/project/project-3.jpg"
-import project4 from "../../public/assets/img/home-01/project/project-4.jpg"
-import project5 from "../../public/assets/img/home-01/project/project-5.jpg"
-import project6 from "../../public/assets/img/home-01/project/project-6.jpg"
+
 //home 3 project image
 import project7 from "../../public/assets/img/home-03/project/project-1.jpg";
 import project8 from "../../public/assets/img/home-03/project/project-2.jpg";
@@ -69,45 +63,45 @@ import portfolioThumb25 from '../../public/assets/img/home-05/project/project-5.
 export const projectsData: projectsDT[] = [
     {
         id: 1,
-        title: "Acme Studio",
-        image: project1,
-        categories: ["Product Design", "Branding", "Creative"],
+        title: "Really Greatste",
+        image: Images.project_1,
+        categories: ["UI/UX Design", "Web Development"],
         link: "/portfolio-details-gallery-light",
     },
     {
         id: 2,
-        title: "Digital Farming",
-        image: project4,
-        categories: ["Product Design", "Branding", "Creative"],
+        title: "Taxi Booking",
+        image: Images.project_4,
+        categories: ["UI/UX Design", "Web Development"],
         link: "/portfolio-details-gallery-light",
 
     },
     {
         id: 3,
-        title: "Grace Clinic",
-        image: project2,
-        categories: ["Creative", "Branding", "Development"],
+        title: "Radiant",
+        image: Images.project_3,
+        categories: ["UI/UX Design", "Web Development"],
         link: "/portfolio-details-gallery-light",
     },
     {
         id: 4,
-        title: "Virtual Reality",
-        image: project5,
-        categories: ["Product Design", "Branding", "Creative"],
+        title: "Sahana Online Shipping",
+        image: Images.project_2,
+        categories: ["UI/UX Design", "Web Development"],
         link: "/portfolio-details-gallery-light",
     },
     {
         id: 5,
-        title: "Smart Cities",
-        image: project3,
-        categories: ["Product Design", "Branding", "Creative"],
+        title: "Red Panda vacations",
+        image: Images.project_5,
+        categories: ["UI/UX Design", "Web Development"],
         link: "/portfolio-details-gallery-light",
     },
     {
         id: 6,
-        title: "Cloud Computing",
-        image: project6,
-        categories: ["Product Design", "Branding", "Creative"],
+        title: "Funkiddoz",
+        image: Images.project_6,
+        categories: ["UI/UX Design", "Web Development"],
         link: "/portfolio-details-gallery-light",
     },
     //home three project data start

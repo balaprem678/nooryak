@@ -19,6 +19,11 @@
   @media screen and (max-width:768px) {
     flex-direction: column-reverse;
   }
+
+  .ds-right,
+  .ds-left {
+    flex: 1;
+  }
 }
 
 // .ds-left {
