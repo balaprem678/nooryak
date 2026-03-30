@@ -13,7 +13,7 @@ import BackToTop from '@/components/shared/BackToTop/BackToTop';
 import HomeMainBanner from '@/components/banner/HomeMainBanner';
 import HomeMainFooter from '@/layouts/footers/HomeMainFooter';
 import HomeMainAbout from '@/components/about/HomeMainAbout';
-import HomeMainHeader from '@/layouts/headers/HomeMainHeader';
+
 import HomeMainWork from '@/components/work/HomeMainWork';
 import ClientSlider from '@/components/clientslider/clientslider';
 import CraftingWebsite from '@/components/craftingwebsite/craftingwebsite';
@@ -31,7 +31,7 @@ const HomeMain = () => {
                     </div>
                     {/* Global Components */}
                     <BackToTop />
-                    <HomeMainHeader />
+                 
                     <div id="smooth-wrapper">
                         <div id="smooth-content">
                             {/* Main Content Sections */}
@@ -50,10 +50,7 @@ const HomeMain = () => {
                                 <HomeMainWork />
                                 <HomeMainTestimonial />
                                 {/* <ModernAgencyAward /> */}
-                                <div className="foot_floating">
-                                    <img src={Images.whatsapp.src} alt="" />
-                                    <img src={Images.mobile.src} alt="" />
-                                </div>
+                             
                                 <SliderMarketing />
 
                             </main>

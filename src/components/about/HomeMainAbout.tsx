@@ -275,13 +275,13 @@ export default function HomeMainAbout() {
                                     <div className="dgm-about-review">
                                         <h4 style={{ margin: 0 }}>4.9</h4>
                                         <span style={{ color: "#777" }}>
-                                            ( 24 review )
+                                            ( 60 Reviews )
                                         </span>
                                     </div>
 
                                     <div className="dgm-about-ratting">
                                         <h4 style={{ marginBottom: "5px" }}>
-                                            Average Rating
+                                            Top Ratings in Google
                                         </h4>
 
                                         <div

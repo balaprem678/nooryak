@@ -109,8 +109,8 @@ export default function HomeMainHero() {
                                 <button className="ctaBtn">
                                     Start a Project <span className="arrow">↗</span>
                                 </button>
-                                <div className="number">125+</div>
-                                <div className="label">Projects Completed in <br /> 24 Countries</div>
+                                <div className="number">138+</div>
+                                <div className="label">Projects Completed in <br /> 5 Countries</div>
                             </div>
                         </div>
                     </div>
@@ -126,9 +126,9 @@ export default function HomeMainHero() {
 
                     <div className="floatingCard">
                         <p>
-                            Results <br />
+                            Results - <br />
                             Driven Digital <br />
-                            Marketing & <br />
+                            Marketing - <br />
                             Scale Your <br />
                             Brand Online
                         </p>

@@ -35,7 +35,6 @@ export default function WhyChoose() {
 
       <div className="container">
         <header className="section-header">
-          <p className="sub-title">WHY CHOOSE US</p>
           <h2 className="main-title">
             Why Choose <span>Nooryak <br /> Technologies?</span>
           </h2>

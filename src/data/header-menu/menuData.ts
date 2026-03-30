@@ -6,14 +6,14 @@ const headerMenuData: MenuItem[] = [
     id: 1,
     active: true,
     title: "Home",
-    link: "#",
+    link: "/",
   },
   // aboutus
   {
     id: 2,
     active: true,
     title: "About Us",
-    link: "#",
+    link: "/aboutus",
 
   },
 
@@ -26,7 +26,7 @@ const headerMenuData: MenuItem[] = [
     title: "Services",
     pluseIncon: true,
     megaMenu: true,
-    link: "#",
+    link: "/services",
     submenus: [
       {
         title: "Web Development",

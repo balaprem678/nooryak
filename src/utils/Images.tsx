@@ -29,12 +29,19 @@ import why_choose_card_icon_2 from "../../public/assets/images/home/why_choose_c
 import why_choose_card_icon_3 from "../../public/assets/images/home/why_choose_card_icon_3.png";
 import why_choose_card_icon_4 from "../../public/assets/images/home/why_choose_card_icon_4.png";
 
+import project_1 from "../../public/assets/images/home/project_1.png";
+import project_2 from "../../public/assets/images/home/project_2.png";
+import project_3 from "../../public/assets/images/home/project_3.png";
+import project_4 from "../../public/assets/images/home/project_4.png";
+import project_5 from "../../public/assets/images/home/project_5.png";
+import project_6 from "../../public/assets/images/home/project_6.png";
 
 export const Images = {
 
     // Common Images Import Here
-    logo, Logo_blue, gmail, instagram, whatsapp, twitter, facebook, linkedin, youtube,mobile,
+    logo, Logo_blue, gmail, instagram, whatsapp, twitter, facebook, linkedin, youtube, mobile,
 
     // Home Images Import here
-    herobanner, herobanner1, herobanner_person, about_1, about_2, abt_sec, services_1, services_2, services_3, services_4,craftingwebsite_banner,why_choose_card_icon_1,why_choose_card_icon_2,why_choose_card_icon_3,why_choose_card_icon_4
+    herobanner, herobanner1, herobanner_person, about_1, about_2, abt_sec, services_1, services_2, services_3, services_4, craftingwebsite_banner, why_choose_card_icon_1, why_choose_card_icon_2, why_choose_card_icon_3, why_choose_card_icon_4
+    , project_1, project_2, project_3, project_4, project_5, project_6
 };

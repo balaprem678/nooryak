@@ -61,9 +61,8 @@ const HomeMainFooter: React.FC<IHomeMainFooter> = ({ bgColor, buttonCls, quikLin
 
             <section className="contact-hero">
                 <div className="top-bar">
-                    <span>Creative Design Agency</span>
-                    <h3 className="logo">  <Image width={120} src={Images.logo} alt="logo" /></h3>
-                    <span>Based in London</span>
+                    <h3 className="">  <Image width={120} src={Images.logo} alt="logo" /></h3>
+                    <span>Creative Grapihic Design</span>
                 </div>
 
                 <div className="center-content">
@@ -85,13 +84,13 @@ const HomeMainFooter: React.FC<IHomeMainFooter> = ({ bgColor, buttonCls, quikLin
                 </div>
 
                 <div className="bottom-bar">
-                    <span>Powered by Aqlova</span>
+                    <span><a href="/privacy-policy">Privacy Policy</a> - <a href="/terms-conditions">Terms & Conditions</a></span>
 
                     <div className="socials">
-                        <a href="#">Twitter</a>
-                        <a href="#">Instagram</a>
-                        <a href="#">Behance</a>
-                        <a href="#">Dribbble</a>
+                        <a href="">About</a>
+                        <a href="">Our Services</a>
+                        <a href="">Our Story</a>
+                        <a href="">Blog</a>
                     </div>
 
                     <span>Copyright © 2026</span>

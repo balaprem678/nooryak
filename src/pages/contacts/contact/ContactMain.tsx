@@ -4,10 +4,10 @@ import ScrollSmoothProvider from '@/components/provider/ScrollSmoothProvider';
 import ContactLocationArea from '@/components/contacts/ContactLocationArea';
 import ContactFormArea from '@/components/contacts/ContactFormArea';
 import BackToTop from '@/components/shared/BackToTop/BackToTop';
-import InnerPageHeader from '@/layouts/headers/InnerPageHeader';
 import HomeMainFooter from '@/layouts/footers/HomeMainFooter';
 import InnerMapArea from '@/components/contacts/InnerMapArea';
 import ContactHero from '@/components/contacts/ContactHero';
+import HomeMainHeader from '@/layouts/headers/HomeMainHeader';
 
 const ContactMain = () => {
     return (
@@ -20,7 +20,7 @@ const ContactMain = () => {
 
                     {/* Global Components */}
                     <BackToTop />
-                    <InnerPageHeader />
+                    <HomeMainHeader />
 
                     <div id="smooth-wrapper">
                         <div id="smooth-content">

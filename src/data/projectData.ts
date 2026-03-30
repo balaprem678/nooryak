@@ -1,5 +1,6 @@
 
 import { projectsDT } from '@/types/project-d-t';
+import { Images } from '@/utils/Images';
 //home main project
 import project1 from "../../public/assets/img/home-01/project/project-1.jpg"
 import project2 from "../../public/assets/img/home-01/project/project-2.jpg"

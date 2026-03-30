@@ -53,15 +53,14 @@ export default function CraftingWebsite() {
           </h1>
 
           <p className="ds-desc">
-            Our team of designers, developers, and strategists are passionate
-            about bringing your brand’s vision to life through innovative user experiences.
+           We are a team of designers, developers, and strategists dedicated to transforming ideas into powerful digital experiences. From modern web applications to scalable platforms, we build solutions that drive real business growth.
           </p>
 
           {/* Progress Bars */}
           <div className="ds-progress">
             <div className="ds-item">
               <div className="ds-label">
-                <span>User Interface Designer</span>
+                <span>UI/UX & Product Design</span>
                 <span>98%</span>
               </div>
               <div className="ds-bar">
@@ -71,7 +70,7 @@ export default function CraftingWebsite() {
 
             <div className="ds-item">
               <div className="ds-label">
-                <span>WordPress Developer</span>
+                <span>Modern Web Development (React, Wordpress, Full Stack)</span>
                 <span>99%</span>
               </div>
               <div className="ds-bar">
