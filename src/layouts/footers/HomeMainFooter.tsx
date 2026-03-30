@@ -86,12 +86,29 @@ const HomeMainFooter: React.FC<IHomeMainFooter> = ({ bgColor, buttonCls, quikLin
                 <div className="bottom-bar">
                     <span><a href="/privacy-policy">Privacy Policy</a> - <a href="/terms-conditions">Terms & Conditions</a></span>
 
-                    <div className="socials">
-                        <a href="">About</a>
-                        <a href="">Our Services</a>
-                        <a href="">Our Story</a>
-                        <a href="">Blog</a>
-                    </div>
+
+                    {/* <ul id="buttons" className="socialmediaicon">
+                        <li className="fb">
+                            <a href="#facebook" title="Facebook">
+                                <i className="fab fa-facebook-f"></i>
+                            </a>
+                        </li>
+                        <li className="tw">
+                            <a href="#twitter" title="Twitter">
+                                <i className="fab fa-twitter"></i>
+                            </a>
+                        </li>
+                        <li className="in">
+                            <a href="http://instagram.com/ilyasbilgihan" title="Instagram" target="_blank">
+                                <i className="fab fa-instagram"></i>
+                            </a>
+                        </li>
+                        <li className="gh">
+                            <a href="#github" title="Github">
+                                <i className="fab fa-github"></i>
+                            </a>
+                        </li>
+                    </ul> */}
 
                     <span>Copyright © 2026</span>
                 </div>
