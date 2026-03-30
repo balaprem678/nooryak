@@ -1,6 +1,10 @@
 import HomeFooterCopyright from "./subComponents/HomeFooterCopyright";
 import { FooterSocialIcons } from "./subComponents/FooterSocialIcons";
 import Link from 'next/link';
+import './HomeMainFooter.scss';
+import Image from "next/image";
+import { Images } from "@/utils/Images";
+
 import React from 'react';
 interface IHomeMainFooter {
     bgColor?: string;
@@ -12,13 +16,12 @@ interface IHomeMainFooter {
 const HomeMainFooter: React.FC<IHomeMainFooter> = ({ bgColor, buttonCls, quikLinkCls = "footer-main", socialBtnCls = "" }) => {
     return (
         <>
-            <div className={`tp-footer-area ${buttonCls} pb-35 pt-160`} style={{ backgroundColor: bgColor }}>
+            {/* <div className={`tp-footer-area ${buttonCls} pb-35 pt-160`} style={{ backgroundColor: bgColor }}>
                 <div className="container">
                     <div className="row align-items-center">
                         <div className="col-xl-4 col-lg-4">
                             <div className="tp-footer-widget tp-footer-col-1 pb-40 tp_fade_anim" data-delay=".3">
                                 <h4 className="tp-footer-widget-title">Helping <br /> start-ups scale & grow.</h4>
-                                {/* footer social icons */}
                                 <FooterSocialIcons className={`tp-footer-widget-social ${socialBtnCls}`} />
                             </div>
                         </div>
@@ -54,7 +57,46 @@ const HomeMainFooter: React.FC<IHomeMainFooter> = ({ bgColor, buttonCls, quikLin
                     </div>
                 </div>
             </div>
-           
+            */}
+
+            <section className="contact-hero">
+                <div className="top-bar">
+                    <span>Creative Design Agency</span>
+                    <h3 className="logo">  <Image width={120} src={Images.logo} alt="logo" /></h3>
+                    <span>Based in London</span>
+                </div>
+
+                <div className="center-content">
+                    <p className="sub-text">
+                        CONTACT US AND LET’S BRING YOUR VISION TO LIFE
+                    </p>
+
+                    <h1 className="main-title">
+                        <span>C</span>
+                        <span>O</span>
+                        <span>N</span>
+                        <span>T</span>
+                        <span>A</span>
+                        <span>C</span>
+                        <span>T</span>
+                        <span>U</span>
+                        <span>S</span>
+                    </h1>
+                </div>
+
+                <div className="bottom-bar">
+                    <span>Powered by Aqlova</span>
+
+                    <div className="socials">
+                        <a href="#">Twitter</a>
+                        <a href="#">Instagram</a>
+                        <a href="#">Behance</a>
+                        <a href="#">Dribbble</a>
+                    </div>
+
+                    <span>Copyright © 2026</span>
+                </div>
+            </section>
 
             {/* footer copyright */}
             <HomeFooterCopyright bgColor={bgColor} />
