@@ -37,12 +37,32 @@ import project_4 from "../../public/assets/images/home/project_4.svg";
 import project_5 from "../../public/assets/images/home/project_5.svg";
 import project_6 from "../../public/assets/images/home/project_6.svg";
 
+import clientlogo_1 from "../../public/assets/images/client_logo/clientlogo_1.png";
+import clientlogo_2 from "../../public/assets/images/client_logo/clientlogo_2.png";
+import clientlogo_3 from "../../public/assets/images/client_logo/clientlogo_3.png";
+import clientlogo_4 from "../../public/assets/images/client_logo/clientlogo_4.png";
+import clientlogo_5 from "../../public/assets/images/client_logo/clientlogo_5.png";
+import clientlogo_6 from "../../public/assets/images/client_logo/clientlogo_6.png";
+import clientlogo_7 from "../../public/assets/images/client_logo/clientlogo_7.png";
+import clientlogo_8 from "../../public/assets/images/client_logo/clientlogo_8.png";
+import clientlogo_9 from "../../public/assets/images/client_logo/clientlogo_9.png";
+import clientlogo_10 from "../../public/assets/images/client_logo/clientlogo_10.png";
+import clientlogo_11 from "../../public/assets/images/client_logo/clientlogo_11.png";
+import clientlogo_12 from "../../public/assets/images/client_logo/clientlogo_12.png";
+import clientlogo_13 from "../../public/assets/images/client_logo/clientlogo_13.png";
+import clientlogo_14 from "../../public/assets/images/client_logo/clientlogo_14.png";
+import clientlogo_15 from "../../public/assets/images/client_logo/clientlogo_15.png";
+import clientlogo_16 from "../../public/assets/images/client_logo/clientlogo_16.png";
+import clientlogo_17 from "../../public/assets/images/client_logo/clientlogo_17.png";
+import clientlogo_18 from "../../public/assets/images/client_logo/clientlogo_18.png";
+import clientlogo_19 from "../../public/assets/images/client_logo/clientlogo_19.png";
+
 export const Images = {
 
     // Common Images Import Here
-    logo, Logo_blue, gmail, instagram, whatsapp, twitter, facebook, linkedin, youtube, mobile,trustpilot,
+    logo, Logo_blue, gmail, instagram, whatsapp, twitter, facebook, linkedin, youtube, mobile, trustpilot,
 
     // Home Images Import here
-    herobanner, herobanner1, herobanner_person, about_1, about_2, abt_sec, services_1, services_2, services_3, services_4, craftingwebsite_banner, why_choose_card_icon_1, why_choose_card_icon_2, why_choose_card_icon_3, why_choose_card_icon_4
-    , project_1, project_2, project_3, project_4, project_5, project_6
+    herobanner, herobanner1, herobanner_person, about_1, about_2, abt_sec, services_1, services_2, services_3, services_4, craftingwebsite_banner, why_choose_card_icon_1, why_choose_card_icon_2, why_choose_card_icon_3, why_choose_card_icon_4, project_1, project_2, project_3, project_4, project_5, project_6, clientlogo_1, clientlogo_2, clientlogo_3, clientlogo_4, clientlogo_5, clientlogo_6, clientlogo_7, clientlogo_8, clientlogo_9, clientlogo_10, clientlogo_11, clientlogo_12, clientlogo_13, clientlogo_14, clientlogo_15, clientlogo_16, clientlogo_17, clientlogo_18, clientlogo_19
+
 };

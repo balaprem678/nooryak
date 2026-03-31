@@ -118,9 +118,7 @@ export default function HomeMainAbout() {
                                             Top Ratings in Trustpilot
                                         </h4>
                                         <div className="trustpilotratings">
-
                                             <img src={Images.trustpilot.src} alt="" />
-                                            <small className="rating_star">✮✮✮✮✮</small>
                                         </div>
 
                                         {/* <div

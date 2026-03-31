@@ -3,6 +3,7 @@ import { projectsData } from '@/data/projectData';
 import { useHoverEffect } from '@/hooks/useHoverEffect';
 import Image from 'next/image';
 import Link from 'next/link';
+import "./ProjectItem.scss"
 
 const ProjectItem = () => {
   const { addToRefs } = useHoverEffect();

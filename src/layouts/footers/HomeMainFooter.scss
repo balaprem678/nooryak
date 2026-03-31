@@ -27,7 +27,7 @@
         opacity: 0.9;
         width: 100%;
         position: sticky;
-        top: 60px;
+        top: 12%;
 
 
         img {
@@ -36,13 +36,14 @@
         }
 
         @media screen and (max-width:500px) {
-            top: 40px;
+            top: 18%;
 
             img {
 
                 width: 200px;
             }
         }
+
     }
 
     // CENTER

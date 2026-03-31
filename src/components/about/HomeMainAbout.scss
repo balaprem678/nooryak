@@ -5,7 +5,7 @@
 
 .dgm-about-review {
     h4 {
-        width: 200px;
+        width: 150px;
 
         .google_ratings {
             letter-spacing: -.02em;
@@ -20,11 +20,25 @@
 
 }
 
-.trustpilotratings {
-    display: flex;
-    align-items: center;
-    gap: 5px;
+@media screen and (max-width:500px) {
+    .dgm-about-review {
+        margin-right: 0 !important;
+    }
+
+    .dgm-about-ratting {
+        padding-top: 0 !important;
+    }
+
+    .dgm-about-review-box {
+        gap: 10px !important;
+    }
 }
+
+// .trustpilotratings {
+//     display: flex;
+//     align-items: center;
+//     gap: 5px;
+// }
 
 .review-box {
     display: flex;

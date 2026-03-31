@@ -93,14 +93,14 @@ export const projectsData: projectsDT[] = [
     {
         id: 5,
         title: "Red Panda vacations",
-        image: Images.project_5,
+        image: Images.project_6,
         categories: ["UI/UX Design", "Ecommerce Development", "Backend"],
         link: "",
     },
     {
         id: 6,
         title: "Funkiddoz",
-        image: Images.project_6,
+        image: Images.project_5,
         categories: ["Creative Design", "Ecommerce Development", "UI/UX Design"],
         link: "",
     },
