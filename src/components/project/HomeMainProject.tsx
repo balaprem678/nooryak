@@ -4,9 +4,9 @@ import Link from 'next/link';
 
 const HomeMainProject = () => {
     return (
-        <div className="tp-project-area pb-60" style={{ overflow: "hidden" }}>
+        <div className="tp-project-area mt-30 pb-60" style={{ overflow: "hidden" }}>
             <div className="container">
-                <div className="tp-project-title-box mb-50">
+                <div className="tp-project-title-box mb-30">
                     <div className="row">
                         <div className="col-md-6">
                             <div className="tp-project-subtitle-wrap">
@@ -30,7 +30,6 @@ const HomeMainProject = () => {
                         </div>
                     </div>
                 </div>
-                {/* Display the list of featured project cards */}
                 <ProjectItem />
             </div>
         </div>

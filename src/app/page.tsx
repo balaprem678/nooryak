@@ -6,7 +6,7 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Home - Nooryak",
   icons: {
-    icon: "/assets/images/common/Logo-blue.png",
+    icon: "/assets/images/common/Logo.png",
   },
 };
 

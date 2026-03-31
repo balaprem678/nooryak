@@ -47,8 +47,6 @@ export default function HomeMainAbout() {
         <section className="about">
             <div className="container">
                 <div className="about-wrapper">
-
-                    {/* LEFT IMAGE */}
                     <div className="about-left">
                         <div className="image-box">
                             <img src={Images.abt_sec.src} alt="about" />
@@ -70,8 +68,6 @@ export default function HomeMainAbout() {
                         <div className="aboutTag">
                             <span className="about1">ABOUT</span>
                             <span className="brand">NOORYAK TECHNOLOGIES</span>
-
-                            {/* bottom gradient line */}
                             <span className="underline"></span>
                         </div>
                         <h2>
@@ -103,7 +99,7 @@ export default function HomeMainAbout() {
                             >
                                 <div
                                     className="dgm-about-review-box d-inline-flex align-items-center"
-                                    style={{ display: "flex", alignItems: "center", gap: "20px" }}
+                                    style={{ display: "flex", alignItems: "center", }}
                                 >
 
                                     <div className="dgm-about-review">
@@ -120,22 +116,11 @@ export default function HomeMainAbout() {
                                         <div className="trustpilotratings">
                                             <img src={Images.trustpilot.src} alt="" />
                                         </div>
-
-                                        {/* <div
-                                            className="dgm-about-ratting-icon"
-                                            style={{ display: "flex", gap: "5px", color: "#ffb400" }}
-                                        >
-                                            {[...Array(5)].map((_, i) => (
-                                                <span key={i}>★</span>
-                                            ))}
-                                        </div> */}
                                     </div>
-
                                 </div>
                             </div>
                         </div>
                     </div>
-
                 </div>
             </div>
         </section>
