@@ -107,7 +107,7 @@ export default function HomeMainAbout() {
                                 >
 
                                     <div className="dgm-about-review">
-                                        <h4 style={{ margin: 0 }}>5 <small className="rating_star">✮✮✮✮✮</small></h4>
+                                        <h4 style={{ margin: 0 }}>5 <small className="google_ratings">Top Ratings in Google</small><small className="rating_star">✮✮✮✮✮</small></h4>
                                         <span style={{ color: "#777" }}>
                                             ( 60 Reviews )
                                         </span>
@@ -115,9 +115,13 @@ export default function HomeMainAbout() {
 
                                     <div className="dgm-about-ratting">
                                         <h4 style={{ marginBottom: "5px" }}>
-                                            Top Ratings in Google 
+                                            Top Ratings in Trustpilot
                                         </h4>
-                                        <img src={Images.trustpilot.src} alt="" />
+                                        <div className="trustpilotratings">
+
+                                            <img src={Images.trustpilot.src} alt="" />
+                                            <small className="rating_star">✮✮✮✮✮</small>
+                                        </div>
 
                                         {/* <div
                                             className="dgm-about-ratting-icon"

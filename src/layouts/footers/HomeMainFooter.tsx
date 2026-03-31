@@ -14,10 +14,11 @@ interface IHomeMainFooter {
 }
 
 const socials = [
-    { name: "youtube", icon: "fa-youtube", link: "#" },
     { name: "instagram", icon: "fa-instagram", link: "#" },
+    { name: "linkedin", icon: "fa-facebook", link: "#" },
     { name: "linkedin", icon: "fa-linkedin-in", link: "#" },
     { name: "x", icon: "fa-x-twitter", link: "#" },
+    { name: "youtube", icon: "fa-youtube", link: "#" },
 ];
 
 const HomeMainFooter: React.FC<IHomeMainFooter> = ({ bgColor, buttonCls, quikLinkCls = "footer-main", socialBtnCls = "" }) => {

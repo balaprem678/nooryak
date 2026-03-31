@@ -7,9 +7,9 @@ import Link from 'next/link';
 const ProjectItem = () => {
   const { addToRefs } = useHoverEffect();
 
-// Split projects into two columns
-  const leftColumnProjects = projectsData.slice(0,6).filter((_, index) => index % 2 === 0);
-  const rightColumnProjects = projectsData.slice(0,6).filter((_, index) => index % 2 !== 0);
+  // Split projects into two columns
+  const leftColumnProjects = projectsData.slice(0, 6).filter((_, index) => index % 2 === 0);
+  const rightColumnProjects = projectsData.slice(0, 6).filter((_, index) => index % 2 !== 0);
 
   return (
     <div className="row gx-135">
@@ -68,9 +68,10 @@ const ProjectCard = ({ project, addToRefs }: ProjectCardProps) => {
       </div>
       <div className="tp-project-content">
         <h4 className="tp-project-title">
-          <Link className="tp-line-black" href={project.link}>
+          {/* <Link className="tp-line-black" href={project.link}>
             {project.title}
-          </Link>
+          </Link> */}
+          {project.title}
         </h4>
         {project.categories && (
           <div className="tp-project-category">

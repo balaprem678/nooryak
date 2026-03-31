@@ -3,6 +3,29 @@
     font-size: 28px;
 }
 
+.dgm-about-review {
+    h4 {
+        width: 200px;
+
+        .google_ratings {
+            letter-spacing: -.02em;
+            color: var(--tp-common-black);
+            margin-bottom: 7px;
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 1;
+            position: absolute;
+        }
+    }
+
+}
+
+.trustpilotratings {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
 .review-box {
     display: flex;
     justify-content: space-between;

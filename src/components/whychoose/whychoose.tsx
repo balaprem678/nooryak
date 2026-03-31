@@ -55,8 +55,8 @@ export default function WhyChoose() {
         </div>
 
         <div className='df_c'>
-          <button className='gra_btn'>Start a Project <i className="fa-solid fa-arrow-trend-down"></i></button>
-          <button className='gra_btn'>Check Our Portfolio <i className="fa-solid fa-arrow-trend-up"></i></button>
+          <button className='gra_btn arrow_trun_up'>Start a Project <i className="fa-solid fa-arrow-right"></i></button>
+          <button className='gra_btn'>Check Our Portfolio <i className="fa-solid fa-arrow-right"></i></button>
         </div>
       </div>
     </section>

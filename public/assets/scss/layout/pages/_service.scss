@@ -3401,10 +3401,32 @@
 .tp-service-pin {
     .pin-spacer {
         height: 436px !important;
+        margin-top: 30px !important;
+
+        .tp-service-content p {
+            margin-bottom: 15px;
+        }
+
+        .tp-service-content .tp-section-title {
+            margin-bottom: 10px;
+        }
+    }
+
+    .tp-service-thumb{
+        img{
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            object-position: center;
+        }
     }
 }
 
-
+.tp-service-area{
+    .tp-service-title-box{
+        padding: 0 !important;
+    }
+}
 
 .checkwritereview {
     position: absolute;
@@ -3412,7 +3434,8 @@
     bottom: 40px;
     left: 50%;
     transform: translateX(-50%);
-    button{
+
+    button {
         white-space: nowrap;
     }
 
