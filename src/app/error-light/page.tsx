@@ -1,13 +1,8 @@
-import ErrorMain from '@/pages/error/ErrorMain';
-import { Metadata } from 'next';
-
-export const metadata: Metadata = {
-    title: "Agntix - Not Found Page",
-};
+import NotFound from '../not-found';
 
 const page = () => {
     return (
-        <ErrorMain />
+        <NotFound />
     );
 };
 

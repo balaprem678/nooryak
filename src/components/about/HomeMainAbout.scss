@@ -1,12 +1,9 @@
-.rating_star {
-    color: gold;
-    font-size: 28px;
-}
-
 .dgm-about-review {
-    h4 {
-        width: 150px;
+    margin-right: 15px;
+    padding-top: 15px;
+    padding-right: 15px;
 
+    h4 {
         .google_ratings {
             letter-spacing: -.02em;
             color: var(--tp-common-black);
@@ -14,11 +11,28 @@
             font-size: 14px;
             font-weight: 500;
             line-height: 1;
-            position: absolute;
         }
     }
 
+    .dgm-about-review_child {
+        display: flex;
+        align-items: start;
+        flex-wrap: wrap;
+        gap: 5px;
+
+        p {
+            margin: 0;
+            font-size: 14px;
+
+            &.rating_star {
+                color: gold;
+                font-size: 28px;
+                line-height: 20px;
+            }
+        }
+    }
 }
+
 
 @media screen and (max-width:500px) {
     .dgm-about-review {

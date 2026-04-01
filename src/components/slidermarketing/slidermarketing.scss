@@ -1,7 +1,12 @@
 .slider {
-  margin: 120px 0;
+  margin: 80px 0;
   width: 100%;
   white-space: nowrap;
+  
+  @media screen and (max-width:500px) {
+    margin: 40px 0;
+    
+  }
 }
 
 /* TRACK */
@@ -99,7 +104,7 @@
 /* Mobile */
 @media (max-width: 600px) {
   .idea-section {
-    height: 380px;
+    height: unset;
   }
 
   .slider {
@@ -116,9 +121,9 @@
     animation-duration: 15s;
   }
 
-  .content {
-    max-width: 90%;
-  }
+  // .content {
+  //   max-width: 90%;
+  // }
 
   .content h2 {
     font-size: 18px;

@@ -3,7 +3,7 @@ import "./slidermarketing.scss";
 
 export default function SliderMarketing() {
     return (
-        <section className="idea-section mt-50">
+        <section className="idea-section mt-50 mb-50">
             <div className="slider">
                 <div className="track">
                     <span className="outline">strategy.</span>

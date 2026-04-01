@@ -1,47 +1,11 @@
 
 "use client";
 import "./HomeMainAbout.scss"
-import { useEffect, useRef, useState } from "react";
+import { useRef } from "react";
 import { Images } from "@/utils/Images";
 
 export default function HomeMainAbout() {
-    const [count, setCount] = useState(0);
     const ref = useRef(null);
-    const hasAnimated = useRef(false);
-
-    useEffect(() => {
-        const observer = new IntersectionObserver(
-            ([entry]) => {
-                if (entry.isIntersecting && !hasAnimated.current) {
-                    hasAnimated.current = true;
-                    startCounting();
-                }
-            },
-            { threshold: 0.5 }
-        );
-
-        if (ref.current) observer.observe(ref.current);
-
-        return () => observer.disconnect();
-    }, []);
-
-    const startCounting = () => {
-        let start = 0;
-        const end = 125;
-        const duration = 1500;
-        const incrementTime = 20;
-
-        const step = Math.ceil(end / (duration / incrementTime));
-
-        const timer = setInterval(() => {
-            start += step;
-            if (start >= end) {
-                start = end;
-                clearInterval(timer);
-            }
-            setCount(start);
-        }, incrementTime);
-    };
 
     return (
         <section className="about">
@@ -56,7 +20,8 @@ export default function HomeMainAbout() {
                                 </div>
 
                                 <div className="text">
-                                    <h3>{count}+</h3>
+                                    {/* <h3>{count}+</h3> */}
+                                    <h3>125+</h3>
                                     <p>Projects Delivered</p>
                                 </div>
                             </div>
@@ -103,7 +68,13 @@ export default function HomeMainAbout() {
                                 >
 
                                     <div className="dgm-about-review">
-                                        <h4 style={{ margin: 0 }}>5 <small className="google_ratings">Top Ratings in Google</small><small className="rating_star">✮✮✮✮✮</small></h4>
+                                        <div className="dgm-about-review_child">
+                                            <h4 style={{ margin: 0 }}>5</h4>
+                                            <div>
+                                                <p className="google_ratings">Top Ratings in Google</p>
+                                                <p className="rating_star">✮✮✮✮✮</p>
+                                            </div>
+                                        </div>
                                         <span style={{ color: "#777" }}>
                                             ( 60 Reviews )
                                         </span>
@@ -114,7 +85,7 @@ export default function HomeMainAbout() {
                                             Top Ratings in Trustpilot
                                         </h4>
                                         <div className="trustpilotratings">
-                                            <img src={Images.trustpilot.src} alt="" />
+                                            <img src={Images.trustpilot.src} alt="trustpilot" />
                                         </div>
                                     </div>
                                 </div>
@@ -126,3 +97,4 @@ export default function HomeMainAbout() {
         </section>
     );
 }
+

@@ -1,16 +1,13 @@
 .contact-hero {
     position: relative;
-    min-height: 100vh; // Changed to min-height to prevent content overflow
-    height: 100dvh; // Uses dynamic viewport height for mobile browsers
+    min-height: 100vh;
+    height: 100dvh;
     color: #fff;
     overflow: hidden;
-    padding: clamp(20px, 5vw, 40px); // Responsive padding
-
+    padding: clamp(20px, 5vw, 40px);
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-
-    /* Background Styles */
+    justify-content: end;
     background: url("../../../public/assets/images/common/footerbg.jpg");
     background-repeat: no-repeat;
     background-size: cover;
@@ -24,11 +21,7 @@
         justify-content: center;
         align-items: center;
         font-size: clamp(12px, 1.5vw, 14px);
-        opacity: 0.9;
         width: 100%;
-        position: sticky;
-        top: 12%;
-
 
         img {
             width: 80%;
@@ -42,7 +35,7 @@
 
             img {
 
-                width: 200px;
+                width: 100%;
             }
         }
 
@@ -51,19 +44,12 @@
     // CENTER
     .center-content {
         text-align: center;
-        flex-grow: 1;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        z-index: 1;
     }
 
     .sub-text {
-        font-size: clamp(10px, 1vw, 12px);
+        font-size: clamp(10px, 1vw, 16px);
         letter-spacing: 2px;
-        opacity: 0.7;
-        margin-bottom: 10px;
+        margin-bottom: 30px;
         text-transform: uppercase;
         color: #fff;
     }
@@ -71,9 +57,8 @@
     // BIG TITLE (The "Mango Grotesque" display)
     .main-title {
         /* Fluid Font Size: Min 60px, Preferred 20vw, Max 280px */
-        font-size: clamp(60px, 20vw, 280px);
+        font-size: clamp(60px, 20vw, 310px);
         font-weight: 500;
-        letter-spacing: 0.04em; // Large fonts usually need tighter tracking
         line-height: 0.9;
         font-family: "MangoGrotesque", serif;
         margin: 0;
@@ -124,7 +109,8 @@
 @media (max-width: 768px) {
     .contact-hero {
         height: auto;
-        min-height: 80vh; // Reduce height slightly on tablet/mobile
+        min-height: unset;
+        padding-top: 70px;
 
         .bottom-bar {
             flex-direction: column;
@@ -135,7 +121,7 @@
 
         .center-content {
             margin-top: 0; // Reset your negative margin for small screens
-            padding: 40px 0;
+            padding: 20px 0;
         }
     }
 }
@@ -147,6 +133,7 @@
 
         .main-title {
             letter-spacing: 1px; // Tighten for very small screens
+            font-size: 100px;
         }
     }
 }
@@ -241,4 +228,6 @@ $x: #000;
             transform: scale(0.95); // slight shrink on small screens
         }
     }
+
+
 }

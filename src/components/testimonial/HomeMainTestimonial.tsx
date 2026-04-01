@@ -32,7 +32,7 @@ const HomeMainTestimonial = () => {
                                                 <i key={index}><StarIconThree /></i>
                                             ))}
                                         </div>
-                                        <p>Based on 60 reviews on Clutch</p>
+                                        <p>Based on Google & Trustpilot</p>
                                     </div>
                                 </div>
                             </div>
