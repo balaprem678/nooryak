@@ -464,7 +464,12 @@ $bp-sm: 480px;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        height: 62vh;
+        height: 60vh;
+    }
+
+    .mb_res_top {
+        position: relative;
+        top: 10px;
     }
 }
 
@@ -524,7 +529,7 @@ $bp-sm: 480px;
     }
 
     @media (max-width: $bp-md) {
-        gap: 5px;
+        gap: 3px;
         margin-bottom: 10px;
         padding: 1px 6px;
         font-weight: 400;
@@ -633,6 +638,7 @@ $bp-sm: 480px;
         z-index: 1;
         border-radius: 14px;
         overflow: hidden;
+        transform: scale(1.01);
     }
 
     @media (max-width: $bp-sm) {
@@ -653,30 +659,30 @@ $bp-sm: 480px;
             display: block;
             border-radius: 25px;
 
-            &.herobanner_2,
-            &.herobanner_2 {
-                display: none;
-            }
+            // &.herobanner_2,
+            // &.herobanner_2 {
+            //     display: none;
+            // }
 
             @media screen and (max-width:768px) {
-                &.herobanner_1 {
-                    display: none;
-                }
+                animation: shake 1.5s linear infinite;
+                // &.herobanner_1 {
+                //     display: none;
+                // }
 
-                &.herobanner_2 {
-                    display: block;
-                    position: absolute;
-                    bottom: 0;
-                }
+                // &.herobanner_2 {
+                //     display: block;
+                //     position: absolute;
+                //     bottom: 0;
+                // }
 
-                &.herobanner_3 {
-                    position: absolute;
-                    z-index: 1;
-                    width: 100%;
-                    height: auto;
-                    bottom: 0;
-                    animation: shake 1.5s linear infinite;
-                }
+                // &.herobanner_3 {
+                //     position: absolute;
+                //     z-index: 1;
+                //     width: 100%;
+                //     height: auto;
+                //     bottom: 0;
+                // }
             }
 
             @media (max-width: $bp-md) {

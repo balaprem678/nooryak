@@ -31,7 +31,9 @@
 
 
         img {
-            width: 400px;
+            width: 80%;
+            display: flex;
+            margin: auto;
             height: 100%;
         }
 
@@ -71,7 +73,7 @@
         /* Fluid Font Size: Min 60px, Preferred 20vw, Max 280px */
         font-size: clamp(60px, 20vw, 280px);
         font-weight: 500;
-        letter-spacing: -0.02em; // Large fonts usually need tighter tracking
+        letter-spacing: 0.04em; // Large fonts usually need tighter tracking
         line-height: 0.9;
         font-family: "MangoGrotesque", serif;
         margin: 0;

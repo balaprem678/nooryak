@@ -33,7 +33,7 @@ const HomeMainHeader = () => {
 
                     {/* Right */}
                     <div className="rights">
-                        <Link href="/portfolio-col-2-light" className="header-btn">
+                        <Link href="/notfound" className="header-btn">
                             <span className="btn-text">Start a Project</span>
                             <span className="btn-icon">
                                 <ArrowSvg />

@@ -3402,6 +3402,11 @@
     .pin-spacer {
         height: 436px !important;
         margin-top: 30px !important;
+        
+        @media screen and (min-width:1700px){
+            height: 370px !important;
+
+        }
 
         .tp-service-content p {
             margin-bottom: 15px;
