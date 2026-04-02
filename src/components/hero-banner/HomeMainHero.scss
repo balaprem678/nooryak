@@ -187,7 +187,7 @@ $bp-sm: 480px;
     padding: 20px 40px 30px 100px;
     display: flex;
     position: relative;
-    background-image: url("../../../public/assets/images/home/circelanimation.png");
+    background-image: url("../../../public/assets/images/home/circelanimation.webp");
     background-repeat: no-repeat;
     background-position: left bottom;
     background-size: 40%;
@@ -195,7 +195,7 @@ $bp-sm: 480px;
 
     &::after {
         content: "";
-        background: url("../../../public/assets/images/home/chart.png");
+        background: url("../../../public/assets/images/home/chart.webp");
         background-repeat: no-repeat;
         background-size: 100%;
         position: absolute;
@@ -717,7 +717,7 @@ $bp-sm: 480px;
     .floatingCard {
         border-radius: 16px;
         box-shadow: 0 20px 60px rgba(0, 0, 0, 0.18);
-        background-image: url("../../../public/assets/images/home/heroarrowbnr.png");
+        background-image: url("../../../public/assets/images/home/heroarrowbnr.webp");
         background-repeat: no-repeat;
         background-size: 100%;
         padding: 20px;

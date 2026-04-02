@@ -1,9 +1,5 @@
 import { TestimonialDT } from "@/types/testimonial-d-t";
-import avaterOne from "../../public/assets/images/home/client1.png";
-import avaterTwo from "../../public/assets/images/home/client2.png";
-import avaterThree from "../../public/assets/images/home/client3.png";
-import avaterFour from "../../public/assets/images/home/client4.png";
-import avaterFive from "../../public/assets/images/home/client5.png";
+import { Images } from "@/utils/Images";
 import avaterSix from "../../public/assets/img/avater/avater-6.jpg";
 //home four avater image
 import avater7 from "../../public/assets/img/home-04/avater/avater-1.jpg";
@@ -35,7 +31,7 @@ const testimonialsData: TestimonialDT[] = [
         quote: "“We recently partnered with Nooryak Technologies, the leading Ecommerce Website Development Company in Chennai, to design our Luxxrr online store. Though some final refinements are still in progress, their exceptional work quality, responsive support, and commitment to excellence have already impressed us so much that we felt compelled to share this happy review. The stunning, user-friendly ecommerce website they delivered perfectly captures our brand vision, making them truly stand out in the industry.”",
         name: "Hitesh Cosy",
         position: "Manger",
-        avatar: avaterTwo,
+        avatar: Images.avaterTwo,
         style: "white-style"
     },
     {
@@ -43,7 +39,7 @@ const testimonialsData: TestimonialDT[] = [
         quote: "“If you’re looking for a reliable Web Development Company, Nooryak Technologies delivers top-quality websites that perform and look amazing. Just How we got a brand new looking professional website before a couple of Months. Thanks.”",
         name: "Aswini's Cibil Agency",
         position: "CEO",
-        avatar: avaterOne,
+        avatar: Images.avaterOne,
         style: "green-style"
     },
     {
@@ -51,7 +47,7 @@ const testimonialsData: TestimonialDT[] = [
         quote: "“I recently worked with Nooryak Technologies to develop my ecommerce brand, CosyChic, and I couldn't be more thrilled with the results. They are truly the best website designing agency in Chennai. Their expertise in ecommerce website development, especially in Triplicane, is exceptional. The website they designed for us is stunning, and their video editing works are equally impressive. I highly recommend Nooryak Tech for anyone looking for top-notch ecommerce development in Chennai. Thank you for bringing our vision to life!”",
         name: "Hitesh Mali",
         position: "Managing Director",
-        avatar: avaterTwo,
+        avatar: Images.avaterTwo,
         style: "black-style"
     },
     {
@@ -59,15 +55,15 @@ const testimonialsData: TestimonialDT[] = [
         quote: "“I am thoroughly impressed with the amazing and great work done by Nooryak Technologies on our affiliate e-commerce website, Hish Gadgets! As the best website development company in chennai and the best e-commerce designing agency, they delivered a sleek, user-friendly design that perfectly captures our brand's essence. Highly recommended their services!”",
         name: "Hisham Hiba",
         position: "CEO & Founder",
-        avatar: avaterTwo,
+        avatar: Images.avaterTwo,
         style: "white-style"
     },
     {
         id: 5,
         quote: "“Nooryak Technologies is the best Website Designing Company I’ve worked with — they built a stunning site for my business and boosted my sales massively.”",
         name: "MOHAMMED YUSUF.M",
-         position: "Manger",
-        avatar: avaterThree,
+        position: "Manger",
+        avatar: Images.avaterThree,
         style: "grey-style"
     },
     {
@@ -75,7 +71,7 @@ const testimonialsData: TestimonialDT[] = [
         quote: "“Nooryak Technologies is a Professional Marketing And Web Development Company in Chennai based in Triplicane. Its always unique for its services and gives most greater results for startups, entrepreneurs and business owners.”",
         name: "Ameen Noor",
         position: "CEO & Founder",
-        avatar: avaterFour,
+        avatar: Images.avaterFour,
         style: "green-style"
     },
     {
@@ -83,7 +79,7 @@ const testimonialsData: TestimonialDT[] = [
         quote: "“Best trusted marketing and web development agency in Chennai for startups and entrepreneurs. I suggest Nooryak Technologies for all who seek to empower their business online.”",
         name: "suriyakumar devaraj",
         position: "CEO & Founder",
-        avatar: avaterTwo,
+        avatar: Images.avaterTwo,
         style: "black-style"
     },
     //home four testimonial data start
