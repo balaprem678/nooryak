@@ -238,7 +238,7 @@
 
 // ─── Page Layout ─────────────────────────────────────────────────────────────
 .page-404 {
-    font-family: var(--font-display);
+    // font-family: var(--font-display);
     background: var(--bg-base);
     color: var(--text-primary);
     min-height: 100vh;
@@ -400,7 +400,7 @@
     }
 
     &__status {
-        font-family: var(--font-mono);
+        // font-family: var(--font-mono);
         font-size: 0.72rem;
         color: var(--text-muted);
         display: flex;
@@ -541,7 +541,7 @@
             inset 0 0 20px rgba(255, 61, 0, 0.06);
 
         .core-number {
-            font-family: var(--font-mono);
+            // font-family: var(--font-mono);
             font-size: 0.65rem;
             font-weight: 500;
             color: var(--accent);
@@ -557,7 +557,7 @@
     animation: fade-in-up 0.7s ease 0.1s both;
 
     .number-404 {
-        font-size: clamp(40px, 18vw, 80px);
+        font-size: clamp(40px, 10vw, 80px);
         font-weight: 800;
         line-height: 0.85;
         letter-spacing: -0.04em;
@@ -593,7 +593,7 @@
 }
 
 .subtext-404 {
-    font-family: var(--font-mono);
+    // font-family: var(--font-mono);
     font-size: 0.875rem;
     color: var(--text-secondary);
     max-width: 420px;
@@ -663,7 +663,7 @@
         }
 
         span {
-            font-family: var(--font-mono);
+            // font-family: var(--font-mono);
             font-size: 0.7rem;
             color: var(--text-muted);
             margin-left: 8px;
@@ -671,7 +671,7 @@
     }
 
     &__line {
-        font-family: var(--font-mono);
+        // font-family: var(--font-mono);
         font-size: 0.75rem;
         line-height: 1.8;
         color: var(--text-muted);
@@ -709,7 +709,7 @@
 }
 
 .btn {
-    font-family: var(--font-display);
+    // font-family: var(--font-display);
     font-size: 0.875rem;
     font-weight: 600;
     letter-spacing: 0.01em;
@@ -796,7 +796,7 @@
     }
 
     &__item {
-        font-family: var(--font-mono);
+        // font-family: var(--font-mono);
         font-size: 0.68rem;
         color: var(--text-muted);
         display: flex;

@@ -5,6 +5,7 @@ import Image from "next/image";
 import { Images } from "@/utils/Images";
 
 import React from 'react';
+import SocialMedia from "@/components/socialmedia/socialmedia";
 interface IHomeMainFooter {
     bgColor?: string;
     buttonCls?: string;
@@ -12,17 +13,11 @@ interface IHomeMainFooter {
     socialBtnCls?: string
 }
 
-const socials = [
-    { name: "instagram", icon: "fa-instagram", link: "#" },
-    { name: "linkedin", icon: "fa-facebook", link: "#" },
-    { name: "linkedin", icon: "fa-linkedin-in", link: "#" },
-    { name: "x", icon: "fa-x-twitter", link: "#" },
-    { name: "youtube", icon: "fa-youtube", link: "#" },
-];
+
 
 const HomeMainFooter: React.FC<IHomeMainFooter> = ({ bgColor = "footer-main" }) => {
     return (
-        <>
+        <div className="pb-10">
             <section className="contact-hero">
                 <div className="top-bar">
                     <h3 className="">  <Image width={120} src={Images.logo} alt="logo" /></h3>
@@ -49,20 +44,7 @@ const HomeMainFooter: React.FC<IHomeMainFooter> = ({ bgColor = "footer-main" }) 
                 <div className="bottom-bar">
                     <span><a href="/privacy-policy">Privacy Policy</a> - <a href="/terms-conditions">Terms & Conditions</a></span>
 
-                    <div className="social-wrapper">
-                        {socials.map((item, index) => (
-                            <a
-                                key={index}
-                                href={item.link}
-                                className={`icon ${item.name}`}
-                                target="_blank"
-                                rel="noreferrer"
-                                aria-label={item.name}
-                            >
-                                <i className={`fab ${item.icon}`}></i>
-                            </a>
-                        ))}
-                    </div>
+                    <SocialMedia />
 
                     <span>Copyright © 2026</span>
                 </div>
@@ -70,7 +52,7 @@ const HomeMainFooter: React.FC<IHomeMainFooter> = ({ bgColor = "footer-main" }) 
 
             {/* footer copyright */}
             <HomeFooterCopyright bgColor={bgColor} />
-        </>
+        </div>
     );
 };
 

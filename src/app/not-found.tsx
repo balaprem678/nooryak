@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import HomeMainHeader from "@/layouts/headers/HomeMainHeader";
 import Link from "next/link";
-import "../components/commingsoon/notfound.scss";
+import "./notfound.scss";
 
 const ArrowLeft = () => (
   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -20,42 +20,7 @@ const HomeIcon = () => (
 );
 
 export default function NotFound() {
-  const [time, setTime] = useState("");
-  const [visibleLines, setVisibleLines] = useState<number[]>([]);
 
-  // 🔹 Add missing terminalLines (IMPORTANT FIX)
-  const terminalLines = [
-    "Initializing system...",
-    "Searching for page...",
-    "Error: Page not found",
-    "Redirecting options...",
-  ];
-
-  // live clock
-  useEffect(() => {
-    const tick = () => {
-      const now = new Date();
-      setTime(now.toLocaleTimeString("en-US", { hour12: false }));
-    };
-
-    tick();
-    const id = setInterval(tick, 1000);
-
-    return () => clearInterval(id);
-  }, []);
-
-  // staggered reveal
-  useEffect(() => {
-    const timers = terminalLines.map((_, i) =>
-      setTimeout(() => {
-        setVisibleLines((prev) => [...prev, i]);
-      }, 300 + i * 250)
-    );
-
-    return () => {
-      timers.forEach((t) => clearTimeout(t));
-    };
-  }, []);
 
   return (
     <div className="page-404">

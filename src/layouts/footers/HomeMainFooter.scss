@@ -1,18 +1,14 @@
 .contact-hero {
     position: relative;
-    min-height: 100vh;
-    height: 100dvh;
+    height: 95vh;
     color: #fff;
     overflow: hidden;
     padding: clamp(20px, 5vw, 40px);
-    display: flex;
-    flex-direction: column;
-    justify-content: end;
     background: url("../../../public/assets/images/common/footerbg.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    margin: clamp(10px, 2vw, 20px);
+    margin: 20px;
     border-radius: 20px;
 
     // TOP BAR
@@ -22,6 +18,7 @@
         align-items: center;
         font-size: clamp(12px, 1.5vw, 14px);
         width: 100%;
+        margin-top: 20px;
 
         img {
             width: 80%;
@@ -35,7 +32,7 @@
 
             img {
 
-                width: 100%;
+                width: 80%;
             }
         }
 
@@ -47,7 +44,7 @@
     }
 
     .sub-text {
-        font-size: clamp(10px, 1vw, 16px);
+        font-size: clamp(13px, 1vw, 16px);
         letter-spacing: 2px;
         margin-bottom: 30px;
         text-transform: uppercase;
@@ -57,7 +54,6 @@
     // BIG TITLE (The "Mango Grotesque" display)
     .main-title {
         /* Fluid Font Size: Min 60px, Preferred 20vw, Max 280px */
-        font-size: clamp(60px, 20vw, 310px);
         font-weight: 500;
         line-height: 0.9;
         font-family: "MangoGrotesque", serif;
@@ -68,9 +64,14 @@
             display: inline-block;
             transition: transform 0.3s cubic-bezier(0.23, 1, 0.32, 1);
             will-change: transform;
+            font-size: 350px;
 
             &:hover {
                 transform: translateY(5%) scaleY(1.1);
+            }
+
+            @media screen and (max-width:500px) {
+                font-size: 100px;
             }
         }
     }
@@ -84,6 +85,11 @@
         opacity: 0.9;
         width: 100%;
         padding-top: 20px;
+
+        span,
+        a {
+            font-size: 14px;
+        }
 
         .socials {
             display: flex;
@@ -100,7 +106,28 @@
             }
         }
     }
+
+    @media screen and (min-width:1300px) {
+        .top-bar {
+            img {
+                width: 80%;
+            }
+        }
+
+        .main-title {
+            span {
+                font-size: 300px;
+            }
+        }
+
+
+    }
+
+    @media screen and (min-width:1700px) {
+        height: unset;
+    }
 }
+
 
 /* ========================= */
 /* 📱 RESPONSIVE OVERRIDES   */
@@ -138,96 +165,3 @@
     }
 }
 
-
-$size: 40px;
-$white: #fff;
-
-$youtube: #ff0000;
-$instagram: linear-gradient(45deg, #f9ce34, #ee2a7b, #6228d7);
-$linkedin: #0077b5;
-$x: #000;
-
-.social-wrapper {
-    display: flex;
-    gap: 14px;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap; // responsive wrap
-
-    .icon {
-        width: $size;
-        height: $size;
-        min-width: $size;
-        min-height: $size;
-
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-        border-radius: 50%;
-        text-decoration: none;
-        color: $white;
-        font-size: 16px; // icon size inside
-
-        background: rgba(255, 255, 255, 0.08);
-        backdrop-filter: blur(8px);
-
-        position: relative;
-        overflow: hidden;
-
-        transition: all 0.3s ease;
-
-        i {
-            position: relative;
-            z-index: 2;
-        }
-
-        &::before {
-            content: "";
-            position: absolute;
-            inset: 0;
-            border-radius: 50%;
-            transform: scale(0);
-            transition: 0.3s ease;
-            z-index: 0;
-        }
-
-        &:hover {
-            transform: translateY(-5px) scale(1.08);
-
-            &::before {
-                transform: scale(1.2);
-            }
-        }
-
-        // Brand Colors
-        &.youtube::before {
-            background: $youtube;
-        }
-
-        &.instagram::before {
-            background: $instagram;
-        }
-
-        &.linkedin::before {
-            background: $linkedin;
-        }
-
-        &.x::before {
-            background: $x;
-        }
-    }
-}
-
-/* 📱 Mobile Optimization */
-@media (max-width: 480px) {
-    .social-wrapper {
-        gap: 10px;
-
-        .icon {
-            transform: scale(0.95); // slight shrink on small screens
-        }
-    }
-
-
-}

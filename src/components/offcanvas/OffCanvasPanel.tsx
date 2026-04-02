@@ -16,6 +16,7 @@ import Link from 'next/link';
 import React from 'react';
 import { Images } from "@/utils/Images";
 import "./OffCanvasPanel.scss"
+import SocialMedia from "../socialmedia/socialmedia";
 
 const galleryImages: ImageDT[] = [
     { id: 1, imgSrc: offcanvas1 },
@@ -83,17 +84,7 @@ const OffCanvasPanel: React.FC<IProps> = ({ openOffcanvas, setOpenOffcanvas }) =
                         </div>
                         <div className="tp-offcanvas-social">
                             <h3 className="tp-offcanvas-title sm">Follow Us</h3>
-                            <ul>
-                                <li>
-                                    <Link href="#"><InstagramSvg /></Link>
-                                </li>
-                                <li>
-                                    <Link href="#"><BehanceTwoSvg /></Link>
-                                </li>
-                                <li>
-                                    <Link href="#"><YouTubeSvg /></Link>
-                                </li>
-                            </ul>
+                            <SocialMedia/>
                         </div>
                     </div>
                 </div>

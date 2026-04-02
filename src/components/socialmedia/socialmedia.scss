@@ -1,0 +1,92 @@
+$size: 40px;
+$white: #fff;
+
+$youtube: #ff0000;
+$instagram: linear-gradient(45deg, #f9ce34, #ee2a7b, #6228d7);
+$linkedin: #0077b5;
+$x: #000;
+
+.social-wrapper {
+    display: flex;
+    gap: 14px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; // responsive wrap
+
+    .icon {
+        width: $size;
+        height: $size;
+        min-width: $size;
+        min-height: $size;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        border-radius: 50%;
+        text-decoration: none;
+        color: $white;
+        font-size: 16px; // icon size inside
+
+        background: rgba(0, 0, 0, 0.652);
+        backdrop-filter: blur(8px);
+
+        position: relative;
+        overflow: hidden;
+
+        transition: all 0.3s ease;
+
+        i {
+            position: relative;
+            z-index: 2;
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            border-radius: 50%;
+            transform: scale(0);
+            transition: 0.3s ease;
+            z-index: 0;
+        }
+
+        &:hover {
+            transform: translateY(-5px) scale(1.08);
+
+            &::before {
+                transform: scale(1.2);
+            }
+        }
+
+        // Brand Colors
+        &.youtube::before {
+            background: $youtube;
+        }
+
+        &.instagram::before {
+            background: $instagram;
+        }
+
+        &.linkedin::before {
+            background: $linkedin;
+        }
+
+        &.x::before {
+            background: $x;
+        }
+    }
+}
+
+/* 📱 Mobile Optimization */
+@media (max-width: 480px) {
+    .social-wrapper {
+        gap: 10px;
+
+        .icon {
+            transform: scale(0.95); // slight shrink on small screens
+        }
+    }
+
+
+}

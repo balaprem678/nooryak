@@ -24,8 +24,7 @@ const ContactHero = () => {
                                 </div>
                             </div>
                             <h3 className="tp-career-title fs-100 pb-30">Any questions? <br />
-                                simply ask us this is <br />
-                                you home!</h3>
+                                simply ask us..</h3>
                         </div>
                     </div>
                 </div>

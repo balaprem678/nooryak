@@ -33,123 +33,123 @@ interface MenuItem {
 // Menu data structure
 const mobileMenuData: MenuItem[] = [
     { id: 1, title: "Home", link: "/", megaMenu: false },
-    { id: 2, title: "About Us", link: "/commingsoon", megaMenu: false },
+    { id: 2, title: "About Us", link: "/404", megaMenu: false },
 
     {
         id: 3,
         title: "Services",
-        link: "/commingsoon",
+        link: "/404",
         megaMenu: true,
         columns: [
             {
                 title: "Web Development",
                 links: [
-                    { title: "Web Developer", link: "/commingsoon" },
-                    { title: "Website Development", link: "/commingsoon" },
-                    { title: "WordPress Website", link: "/commingsoon" },
-                    { title: "Ecommerce Website", link: "/commingsoon" },
-                    { title: "Shopify Website", link: "/commingsoon" },
-                    { title: "WooCommerce Website", link: "/commingsoon" },
-                    { title: "PHP Web Development", link: "/commingsoon" },
-                    { title: "React Web Development", link: "/commingsoon" },
-                    { title: "Ecommerce Development", link: "/commingsoon" },
-                    { title: "Shopify Development", link: "/commingsoon" },
-                    { title: "Custom Website Development", link: "/commingsoon" },
-                    { title: "Website Design and Development", link: "/commingsoon" }
+                    { title: "Web Developer", link: "/404" },
+                    { title: "Website Development", link: "/404" },
+                    { title: "WordPress Website", link: "/404" },
+                    { title: "Ecommerce Website", link: "/404" },
+                    { title: "Shopify Website", link: "/404" },
+                    { title: "WooCommerce Website", link: "/404" },
+                    { title: "PHP Web Development", link: "/404" },
+                    { title: "React Web Development", link: "/404" },
+                    { title: "Ecommerce Development", link: "/404" },
+                    { title: "Shopify Development", link: "/404" },
+                    { title: "Custom Website Development", link: "/404" },
+                    { title: "Website Design and Development", link: "/404" }
                 ]
             },
             {
                 title: "App Development",
                 links: [
-                    { title: "Android Application", link: "/commingsoon" },
-                    { title: "IOS Application", link: "/commingsoon" },
-                    { title: "React Native", link: "/commingsoon" },
-                    { title: "Flutter App Development", link: "/commingsoon" },
+                    { title: "Android Application", link: "/404" },
+                    { title: "IOS Application", link: "/404" },
+                    { title: "React Native", link: "/404" },
+                    { title: "Flutter App Development", link: "/404" },
                 ]
             },
             {
                 title: "Digital Marketing",
                 links: [
-                    { title: "Search Engine Optimization", link: "/commingsoon" },
-                    { title: "Search Engine Marketing", link: "/commingsoon" },
-                    { title: "Social Media Marketing", link: "/commingsoon" },
-                    { title: "SMS Marketing", link: "/commingsoon" },
-                    { title: "Facebook Marketing", link: "/commingsoon" },
-                    { title: "Content Marketing", link: "/commingsoon" },
-                    { title: "On-Page Optimization", link: "/commingsoon" },
-                    { title: "Off-Page Optimization", link: "/commingsoon" },
-                    { title: "Technical SEO", link: "/commingsoon" },
-                    { title: "Branding", link: "/commingsoon" }
+                    { title: "Search Engine Optimization", link: "/404" },
+                    { title: "Search Engine Marketing", link: "/404" },
+                    { title: "Social Media Marketing", link: "/404" },
+                    { title: "SMS Marketing", link: "/404" },
+                    { title: "Facebook Marketing", link: "/404" },
+                    { title: "Content Marketing", link: "/404" },
+                    { title: "On-Page Optimization", link: "/404" },
+                    { title: "Off-Page Optimization", link: "/404" },
+                    { title: "Technical SEO", link: "/404" },
+                    { title: "Branding", link: "/404" }
                 ]
             },
             {
                 title: "Social Media Marketing",
                 links: [
-                    { title: "Facebook Marketing", link: "/commingsoon" },
-                    { title: "Instagram Marketing", link: "/commingsoon" },
-                    { title: "Youtube Marketing", link: "/commingsoon" },
-                    { title: "LinkedIn Marketing", link: "/commingsoon" },
-                    { title: "Twitter Marketing", link: "/commingsoon" },
-                    { title: "Social Media Advertising", link: "/commingsoon" },
-                    { title: "Social Media Post Scheduling", link: "/commingsoon" }
+                    { title: "Facebook Marketing", link: "/404" },
+                    { title: "Instagram Marketing", link: "/404" },
+                    { title: "Youtube Marketing", link: "/404" },
+                    { title: "LinkedIn Marketing", link: "/404" },
+                    { title: "Twitter Marketing", link: "/404" },
+                    { title: "Social Media Advertising", link: "/404" },
+                    { title: "Social Media Post Scheduling", link: "/404" }
                 ]
             },
             {
                 title: "Local SEO",
                 links: [
-                    { title: "Google My Business Ranking", link: "/commingsoon" },
-                    { title: "Local Directory Listings", link: "/commingsoon" },
-                    { title: "Local SEO Tools", link: "/commingsoon" }
+                    { title: "Google My Business Ranking", link: "/404" },
+                    { title: "Local Directory Listings", link: "/404" },
+                    { title: "Local SEO Tools", link: "/404" }
                 ]
             },
             {
                 title: "Pay-Per-Click (PPC)",
                 links: [
-                    { title: "Google Ads", link: "/commingsoon" },
-                    { title: "Facebook Ads", link: "/commingsoon" },
-                    { title: "Display Advertising", link: "/commingsoon" },
-                    { title: "Remarketing Campaigns", link: "/commingsoon" }
+                    { title: "Google Ads", link: "/404" },
+                    { title: "Facebook Ads", link: "/404" },
+                    { title: "Display Advertising", link: "/404" },
+                    { title: "Remarketing Campaigns", link: "/404" }
                 ]
             },
             {
                 title: "Graphic Designing",
                 links: [
-                    { title: "Logo Designs", link: "/commingsoon" },
-                    { title: "Package Designs", link: "/commingsoon" },
-                    { title: "Social Media Designs", link: "/commingsoon" },
-                    { title: "Brochure Designs", link: "/commingsoon" },
-                    { title: "Pamphlet Designs", link: "/commingsoon" },
-                    { title: "Website Banners", link: "/commingsoon" },
-                    { title: "Banner Designs", link: "/commingsoon" },
-                    { title: "2D & 3D Designs", link: "/commingsoon" },
-                    { title: "Standee Designs", link: "/commingsoon" },
-                    { title: "Creative Business Card designs", link: "/commingsoon" },
-                    { title: "Annual report design", link: "/commingsoon" },
-                    { title: "End to End Event designs", link: "/commingsoon" },
-                    { title: "CSR Report design", link: "/commingsoon" },
-                    { title: "Strategy Report Design", link: "/commingsoon" },
-                    { title: "Catalogue Designs", link: "/commingsoon" },
-                    { title: "Menu Designs", link: "/commingsoon" },
-                    { title: "Marriage Card designs", link: "/commingsoon" },
-                    { title: "Hoarding/billboard designs", link: "/commingsoon" },
-                    { title: "Illustrations", link: "/commingsoon" },
-                    { title: "Branding", link: "/commingsoon" }
+                    { title: "Logo Designs", link: "/404" },
+                    { title: "Package Designs", link: "/404" },
+                    { title: "Social Media Designs", link: "/404" },
+                    { title: "Brochure Designs", link: "/404" },
+                    { title: "Pamphlet Designs", link: "/404" },
+                    { title: "Website Banners", link: "/404" },
+                    { title: "Banner Designs", link: "/404" },
+                    { title: "2D & 3D Designs", link: "/404" },
+                    { title: "Standee Designs", link: "/404" },
+                    { title: "Creative Business Card designs", link: "/404" },
+                    { title: "Annual report design", link: "/404" },
+                    { title: "End to End Event designs", link: "/404" },
+                    { title: "CSR Report design", link: "/404" },
+                    { title: "Strategy Report Design", link: "/404" },
+                    { title: "Catalogue Designs", link: "/404" },
+                    { title: "Menu Designs", link: "/404" },
+                    { title: "Marriage Card designs", link: "/404" },
+                    { title: "Hoarding/billboard designs", link: "/404" },
+                    { title: "Illustrations", link: "/404" },
+                    { title: "Branding", link: "/404" }
                 ]
             },
             {
                 title: "Video Editing",
                 links: [
-                    { title: "Reel Videos", link: "/commingsoon" },
-                    { title: "Model Shoot Videos", link: "/commingsoon" },
-                    { title: "RealEstate Drone Shots", link: "/commingsoon" },
-                    { title: "Custom Videos", link: "/commingsoon" }
+                    { title: "Reel Videos", link: "/404" },
+                    { title: "Model Shoot Videos", link: "/404" },
+                    { title: "RealEstate Drone Shots", link: "/404" },
+                    { title: "Custom Videos", link: "/404" }
                 ]
             },
             {
                 title: "Software Development",
                 links: [
-                    { title: "Software Development", link: "/commingsoon" },
-                    { title: "AI Automations", link: "/commingsoon" }
+                    { title: "Software Development", link: "/404" },
+                    { title: "AI Automations", link: "/404" }
                 ]
             },
         ],
@@ -159,26 +159,27 @@ const mobileMenuData: MenuItem[] = [
     {
         id: 4,
         title: "Products",
-        link: "/commingsoon",
+        link: "/404",
         megaMenu: true,
         columns: [
             {
-                title: "Web Development",
+                title: "",
                 links: [
-                    { title: "SAAS WEBSITE BUILDER", link: "/commingsoon" },
-                    { title: "SAAS LEAD MANAGEMENT CRM", link: "/commingsoon" },
-                    { title: "SAAS INVOICE GENERATOR", link: "/commingsoon" },
+                    { title: "SAAS WEBSITE BUILDER", link: "/404" },
+                    { title: "SAAS LEAD MANAGEMENT CRM", link: "/404" },
+                    { title: "SAAS INVOICE GENERATOR", link: "/404" },
                 ]
             },
         ],
+
         image: { src: menuThumb, alt: "menu thumb" }
     },
 
-    { id: 5, title: "Portfolio", link: "/commingsoon", megaMenu: false },
-    { id: 6, title: "Careers", link: "/commingsoon", megaMenu: false },
-    { id: 7, title: "Clients", link: "/commingsoon", megaMenu: false },
-    { id: 8, title: "Blog", link: "/commingsoon", megaMenu: false },
-    { id: 9, title: "Contact", link: "/commingsoon", megaMenu: false }
+    { id: 5, title: "Portfolio", link: "/404", megaMenu: false },
+    { id: 6, title: "Careers", link: "/404", megaMenu: false },
+    { id: 7, title: "Clients", link: "/404", megaMenu: false },
+    { id: 8, title: "Blog", link: "/404", megaMenu: false },
+    { id: 9, title: "Contact", link: "/404", megaMenu: false }
 ];
 
 export default mobileMenuData;

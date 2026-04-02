@@ -1,7 +1,228 @@
-// import mobileMenuData from '@/data/header-menu/mobileMenuData';
-// import { useState } from 'react';
-// import Image from 'next/image';
-// import Link from 'next/link';
+// // import mobileMenuData from '@/data/header-menu/mobileMenuData';
+// // import { useState } from 'react';
+// // import Image from 'next/image';
+// // import Link from 'next/link';
+
+// // const MainMobileMenu = () => {
+// //     const [activeMenu, setActiveMenu] = useState<number | null>(null);
+// //     const [activeSubmenu, setActiveSubmenu] = useState<number | null>(null);
+
+// //     const toggleMenu = (id: number) => {
+// //         if (activeMenu === id) {
+// //             setActiveMenu(null);
+// //         } else {
+// //             setActiveMenu(id);
+// //             setActiveSubmenu(null);
+// //         }
+// //     };
+
+// //     const toggleSubmenu = (index: number) => {
+// //         if (activeSubmenu === index) {
+// //             setActiveSubmenu(null);
+// //         } else {
+// //             setActiveSubmenu(index);
+// //         }
+// //     };
+
+// //     // Returns CSS class based on tag like 'Popular', 'Trending', or 'Hot'
+// //     const getTagClass = (tag: string) => {
+// //         switch (tag) {
+// //             case 'Popular': return 'pop';
+// //             case 'Trending': return 'new';
+// //             case 'Hot': return 'hot';
+// //             default: return '';
+// //         }
+// //     };
+
+// //     return (
+// //         <>
+// //             <ul>
+// //                 {mobileMenuData.map((menuItem) => (
+// //                     <li key={menuItem.id} className={`has-dropdown ${activeMenu === menuItem.id ? 'active' : ''}`}>
+// //                         <Link href={menuItem.link} onClick={(e) => {
+// //                             e.preventDefault();
+// //                             toggleMenu(menuItem.id);
+// //                         }}>
+// //                             {menuItem.title}
+// //                         </Link>
+
+// //                         {menuItem.megaMenu ? (
+// //                             <div className="tp-megamenu-wrapper mega-menu megamenu-white-bg" style={{ display: `${activeMenu === menuItem.id ? 'block' : 'none'}` }}>
+// //                                 <div className="row gx-0">
+// //                                     {menuItem.columns?.map((column, colIndex) => (
+// //                                         <div key={colIndex} className={menuItem.image ? "col-xl-2" : "col-xl-3"}>
+// //                                             <div className="tp-megamenu-list">
+// //                                                 <h4 className="tp-megamenu-title">{column.title}</h4>
+// //                                                 <ul>
+// //                                                     {column.links.map((link, linkIndex) => (
+// //                                                         <li key={linkIndex}>
+// //                                                             <Link href={link.link}>
+// //                                                                 {link.title}
+// //                                                                 {link.badge && (
+// //                                                                     <span className={getTagClass(link.badge)}>
+// //                                                                         {link.badge}
+// //                                                                     </span>
+// //                                                                 )}
+// //                                                             </Link>
+// //                                                         </li>
+// //                                                     ))}
+// //                                                 </ul>
+// //                                             </div>
+// //                                         </div>
+// //                                     ))}
+
+// //                                     {menuItem.image && (
+// //                                         <div className="col-xl-2">
+// //                                             <div className="tp-megamenu-list">
+// //                                                 <div className="tp-megamenu-thumb">
+// //                                                     <Image src={menuItem.image.src} alt={menuItem.image.alt} />
+// //                                                 </div>
+// //                                             </div>
+// //                                         </div>
+// //                                     )}
+// //                                 </div>
+// //                             </div>
+// //                         ) : (
+// //                             <ul className="tp-submenu submenu" style={{ display: `${activeMenu === menuItem.id ? 'block' : 'none'}` }}>
+// //                                 {menuItem.submenu?.map((subItem, subIndex) => (
+// //                                     <li key={subIndex} className={subItem.submenu ? `menu-item-has-children ${activeSubmenu === subIndex ? 'active' : ''}` : ""}>
+// //                                         <Link href={subItem.link} onClick={(e) => {
+// //                                             if (subItem.submenu) {
+// //                                                 e.preventDefault();
+// //                                                 toggleSubmenu(subIndex);
+// //                                             }
+// //                                         }}>
+// //                                             {subItem.title}
+// //                                         </Link>
+
+// //                                         {subItem.submenu && (
+// //                                             <>
+// //                                                 <ul className="tp-submenu submenu" style={{ display: `${activeSubmenu === subIndex ? 'block' : 'none'}` }}>
+// //                                                     {subItem.submenu.map((nestedItem, nestedIndex) => (
+// //                                                         <li key={nestedIndex}>
+// //                                                             <Link href={nestedItem.link}>{nestedItem.title}</Link>
+// //                                                         </li>
+// //                                                     ))}
+// //                                                 </ul>
+// //                                                 <button
+// //                                                     className={`tp-menu-close ${activeSubmenu === subIndex ? 'active' : ''}`}
+// //                                                     onClick={() => toggleSubmenu(subIndex)}
+// //                                                 >
+// //                                                     <i className="fa-solid fa-plus"></i>
+// //                                                 </button>
+// //                                             </>
+// //                                         )}
+// //                                     </li>
+// //                                 ))}
+// //                             </ul>
+// //                         )}
+
+// //                         <button
+// //                             className={`tp-menu-close ${activeMenu === menuItem.id ? 'active' : ''}`}
+// //                             onClick={() => toggleMenu(menuItem.id)}
+// //                         >
+// //                             <i className="fa-solid fa-plus"></i>
+// //                         </button>
+// //                     </li>
+// //                 ))}
+// //             </ul>
+// //         </>
+// //     );
+// // };
+
+// // export default MainMobileMenu;
+
+
+// "use client";
+
+// import mobileMenuData from "@/data/header-menu/mobileMenuData";
+// import { useState } from "react";
+// import Image from "next/image";
+// import Link from "next/link";
+// import {
+//   Monitor, Globe, Layout, Settings, Store, ShoppingBag, CreditCard,
+//   Package, Truck, AppWindow, Code, Database,
+//   Smartphone, Tablet, Layers, Cpu,
+//   Search, LineChart, Share2, MessageSquare, BadgeCheck,
+//   FileText, ClipboardList, Send, Wrench, Rocket,
+//   MapPin, ListTree,
+//   Target, Megaphone, Tv, Repeat,
+//   Camera, PlayCircle, Briefcase, CalendarClock, Activity,
+//   Film, Aperture, Video, Wand2,
+//   Brush, Box, Image as ImgIcon, File, Newspaper, LayoutGrid, Columns,
+//   Cuboid, Layers3, IdCard, BarChart4, Lightbulb, FileBadge,
+//   Focus, BookOpen, MenuSquare, Heart, PenTool,
+//   BrainCircuit, Cloud
+// } from "lucide-react";
+
+// // 🔹 ICON LOGIC
+// const getIcon = (title: string = "") => {
+//   const t = title.toLowerCase();
+//   if (t.includes("web developer")) return <Monitor size={16} />;
+//   if (t.includes("website development")) return <Globe size={16} />;
+//   if (t.includes("wordpress")) return <Layout size={16} />;
+//   if (t.includes("custom website")) return <Settings size={16} />;
+//   if (t.includes("ecommerce website")) return <Store size={16} />;
+//   if (t.includes("shopify website")) return <ShoppingBag size={16} />;
+//   if (t.includes("woocommerce")) return <CreditCard size={16} />;
+//   if (t.includes("ecommerce development")) return <Package size={16} />;
+//   if (t.includes("shopify development")) return <Truck size={16} />;
+//   if (t.includes("react web")) return <AppWindow size={16} />;
+//   if (t.includes("php")) return <Code size={16} />;
+//   if (t.includes("software")) return <Database size={16} />;
+//   if (t.includes("android")) return <Smartphone size={16} />;
+//   if (t.includes("ios")) return <Tablet size={16} />;
+//   if (t.includes("flutter")) return <Layers size={16} />;
+//   if (t.includes("react native")) return <Cpu size={16} />;
+//   if (t.includes("search engine optimization")) return <Search size={16} />;
+//   if (t.includes("search engine marketing")) return <LineChart size={16} />;
+//   if (t.includes("social media marketing")) return <Share2 size={16} />;
+//   if (t.includes("sms marketing")) return <MessageSquare size={16} />;
+//   if (t.includes("facebook marketing")) return <BadgeCheck size={16} />;
+//   if (t.includes("content marketing")) return <FileText size={16} />;
+//   if (t.includes("on-page")) return <ClipboardList size={16} />;
+//   if (t.includes("off-page")) return <Send size={16} />;
+//   if (t.includes("technical seo")) return <Wrench size={16} />;
+//   if (t.includes("branding")) return <Rocket size={16} />;
+//   if (t.includes("google my business")) return <MapPin size={16} />;
+//   if (t.includes("directory") || t.includes("local seo tools")) return <ListTree size={16} />;
+//   if (t.includes("google ads")) return <Target size={16} />;
+//   if (t.includes("facebook ads")) return <Megaphone size={16} />;
+//   if (t.includes("display advertising")) return <Tv size={16} />;
+//   if (t.includes("remarketing")) return <Repeat size={16} />;
+//   if (t.includes("instagram")) return <Camera size={16} />;
+//   if (t.includes("youtube")) return <PlayCircle size={16} />;
+//   if (t.includes("linkedin")) return <Briefcase size={16} />;
+//   if (t.includes("twitter")) return <Briefcase size={16} />;
+//   if (t.includes("post scheduling")) return <CalendarClock size={16} />;
+//   if (t.includes("social media advertising")) return <Activity size={16} />;
+//   if (t.includes("reel")) return <Film size={16} />;
+//   if (t.includes("model shoot")) return <Aperture size={16} />;
+//   if (t.includes("drone")) return <Video size={16} />;
+//   if (t.includes("custom video")) return <Wand2 size={16} />;
+//   if (t.includes("logo")) return <Brush size={16} />;
+//   if (t.includes("package design")) return <Box size={16} />;
+//   if (t.includes("social media design")) return <ImgIcon size={16} />;
+//   if (t.includes("brochure")) return <File size={16} />;
+//   if (t.includes("pamphlet")) return <Newspaper size={16} />;
+//   if (t.includes("website banner")) return <LayoutGrid size={16} />;
+//   if (t.includes("banner design")) return <Columns size={16} />;
+//   if (t.includes("2d") || t.includes("3d")) return <Cuboid size={16} />;
+//   if (t.includes("standee")) return <Layers3 size={16} />;
+//   if (t.includes("business card")) return <IdCard size={16} />;
+//   if (t.includes("annual report")) return <BarChart4 size={16} />;
+//   if (t.includes("event design")) return <Lightbulb size={16} />;
+//   if (t.includes("csr")) return <FileBadge size={16} />;
+//   if (t.includes("strategy")) return <Focus size={16} />;
+//   if (t.includes("catalogue")) return <BookOpen size={16} />;
+//   if (t.includes("menu design")) return <MenuSquare size={16} />;
+//   if (t.includes("marriage")) return <Heart size={16} />;
+//   if (t.includes("hoarding") || t.includes("billboard")) return <Heart size={16} />;
+//   if (t.includes("illustration")) return <PenTool size={16} />;
+//   if (t.includes("ai")) return <BrainCircuit size={16} />;
+//   if (t.includes("cloud") || t.includes("hosting")) return <Cloud size={16} />;
+//   return <Layers size={16} />;
+// };
 
 // const MainMobileMenu = () => {
 //     const [activeMenu, setActiveMenu] = useState<number | null>(null);
@@ -24,7 +245,6 @@
 //         }
 //     };
 
-//     // Returns CSS class based on tag like 'Popular', 'Trending', or 'Hot'
 //     const getTagClass = (tag: string) => {
 //         switch (tag) {
 //             case 'Popular': return 'pop';
@@ -35,98 +255,91 @@
 //     };
 
 //     return (
-//         <>
-//             <ul>
-//                 {mobileMenuData.map((menuItem) => (
-//                     <li key={menuItem.id} className={`has-dropdown ${activeMenu === menuItem.id ? 'active' : ''}`}>
-//                         <Link href={menuItem.link} onClick={(e) => {
-//                             e.preventDefault();
-//                             toggleMenu(menuItem.id);
-//                         }}>
-//                             {menuItem.title}
-//                         </Link>
+//         <ul>
+//             {mobileMenuData.map((menuItem, menuIndex) => (
+//                 <li key={menuItem.id} className={`has-dropdown ${activeMenu === menuItem.id ? 'active' : ''}`}>
+//                     <Link href={menuItem.link} onClick={(e) => { e.preventDefault(); toggleMenu(menuItem.id); }}>
+//                         {/* ICON */}
+//                         {/* <span className="menu-icon">{getIcon(menuItem.title)}</span> */}
+//                         <span className="menu-text">{menuItem.title}</span>
+//                     </Link>
 
-//                         {menuItem.megaMenu ? (
-//                             <div className="tp-megamenu-wrapper mega-menu megamenu-white-bg" style={{ display: `${activeMenu === menuItem.id ? 'block' : 'none'}` }}>
-//                                 <div className="row gx-0">
-//                                     {menuItem.columns?.map((column, colIndex) => (
-//                                         <div key={colIndex} className={menuItem.image ? "col-xl-2" : "col-xl-3"}>
-//                                             <div className="tp-megamenu-list">
-//                                                 <h4 className="tp-megamenu-title">{column.title}</h4>
-//                                                 <ul>
-//                                                     {column.links.map((link, linkIndex) => (
-//                                                         <li key={linkIndex}>
-//                                                             <Link href={link.link}>
-//                                                                 {link.title}
-//                                                                 {link.badge && (
-//                                                                     <span className={getTagClass(link.badge)}>
-//                                                                         {link.badge}
-//                                                                     </span>
-//                                                                 )}
-//                                                             </Link>
-//                                                         </li>
-//                                                     ))}
-//                                                 </ul>
-//                                             </div>
+//                     {menuItem.megaMenu ? (
+//                         <div className="tp-megamenu-wrapper mega-menu megamenu-white-bg" style={{ display: `${activeMenu === menuItem.id ? 'block' : 'none'}` }}>
+//                             <div className="row gx-0">
+//                                 {menuItem.columns?.map((column, colIndex) => (
+//                                     <div key={colIndex} className={menuItem.image ? "col-xl-2" : "col-xl-3"}>
+//                                         <div className="tp-megamenu-list">
+//                                             <h4 className="tp-megamenu-title">{column.title}</h4>
+//                                             <ul>
+//                                                 {column.links.map((link, linkIndex) => (
+//                                                     <li key={linkIndex}>
+//                                                         <Link href={link.link}>
+//                                                             <span className="menu-icon">{getIcon(link.title)}</span>
+//                                                             <span className="menu-text">{link.title}</span>
+//                                                             {link.badge && <span className={getTagClass(link.badge)}>{link.badge}</span>}
+//                                                         </Link>
+//                                                     </li>
+//                                                 ))}
+//                                             </ul>
 //                                         </div>
-//                                     ))}
-
-//                                     {menuItem.image && (
-//                                         <div className="col-xl-2">
-//                                             <div className="tp-megamenu-list">
-//                                                 <div className="tp-megamenu-thumb">
-//                                                     <Image src={menuItem.image.src} alt={menuItem.image.alt} />
-//                                                 </div>
-//                                             </div>
-//                                         </div>
-//                                     )}
-//                                 </div>
-//                             </div>
-//                         ) : (
-//                             <ul className="tp-submenu submenu" style={{ display: `${activeMenu === menuItem.id ? 'block' : 'none'}` }}>
-//                                 {menuItem.submenu?.map((subItem, subIndex) => (
-//                                     <li key={subIndex} className={subItem.submenu ? `menu-item-has-children ${activeSubmenu === subIndex ? 'active' : ''}` : ""}>
-//                                         <Link href={subItem.link} onClick={(e) => {
-//                                             if (subItem.submenu) {
-//                                                 e.preventDefault();
-//                                                 toggleSubmenu(subIndex);
-//                                             }
-//                                         }}>
-//                                             {subItem.title}
-//                                         </Link>
-
-//                                         {subItem.submenu && (
-//                                             <>
-//                                                 <ul className="tp-submenu submenu" style={{ display: `${activeSubmenu === subIndex ? 'block' : 'none'}` }}>
-//                                                     {subItem.submenu.map((nestedItem, nestedIndex) => (
-//                                                         <li key={nestedIndex}>
-//                                                             <Link href={nestedItem.link}>{nestedItem.title}</Link>
-//                                                         </li>
-//                                                     ))}
-//                                                 </ul>
-//                                                 <button
-//                                                     className={`tp-menu-close ${activeSubmenu === subIndex ? 'active' : ''}`}
-//                                                     onClick={() => toggleSubmenu(subIndex)}
-//                                                 >
-//                                                     <i className="fa-solid fa-plus"></i>
-//                                                 </button>
-//                                             </>
-//                                         )}
-//                                     </li>
+//                                     </div>
 //                                 ))}
-//                             </ul>
-//                         )}
 
-//                         <button
-//                             className={`tp-menu-close ${activeMenu === menuItem.id ? 'active' : ''}`}
-//                             onClick={() => toggleMenu(menuItem.id)}
-//                         >
-//                             <i className="fa-solid fa-plus"></i>
-//                         </button>
-//                     </li>
-//                 ))}
-//             </ul>
-//         </>
+//                                 {menuItem.image && (
+//                                     <div className="col-xl-2">
+//                                         <div className="tp-megamenu-list">
+//                                             <div className="tp-megamenu-thumb">
+//                                                 <Image src={menuItem.image.src} alt={menuItem.image.alt} />
+//                                             </div>
+//                                         </div>
+//                                     </div>
+//                                 )}
+//                             </div>
+//                         </div>
+//                     ) : (
+//                         <ul className="tp-submenu submenu" style={{ display: `${activeMenu === menuItem.id ? 'block' : 'none'}` }}>
+//                             {menuItem.submenu?.map((subItem, subIndex) => (
+//                                 <li key={subIndex} className={subItem.submenu ? `menu-item-has-children ${activeSubmenu === subIndex ? 'active' : ''}` : ""}>
+//                                     <Link href={subItem.link} onClick={(e) => {
+//                                         if (subItem.submenu) {
+//                                             e.preventDefault();
+//                                             toggleSubmenu(subIndex);
+//                                         }
+//                                     }}>
+//                                         {/* ICON */}
+//                                         <span className="menu-icon">{getIcon(subItem.title)}</span>
+//                                         <span className="menu-text">{subItem.title}</span>
+//                                     </Link>
+
+//                                     {subItem.submenu && (
+//                                         <>
+//                                             <ul className="tp-submenu submenu" style={{ display: `${activeSubmenu === subIndex ? 'block' : 'none'}` }}>
+//                                                 {subItem.submenu.map((nestedItem, nestedIndex) => (
+//                                                     <li key={nestedIndex}>
+//                                                         <Link href={nestedItem.link}>
+//                                                             <span className="menu-icon">{getIcon(nestedItem.title)}</span>
+//                                                             <span className="menu-text">{nestedItem.title}</span>
+//                                                         </Link>
+//                                                     </li>
+//                                                 ))}
+//                                             </ul>
+//                                             <button className={`tp-menu-close ${activeSubmenu === subIndex ? 'active' : ''}`} onClick={() => toggleSubmenu(subIndex)}>
+//                                                 <i className="fa-solid fa-plus"></i>
+//                                             </button>
+//                                         </>
+//                                     )}
+//                                 </li>
+//                             ))}
+//                         </ul>
+//                     )}
+
+//                     <button className={`tp-menu-close ${activeMenu === menuItem.id ? 'active' : ''}`} onClick={() => toggleMenu(menuItem.id)}>
+//                         <i className="fa-solid fa-plus"></i>
+//                     </button>
+//                 </li>
+//             ))}
+//         </ul>
 //     );
 // };
 
@@ -139,208 +352,113 @@ import mobileMenuData from "@/data/header-menu/mobileMenuData";
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import {
-  Monitor, Globe, Layout, Settings, Store, ShoppingBag, CreditCard,
-  Package, Truck, AppWindow, Code, Database,
-  Smartphone, Tablet, Layers, Cpu,
-  Search, LineChart, Share2, MessageSquare, BadgeCheck,
-  FileText, ClipboardList, Send, Wrench, Rocket,
-  MapPin, ListTree,
-  Target, Megaphone, Tv, Repeat,
-  Camera, PlayCircle, Briefcase, CalendarClock, Activity,
-  Film, Aperture, Video, Wand2,
-  Brush, Box, Image as ImgIcon, File, Newspaper, LayoutGrid, Columns,
-  Cuboid, Layers3, IdCard, BarChart4, Lightbulb, FileBadge,
-  Focus, BookOpen, MenuSquare, Heart, PenTool,
-  BrainCircuit, Cloud
-} from "lucide-react";
-
-// 🔹 ICON LOGIC
-const getIcon = (title: string = "") => {
-  const t = title.toLowerCase();
-  if (t.includes("web developer")) return <Monitor size={16} />;
-  if (t.includes("website development")) return <Globe size={16} />;
-  if (t.includes("wordpress")) return <Layout size={16} />;
-  if (t.includes("custom website")) return <Settings size={16} />;
-  if (t.includes("ecommerce website")) return <Store size={16} />;
-  if (t.includes("shopify website")) return <ShoppingBag size={16} />;
-  if (t.includes("woocommerce")) return <CreditCard size={16} />;
-  if (t.includes("ecommerce development")) return <Package size={16} />;
-  if (t.includes("shopify development")) return <Truck size={16} />;
-  if (t.includes("react web")) return <AppWindow size={16} />;
-  if (t.includes("php")) return <Code size={16} />;
-  if (t.includes("software")) return <Database size={16} />;
-  if (t.includes("android")) return <Smartphone size={16} />;
-  if (t.includes("ios")) return <Tablet size={16} />;
-  if (t.includes("flutter")) return <Layers size={16} />;
-  if (t.includes("react native")) return <Cpu size={16} />;
-  if (t.includes("search engine optimization")) return <Search size={16} />;
-  if (t.includes("search engine marketing")) return <LineChart size={16} />;
-  if (t.includes("social media marketing")) return <Share2 size={16} />;
-  if (t.includes("sms marketing")) return <MessageSquare size={16} />;
-  if (t.includes("facebook marketing")) return <BadgeCheck size={16} />;
-  if (t.includes("content marketing")) return <FileText size={16} />;
-  if (t.includes("on-page")) return <ClipboardList size={16} />;
-  if (t.includes("off-page")) return <Send size={16} />;
-  if (t.includes("technical seo")) return <Wrench size={16} />;
-  if (t.includes("branding")) return <Rocket size={16} />;
-  if (t.includes("google my business")) return <MapPin size={16} />;
-  if (t.includes("directory") || t.includes("local seo tools")) return <ListTree size={16} />;
-  if (t.includes("google ads")) return <Target size={16} />;
-  if (t.includes("facebook ads")) return <Megaphone size={16} />;
-  if (t.includes("display advertising")) return <Tv size={16} />;
-  if (t.includes("remarketing")) return <Repeat size={16} />;
-  if (t.includes("instagram")) return <Camera size={16} />;
-  if (t.includes("youtube")) return <PlayCircle size={16} />;
-  if (t.includes("linkedin")) return <Briefcase size={16} />;
-  if (t.includes("twitter")) return <Briefcase size={16} />;
-  if (t.includes("post scheduling")) return <CalendarClock size={16} />;
-  if (t.includes("social media advertising")) return <Activity size={16} />;
-  if (t.includes("reel")) return <Film size={16} />;
-  if (t.includes("model shoot")) return <Aperture size={16} />;
-  if (t.includes("drone")) return <Video size={16} />;
-  if (t.includes("custom video")) return <Wand2 size={16} />;
-  if (t.includes("logo")) return <Brush size={16} />;
-  if (t.includes("package design")) return <Box size={16} />;
-  if (t.includes("social media design")) return <ImgIcon size={16} />;
-  if (t.includes("brochure")) return <File size={16} />;
-  if (t.includes("pamphlet")) return <Newspaper size={16} />;
-  if (t.includes("website banner")) return <LayoutGrid size={16} />;
-  if (t.includes("banner design")) return <Columns size={16} />;
-  if (t.includes("2d") || t.includes("3d")) return <Cuboid size={16} />;
-  if (t.includes("standee")) return <Layers3 size={16} />;
-  if (t.includes("business card")) return <IdCard size={16} />;
-  if (t.includes("annual report")) return <BarChart4 size={16} />;
-  if (t.includes("event design")) return <Lightbulb size={16} />;
-  if (t.includes("csr")) return <FileBadge size={16} />;
-  if (t.includes("strategy")) return <Focus size={16} />;
-  if (t.includes("catalogue")) return <BookOpen size={16} />;
-  if (t.includes("menu design")) return <MenuSquare size={16} />;
-  if (t.includes("marriage")) return <Heart size={16} />;
-  if (t.includes("hoarding") || t.includes("billboard")) return <Heart size={16} />;
-  if (t.includes("illustration")) return <PenTool size={16} />;
-  if (t.includes("ai")) return <BrainCircuit size={16} />;
-  if (t.includes("cloud") || t.includes("hosting")) return <Cloud size={16} />;
-  return <Layers size={16} />;
-};
 
 const MainMobileMenu = () => {
-    const [activeMenu, setActiveMenu] = useState<number | null>(null);
-    const [activeSubmenu, setActiveSubmenu] = useState<number | null>(null);
+  const [activeMenu, setActiveMenu] = useState<number | null>(null);
+  const [activeSubmenu, setActiveSubmenu] = useState<number | null>(null);
 
-    const toggleMenu = (id: number) => {
-        if (activeMenu === id) {
-            setActiveMenu(null);
-        } else {
-            setActiveMenu(id);
-            setActiveSubmenu(null);
-        }
-    };
+  const toggleMenu = (id: number) => {
+    if (activeMenu === id) {
+      setActiveMenu(null);
+    } else {
+      setActiveMenu(id);
+      setActiveSubmenu(null);
+    }
+  };
 
-    const toggleSubmenu = (index: number) => {
-        if (activeSubmenu === index) {
-            setActiveSubmenu(null);
-        } else {
-            setActiveSubmenu(index);
-        }
-    };
+  const toggleSubmenu = (index: number) => {
+    if (activeSubmenu === index) {
+      setActiveSubmenu(null);
+    } else {
+      setActiveSubmenu(index);
+    }
+  };
 
-    const getTagClass = (tag: string) => {
-        switch (tag) {
-            case 'Popular': return 'pop';
-            case 'Trending': return 'new';
-            case 'Hot': return 'hot';
-            default: return '';
-        }
-    };
+  return (
+    <ul>
+      {mobileMenuData.map((menuItem) => {
+        const isDropdown = menuItem.megaMenu;
 
-    return (
-        <ul>
-            {mobileMenuData.map((menuItem, menuIndex) => (
-                <li key={menuItem.id} className={`has-dropdown ${activeMenu === menuItem.id ? 'active' : ''}`}>
-                    <Link href={menuItem.link} onClick={(e) => { e.preventDefault(); toggleMenu(menuItem.id); }}>
-                        {/* ICON */}
-                        {/* <span className="menu-icon">{getIcon(menuItem.title)}</span> */}
-                        <span className="menu-text">{menuItem.title}</span>
-                    </Link>
+        return (
+          <li
+            key={menuItem.id}
+            className={`${isDropdown ? "has-dropdown" : ""} ${
+              activeMenu === menuItem.id ? "active" : ""
+            }`}
+          >
+            {/* ✅ MAIN MENU */}
+            <Link
+              href={menuItem.link}
+              onClick={(e) => {
+                if (isDropdown) {
+                  e.preventDefault(); // only block dropdown
+                  toggleMenu(menuItem.id);
+                }
+              }}
+            >
+              <span className="menu-text">{menuItem.title}</span>
+            </Link>
 
-                    {menuItem.megaMenu ? (
-                        <div className="tp-megamenu-wrapper mega-menu megamenu-white-bg" style={{ display: `${activeMenu === menuItem.id ? 'block' : 'none'}` }}>
-                            <div className="row gx-0">
-                                {menuItem.columns?.map((column, colIndex) => (
-                                    <div key={colIndex} className={menuItem.image ? "col-xl-2" : "col-xl-3"}>
-                                        <div className="tp-megamenu-list">
-                                            <h4 className="tp-megamenu-title">{column.title}</h4>
-                                            <ul>
-                                                {column.links.map((link, linkIndex) => (
-                                                    <li key={linkIndex}>
-                                                        <Link href={link.link}>
-                                                            <span className="menu-icon">{getIcon(link.title)}</span>
-                                                            <span className="menu-text">{link.title}</span>
-                                                            {link.badge && <span className={getTagClass(link.badge)}>{link.badge}</span>}
-                                                        </Link>
-                                                    </li>
-                                                ))}
-                                            </ul>
-                                        </div>
-                                    </div>
-                                ))}
+            {/* ✅ MEGA MENU */}
+            {isDropdown && menuItem.megaMenu && (
+              <div
+                className="tp-megamenu-wrapper mega-menu"
+                style={{
+                  display: activeMenu === menuItem.id ? "block" : "none",
+                }}
+              >
+                <div className="row gx-0">
+                  {menuItem.columns?.map((column, colIndex) => (
+                    <div key={colIndex} className="col-xl-3">
+                      <div className="tp-megamenu-list">
+                        <h4 className="tp-megamenu-title">
+                          {column.title}
+                        </h4>
 
-                                {menuItem.image && (
-                                    <div className="col-xl-2">
-                                        <div className="tp-megamenu-list">
-                                            <div className="tp-megamenu-thumb">
-                                                <Image src={menuItem.image.src} alt={menuItem.image.alt} />
-                                            </div>
-                                        </div>
-                                    </div>
-                                )}
-                            </div>
-                        </div>
-                    ) : (
-                        <ul className="tp-submenu submenu" style={{ display: `${activeMenu === menuItem.id ? 'block' : 'none'}` }}>
-                            {menuItem.submenu?.map((subItem, subIndex) => (
-                                <li key={subIndex} className={subItem.submenu ? `menu-item-has-children ${activeSubmenu === subIndex ? 'active' : ''}` : ""}>
-                                    <Link href={subItem.link} onClick={(e) => {
-                                        if (subItem.submenu) {
-                                            e.preventDefault();
-                                            toggleSubmenu(subIndex);
-                                        }
-                                    }}>
-                                        {/* ICON */}
-                                        <span className="menu-icon">{getIcon(subItem.title)}</span>
-                                        <span className="menu-text">{subItem.title}</span>
-                                    </Link>
-
-                                    {subItem.submenu && (
-                                        <>
-                                            <ul className="tp-submenu submenu" style={{ display: `${activeSubmenu === subIndex ? 'block' : 'none'}` }}>
-                                                {subItem.submenu.map((nestedItem, nestedIndex) => (
-                                                    <li key={nestedIndex}>
-                                                        <Link href={nestedItem.link}>
-                                                            <span className="menu-icon">{getIcon(nestedItem.title)}</span>
-                                                            <span className="menu-text">{nestedItem.title}</span>
-                                                        </Link>
-                                                    </li>
-                                                ))}
-                                            </ul>
-                                            <button className={`tp-menu-close ${activeSubmenu === subIndex ? 'active' : ''}`} onClick={() => toggleSubmenu(subIndex)}>
-                                                <i className="fa-solid fa-plus"></i>
-                                            </button>
-                                        </>
-                                    )}
-                                </li>
-                            ))}
+                        <ul>
+                          {column.links.map((link, linkIndex) => (
+                            <li key={linkIndex}>
+                              <Link href={link.link}>
+                                {link.title}
+                              </Link>
+                            </li>
+                          ))}
                         </ul>
-                    )}
+                      </div>
+                    </div>
+                  ))}
 
-                    <button className={`tp-menu-close ${activeMenu === menuItem.id ? 'active' : ''}`} onClick={() => toggleMenu(menuItem.id)}>
-                        <i className="fa-solid fa-plus"></i>
-                    </button>
-                </li>
-            ))}
-        </ul>
-    );
+                  {/* IMAGE */}
+                  {menuItem.image && (
+                    <div className="col-xl-3">
+                      <div className="tp-megamenu-thumb">
+                        <Image
+                          src={menuItem.image.src}
+                          alt={menuItem.image.alt}
+                        />
+                      </div>
+                    </div>
+                  )}
+                </div>
+              </div>
+            )}
+
+            {/* ✅ TOGGLE BUTTON ONLY FOR DROPDOWN */}
+            {isDropdown && (
+              <button
+                className={`tp-menu-close ${
+                  activeMenu === menuItem.id ? "active" : ""
+                }`}
+                onClick={() => toggleMenu(menuItem.id)}
+              >
+                <i className="fa-solid fa-plus"></i>
+              </button>
+            )}
+          </li>
+        );
+      })}
+    </ul>
+  );
 };
 
 export default MainMobileMenu;
