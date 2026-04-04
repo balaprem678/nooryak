@@ -8,7 +8,6 @@ import CreativeAgencyBrand from '@/components/brand/CreativeAgencyBrand';
 import CreativeAgencyAward from '@/components/award/CreativeAgencyAward';
 import CreativeAgencyTeam from '@/components/team/CreativeAgencyTeam';
 import CreativeAboutTwo from '@/components/about/CreativeAboutTwo';
-import InnerPageHeader from '@/layouts/headers/InnerPageHeader';
 import BackToTop from '@/components/shared/BackToTop/BackToTop';
 import HomeMainBanner from '@/components/banner/HomeMainBanner';
 import HomeMainFooter from '@/layouts/footers/HomeMainFooter';
@@ -24,7 +23,6 @@ const AboutCreativeMain = () => {
                     </div>
                     {/* Global Components */}
                     <BackToTop />
-                    <InnerPageHeader />
 
                     <div id="smooth-wrapper">
                         <div id="smooth-content">

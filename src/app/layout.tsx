@@ -1,4 +1,3 @@
-
 import { Inter, Besley, Space_Grotesk, Playfair_Display, Satisfy, Teko, Phudu, Poppins, Onest } from "next/font/google";
 import GlobalVideoModal from "@/components/Popup/GlobalVideoModal";
 import { VideoProvider } from "@/provider/VideoProvider";
@@ -8,25 +7,20 @@ import type { Metadata } from "next";
 import "swiper/css/bundle";
 import "./globals.scss";
 
-// Inter font – Supports weights from 100 to 900, including italic styles
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
   display: "swap",
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
-  style: ["normal", "italic"],
 });
 
-// Besley font – Supports weights from 400 to 900, including italic styles
 const besley = Besley({
   subsets: ["latin"],
   variable: "--font-besley",
   display: "swap",
   weight: ["400", "500", "600", "700", "800", "900"],
-  style: ["normal", "italic"],
 });
 
-// Space Grotesk font – Supports weights from 300 to 700
 const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
   variable: "--font-space-grotesk",
@@ -34,16 +28,13 @@ const spaceGrotesk = Space_Grotesk({
   weight: ["300", "400", "500", "600", "700"],
 });
 
-// Playfair Display font – Supports weights from 400 to 900, including italic styles
 const playfairDisplay = Playfair_Display({
   subsets: ["latin"],
   variable: "--font-playfair-display",
   display: "swap",
   weight: ["400", "500", "600", "700", "800", "900"],
-  style: ["normal", "italic"],
 });
 
-// Satisfy font – Only available in regular weight (400)
 const satisfy = Satisfy({
   subsets: ["latin"],
   variable: "--font-satisfy",
@@ -51,7 +42,6 @@ const satisfy = Satisfy({
   display: "swap",
 });
 
-// Teko font – Supports weights from 300 to 700
 const teko = Teko({
   subsets: ["latin"],
   variable: "--font-teko",
@@ -59,7 +49,6 @@ const teko = Teko({
   weight: ["300", "400", "500", "600", "700"],
 });
 
-// Phudu font – Supports weights from 300 to 900
 const phudu = Phudu({
   subsets: ["latin"],
   variable: "--font-phudu",
@@ -67,16 +56,13 @@ const phudu = Phudu({
   weight: ["300", "400", "500", "600", "700", "800", "900"],
 });
 
-// Poppins font – Supports weights from 100 to 900, including italic styles
 const poppins = Poppins({
   subsets: ["latin"],
   variable: "--font-poppins",
   display: "swap",
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
-  style: ["normal", "italic"],
 });
 
-// Onest font – Supports weights from 100 to 900
 const onest = Onest({
   subsets: ["latin"],
   variable: "--font-onest",
@@ -95,10 +81,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="no-js agntix-light" suppressHydrationWarning={true}>
-      <head>
-        <link rel="icon" href="../../public/assets/images/common/Logo-blue.png" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
+    <html lang="en" suppressHydrationWarning={true} className="agntix-light">
+      <head suppressHydrationWarning={true}>
+        <link rel="icon" href="/assets/images/common/Logo-blue.png" />
       </head>
       <body suppressHydrationWarning={true} className={`tp-magic-cursor ${inter.variable}
      ${besley.variable} ${spaceGrotesk.variable} ${playfairDisplay.variable}

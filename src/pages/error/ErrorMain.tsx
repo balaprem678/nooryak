@@ -1,10 +1,8 @@
 import CursorAndBackgroundProvider from '@/components/provider/CustomCursorProvider';
 import AnimationWrapper from '@/components/shared/Animation/AnimationWrapper';
 import ScrollSmoothProvider from '@/components/provider/ScrollSmoothProvider';
-import CreativeAgencyFooter from '@/layouts/footers/CreativeAgencyFooter';
 import errorImg from '../../../public/assets/img/error/error.png';
 import BackToTop from '@/components/shared/BackToTop/BackToTop';
-import InnerPageHeader from '@/layouts/headers/InnerPageHeader';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -19,7 +17,6 @@ const ErrorMain = () => {
 
                     {/* Global Components */}
                     <BackToTop />
-                    <InnerPageHeader />
 
                     <div id="smooth-wrapper">
                         <div id="smooth-content">
@@ -44,7 +41,6 @@ const ErrorMain = () => {
                                 </div>
                             </main>
                             {/* footer */}
-                            <CreativeAgencyFooter bgColor="#0E0F11" />
                         </div>
                     </div>
                 </AnimationWrapper>

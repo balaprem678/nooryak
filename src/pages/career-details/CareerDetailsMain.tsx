@@ -3,7 +3,6 @@ import CursorAndBackgroundProvider from "@/components/provider/CustomCursorProvi
 import ScrollSmoothProvider from "@/components/provider/ScrollSmoothProvider";
 import AnimationWrapper from "@/components/shared/Animation/AnimationWrapper";
 import BackToTop from '@/components/shared/BackToTop/BackToTop';
-import InnerPageHeader from '@/layouts/headers/InnerPageHeader';
 import HomeMainFooter from '@/layouts/footers/HomeMainFooter';
 import AboutUsBanner from '@/components/banner/AboutUsBanner';
 import CareerDetails from "@/components/career/CareerDetails";
@@ -19,7 +18,6 @@ const CareerDetailsMain = () => {
 
                     {/* Global Components */}
                     <BackToTop />
-                    <InnerPageHeader />
 
                     <div id="smooth-wrapper">
                         <div id="smooth-content">

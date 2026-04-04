@@ -51,7 +51,7 @@ const menuItemsTwo: MenuItem[] = [
         href: "#",
         static: false,
         subItems: [
-            { title: "Blog Grid", href: "/blog-grid-light" },
+            { title: "Blog Grid", href: "/blog" },
             { title: "Blog Classic", href: "/blog-standard-light" },
             { title: "Blog Listing", href: "/blog-list-light" },
             { title: "Masonry", href: "/blog-masonry-light" },

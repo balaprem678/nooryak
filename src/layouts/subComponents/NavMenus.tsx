@@ -2,7 +2,7 @@
 import headerMenuData from "@/data/header-menu/menuData";
 import ThemeLink from "@/components/ThemeLink";
 import { Submenu } from "@/types/menu-d-t";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import "./NavMenus.scss";
 
@@ -23,8 +23,42 @@ import {
 } from "lucide-react";
 
 export default function NavMenus() {
-
   const [hoveredMenu, setHoveredMenu] = useState<number | null>(null);
+  const [menuData, setMenuData] = useState(headerMenuData);
+
+  useEffect(() => {
+    const fetchDynamicServices = async () => {
+      try {
+        const res = await fetch('/api/admin/services');
+        if (res.ok) {
+          const data = await res.json();
+          if (data.services && data.services.length > 0) {
+            const updatedMenu = headerMenuData.map(menu => {
+              if (menu.title === "Services" && menu.submenus) {
+                const dynamicSubmenu = {
+                  title: "Our Services",
+                  megaMenu: data.services.map((s: any) => ({
+                    title: s.name,
+                    link: `/services/${s.slug}`
+                  }))
+                };
+                return {
+                  ...menu,
+                  submenus: [...menu.submenus, dynamicSubmenu]
+                };
+              }
+              return menu;
+            });
+            setMenuData(updatedMenu);
+          }
+        }
+      } catch (err) {
+        console.error("Failed to fetch dynamic services", err);
+      }
+    };
+
+    fetchDynamicServices();
+  }, []);
 
   // ✅ MENU TYPE CLASS
   const getMenuTypeClass = (menu: any) => {
@@ -135,7 +169,7 @@ export default function NavMenus() {
       className="main-menu"
       onMouseLeave={() => setHoveredMenu(null)} // ✅ CLOSE OUTSIDE
     >
-      {headerMenuData.map((menu) => (
+      {menuData.map((menu) => (
         <li
           key={menu.id}
           className={`has-dropdown ${

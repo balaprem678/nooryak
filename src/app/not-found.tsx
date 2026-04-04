@@ -78,14 +78,6 @@ export default function NotFound() {
             <HomeIcon />
             Back to Home
           </Link>
-
-          <button
-            className="btn btn--ghost"
-            onClick={() => window.history.back()}
-          >
-            <ArrowLeft />
-            Go Back
-          </button>
         </div>
       </main>
     </div>

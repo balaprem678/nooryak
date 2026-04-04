@@ -7,7 +7,6 @@ import ScrollSmoothProvider from '@/components/provider/ScrollSmoothProvider';
 import AnimationWrapper from '@/components/shared/Animation/AnimationWrapper';
 import ServiceSolutionTwo from '@/components/service/ServiceSolutionTwo';
 import ServiceOverview from '@/components/service/ServiceOverview';
-import InnerPageHeader from '@/layouts/headers/InnerPageHeader';
 import BackToTop from '@/components/shared/BackToTop/BackToTop';
 import HomeMainFooter from '@/layouts/footers/HomeMainFooter';
 import ServiceThumb from '@/components/service/ServiceThumb';
@@ -23,7 +22,6 @@ const ServiceDetailsTwoMain = () => {
 
                     {/* Global Components */}
                     <BackToTop />
-                    <InnerPageHeader />
 
                     <div id="smooth-wrapper">
                         <div id="smooth-content">

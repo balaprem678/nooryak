@@ -1,3 +1,4 @@
+@use "sass:math";
 @import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=JetBrains+Mono:wght@300;400;500&display=swap');
 
 // ─── Design Tokens ────────────────────────────────────────────────────────────
@@ -349,14 +350,14 @@
 
         @for $i from 1 through 14 {
             &:nth-child(#{$i}) {
-                left: (random(90) + 5) * 1%;
-                bottom: (random(40)) * 1%;
-                animation-duration: (random(4) + 3) * 1s;
-                animation-delay: (random(6)) * -1s;
-                opacity: random(7) * 0.1;
-                width: random(3) + 1px;
-                height: random(3) + 1px;
-                background: if($i % 3==0, rgba(255, 255, 255, 0.45), var(--accent));
+                left: (math.random(90) + 5) * 1%;
+                bottom: (math.random(40)) * 1%;
+                animation-duration: (math.random(4) + 3) * 1s;
+                animation-delay: (math.random(6)) * -1s;
+                opacity: math.random(7) * 0.1;
+                width: math.random(3) + 1px;
+                height: math.random(3) + 1px;
+                background: if($i % 3 == 0, rgba(255, 255, 255, 0.45), var(--accent));
             }
         }
     }

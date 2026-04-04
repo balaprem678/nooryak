@@ -20,6 +20,7 @@ import CraftingWebsite from '@/components/craftingwebsite/craftingwebsite';
 import Whychoose from '../../../components/whychoose/whychoose';
 import { Images } from '../../../utils/Images';
 import SliderMarketing from '@/components/slidermarketing/slidermarketing';
+import BlogPage from '@/components/blog/page';
 
 const HomeMain = () => {
     return (
@@ -36,6 +37,8 @@ const HomeMain = () => {
                         <div id="smooth-content">
                             {/* Main Content Sections */}
                             <main style={{ overflowX: "hidden" }}>
+
+                                {/* <BlogPage /> */}
                                 <HomeMainHero />
                                 <ClientSlider />
                                 <HomeMainBanner />

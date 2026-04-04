@@ -13,7 +13,7 @@ const headerMenuData: MenuItem[] = [
     id: 2,
     active: true,
     title: "About Us",
-    link: "/404",
+    link: "/about",
   },
 
   // Services
@@ -167,7 +167,7 @@ const headerMenuData: MenuItem[] = [
   },
   // products
   {
-    id: 4,
+    id: 10,
     hasDropdown: true,
     active: true,
     children: true,
@@ -214,7 +214,7 @@ const headerMenuData: MenuItem[] = [
     id: 8,
     active: true,
     title: "Blog",
-    link: "/404",
+    link: "/blog",
   },
 
   // Contact us

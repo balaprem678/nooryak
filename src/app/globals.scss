@@ -190,27 +190,29 @@
 
 
 
+@media screen and (max-width:768px) {
 
-.btn-call {
-  cursor: pointer;
-  text-align: center;
-  z-index: 999;
-  background: #ff3d00;
-  border: 2px solid #ff3d00;
-  border-radius: 50%;
-  justify-content: center;
-  align-items: center;
-  width: 40px;
-  height: 40px;
-  text-decoration: none;
-  transition: all .3s;
-  animation: 1s linear infinite hoverWave;
-  display: flex;
-  position: fixed;
-  bottom: 20px;
-  left: 20px;
-  box-shadow: 0 8px 10px #ff3d004d;
-  transform: rotate(90deg);
+  .btn-call {
+    cursor: pointer;
+    text-align: center;
+    z-index: 999;
+    background: #ff3d00;
+    border: 2px solid #ff3d00;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    text-decoration: none;
+    transition: all .3s;
+    animation: 1s linear infinite hoverWave;
+    display: flex;
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    box-shadow: 0 8px 10px #ff3d004d;
+    transform: rotate(90deg);
+  }
 }
 
 .btn-call__ico {

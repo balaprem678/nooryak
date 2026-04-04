@@ -4,7 +4,6 @@ import AnimationWrapper from '@/components/shared/Animation/AnimationWrapper';
 import teamBgImg from '../../../public/assets/img/team/team-bg.png';
 import ApplicationForm from '@/components/forms/ApplicationForm';
 import BackToTop from '@/components/shared/BackToTop/BackToTop';
-import InnerPageHeader from '@/layouts/headers/InnerPageHeader';
 import HomeMainFooter from '@/layouts/footers/HomeMainFooter';
 import { CareerShape } from '@/svg/HeroShape';
 
@@ -19,7 +18,6 @@ const JobApplicationForm = () => {
 
                     {/* Global Components */}
                     <BackToTop />
-                    <InnerPageHeader />
 
                     <div id="smooth-wrapper">
                         <div id="smooth-content">

@@ -8,7 +8,6 @@ import ServiceFiveBanner from '@/components/banner/ServiceFiveBanner';
 import BackToTop from '@/components/shared/BackToTop/BackToTop';
 import ServiceBenifit from '@/components/benefits/ServiceBenifit';
 import ServiceFeature from '@/components/features/ServiceFeature';
-import InnerPageHeader from '@/layouts/headers/InnerPageHeader';
 import HomeMainFooter from '@/layouts/footers/HomeMainFooter';
 
 const ServiceFiveMain = () => {
@@ -21,7 +20,6 @@ const ServiceFiveMain = () => {
                     </div>
                     {/* Global Components */}
                     <BackToTop />
-                    <InnerPageHeader />
 
                     <div id="smooth-wrapper">
                         <div id="smooth-content">

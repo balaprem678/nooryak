@@ -6,7 +6,6 @@ import ServiceTwoBanner from '@/components/banner/ServiceTwoBanner';
 import HomeMainService from '@/components/service/HomeMainService';
 import HomeMainVideo from '@/components/video-area/HomeMainVideo';
 import BackToTop from '@/components/shared/BackToTop/BackToTop';
-import InnerPageHeader from '@/layouts/headers/InnerPageHeader';
 import HomeMainFooter from '@/layouts/footers/HomeMainFooter';
 import HomeMainWork from '@/components/work/HomeMainWork';
 
@@ -21,7 +20,6 @@ const ServiceTwoMain = () => {
 
                     {/* Global Components */}
                     <BackToTop />
-                    <InnerPageHeader />
 
                     <div id="smooth-wrapper">
                         <div id="smooth-content">

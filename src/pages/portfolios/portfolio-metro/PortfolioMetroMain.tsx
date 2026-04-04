@@ -3,9 +3,7 @@ import PortfolioMertoProject from '@/components/project/PortfolioMertoProject';
 import ScrollSmoothProvider from '@/components/provider/ScrollSmoothProvider';
 import AnimationWrapper from '@/components/shared/Animation/AnimationWrapper';
 import CreativeAgencyBrand from '@/components/brand/CreativeAgencyBrand';
-import DesignAgencyFooter from '@/layouts/footers/DesignAgencyFooter';
 import BackToTop from '@/components/shared/BackToTop/BackToTop';
-import InnerPageHeader from '@/layouts/headers/InnerPageHeader';
 
 const PortfolioMetroMain = () => {
     return (
@@ -18,7 +16,6 @@ const PortfolioMetroMain = () => {
 
                     {/* Global Components */}
                     <BackToTop />
-                    <InnerPageHeader />
 
                     <div id="smooth-wrapper">
                         <div id="smooth-content">
@@ -27,7 +24,6 @@ const PortfolioMetroMain = () => {
                                 <PortfolioMertoProject />
                                 <CreativeAgencyBrand spacingCls='pb-50' subtitleTextColor='' />
                             </main>
-                            <DesignAgencyFooter spacingCls='pt-150' />
                         </div>
                     </div>
                 </AnimationWrapper>

@@ -1,10 +1,8 @@
 import CursorAndBackgroundProvider from '@/components/provider/CustomCursorProvider';
 import ScrollSmoothProvider from '@/components/provider/ScrollSmoothProvider';
 import AnimationWrapper from '@/components/shared/Animation/AnimationWrapper';
-import CreativeAgencyFooter from '@/layouts/footers/CreativeAgencyFooter';
 import PortfolioColTwo from '@/components/portfolio/PortfolioColTwo';
 import BackToTop from '@/components/shared/BackToTop/BackToTop';
-import InnerPageHeader from '@/layouts/headers/InnerPageHeader';
 import Breadcurmb from '@/components/breadcurmb/Breadcurmb';
 
 const PortfolioColTwoMain = () => {
@@ -18,7 +16,6 @@ const PortfolioColTwoMain = () => {
 
                     {/* Global Components */}
                     <BackToTop />
-                    <InnerPageHeader />
 
                     <div id="smooth-wrapper">
                         <div id="smooth-content">
@@ -27,7 +24,6 @@ const PortfolioColTwoMain = () => {
                                 <Breadcurmb />
                                 <PortfolioColTwo />
                             </main>
-                            <CreativeAgencyFooter bgColor="#1b1b1d" />
                         </div>
                     </div>
                 </AnimationWrapper>

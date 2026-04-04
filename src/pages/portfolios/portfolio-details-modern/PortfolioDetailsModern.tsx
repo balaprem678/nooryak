@@ -9,9 +9,7 @@ import CursorAndBackgroundProvider from '@/components/provider/CustomCursorProvi
 import PortfolioDetailsFourWork from '@/components/work/PortfolioDetailsFourWork';
 import ScrollSmoothProvider from '@/components/provider/ScrollSmoothProvider';
 import AnimationWrapper from '@/components/shared/Animation/AnimationWrapper';
-import DesignAgencyFooter from '@/layouts/footers/DesignAgencyFooter';
 import BackToTop from '@/components/shared/BackToTop/BackToTop';
-import InnerPageHeader from '@/layouts/headers/InnerPageHeader';
 
 const PortfolioDetailsModern = () => {
 
@@ -25,7 +23,6 @@ const PortfolioDetailsModern = () => {
 
                     {/* Global Components */}
                     <BackToTop />
-                    <InnerPageHeader />
 
                     <div id="smooth-wrapper">
                         <div id="smooth-content">
@@ -40,7 +37,6 @@ const PortfolioDetailsModern = () => {
                                 <PortfolioDetailsFourSlider />
                                 <PortfolioDetailsNextPrv />
                             </main>
-                            <DesignAgencyFooter spacingCls="" />
                         </div>
                     </div>
                 </AnimationWrapper>

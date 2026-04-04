@@ -2,13 +2,11 @@
 import CursorAndBackgroundProvider from '@/components/provider/CustomCursorProvider';
 import ScrollSmoothProvider from '@/components/provider/ScrollSmoothProvider';
 import AnimationWrapper from '@/components/shared/Animation/AnimationWrapper';
-import CreativeAgencyFooter from '@/layouts/footers/CreativeAgencyFooter';
 import ContactUsForm from '@/components/contacts/ContactUsForm';
 import ContactUsAbout from '@/components/about/ContactUsAbout';
 import ContactUsArea from '@/components/contacts/ContactUsArea';
 import BackToTop from '@/components/shared/BackToTop/BackToTop';
 import ContactUsHero from '@/components/contacts/ContactUsHero';
-import InnerPageHeader from '@/layouts/headers/InnerPageHeader';
 
 const ContactUsMain = () => {
     return (
@@ -20,7 +18,6 @@ const ContactUsMain = () => {
                     </div>
                     {/* Global Components */}
                     <BackToTop />
-                    <InnerPageHeader />
                     <div id="smooth-wrapper">
                         <div id="smooth-content">
                             {/* Main Content Sections */}
@@ -30,7 +27,6 @@ const ContactUsMain = () => {
                                 <ContactUsAbout />
                                 <ContactUsArea />
                             </main>
-                            <CreativeAgencyFooter bgColor="#1B1B1D" />
                         </div>
                     </div>
                 </AnimationWrapper>

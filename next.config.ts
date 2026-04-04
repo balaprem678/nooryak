@@ -1,9 +1,9 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  output: "export",   // 👈 important
+  /* config options here */
   images: {
-    unoptimized: true, // 👈 avoids image issues in static hosting
+    unoptimized: true,
   },
 };
 

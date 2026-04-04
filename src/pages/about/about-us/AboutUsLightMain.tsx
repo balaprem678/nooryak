@@ -6,7 +6,6 @@ import BackToTop from '@/components/shared/BackToTop/BackToTop';
 import AboutUsService from '@/components/service/AboutUsService';
 import AboutUsHero from '@/components/hero-banner/AboutUsHero';
 import AboutUsBanner from '@/components/banner/AboutUsBanner';
-import InnerPageHeader from '@/layouts/headers/InnerPageHeader';
 import HomeMainFooter from '@/layouts/footers/HomeMainFooter';
 import HomeMainAbout from '@/components/about/HomeMainAbout';
 import AboutUsBrand from '@/components/brand/AboutUsBrand';
@@ -25,7 +24,6 @@ const AboutUsLightMain = () => {
                     </div>
                     {/* Global Components */}
                     <BackToTop />
-                    <InnerPageHeader />
                     <div id="smooth-wrapper">
                         <div id="smooth-content">
                             <main>

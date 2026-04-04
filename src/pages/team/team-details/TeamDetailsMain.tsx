@@ -1,10 +1,8 @@
 import CursorAndBackgroundProvider from '@/components/provider/CustomCursorProvider';
 import ScrollSmoothProvider from '@/components/provider/ScrollSmoothProvider';
 import AnimationWrapper from '@/components/shared/Animation/AnimationWrapper';
-import CreativeAgencyFooter from '@/layouts/footers/CreativeAgencyFooter';
 import TeamDetailsHero from '@/components/hero-banner/TeamDetailsHero';
 import BackToTop from '@/components/shared/BackToTop/BackToTop';
-import InnerPageHeader from '@/layouts/headers/InnerPageHeader';
 import TeamFunfact from '@/components/funfact/TeamFunfact';
 import TeamDetails from '@/components/team/TeamDetails';
 
@@ -19,7 +17,6 @@ const TeamDetailsMain = () => {
 
                     {/* Global Components */}
                     <BackToTop />
-                    <InnerPageHeader />
 
                     <div id="smooth-wrapper">
                         <div id="smooth-content">
@@ -35,7 +32,6 @@ const TeamDetailsMain = () => {
                                     </div>
                                 </section>
                             </main>
-                            <CreativeAgencyFooter bgColor="#0E0F11" className='footer-menu-style' />
                         </div>
                     </div>
                 </AnimationWrapper>

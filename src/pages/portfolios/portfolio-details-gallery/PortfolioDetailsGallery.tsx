@@ -7,9 +7,7 @@ import CursorAndBackgroundProvider from '@/components/provider/CustomCursorProvi
 import ScrollSmoothProvider from '@/components/provider/ScrollSmoothProvider';
 import AnimationWrapper from '@/components/shared/Animation/AnimationWrapper';
 import PortfolioDetailsStep from '@/components/step/PortfolioDetailsStep';
-import CreativeAgencyFooter from '@/layouts/footers/CreativeAgencyFooter';
 import BackToTop from '@/components/shared/BackToTop/BackToTop';
-import InnerPageHeader from '@/layouts/headers/InnerPageHeader';
 import PrevNextArrow from '@/svg/PrevNextArrow';
 import Link from 'next/link';
 
@@ -24,7 +22,6 @@ const PortfolioDetailsGallery = () => {
 
                     {/* Global Components */}
                     <BackToTop />
-                    <InnerPageHeader />
 
                     <div id="smooth-wrapper">
                         <div id="smooth-content">
@@ -56,7 +53,6 @@ const PortfolioDetailsGallery = () => {
                                     </div>
                                 </div>
                             </main>
-                            <CreativeAgencyFooter bgColor="#1b1b1d" />
                         </div>
                     </div>
                 </AnimationWrapper>

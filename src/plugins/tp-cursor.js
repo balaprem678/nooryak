@@ -107,8 +107,8 @@ export default function cursorAnimation() {
                             borderWidth: 0,
                             zIndex: 1,
                             backdropFilter: "blur(14px)",
-                            backgroundColor: "#fff",
-                            boxShadow: "0px 1px 3px 0px rgba(18, 20, 32, 0.14)"
+                            backgroundColor: "#49363600",
+                            boxShadow: "0px 1px 3px 0px rgb(0, 0, 0)"
                         });
                         gsap.to(".ball-view", { duration: 0.3, scale: 1, autoAlpha: 1 });
                     }

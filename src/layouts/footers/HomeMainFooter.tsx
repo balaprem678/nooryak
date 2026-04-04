@@ -1,4 +1,3 @@
-import HomeFooterCopyright from "./subComponents/HomeFooterCopyright";
 import Link from 'next/link';
 import './HomeMainFooter.scss';
 import Image from "next/image";
@@ -50,8 +49,7 @@ const HomeMainFooter: React.FC<IHomeMainFooter> = ({ bgColor = "footer-main" }) 
                 </div>
             </section>
 
-            {/* footer copyright */}
-            <HomeFooterCopyright bgColor={bgColor} />
+       
         </div>
     );
 };

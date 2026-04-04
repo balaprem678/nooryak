@@ -3,9 +3,7 @@ import CursorAndBackgroundProvider from '@/components/provider/CustomCursorProvi
 import ScrollSmoothProvider from '@/components/provider/ScrollSmoothProvider';
 import AnimationWrapper from '@/components/shared/Animation/AnimationWrapper';
 import PortfolioMasonryTwo from '@/components/portfolio/PortfolioMasonryTwo';
-import CreativeAgencyFooter from '@/layouts/footers/CreativeAgencyFooter';
 import BackToTop from '@/components/shared/BackToTop/BackToTop';
-import InnerPageHeader from '@/layouts/headers/InnerPageHeader';
 
 const PortfolioSlicerMain = () => {
     return (
@@ -17,7 +15,6 @@ const PortfolioSlicerMain = () => {
                     </div>
                     {/* Global Components */}
                     <BackToTop />
-                    <InnerPageHeader containerCls='container-1830' />
                     <div id="smooth-wrapper">
                         <div id="smooth-content">
                             {/* Main Content Sections */}
@@ -25,7 +22,6 @@ const PortfolioSlicerMain = () => {
                                 <PortfolioMasonryTwo />
                                 <PortfolioProjectArea />
                             </main>
-                            <CreativeAgencyFooter bgColor="#0E0F11" />
                         </div>
                     </div>
                 </AnimationWrapper>

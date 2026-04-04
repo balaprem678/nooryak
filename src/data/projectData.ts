@@ -66,14 +66,14 @@ export const projectsData: projectsDT[] = [
         title: "S3-INFRASTRUCTURE",
         image: Images.project_1,
         categories: ["Graphic Designing", "Branding", "UI/UX"],
-        link: "",
+        link: "https://s3infrastructure.com/",
     },
     {
         id: 2,
         title: "Travel Time Taxi",
         image: Images.project_4,
         categories: ["Web Development", "UI/UX Design", "Backend"],
-        link: "",
+        link: "https://traveltimetaxi.com/",
 
     },
     {
@@ -95,7 +95,7 @@ export const projectsData: projectsDT[] = [
         title: "Red Panda vacations",
         image: Images.project_6,
         categories: ["UI/UX Design", "Ecommerce Development", "Backend"],
-        link: "",
+        link: "https://redpandavacations.com/",
     },
     {
         id: 6,

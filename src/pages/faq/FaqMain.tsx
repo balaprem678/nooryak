@@ -4,7 +4,6 @@ import ScrollSmoothProvider from '@/components/provider/ScrollSmoothProvider';
 import AnimationWrapper from '@/components/shared/Animation/AnimationWrapper';
 import teamBg from '../../../public/assets/img/team/team-bg.png';
 import BackToTop from '@/components/shared/BackToTop/BackToTop';
-import InnerPageHeader from '@/layouts/headers/InnerPageHeader';
 import HomeMainFooter from '@/layouts/footers/HomeMainFooter';
 import FaqArea from '@/components/faq/FaqArea';
 import { CareerShape } from '@/svg/HeroShape';
@@ -22,7 +21,6 @@ const FaqMain = () => {
 
                     {/* Global Components */}
                     <BackToTop />
-                    <InnerPageHeader />
 
                     <div id="smooth-wrapper">
                         <div id="smooth-content">

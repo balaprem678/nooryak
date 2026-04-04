@@ -2,10 +2,8 @@ import CursorAndBackgroundProvider from '@/components/provider/CustomCursorProvi
 import AnimationWrapper from '@/components/shared/Animation/AnimationWrapper';
 import ScrollSmoothProvider from '@/components/provider/ScrollSmoothProvider';
 import BrandShowcaseHero from '@/components/hero-banner/BrandShowcaseHero';
-import CreativeAgencyFooter from '@/layouts/footers/CreativeAgencyFooter';
 import BrandShowcaseBrand from '@/components/brand/BrandShowcaseBrand';
 import BackToTop from '@/components/shared/BackToTop/BackToTop';
-import InnerPageHeader from '@/layouts/headers/InnerPageHeader';
 
 const PortfolioColTwoMain = () => {
     return (
@@ -17,7 +15,6 @@ const PortfolioColTwoMain = () => {
                     </div>
                     {/* Global Components */}
                     <BackToTop />
-                    <InnerPageHeader />
                     <div id="smooth-wrapper">
                         <div id="smooth-content">
                             {/* Main Content Sections */}
@@ -25,7 +22,6 @@ const PortfolioColTwoMain = () => {
                                 <BrandShowcaseHero />
                                 <BrandShowcaseBrand />
                             </main>
-                            <CreativeAgencyFooter bgColor="#1b1b1d" />
                         </div>
                     </div>
                 </AnimationWrapper>

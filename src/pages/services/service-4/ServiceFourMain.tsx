@@ -2,7 +2,6 @@ import CursorAndBackgroundProvider from '@/components/provider/CustomCursorProvi
 import DigitalMarketingBrandTwo from '@/components/brand/DigitalMarketingBrandTwo';
 import ScrollSmoothProvider from '@/components/provider/ScrollSmoothProvider';
 import AnimationWrapper from '@/components/shared/Animation/AnimationWrapper';
-import DigitalMarketingFooter from '@/layouts/footers/DigitalMarketingFooter';
 import ServiceProcessArea from '@/components/process/ServiceProcessArea';
 import ServiceFourHero from '@/components/hero-banner/ServiceFourHero';
 import ServiceFourBanner from '@/components/banner/ServiceFourBanner';
@@ -11,7 +10,6 @@ import ServiceSolution from '@/components/service/ServiceSolution';
 import ServiceFourBrand from '@/components/brand/ServiceFourBrand';
 import ServicePricing from '@/components/price-area/ServicePricing';
 import BackToTop from '@/components/shared/BackToTop/BackToTop';
-import InnerPageHeader from '@/layouts/headers/InnerPageHeader';
 
 const ServiceFourMain = () => {
     return (
@@ -24,7 +22,6 @@ const ServiceFourMain = () => {
 
                     {/* Global Components */}
                     <BackToTop />
-                    <InnerPageHeader />
 
                     <div id="smooth-wrapper">
                         <div id="smooth-content">
@@ -40,7 +37,6 @@ const ServiceFourMain = () => {
                                 <ServiceProcessArea />
                                 <DigitalMarketingBrandTwo />
                             </main>
-                            <DigitalMarketingFooter spacingCls='tp-service-4-padding-area' />
                         </div>
                     </div>
                 </AnimationWrapper>

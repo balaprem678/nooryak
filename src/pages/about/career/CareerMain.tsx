@@ -4,7 +4,6 @@ import ScrollSmoothProvider from '@/components/provider/ScrollSmoothProvider';
 import AnimationWrapper from '@/components/shared/Animation/AnimationWrapper';
 import CareerBenifit from '@/components/benefits/CareerBenifit';
 import BackToTop from '@/components/shared/BackToTop/BackToTop';
-import InnerPageHeader from '@/layouts/headers/InnerPageHeader';
 import CareerOpening from '@/components/career/CareerOpening';
 import HomeMainFooter from '@/layouts/footers/HomeMainFooter';
 import CareerBanner from '@/components/banner/CareerBanner';
@@ -22,7 +21,6 @@ const CareerMain = () => {
                     </div>
                     {/* Global Components */}
                     <BackToTop />
-                    <InnerPageHeader />
                     <div id="smooth-wrapper">
                         <div id="smooth-content">
                             <main>

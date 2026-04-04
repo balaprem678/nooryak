@@ -8,9 +8,7 @@ import AnimationWrapper from '@/components/shared/Animation/AnimationWrapper';
 import PortfolioDetailsThumb from '@/components/thumb/PortfolioDetailsThumb';
 import PortfolioDetailsAbout from '@/components/about/PortfolioDetailsAbout';
 import PortfolioDetailsWork from '@/components/work/PortfolioDetailsWork';
-import CreativeAgencyFooter from '@/layouts/footers/CreativeAgencyFooter';
 import BackToTop from '@/components/shared/BackToTop/BackToTop';
-import InnerPageHeader from '@/layouts/headers/InnerPageHeader';
 import { ArrowSvg } from '@/svg';
 import Link from 'next/link';
 
@@ -25,7 +23,6 @@ const PortfolioDetailsClassic = () => {
 
                     {/* Global Components */}
                     <BackToTop />
-                    <InnerPageHeader />
 
                     <div id="smooth-wrapper">
                         <div id="smooth-content">
@@ -77,7 +74,6 @@ const PortfolioDetailsClassic = () => {
                                 <PortfolioDetailsThumbTwo />
                                 <PortfolioDetailsNextPrv />
                             </main>
-                            <CreativeAgencyFooter bgColor="#1b1b1d" />
                         </div>
                     </div>
                 </AnimationWrapper>

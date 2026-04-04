@@ -4,7 +4,6 @@ import AboutModernSuccess from '@/components/success-area/AboutModernSuccess';
 import AnimationWrapper from '@/components/shared/Animation/AnimationWrapper';
 import DesignStudioTeam from '@/components/team/DesignStudioTeam';
 import BackToTop from '@/components/shared/BackToTop/BackToTop';
-import InnerPageHeader from '@/layouts/headers/InnerPageHeader';
 import HomeMainFooter from '@/layouts/footers/HomeMainFooter';
 import InnerTeamPart from '@/components/team/InnerTeamPart';
 import TeamHero from '@/components/hero-banner/TeamHero';
@@ -21,7 +20,6 @@ const TeamMain = () => {
 
                     {/* Global Components */}
                     <BackToTop />
-                    <InnerPageHeader />
 
                     <div id="smooth-wrapper">
                         <div id="smooth-content">

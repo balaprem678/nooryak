@@ -1,0 +1,12 @@
+.cursor-hide {
+  overflow: hidden !important;
+}
+
+.cursor-hide img {
+  transition: all 0.3s ease-in-out;
+  border-radius: 20px;
+}
+
+.cursor-hide img:hover {
+  transform: scale(1.05);
+}
