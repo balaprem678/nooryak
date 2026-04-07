@@ -63,6 +63,9 @@ import avaterThree from "../../public/assets/images/home/client3.webp";
 import avaterFour from "../../public/assets/images/home/client4.webp";
 import avaterFive from "../../public/assets/images/home/client5.webp";
 
+// Blog Images Import Here
+import blog_banner from "../../public/assets/images/blog/blog_banner.png";
+
 export const Images = {
 
     // Common Images Import Here
@@ -73,4 +76,6 @@ export const Images = {
 
     avaterOne, avaterTwo, avaterThree, avaterFour, avaterFive,
 
+    // Blog Images Import Here
+    blog_banner,    
 };

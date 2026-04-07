@@ -1,7 +1,6 @@
 import CursorAndBackgroundProvider from '@/components/provider/CustomCursorProvider';
 import ScrollSmoothProvider from '@/components/provider/ScrollSmoothProvider';
 import AnimationWrapper from '@/components/shared/Animation/AnimationWrapper';
-import PortfolioFixedHeader from '@/layouts/headers/PortfolioFixedHeader';
 import { portfolioSliderElegantData } from '@/data/portfolioTwoData';
 import BackToTop from '@/components/shared/BackToTop/BackToTop';
 import Image from 'next/image';
@@ -18,7 +17,6 @@ const PortfolioSlicerElegant = () => {
 
                     {/* Global Components */}
                     <BackToTop />
-                    <PortfolioFixedHeader />
 
                     <div id="smooth-wrapper">
                         <div id="smooth-content">

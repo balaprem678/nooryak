@@ -1,7 +1,6 @@
 "use client";
 import { EffectCoverflow, Keyboard, Mousewheel, Autoplay, Navigation, Controller, Pagination } from 'swiper/modules';
 import CursorAndBackgroundProvider from '@/components/provider/CustomCursorProvider';
-import PortfolioWebglHeader from '@/layouts/headers/PortfolioWebglHeader';
 import BackToTop from '@/components/shared/BackToTop/BackToTop';
 import { useRef, useEffect, useState } from 'react';
 import { ArrowNextPrevIcon } from '@/svg/ArrowIcons';
@@ -90,7 +89,6 @@ const PortfolioCoverflowMain = () => {
             </div>
             {/* Global Components */}
             <BackToTop />
-            <PortfolioWebglHeader customClass='header-fixed tp-header-main-custom pt-10' logoBlack={true} />
 
             <main>
                 {/* -- project slider area start -- */}

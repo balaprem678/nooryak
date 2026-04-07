@@ -3,7 +3,6 @@ import PortfolioDetailsFourSlider from '@/components/portfolio/PortfolioDetailsF
 import PortfolioDetailsFourBanner from '@/components/banner/PortfolioDetailsFourBanner';
 import PortfolioDetailsFourArea from '@/components/portfolio/PortfolioDetailsFourArea';
 import PortfolioDetailsNextPrv from '@/components/portfolio/PortfolioDetailsNextPrv';
-import PortfolioDetailsFourAbout from '@/components/about/PortfolioDetailsFourAbout';
 import PortfolioDetailsFourThumb from '@/components/thumb/PortfolioDetailsFourThumb';
 import CursorAndBackgroundProvider from '@/components/provider/CustomCursorProvider';
 import PortfolioDetailsFourWork from '@/components/work/PortfolioDetailsFourWork';
@@ -30,7 +29,6 @@ const PortfolioDetailsModern = () => {
                             <main>
                                 <PortfolioDetailsFourArea />
                                 <PortfolioDetailsFourBanner />
-                                <PortfolioDetailsFourAbout />
                                 <PortfolioDetailsFourColorArea />
                                 <PortfolioDetailsFourWork />
                                 <PortfolioDetailsFourThumb />

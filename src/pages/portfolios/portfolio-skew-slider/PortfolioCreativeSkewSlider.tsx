@@ -1,5 +1,4 @@
 "use client";
-import PortfolioThumbSliderHeader from '@/layouts/headers/PortfolioThumbSliderHeader';
 import CursorAndBackgroundProvider from '@/components/provider/CustomCursorProvider';
 import BackToTop from '@/components/shared/BackToTop/BackToTop';
 import { skewSliderData } from '@/data/portfolioTwoData';
@@ -19,7 +18,6 @@ const PortfolioCreativeSkewSlider = () => {
 
             {/* Global Components */}
             <BackToTop />
-            <PortfolioThumbSliderHeader />
 
             <main className="skew-slider-main">
                 <div className="skew-slider-area">

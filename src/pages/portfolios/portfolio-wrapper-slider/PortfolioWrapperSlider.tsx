@@ -1,5 +1,4 @@
 import CursorAndBackgroundProvider from '@/components/provider/CustomCursorProvider';
-import PersonalPortfolioHeader from '@/layouts/headers/PersonalPortfolioHeader';
 import ScrollSmoothProvider from '@/components/provider/ScrollSmoothProvider';
 import AnimationWrapper from '@/components/shared/Animation/AnimationWrapper';
 import PortfolioWrapSlider from '@/components/portfolio/PortfolioWrapSlider';
@@ -15,7 +14,6 @@ const PortfolioWrapperSlider = () => {
                     </div>
                     {/* Global Components */}
                     <BackToTop />
-                    <PersonalPortfolioHeader />
 
                     <div id="smooth-wrapper">
                         <div id="smooth-content">

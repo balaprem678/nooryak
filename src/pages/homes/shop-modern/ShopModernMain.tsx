@@ -1,6 +1,4 @@
 // Layout Components
-import ShopModernHeader from '@/layouts/headers/ShopModernHeader';
-import ShopModernFooter from '@/layouts/footers/ShopModernFooter';
 import BackToTop from '@/components/shared/BackToTop/BackToTop';
 
 // UI Components
@@ -13,7 +11,6 @@ import SearchArea from '@/components/search-area/SearchArea';
 import ShopModernFeature from '@/components/features/ShopModernFeature';
 import ShopModernHero from '@/components/hero-banner/ShopModernHero';
 import ShopModernBanner from '@/components/banner/ShopModernBanner';
-import ShopModernAbout from '@/components/about/ShopModernAbout';
 
 // Product Sections
 import ModernProductRelatedArea from '@/components/product/ModernProductRelatedArea';
@@ -44,7 +41,6 @@ const ShopModernMain = () => {
                     <SearchArea />
                     <ProductQuickViewModal />
                     <ShopModernSubscribePopup />
-                    <ShopModernHeader />
 
                     <div id="smooth-wrapper">
                         <div id="smooth-content">
@@ -54,7 +50,6 @@ const ShopModernMain = () => {
                                 <ShopModernTextSlider />
                                 <ShopModernProduct />
                                 <ModernProductRelatedArea />
-                                <ShopModernAbout />
                                 <ShopModernProductTwo />
                                 <ShopModernBanner />
                                 <ShopModernNewsletter />
@@ -62,7 +57,6 @@ const ShopModernMain = () => {
                                 <ShopModernFeature />
                                 <ShopModernInstagram />
                             </main>
-                            <ShopModernFooter />
                         </div>
                     </div>
                 </AnimationWrapper>

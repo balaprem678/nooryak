@@ -1,7 +1,6 @@
 "use client";
 import CursorAndBackgroundProvider from '@/components/provider/CustomCursorProvider';
 import { swiperParallaxOptions, useParallaxSwiper } from '@/constants/swiper';
-import PortfolioWebglHeader from '@/layouts/headers/PortfolioWebglHeader';
 import BackToTop from '@/components/shared/BackToTop/BackToTop';
 import { Swiper, SwiperSlide, SwiperRef } from 'swiper/react';
 import { parallaxSlideItems } from '@/data/portfolioTwoData';
@@ -29,7 +28,6 @@ const PortfolioParallaxSlider = () => {
 
             {/* Global Components */}
             <BackToTop />
-            <PortfolioWebglHeader />
             <main>
                 <section className="tp-showcase-slider">
                     <div className="tp-showcase-slider-main p-relative">

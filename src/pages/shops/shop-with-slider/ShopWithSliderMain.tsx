@@ -12,9 +12,6 @@ import ShopModernInstagram from '@/components/instagram/ShopModernInstagram';
 import ShopModernProductTwo from '@/components/product/ShopModernProductTwo';
 import ShopModernFeature from '@/components/features/ShopModernFeature';
 import ShopModernBanner from '@/components/banner/ShopModernBanner';
-import ShopModernFooter from '@/layouts/footers/ShopModernFooter';
-import ShopModernHeader from '@/layouts/headers/ShopModernHeader';
-import ShopModernAbout from '@/components/about/ShopModernAbout';
 import CartOffcanvas from '@/components/offcanvas/CartOffcanvas';
 import BackToTop from '@/components/shared/BackToTop/BackToTop';
 import ShopCategory from '@/components/category/ShopCategory';
@@ -35,7 +32,6 @@ const ShopWithSliderMain = () => {
                     <SearchArea />
                     <ProductQuickViewModal />
                     <ShopModernSubscribePopup />
-                    <ShopModernHeader variantClass='shop-white-header' useWhiteLogo />
 
                     <div id="smooth-wrapper">
                         <div id="smooth-content">
@@ -45,7 +41,6 @@ const ShopWithSliderMain = () => {
                                 <ShopModernTextSlider varientClass='' />
                                 <ShopCategory />
                                 <ModernProductRelatedArea spacingCls='pt-40' />
-                                <ShopModernAbout />
                                 <ShopModernProductTwo />
                                 <ShopModernBanner />
                                 <ShopModernNewsletter />
@@ -53,7 +48,6 @@ const ShopWithSliderMain = () => {
                                 <ShopModernFeature />
                                 <ShopModernInstagram />
                             </main>
-                            <ShopModernFooter />
                         </div>
                     </div>
                 </AnimationWrapper>

@@ -5,8 +5,6 @@ import ScrollSmoothProvider from '@/components/provider/ScrollSmoothProvider';
 import ProductRelatedArea from '@/components/product/ProductRelatedArea';
 import ProductDetailsArea from '@/components/product/ProductDetailsArea';
 import ShopBreadcurmb from '@/components/breadcurmb/ShopBreadcurmb';
-import ShopModernFooter from '@/layouts/footers/ShopModernFooter';
-import ShopModernHeader from '@/layouts/headers/ShopModernHeader';
 import CartOffcanvas from '@/components/offcanvas/CartOffcanvas';
 import BackToTop from '@/components/shared/BackToTop/BackToTop';
 import SearchArea from '@/components/search-area/SearchArea';
@@ -25,7 +23,6 @@ const ShopDetailsMain = () => {
                     <CartOffcanvas />
                     <SearchArea />
                     <ProductQuickViewModal />
-                    <ShopModernHeader />
 
                     <div id="smooth-wrapper">
                         <div id="smooth-content">
@@ -35,7 +32,6 @@ const ShopDetailsMain = () => {
                                 <ProductDetailsArea />
                                 <ProductRelatedArea />
                             </main>
-                            <ShopModernFooter />
                         </div>
                     </div>
                 </AnimationWrapper>

@@ -1,68 +1,36 @@
-import CursorAndBackgroundProvider from '@/components/provider/CustomCursorProvider';
 import HomeMainTestimonial from '@/components/testimonial/HomeMainTestimonial';
-import AnimationWrapper from '@/components/shared/Animation/AnimationWrapper';
-import ScrollSmoothProvider from '@/components/provider/ScrollSmoothProvider';
 import HomeMainTextSlider from '@/components/text-slider/HomeMainTextSlider';
 import ModernAgencyAward from '@/components/award/ModernAgencyAward';
-import HomeMainFunFact from '@/components/funfact/HomeMainFunFact';
 import HomeMainProject from '@/components/project/HomeMainProject';
 import HomeMainService from '@/components/service/HomeMainService';
 import HomeMainVideo from '@/components/video-area/HomeMainVideo';
 import HomeMainHero from '@/components/hero-banner/HomeMainHero';
-import BackToTop from '@/components/shared/BackToTop/BackToTop';
 import HomeMainBanner from '@/components/banner/HomeMainBanner';
-import HomeMainFooter from '@/layouts/footers/HomeMainFooter';
 import HomeMainAbout from '@/components/about/HomeMainAbout';
-
 import HomeMainWork from '@/components/work/HomeMainWork';
 import ClientSlider from '@/components/clientslider/clientslider';
 import CraftingWebsite from '@/components/craftingwebsite/craftingwebsite';
 import Whychoose from '../../../components/whychoose/whychoose';
-import { Images } from '../../../utils/Images';
 import SliderMarketing from '@/components/slidermarketing/slidermarketing';
-import BlogPage from '@/components/blog/page';
 
 const HomeMain = () => {
     return (
-        <ScrollSmoothProvider>
-            <CursorAndBackgroundProvider>
-                <AnimationWrapper>
-                    <div id="magic-cursor" className="cursor-white-bg">
-                        <div id="ball"></div>
-                    </div>
-                    {/* Global Components */}
-                    <BackToTop />
-                 
-                    <div id="smooth-wrapper">
-                        <div id="smooth-content">
-                            {/* Main Content Sections */}
-                            <main style={{ overflowX: "hidden" }}>
-
-                                {/* <BlogPage /> */}
-                                <HomeMainHero />
-                                <ClientSlider />
-                                <HomeMainBanner />
-                                <HomeMainTextSlider />
-                                <CraftingWebsite />
-                                <HomeMainAbout />
-                                <Whychoose />
-                                <HomeMainService />
-                                <HomeMainVideo />
-                                <HomeMainProject />
-                                {/* <HomeMainFunFact /> */}
-                                <HomeMainWork />
-                                <HomeMainTestimonial />
-                                {/* <ModernAgencyAward /> */}
-                             
-                                <SliderMarketing />
-
-                            </main>
-                            <HomeMainFooter />
-                        </div>
-                    </div>
-                </AnimationWrapper>
-            </CursorAndBackgroundProvider>
-        </ScrollSmoothProvider>
+        /* Main Content Sections */
+        <main style={{ overflowX: "hidden" }}>
+            <HomeMainHero />
+            <ClientSlider />
+            <HomeMainBanner />
+            <HomeMainTextSlider />
+            <CraftingWebsite />
+            <HomeMainAbout />
+            <Whychoose />
+            <HomeMainService />
+            <HomeMainVideo />
+            <HomeMainProject />
+            <HomeMainWork />
+            <HomeMainTestimonial />
+            <SliderMarketing />
+        </main>
     );
 };
 

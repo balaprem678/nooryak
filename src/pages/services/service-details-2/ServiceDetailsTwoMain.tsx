@@ -2,7 +2,6 @@ import CursorAndBackgroundProvider from '@/components/provider/CustomCursorProvi
 import ServiceDetailsTwoProcess from '@/components/process/ServiceDetailsTwoProcess';
 import ServiceDetailsTwoPrice from '@/components/price-area/ServiceDetailsTwoPrice';
 import ServiceDetailsTwoBanner from '@/components/banner/ServiceDetailsTwoBanner';
-import ServiceDetailsTwoAbout from '@/components/about/ServiceDetailsTwoAbout';
 import ScrollSmoothProvider from '@/components/provider/ScrollSmoothProvider';
 import AnimationWrapper from '@/components/shared/Animation/AnimationWrapper';
 import ServiceSolutionTwo from '@/components/service/ServiceSolutionTwo';
@@ -26,7 +25,6 @@ const ServiceDetailsTwoMain = () => {
                     <div id="smooth-wrapper">
                         <div id="smooth-content">
                             <main>
-                                <ServiceDetailsTwoAbout />
                                 <ServiceDetailsTwoBanner />
                                 <ServiceOverview />
                                 <ServiceSolutionTwo />

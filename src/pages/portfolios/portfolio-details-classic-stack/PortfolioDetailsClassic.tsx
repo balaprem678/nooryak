@@ -6,7 +6,6 @@ import PortfolioDetailsBanner from '@/components/banner/PortfolioDetailsBanner';
 import ScrollSmoothProvider from '@/components/provider/ScrollSmoothProvider';
 import AnimationWrapper from '@/components/shared/Animation/AnimationWrapper';
 import PortfolioDetailsThumb from '@/components/thumb/PortfolioDetailsThumb';
-import PortfolioDetailsAbout from '@/components/about/PortfolioDetailsAbout';
 import PortfolioDetailsWork from '@/components/work/PortfolioDetailsWork';
 import BackToTop from '@/components/shared/BackToTop/BackToTop';
 import { ArrowSvg } from '@/svg';
@@ -63,7 +62,6 @@ const PortfolioDetailsClassic = () => {
                                     </div>
                                 </div>
                                 <PortfolioDetailsThumb />
-                                <PortfolioDetailsAbout />
                                 <PortfolioDetailsBanner
                                     varientCls="hight"
                                     spacingCls=""

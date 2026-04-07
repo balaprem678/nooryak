@@ -22,7 +22,7 @@ export function StatCard({ label, value, badge, up, color, icon: Icon }: StatCar
     <div className="bg-[#111111] border border-[#2a2a2a] rounded-xl p-5 hover:border-[#ff7a18] hover:-translate-y-0.5 transition-all shadow-lg text-white">
       <div className="flex items-center justify-between mb-3.5">
         <div className={cn('w-10 h-10 rounded-xl flex items-center justify-center', colorClasses[color])}>
-          {/* @ts-ignore */}
+
           <Icon size={16} />
         </div>
         <span

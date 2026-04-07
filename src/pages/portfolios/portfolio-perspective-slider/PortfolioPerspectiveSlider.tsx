@@ -1,9 +1,7 @@
 import PerspectiveSlideCard from '@/components/portfolio/subComponents/PerspectiveSlideCard';
-import PortfolioPerspectiveFooter from '@/layouts/footers/PortfolioPerspectiveFooter';
 import CursorAndBackgroundProvider from '@/components/provider/CustomCursorProvider';
 import ScrollSmoothProvider from '@/components/provider/ScrollSmoothProvider';
 import AnimationWrapper from '@/components/shared/Animation/AnimationWrapper';
-import PortfolioFixedHeader from '@/layouts/headers/PortfolioFixedHeader';
 import portfolioData from '@/data/portfolioData';
 
 const PortfolioPerspectiveSlider = () => {
@@ -17,7 +15,6 @@ const PortfolioPerspectiveSlider = () => {
           </div>
 
           {/* Global Components */}
-          <PortfolioFixedHeader />
 
           <div id="smooth-wrapper">
             <div id="smooth-content">
@@ -38,7 +35,6 @@ const PortfolioPerspectiveSlider = () => {
               </main>
             </div>
           </div>
-          <PortfolioPerspectiveFooter />
         </AnimationWrapper>
       </CursorAndBackgroundProvider>
     </ScrollSmoothProvider>

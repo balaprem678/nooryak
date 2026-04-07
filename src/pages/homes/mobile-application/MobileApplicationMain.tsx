@@ -7,8 +7,6 @@ import MobileApplicationPrice from '@/components/price-area/MobileApplicationPri
 import MobileApplicationHero from '@/components/hero-banner/MobileApplicationHero';
 import MobileApplicationStack from '@/components/stack-area/MobileApplicationStack';
 import CursorAndBackgroundProvider from '@/components/provider/CustomCursorProvider';
-import MobileApplicationFooter from '@/layouts/footers/MobileApplicationFooter';
-import MobileApplicationHeader from '@/layouts/headers/MobileApplicationHeader';
 import MobileApplicationBrand from '@/components/brand/MobileApplicationBrand';
 import ScrollSmoothProvider from '@/components/provider/ScrollSmoothProvider';
 import AnimationWrapper from '@/components/shared/Animation/AnimationWrapper';
@@ -26,7 +24,6 @@ const MobileApplicationMain = () => {
                     </div>
                     {/* Global Components */}
                     <BackToTop />
-                    <MobileApplicationHeader />
 
                     <div id="smooth-wrapper" style={{ backgroundColor: "#F7F7FD" }}>
                         <div id="smooth-content">
@@ -44,7 +41,6 @@ const MobileApplicationMain = () => {
                                 <MobileApplicationFaq />
                                 <MobileApplicationCta />
                             </main>
-                            <MobileApplicationFooter />
                         </div>
                     </div>
                 </AnimationWrapper>

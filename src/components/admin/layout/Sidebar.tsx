@@ -33,8 +33,9 @@ const navItems: NavItem[] = [
       { label: 'Blog List', href: '/admin/blog' },
     ],
   },
-  { label: 'Users', icon: <Users size={18} />, href: '/admin/users' },
-  { label: 'Settings', icon: <Settings size={18} />, href: '/admin/settings' },
+  { label: 'Users', icon: <Users size={18} />, href: '/admin/user' },
+  
+  { label: 'Settings', icon: <Settings size={18} />, href: '/admin/setting' },
 ];
 
 export function Sidebar() {

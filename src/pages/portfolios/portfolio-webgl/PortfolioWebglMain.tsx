@@ -3,7 +3,6 @@ import { addEvents, slideNextTransitionStart, slidePrevTransitionStart, verTextF
 import CursorAndBackgroundProvider from '@/components/provider/CustomCursorProvider';
 import { portfolioWebglSlides, sliderImages } from '@/data/portfolioTwoData';
 import { Autoplay, Mousewheel, Navigation, Pagination } from 'swiper/modules';
-import PortfolioWebglHeader from '@/layouts/headers/PortfolioWebglHeader';
 import BackToTop from '@/components/shared/BackToTop/BackToTop';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { useEffect, useRef } from 'react';
@@ -35,7 +34,6 @@ const PortfolioWebglMain = () => {
             </div>
             {/* Global Components */}
             <BackToTop />
-            <PortfolioWebglHeader />
             <main>
                 <div id="port-showcase-slider-main">
                     <div className="port-showcase-slider-spaces p-relative">

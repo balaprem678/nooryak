@@ -8,10 +8,7 @@ import ITSolutionProject from '@/components/project/ITSolutionProject';
 import ITSolutionBrandTwo from '@/components/brand/ITSolutionBrandTwo';
 import ITSolutionHero from '@/components/hero-banner/ITSolutionHero';
 import ITSolutionFeature from '@/components/features/ITSolutionFaq';
-import ITSolutionFooter from '@/layouts/footers/ITSolutionFooter';
 import ITSolutionBrand from '@/components/brand/ITSolutionBrand';
-import ITSolutionAbout from '@/components/about/ITSolutionAbout';
-import ITSolutionHeader from '@/layouts/headers/ITSolutionHeader';
 import BackToTop from '@/components/shared/BackToTop/BackToTop';
 import ITSolutionStep from '@/components/step/ITSolutionStep';
 import SearchArea from '@/components/search-area/SearchArea';
@@ -30,7 +27,6 @@ const ITSolutionMain = () => {
                     {/* Global Components */}
                     <BackToTop />
                     <SearchArea />
-                    <ITSolutionHeader />
 
                     <div id="smooth-wrapper" style={{ backgroundColor: "#FDF7F4" }}>
                         <div id="smooth-content">
@@ -40,7 +36,6 @@ const ITSolutionMain = () => {
                                 <ITSolutionStep />
                                 <ITSolutionBrand />
                                 <ITSolutionFeature />
-                                <ITSolutionAbout />
                                 <ITSolutionProject />
                                 <ITSolutionBrandTwo />
                                 <ITSolutionTestimonial />
@@ -48,7 +43,6 @@ const ITSolutionMain = () => {
                                 <ITSolutionBenifit />
                                 <ITSolutionFaq />
                             </main>
-                            <ITSolutionFooter />
                         </div>
                     </div>
                 </AnimationWrapper>

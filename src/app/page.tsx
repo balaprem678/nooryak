@@ -13,7 +13,6 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <>
-      <HomeMainHeader />
       <HomeMain />
       <div className="foot_floating">
         <a href="

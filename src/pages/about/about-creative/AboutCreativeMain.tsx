@@ -7,11 +7,9 @@ import HomeMainTextSlider from '@/components/text-slider/HomeMainTextSlider';
 import CreativeAgencyBrand from '@/components/brand/CreativeAgencyBrand';
 import CreativeAgencyAward from '@/components/award/CreativeAgencyAward';
 import CreativeAgencyTeam from '@/components/team/CreativeAgencyTeam';
-import CreativeAboutTwo from '@/components/about/CreativeAboutTwo';
 import BackToTop from '@/components/shared/BackToTop/BackToTop';
 import HomeMainBanner from '@/components/banner/HomeMainBanner';
 import HomeMainFooter from '@/layouts/footers/HomeMainFooter';
-import CreativeAbout from '@/components/about/CreativeAbout';
 
 const AboutCreativeMain = () => {
     return (
@@ -27,9 +25,7 @@ const AboutCreativeMain = () => {
                     <div id="smooth-wrapper">
                         <div id="smooth-content">
                             <main>
-                                <CreativeAbout />
                                 <HomeMainTextSlider bgColor='' titleCls='tp-about-us-2-text-title' />
-                                <CreativeAboutTwo />
                                 <HomeMainBanner ColorStyleCls='pink-style' />
                                 <HomeMainTextSlider bgColor='pink-bg' />
                                 <CreativeAgencyTeam spacingCls="pt-140" />

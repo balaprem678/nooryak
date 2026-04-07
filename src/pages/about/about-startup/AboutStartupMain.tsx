@@ -5,11 +5,8 @@ import PersonalPortfolioAward from '@/components/award/PersonalPortfolioAward';
 import AboutModernSuccess from '@/components/success-area/AboutModernSuccess';
 import ScrollSmoothProvider from '@/components/provider/ScrollSmoothProvider';
 import AnimationWrapper from '@/components/shared/Animation/AnimationWrapper';
-import CorporateAgencyAbout from '@/components/about/CorporateAgencyAbout';
 import CorporateAgencyBrand from '@/components/brand/CorporateAgencyBrand';
 import AboutStartupProject from '@/components/project/AboutStartupProject';
-import CorporateAgencyFooter from '@/layouts/footers/CorporateAgencyFooter';
-import CorporateAgencyHeader from '@/layouts/headers/CorporateAgencyHeader';
 import AboutStartupHero from '@/components/hero-banner/AboutStartupHero';
 import DesignStudioTeam from '@/components/team/DesignStudioTeam';
 import BackToTop from '@/components/shared/BackToTop/BackToTop';
@@ -27,14 +24,12 @@ const AboutStartupMain = () => {
                     {/* Global Components */}
                     <BackToTop />
                     <SearchArea />
-                    <CorporateAgencyHeader />
 
                     <div id="smooth-wrapper">
                         <div id="smooth-content">
                             <main>
                                 <AboutStartupHero />
                                 <CorporateAgencyBannerTwo />
-                                <CorporateAgencyAbout />
                                 <CorporateAgencyBrand />
                                 <CorporateAgencyService />
                                 <AboutModernSuccess bgColor='#45653C' />
@@ -46,7 +41,6 @@ const AboutStartupMain = () => {
                                 />
                                 <AboutStartupProject />
                             </main>
-                            <CorporateAgencyFooter />
                         </div>
                     </div>
                 </AnimationWrapper>

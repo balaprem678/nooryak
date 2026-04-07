@@ -1,5 +1,4 @@
 import CursorAndBackgroundProvider from '@/components/provider/CustomCursorProvider';
-import PersonalPortfolioHeader from '@/layouts/headers/PersonalPortfolioHeader';
 import ScrollSmoothProvider from '@/components/provider/ScrollSmoothProvider';
 import AnimationWrapper from '@/components/shared/Animation/AnimationWrapper';
 import PortfolioScroll from '@/components/portfolio/PortfolioScroll';
@@ -16,7 +15,6 @@ const PortfolioInteractiveScroll = () => {
 
                     {/* Global Components */}
                     <BackToTop />
-                    <PersonalPortfolioHeader />
                     {/* Main Content Sections */}
                     <main>
                         <PortfolioScroll />

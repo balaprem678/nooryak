@@ -1,7 +1,6 @@
 import CursorAndBackgroundProvider from '@/components/provider/CustomCursorProvider';
 import ScrollSmoothProvider from '@/components/provider/ScrollSmoothProvider';
 import AnimationWrapper from '@/components/shared/Animation/AnimationWrapper';
-import PortfolioFixedHeader from '@/layouts/headers/PortfolioFixedHeader';
 import PortfolioSlider from '@/components/portfolio/PortfolioSlider';
 import BackToTop from '@/components/shared/BackToTop/BackToTop';
 
@@ -15,7 +14,6 @@ const PortfolioHorizontalShowcase = () => {
                     </div>
                     {/* Global Components */}
                     <BackToTop />
-                    <PortfolioFixedHeader />
 
                     <div id="smooth-wrapper">
                         <div id="smooth-content">

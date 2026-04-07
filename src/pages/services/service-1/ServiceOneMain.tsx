@@ -7,7 +7,6 @@ import InnerTextSlider from '@/components/text-slider/InnerTextSlider';
 import BackToTop from '@/components/shared/BackToTop/BackToTop';
 import HomeMainFooter from '@/layouts/footers/HomeMainFooter';
 import InnerService from '@/components/service/InnerService';
-import ServiceHeader from '@/layouts/headers/ServiceHeader';
 
 const ServiceOneMain = () => {
     return (
@@ -20,7 +19,6 @@ const ServiceOneMain = () => {
 
                     {/* Global Components */}
                     <BackToTop />
-                    <ServiceHeader />
 
                     <div id="smooth-wrapper">
                         <div id="smooth-content">

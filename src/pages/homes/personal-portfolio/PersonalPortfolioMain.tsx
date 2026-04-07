@@ -1,6 +1,4 @@
 // Layout Components
-import PersonalPortfolioFooter from '@/layouts/footers/PersonalPortfolioFooter';
-import PersonalPortfolioHeader from '@/layouts/headers/PersonalPortfolioHeader';
 import BackToTop from '@/components/shared/BackToTop/BackToTop';
 
 // Portfolio Sections
@@ -14,7 +12,6 @@ import CursorAndBackgroundProvider from '@/components/provider/CustomCursorProvi
 import PersonalPortfolioHero from '@/components/hero-banner/PersonalPortfolioHero';
 import PersonalPortfolioBanner from '@/components/banner/PersonalPortfolioBanner';
 import PortfolioTestimonial from '@/components/testimonial/PortfolioTestimonial';
-import PersonalPortfolioAbout from '@/components/about/PersonalPortfolioAbout';
 import PersonalPortfolioBrand from '@/components/brand/PersonalPortfolioBrand';
 import PersonalPortfolioAward from '@/components/award/PersonalPortfolioAward';
 import ScrollSmoothProvider from '@/components/provider/ScrollSmoothProvider';
@@ -31,7 +28,6 @@ const PersonalPortfolioMain = () => {
 
                     {/* Global Components */}
                     <BackToTop />
-                    <PersonalPortfolioHeader />
 
                     <div id="smooth-wrapper">
                         <div id="smooth-content">
@@ -39,7 +35,6 @@ const PersonalPortfolioMain = () => {
                             <main>
                                 <PersonalPortfolioHero />
                                 <PersonalPortfolioBrand />
-                                <PersonalPortfolioAbout />
                                 <PersonalPortfolioService />
                                 <PersonalPortfolioBanner />
                                 <PersonalPortfolioProject />
@@ -50,7 +45,6 @@ const PersonalPortfolioMain = () => {
                                 <PortfolioTestimonial />
                                 <PersonalPortfolioSocial />
                             </main>
-                            <PersonalPortfolioFooter />
                         </div>
                     </div>
                 </AnimationWrapper>

@@ -3,7 +3,6 @@ import authorImg from '../../../../public/assets/img/portfolio/portfolio-details
 import CursorAndBackgroundProvider from '@/components/provider/CustomCursorProvider';
 import ScrollSmoothProvider from '@/components/provider/ScrollSmoothProvider';
 import AnimationWrapper from '@/components/shared/Animation/AnimationWrapper';
-import ImageComparisonHeader from '@/layouts/headers/ImageComparisonHeader';
 import { portfolioDetailsImgSlider } from '@/data/portfolioTwoData';
 import BackToTop from '@/components/shared/BackToTop/BackToTop';
 import React, { useEffect, useRef, useState } from 'react';
@@ -121,7 +120,6 @@ const PortfolioImageComparison = () => {
 
                     {/* Global Components */}
                     <BackToTop />
-                    <ImageComparisonHeader />
 
                     <div id="smooth-wrapper">
                         <div id="smooth-content">

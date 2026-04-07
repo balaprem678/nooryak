@@ -1,5 +1,4 @@
 "use client";
-import PortfolioThumbSliderHeader from '@/layouts/headers/PortfolioThumbSliderHeader';
 import CursorAndBackgroundProvider from '@/components/provider/CustomCursorProvider';
 import { portfolioThumbSliderItems } from '@/data/portfolioTwoData';
 import useSlideshowPortfolio from '@/hooks/useSlideshowPortfolio';
@@ -17,7 +16,6 @@ const PortfolioCreativeThumbSlider: React.FC = () => {
             </div>
             {/* Global Components */}
             <BackToTop />
-            <PortfolioThumbSliderHeader />
             <main>
                 <div className="tp-portfolio-slider__main fix" ref={sliderRef}>
                     {/* Contact information */}

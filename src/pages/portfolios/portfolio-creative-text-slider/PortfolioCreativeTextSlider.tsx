@@ -1,7 +1,6 @@
 "use client";
 import { textPortfolioItems, textSliderItems, textSmallSliderItems } from '@/data/portfolioTwoData';
 import CursorAndBackgroundProvider from '@/components/provider/CustomCursorProvider';
-import PortfolioWebglHeader from '@/layouts/headers/PortfolioWebglHeader';
 import useSlideshowPortfolio from '@/hooks/useSlideshowPortfolio';
 import BackToTop from '@/components/shared/BackToTop/BackToTop';
 import { ArrowNextPrevIcon } from '@/svg/ArrowIcons';
@@ -18,7 +17,6 @@ const PortfolioCreativeTextSlider = () => {
             </div>
             {/* Global Components */}
             <BackToTop />
-            <PortfolioWebglHeader />
             <main>
                 <div className="tp-portfolio-slider__main tp-portfolio-slider__style-2 fix" ref={sliderRef}>
                     {/* Copyright */}

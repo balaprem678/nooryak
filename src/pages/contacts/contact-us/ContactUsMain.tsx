@@ -3,7 +3,6 @@ import CursorAndBackgroundProvider from '@/components/provider/CustomCursorProvi
 import ScrollSmoothProvider from '@/components/provider/ScrollSmoothProvider';
 import AnimationWrapper from '@/components/shared/Animation/AnimationWrapper';
 import ContactUsForm from '@/components/contacts/ContactUsForm';
-import ContactUsAbout from '@/components/about/ContactUsAbout';
 import ContactUsArea from '@/components/contacts/ContactUsArea';
 import BackToTop from '@/components/shared/BackToTop/BackToTop';
 import ContactUsHero from '@/components/contacts/ContactUsHero';
@@ -24,7 +23,6 @@ const ContactUsMain = () => {
                             <main>
                                 <ContactUsHero />
                                 <ContactUsForm />
-                                <ContactUsAbout />
                                 <ContactUsArea />
                             </main>
                         </div>

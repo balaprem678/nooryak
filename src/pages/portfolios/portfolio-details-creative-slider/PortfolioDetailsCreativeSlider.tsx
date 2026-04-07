@@ -7,9 +7,7 @@ import CursorAndBackgroundProvider from '@/components/provider/CustomCursorProvi
 import PortfolioDetailsThree from '@/components/portfolio/PortfolioDetailsThree';
 import AnimationWrapper from '@/components/shared/Animation/AnimationWrapper';
 import ScrollSmoothProvider from '@/components/provider/ScrollSmoothProvider';
-import DesignStudioFooter from '@/layouts/footers/DesignStudioFooter';
 import BackToTop from '@/components/shared/BackToTop/BackToTop';
-import CommonHeader from '@/layouts/headers/CommonHeader';
 
 const PortfolioDetailsCreativeSlider = () => {
     return (
@@ -22,7 +20,6 @@ const PortfolioDetailsCreativeSlider = () => {
 
                     {/* Global Components */}
                     <BackToTop />
-                    <CommonHeader spacingCls="mt-55" />
 
                     <div id="smooth-wrapper">
                         <div id="smooth-content">
@@ -35,7 +32,6 @@ const PortfolioDetailsCreativeSlider = () => {
                                 <PortfolioDetailsThreeGalleryTwo />
                                 <PortfolioDetailsThreeNavigation />
                             </main>
-                            <DesignStudioFooter />
                         </div>
                     </div>
                 </AnimationWrapper>

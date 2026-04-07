@@ -6,6 +6,7 @@ import Wrapper from "@/layouts/wrapper";
 import type { Metadata } from "next";
 import "swiper/css/bundle";
 import "./globals.scss";
+import HeaderFooterWrapper from "@/components/layout/HeaderFooterWrapper";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -84,6 +85,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning={true} className="agntix-light">
       <head suppressHydrationWarning={true}>
         <link rel="icon" href="/assets/images/common/Logo-blue.png" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
       </head>
       <body suppressHydrationWarning={true} className={`tp-magic-cursor ${inter.variable}
      ${besley.variable} ${spaceGrotesk.variable} ${playfairDisplay.variable}
@@ -92,7 +94,9 @@ export default function RootLayout({
         <AppProvider>
           <Wrapper>
             <VideoProvider>
-              {children}
+              <HeaderFooterWrapper>
+                {children}
+              </HeaderFooterWrapper>
             </VideoProvider>
             <GlobalVideoModal />
           </Wrapper>
