@@ -4,9 +4,10 @@ import { Images } from "@/utils/Images";
 interface BlogBannerProps {
     search: string;
     setSearch: (value: string) => void;
+    suggestions: string[];
 }
 
-export default function BlogBanner({ search, setSearch }: BlogBannerProps) {
+export default function BlogBanner({ search, setSearch, suggestions }: BlogBannerProps) {
     return (
         <section className="blog_hero">
             <div className="container">
@@ -30,6 +31,21 @@ export default function BlogBanner({ search, setSearch }: BlogBannerProps) {
                             <button><i className="fa-solid fa-magnifying-glass"></i></button>
                         </div>
 
+                        {suggestions.length > 0 && (
+                            <div className="search-suggestions">
+                                <span>Suggested: </span>
+                                {suggestions.map((tag, idx) => (
+                                    <button 
+                                        key={idx} 
+                                        className="suggestion-tag"
+                                        onClick={() => setSearch(tag)}
+                                    >
+                                        {tag}
+                                    </button>
+                                ))}
+                            </div>
+                        )}
+
                         <div className="trusted">
                             <div className="avatars">
                                 <span></span><span></span><span></span><span></span>
@@ -38,8 +54,18 @@ export default function BlogBanner({ search, setSearch }: BlogBannerProps) {
                         </div>
                     </div>
 
-                    <div className="hero-right col-md-6">
-                        <img src={Images.blog_banner.src} alt="blog_banner" />
+                    <div className="hero-right col-md-6 flex justify-center items-center relative">
+                        <img src={Images.blog_banner.src} alt="blog_banner" className="main-img" />
+                        
+                        {/* Decorative bubbles to match the design */}
+                        {suggestions.slice(0, 3).map((s, i) => (
+                             <div key={i} className={`floating-tag tag-${i}`}>
+                                {i === 0 && <i className="fa-solid fa-chart-line"></i>}
+                                {i === 1 && <i className="fa-solid fa-code"></i>}
+                                {i === 2 && <i className="fa-solid fa-lightbulb"></i>}
+                                {s}
+                             </div>
+                        ))}
                     </div>
                 </div>
             </div>

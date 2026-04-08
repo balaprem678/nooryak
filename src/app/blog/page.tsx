@@ -19,6 +19,7 @@ interface Blog {
     tags: string[];
     status?: string;
     isFeatured?: boolean;
+    views?: number;
 }
 
 function formatDate(dateStr: string) {
@@ -40,11 +41,12 @@ export default function BlogPage() {
     const [activeTab, setActiveTab] = useState("All Articles");
     const [search, setSearch] = useState("");
     const [tabs, setTabs] = useState<string[]>(["All Articles"]);
-    const [visibleCount, setVisibleCount] = useState(9);
+    const [currentPage, setCurrentPage] = useState(1);
+    const itemsPerPage = 6;
 
-    // Reset visible count when tab or search changes
+    // Reset page when tab or search changes
     useEffect(() => {
-        setVisibleCount(9);
+        setCurrentPage(1);
     }, [activeTab, search]);
 
     useEffect(() => {
@@ -63,7 +65,7 @@ export default function BlogPage() {
 
     /* 🔍 Unified Filter Logic */
     const { featuredBlogs, regularBlogs } = useMemo(() => {
-        const baseFiltered = blogs.filter((b) => {
+        const baseFiltered = blogs.filter((b: Blog) => {
             if (b.status && b.status !== "Published") return false;
             const matchSearch = (b.title || "").toLowerCase().includes(search.toLowerCase()) ||
                 (b.content || "").toLowerCase().includes(search.toLowerCase());
@@ -71,8 +73,8 @@ export default function BlogPage() {
         });
 
         return {
-            featuredBlogs: baseFiltered.filter(b => b.isFeatured === true || String(b.isFeatured) === "true"),
-            regularBlogs: baseFiltered.filter(b => {
+            featuredBlogs: baseFiltered.filter((b: Blog) => b.isFeatured === true || String(b.isFeatured) === "true"),
+            regularBlogs: baseFiltered.filter((b: Blog) => {
                 const isNotFeatured = !b.isFeatured || String(b.isFeatured) === "false";
                 const matchCategory = activeTab === "All Articles" || b.category === activeTab;
                 return isNotFeatured && matchCategory;
@@ -80,11 +82,17 @@ export default function BlogPage() {
         };
     }, [blogs, activeTab, search]);
 
-    const displayedRegularBlogs = regularBlogs.slice(0, visibleCount);
+    const totalPages = Math.ceil(regularBlogs.length / itemsPerPage);
+    const displayedRegularBlogs = regularBlogs.slice((currentPage - 1) * itemsPerPage, currentPage * itemsPerPage);
+
+    /* 💡 Search Suggestions (Top 5 Categories) */
+    const suggestions = useMemo(() => {
+        return tabs.filter(t => t !== "All Articles").slice(0, 5);
+    }, [tabs]);
 
     /* 📊 Category Count */
     const categoriesMap: Record<string, number> = {};
-    blogs.forEach((b) => {
+    blogs.forEach((b: Blog) => {
         if (b.category) {
             categoriesMap[b.category] = (categoriesMap[b.category] || 0) + 1;
         }
@@ -95,7 +103,12 @@ export default function BlogPage() {
         count: categoriesMap[key],
     }));
 
-    const popular = blogs.slice(0, 4);
+    const popular = useMemo(() => {
+        return [...blogs]
+            .filter((b: Blog) => (b.views || 0) > 1)
+            .sort((a: Blog, b: Blog) => (b.views || 0) - (a.views || 0))
+            .slice(0, 4);
+    }, [blogs]);
 
     if (loading) return (
         <div className="blog-page">
@@ -106,7 +119,11 @@ export default function BlogPage() {
 
     return (
         <div className="blog-page">
-            <BlogBanner search={search} setSearch={setSearch} />
+            <BlogBanner 
+                search={search} 
+                setSearch={setSearch} 
+                suggestions={suggestions}
+            />
 
             <div className="tabs">
                 {tabs.map((t, i) => (
@@ -205,14 +222,47 @@ export default function BlogPage() {
                 </div>
 
                 <div className="col-12">
-                    {regularBlogs.length > visibleCount && (
-                        <div className="load-more-container d-flex justify-content-center w-100 mt-5">
-                            <button
-                                className="load-more-btn gra_btn"
-                                onClick={() => setVisibleCount(prev => prev + 6)}
+                    {totalPages > 1 && (
+                        <div className="pagination-container d-flex justify-content-center w-100 mt-5">
+                            <button 
+                                className={`page-btn prev ${currentPage === 1 ? 'disabled' : ''}`}
+                                onClick={() => setCurrentPage(prev => Math.max(1, prev - 1))}
+                                disabled={currentPage === 1}
                             >
-                                <span>Load More</span>
-                                <i className="fa-solid fa-chevron-down ms-2"></i>
+                                <i className="fa-solid fa-chevron-left"></i>
+                            </button>
+                            
+                            {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => {
+                                // Simple logic to show a few pages around current page
+                                if (
+                                    page === 1 || 
+                                    page === totalPages || 
+                                    (page >= currentPage - 1 && page <= currentPage + 1)
+                                ) {
+                                    return (
+                                        <button
+                                            key={page}
+                                            className={`page-btn ${currentPage === page ? 'active' : ''}`}
+                                            onClick={() => setCurrentPage(page)}
+                                        >
+                                            {page}
+                                        </button>
+                                    );
+                                } else if (
+                                    page === currentPage - 2 || 
+                                    page === currentPage + 2
+                                ) {
+                                    return <span key={page} className="pagination-dots">...</span>;
+                                }
+                                return null;
+                            })}
+
+                            <button 
+                                className={`page-btn next ${currentPage === totalPages ? 'disabled' : ''}`}
+                                onClick={() => setCurrentPage(prev => Math.min(totalPages, prev + 1))}
+                                disabled={currentPage === totalPages}
+                            >
+                                <i className="fa-solid fa-chevron-right"></i>
                             </button>
                         </div>
                     )}

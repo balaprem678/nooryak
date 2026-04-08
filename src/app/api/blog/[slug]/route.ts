@@ -8,7 +8,7 @@ export async function GET(req: Request, { params }: { params: Promise<{ slug: st
   try {
     await dbConnect();
     const { slug } = await params;
-    const blog = await Blog.findOne({ slug });
+    const blog = await Blog.findOneAndUpdate({ slug }, { $inc: { views: 1 } }, { new: true });
     
     if (!blog) {
       return NextResponse.json({ message: 'Blog post not found' }, { status: 404 });
