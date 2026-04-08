@@ -29,9 +29,9 @@ export function Topbar({ title, breadcrumb }: TopbarProps) {
         </div>
       </div>
       <div className="flex items-center gap-2">
-        <button className="w-9 h-9 rounded-xl border border-[#2a2a2a] text-[#888] hover:border-[#ff7a18] hover:text-[#ff7a18] flex items-center justify-center transition-all">
+        {/* <button className="w-9 h-9 rounded-xl border border-[#2a2a2a] text-[#888] hover:border-[#ff7a18] hover:text-[#ff7a18] flex items-center justify-center transition-all">
           <Search size={14} />
-        </button>
+        </button> */}
         <button className="w-9 h-9 rounded-xl border border-[#2a2a2a] text-[#888] hover:border-[#ff7a18] hover:text-[#ff7a18] flex items-center justify-center transition-all relative">
           <Bell size={14} />
           <span className="absolute top-1 right-1 w-3.5 h-3.5 rounded-full bg-[#ff7a18] text-white text-[8px] font-bold flex items-center justify-center">
