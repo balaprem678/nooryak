@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect, useState, FormEvent } from 'react';
 import { AppShell } from '@/components/admin/layout/AppShell';
 import { Card } from '@/components/admin/ui/card';
 import { Input } from '@/components/admin/ui/input';
@@ -33,6 +33,18 @@ export default function BlogListPage() {
   const [loading, setLoading] = useState(true);
   const [searchQuery, setSearchQuery] = useState('');
   const [deletingId, setDeletingId] = useState<string | null>(null);
+  const [showModal, setShowModal] = useState(false);
+  const [editingId, setEditingId] = useState<string | null>(null);
+
+  const [formData, setFormData] = useState({
+    title: '',
+    slug: '',
+    category: '',
+    excerpt: '',
+    status: 'Draft',
+    isFeatured: false,
+    image: ''
+  });
 
   const fetchBlogs = async () => {
     setLoading(true);
@@ -49,6 +61,57 @@ export default function BlogListPage() {
   };
 
   useEffect(() => { fetchBlogs(); }, []);
+
+  const generateSlug = (text: string): string => {
+    return text
+      .toLowerCase()
+      .trim()
+      .replace(/[^\w\s-]/g, '')      // Remove all non-word chars (except spaces and hyphens)
+      .replace(/[\s_-]+/g, '-')       // Replace spaces and underscores with a single hyphen
+      .replace(/^-+|-+$/g, '');      // Remove leading/trailing hyphens
+  };
+
+  const handleTitleChange = (val: string) => {
+    const slug = generateSlug(val);
+    setFormData(prev => ({
+      ...prev,
+      title: val,
+      slug: slug
+    }));
+  };
+
+  const handleEdit = (blog: Blog) => {
+    setEditingId(blog._id);
+    setFormData({
+      title: blog.title,
+      slug: blog.slug,
+      category: blog.category || '',
+      excerpt: blog.excerpt || '',
+      status: blog.status || 'Draft',
+      isFeatured: blog.isFeatured || false,
+      image: blog.image || ''
+    });
+    setShowModal(true);
+  };
+
+  const handleSubmit = async (e: FormEvent) => {
+    e.preventDefault();
+    const method = editingId ? 'PUT' : 'POST';
+    const url = editingId ? `/api/admin/blogs/${editingId}` : '/api/admin/blogs';
+
+    try {
+      const res = await fetch(url, {
+        method,
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData)
+      });
+      if (res.ok) {
+        toast.success(editingId ? 'Post updated' : 'Post created');
+        setShowModal(false);
+        fetchBlogs();
+      }
+    } catch { toast.error('Something went wrong'); }
+  };
 
   const handleDelete = async (id: string) => {
     if (!confirm('Are you sure you want to delete this post?')) return;
@@ -94,9 +157,9 @@ export default function BlogListPage() {
           </h2>
           <p className="text-xs text-[#888] mt-1">Manage your site's articles and news.</p>
         </div>
-        <div className='flex gap-10'>
+        <div className='flex items-center gap-4'>
           {/* Search */}
-          <div className="flex items-center gap-3 mb-5">
+          <div className="flex items-center gap-3">
             {searchQuery && (
               <span className="text-xs text-[#888]">
                 {filteredBlogs.length} result{filteredBlogs.length !== 1 ? 's' : ''}
@@ -109,7 +172,7 @@ export default function BlogListPage() {
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 className="bg-[#111111] border-[#2a2a2a] pl-9 pr-9 h-10 text-[13px] text-white"
-               
+
               />
               {searchQuery && (
                 <button
@@ -121,6 +184,15 @@ export default function BlogListPage() {
               )}
             </div>
           </div>
+
+          {/* <Button
+            variant="outline"
+            onClick={() => router.push('/blog')}
+            className="border-[#2a2a2a] text-white hover:bg-[#1a1a1a] h-10"
+          >
+            <Newspaper size={16} className="mr-2" />
+            View Blog
+          </Button> */}
 
           <Button
             onClick={() => router.push('/admin/blog/add')}
@@ -295,6 +367,86 @@ export default function BlogListPage() {
           </div>
         )}
       </Card>
+
+      {/* Add/Edit Modal */}
+      {showModal && (
+        <div className="modal">
+          <div className="modal-content add-blog-form">
+            <div className="modal-header">
+              <h3>{editingId ? 'Edit Post' : 'Create New Post'}</h3>
+              <button className="close-btn" onClick={() => setShowModal(false)}><X size={20} /></button>
+            </div>
+
+            <form onSubmit={handleSubmit}>
+              <div className="form-group">
+                <label className="form-label">Title</label>
+                <Input
+                  placeholder="Post title"
+                  value={formData.title}
+                  onChange={(e) => handleTitleChange(e.target.value)}
+                  required
+                  className="form-input-plain"
+                />
+              </div>
+
+              <div className="form-group">
+                <label className="form-label">Slug (Auto-generated)</label>
+                <Input
+                  placeholder="slug-will-appear-here"
+                  value={formData.slug}
+                  readOnly
+                  tabIndex={-1}
+                  className="form-input-plain bg-[#0a0a0a] text-[#888] cursor-not-allowed"
+                />
+              </div>
+
+              <div className="grid grid-cols-2 gap-4">
+                <div className="form-group">
+                  <label className="form-label">Category</label>
+                  <Input
+                    placeholder="e.g. Technology"
+                    value={formData.category}
+                    onChange={(e) => setFormData({ ...formData, category: e.target.value })}
+                    className="form-input-plain"
+                  />
+                </div>
+                <div className="form-group">
+                  <label className="form-label">Status</label>
+                  <select
+                    value={formData.status}
+                    onChange={(e) => setFormData({ ...formData, status: e.target.value })}
+                    className="form-input-plain"
+                  >
+                    <option value="Draft">Draft</option>
+                    <option value="Published">Published</option>
+                  </select>
+                </div>
+              </div>
+
+              <div className="form-group flex items-center gap-2 mt-2">
+                <input
+                  type="checkbox"
+                  id="featured"
+                  checked={formData.isFeatured}
+                  onChange={(e) => setFormData({ ...formData, isFeatured: e.target.checked })}
+                  className="accent-[#ff7a18]"
+                />
+                <label htmlFor="featured" className="text-sm text-[#ccc] cursor-pointer">Mark as Featured</label>
+              </div>
+
+              <div className="modal-actions mt-6">
+                <Button type="button" variant="outline" onClick={() => setShowModal(false)} className="cancel border-[#2a2a2a] text-white hover:bg-[#1a1a1a]">
+                  Cancel
+                </Button>
+                <Button type="submit" className="submit bg-gradient-to-r from-[#ff7a18] to-[#ff3d00] text-white">
+                  {editingId ? 'Save Changes' : 'Create Post'}
+                </Button>
+              </div>
+            </form>
+          </div>
+        </div>
+      )}
+
     </AppShell>
   );
 }

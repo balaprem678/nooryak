@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useMemo } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import "./blogmain.scss";
@@ -40,6 +40,12 @@ export default function BlogPage() {
     const [activeTab, setActiveTab] = useState("All Articles");
     const [search, setSearch] = useState("");
     const [tabs, setTabs] = useState<string[]>(["All Articles"]);
+    const [visibleCount, setVisibleCount] = useState(9);
+
+    // Reset visible count when tab or search changes
+    useEffect(() => {
+        setVisibleCount(9);
+    }, [activeTab, search]);
 
     useEffect(() => {
         fetch("/api/admin/blogs")
@@ -55,17 +61,26 @@ export default function BlogPage() {
             .finally(() => setLoading(false));
     }, []);
 
-    /* 🔍 Filter Logic */
-    const filteredBlogs = blogs.filter((b) => {
-        if (b.status && b.status !== "Published") return false;
-        const matchCategory = activeTab === "All Articles" || b.category === activeTab;
-        const matchSearch = (b.title || "").toLowerCase().includes(search.toLowerCase()) ||
-            (b.content || "").toLowerCase().includes(search.toLowerCase());
-        return matchCategory && matchSearch;
-    });
+    /* 🔍 Unified Filter Logic */
+    const { featuredBlogs, regularBlogs } = useMemo(() => {
+        const baseFiltered = blogs.filter((b) => {
+            if (b.status && b.status !== "Published") return false;
+            const matchSearch = (b.title || "").toLowerCase().includes(search.toLowerCase()) ||
+                (b.content || "").toLowerCase().includes(search.toLowerCase());
+            return matchSearch;
+        });
 
-    const featuredBlogs = filteredBlogs.filter(b => b.isFeatured === true || String(b.isFeatured) === "true");
-    const regularBlogs = filteredBlogs.filter(b => !b.isFeatured || String(b.isFeatured) === "false");
+        return {
+            featuredBlogs: baseFiltered.filter(b => b.isFeatured === true || String(b.isFeatured) === "true"),
+            regularBlogs: baseFiltered.filter(b => {
+                const isNotFeatured = !b.isFeatured || String(b.isFeatured) === "false";
+                const matchCategory = activeTab === "All Articles" || b.category === activeTab;
+                return isNotFeatured && matchCategory;
+            })
+        };
+    }, [blogs, activeTab, search]);
+
+    const displayedRegularBlogs = regularBlogs.slice(0, visibleCount);
 
     /* 📊 Category Count */
     const categoriesMap: Record<string, number> = {};
@@ -110,10 +125,10 @@ export default function BlogPage() {
 
 
                 <div className="blogs col-lg-8 col-md-12">
-                    {regularBlogs.length === 0 && <p className="noblogfound">No regular articles found</p>}
+                    {displayedRegularBlogs.length === 0 && <p className="noblogfound">No regular articles found</p>}
 
-                    {regularBlogs.map((b) => (
-                        <div className="card" key={b._id}>
+                    {displayedRegularBlogs.map((b) => (
+                        <div className="card fade-in" key={b._id}>
                             <div className="img">
                                 <img src={b.image} alt={b.title} />
                             </div>
@@ -137,6 +152,7 @@ export default function BlogPage() {
 
 
                 </div>
+
 
                 <div className="sidebar col-lg-4 col-md-12">
                     <div className="search">
@@ -188,6 +204,20 @@ export default function BlogPage() {
                     </div>
                 </div>
 
+                <div className="col-12">
+                    {regularBlogs.length > visibleCount && (
+                        <div className="load-more-container d-flex justify-content-center w-100 mt-5">
+                            <button
+                                className="load-more-btn gra_btn"
+                                onClick={() => setVisibleCount(prev => prev + 6)}
+                            >
+                                <span>Load More</span>
+                                <i className="fa-solid fa-chevron-down ms-2"></i>
+                            </button>
+                        </div>
+                    )}
+                </div>
+
                 {/* Featured Section */}
                 <div className="col-lg-12 featured_section">
                     <div className="row">
@@ -200,8 +230,8 @@ export default function BlogPage() {
 
                                 <div className="featured_projects_child row ">
                                     {featuredBlogs.map((b) => (
-                                        <div className="col-md-3 col-sm-12">
-                                            <div className="card" key={b._id}>
+                                        <div className="col-md-3 col-sm-12" key={b._id}>
+                                            <div className="card">
                                                 <div className="img">
                                                     <img src={b.image} alt={b.title} />
                                                 </div>
@@ -231,10 +261,6 @@ export default function BlogPage() {
                     </div>
                 </div>
             </div>
-
-
-
-
         </div>
     );
 }

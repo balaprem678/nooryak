@@ -56,9 +56,25 @@ export default function AddBlogPage() {
       });
   }, []);
 
+  const generateSlug = (text: string): string => {
+    return text
+      .toLowerCase()
+      .trim()
+      .replace(/[^\w\s-]/g, '')      // Remove all non-word chars (except spaces and hyphens)
+      .replace(/[\s_-]+/g, '-')       // Replace spaces and underscores with a single hyphen
+      .replace(/^-+|-+$/g, '');      // Remove leading/trailing hyphens
+  };
+
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
-    setFormData(prev => ({ ...prev, [name]: value }));
+    setFormData(prev => {
+      const newState = { ...prev, [name]: value };
+      if (name === 'title') {
+        newState.slug = generateSlug(value);
+      }
+      return newState;
+    });
+
     if (errors[name]) {
       setErrors(prev => ({ ...prev, [name]: '' }));
     }
@@ -206,9 +222,11 @@ export default function AddBlogPage() {
                   type="text"
                   name="slug"
                   className={`form-input-plain w-full bg-[#1a1a1a] border border-[#2a2a2a] rounded-md  text-white focus:border-[#ff7a18] outline-none ${errors.slug ? 'border-red-500' : ''}`}
-                  placeholder="post-url-slug"
+                  placeholder="slug-will-appear-here"
                   value={formData.slug}
-                  onChange={handleInputChange}
+                  readOnly
+                  tabIndex={-1}
+                // onChange={handleInputChange} // Removed as slug is now auto-generated
                 />
                 {errors.slug && <span className="form-error text-red-500 text-xs mt-1">{errors.slug}</span>}
               </div>

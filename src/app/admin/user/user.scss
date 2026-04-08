@@ -160,23 +160,50 @@ p {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(8px);
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 1000;
 
   .modal-content {
-    background: #111;
-    padding: 25px;
-    border-radius: 12px;
-    width: 350px;
+    background: #0f0f0f;
+    padding: 30px;
+    border-radius: 16px;
+    width: 400px;
+    border: 1px solid #2a2a2a;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
 
-    h3 {
-      margin-bottom: 20px;
+    .modal-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 25px;
+
+      h3 {
+        margin: 0;
+        font-size: 1.25rem;
+        font-weight: 600;
+        color: #fff;
+      }
+
+      .close-btn {
+        background: transparent;
+        border: none;
+        color: #666;
+        cursor: pointer;
+        padding: 4px;
+        transition: 0.2s;
+
+        &:hover {
+          color: #fff;
+        }
+      }
     }
 
     .form-group {
-      margin-bottom: 15px;
+      margin-bottom: 20px;
 
       label {
         display: block;
@@ -187,20 +214,34 @@ p {
       input,
       select {
         width: 100%;
-        padding: 10px;
-        border-radius: 6px;
-        border: 1px solid #333;
-        background: #0b0b0c;
+        padding: 12px 14px;
+        border-radius: 10px;
+        border: 1px solid #2a2a2a;
+        background: #161616;
         color: #fff;
+        font-size: 14px;
+        transition: 0.2s;
+
+        &:focus {
+          outline: none;
+          border-color: #ff7a18;
+          background: #1a1a1a;
+        }
+      }
+
+      select {
+        cursor: pointer;
+        appearance: none;
       }
     }
 
     .modal-actions {
       display: flex;
-      justify-content: flex-end;
-      gap: 10px;
+      gap: 12px;
+      margin-top: 30px;
 
       .cancel {
+        flex: 1;
         background: transparent;
         border: 1px solid #444;
         color: #aaa;
@@ -209,11 +250,19 @@ p {
       }
 
       .submit {
-        background: #ff6a00;
+        flex: 2;
+        background: linear-gradient(135deg, #ff7a18, #ff3d00);
         border: none;
         padding: 8px 14px;
         color: #fff;
-        border-radius: 6px;
+        border-radius: 8px;
+        font-weight: 600;
+        transition: 0.3s;
+
+        &:hover {
+          opacity: 0.9;
+          transform: translateY(-1px);
+        }
       }
     }
   }
