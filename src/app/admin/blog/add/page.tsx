@@ -12,15 +12,49 @@ export default function AddBlogPage() {
   const [formData, setFormData] = useState({
     title: '',
     slug: '',
-    category: 'Technology',
-    status: 'Draft',
+    category: 'All Articles',
+    status: 'Published',
+    isFeatured: false,
     excerpt: '',
     content: '',
   });
-  const [tags, setTags] = useState(['Technology', 'Design']);
+
+
+
+  const [tags, setTags] = useState([
+    "Digital Marketing",
+    "Web Development",
+    "UI/UX Design",
+    "Business Strategy",
+    "SEO",
+    "Technology",
+    "Growth",]);
   const [tagInput, setTagInput] = useState('');
   const [imagePreview, setImagePreview] = useState<string | null>(null);
   const [errors, setErrors] = useState<Record<string, string>>({});
+  const [existingCategories, setExistingCategories] = useState([
+    "Digital Marketing",
+    "Web Development",
+    "UI/UX Design",
+    "Business Strategy",
+    "SEO",
+    "Technology",
+    "Growth",
+  ]);
+
+  React.useEffect(() => {
+    fetch('/api/admin/blogs')
+      .then(res => res.json())
+      .then(data => {
+        const blogs = data.blogs || [];
+        const cats = Array.from(new Set(blogs.map((b: any) => b.category))).filter(Boolean) as string[];
+
+        setExistingCategories(prev => {
+          const combined = [...new Set([...prev, ...cats])];
+          return combined;
+        });
+      });
+  }, []);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
@@ -88,6 +122,8 @@ export default function AddBlogPage() {
         content: formData.content,
         excerpt: formData.excerpt,
         category: formData.category,
+        status: formData.status,
+        isFeatured: formData.isFeatured,
         tags,
         image: imagePreview || '',
         author: 'Admin',
@@ -100,7 +136,7 @@ export default function AddBlogPage() {
       });
 
       if (res.ok) {
-        toast.success(`Blog post ${status === 'Draft' ? 'saved as draft' : 'published'}!`);
+        toast.success(`Blog post ${formData.status === 'Published' ? 'published' : 'saved'} successfully!`);
         router.push('/admin/blog');
       } else {
         const data = await res.json();
@@ -113,8 +149,7 @@ export default function AddBlogPage() {
     }
   };
 
-  const handleSaveDraft = () => submitPost('Draft');
-  const handlePublish = () => submitPost('Published');
+  const handlePublish = () => submitPost(formData.status);
   const handleCancel = () => router.back();
 
   const Icon = ({ name, className = '' }: { name: string, className?: string }) => {
@@ -124,39 +159,64 @@ export default function AddBlogPage() {
   return (
     <AppShell title="Add Blog Post" breadcrumb="Blog / Add">
       <div className="add-blog-form text-white">
-        <div className="page-header mb-6">
-          <h2 className="text-xl font-bold">Add Blog Post</h2>
-          <p className="text-[#888] text-sm">Create and publish new content</p>
+        <div className='flex justify-between items-between
+        '>
+          <div className="page-header mb-6">
+            <h2 className="text-xl font-bold">Add Blog Post</h2>
+            <p className="text-[#888] text-sm">Create and publish new content</p>
+          </div>
+          <div className="form-group mb-5">
+            <label className="toggle-container" htmlFor="featured-toggle">
+              <input
+                id="featured-toggle"
+                type="checkbox"
+                name="isFeatured"
+                className="sr-only"
+                checked={formData.isFeatured}
+                onChange={(e) => setFormData(prev => ({ ...prev, isFeatured: e.target.checked }))}
+              />
+              <div className="toggle-switch"></div>
+              <span className="toggle-label">Mark as Featured Post</span>
+            </label>
+          </div>
         </div>
 
         <div className="form-card bg-[#111] border border-[#2a2a2a] p-6 rounded-xl">
-          {/* Post Title */}
-          <div className="form-group">
-            <label className="form-label block text-sm text-[#888] mb-2">Post Title *</label>
-            <input
-              type="text"
-              name="title"
-              className={`form-input-plain w-full bg-[#1a1a1a] border border-[#2a2a2a] rounded-md px-4 py-2 text-white focus:border-[#ff7a18] outline-none ${errors.title ? 'border-red-500' : ''}`}
-              placeholder="Enter post title…"
-              value={formData.title}
-              onChange={handleInputChange}
-            />
-            {errors.title && <span className="form-error text-red-500 text-xs mt-1">{errors.title}</span>}
+          <div className="row">
+            <div className="col-md-6">
+              {/* Post Title */}
+              <div className="form-group">
+                <label className="form-label block text-sm text-[#888] mb-2">Post Title *</label>
+                <input
+                  type="text"
+                  name="title"
+                  className={`form-input-plain w-full bg-[#1a1a1a] border border-[#2a2a2a] rounded-md  text-white focus:border-[#ff7a18] outline-none ${errors.title ? 'border-red-500' : ''}`}
+                  placeholder="Enter post title…"
+                  value={formData.title}
+                  onChange={handleInputChange}
+                />
+                {errors.title && <span className="form-error text-red-500 text-xs mt-1">{errors.title}</span>}
+              </div>
+            </div>
+            <div className="col-md-6">
+              {/* Slug */}
+              <div className="form-group">
+                <label className="form-label block text-sm text-[#888] mb-2">Slug</label>
+                <input
+                  type="text"
+                  name="slug"
+                  className={`form-input-plain w-full bg-[#1a1a1a] border border-[#2a2a2a] rounded-md  text-white focus:border-[#ff7a18] outline-none ${errors.slug ? 'border-red-500' : ''}`}
+                  placeholder="post-url-slug"
+                  value={formData.slug}
+                  onChange={handleInputChange}
+                />
+                {errors.slug && <span className="form-error text-red-500 text-xs mt-1">{errors.slug}</span>}
+              </div>
+            </div>
           </div>
 
-          {/* Slug */}
-          <div className="form-group">
-            <label className="form-label block text-sm text-[#888] mb-2">Slug</label>
-            <input
-              type="text"
-              name="slug"
-              className={`form-input-plain w-full bg-[#1a1a1a] border border-[#2a2a2a] rounded-md px-4 py-2 text-white focus:border-[#ff7a18] outline-none ${errors.slug ? 'border-red-500' : ''}`}
-              placeholder="post-url-slug"
-              value={formData.slug}
-              onChange={handleInputChange}
-            />
-            {errors.slug && <span className="form-error text-red-500 text-xs mt-1">{errors.slug}</span>}
-          </div>
+
+
 
           {/* Category and Status Grid */}
           <div className="form-grid grid grid-cols-1 md:grid-cols-2 gap-5 mb-5">
@@ -164,36 +224,40 @@ export default function AddBlogPage() {
               <label className="form-label block text-sm text-[#888] mb-2">Category</label>
               <select
                 name="category"
-                className="form-input-plain w-full bg-[#1a1a1a] border border-[#2a2a2a] rounded-md px-4 py-2 text-white focus:border-[#ff7a18] outline-none"
+                className="form-input-plain w-full bg-[#1a1a1a] border border-[#2a2a2a] rounded-md  text-white focus:border-[#ff7a18] outline-none"
                 value={formData.category}
                 onChange={handleInputChange}
               >
-                <option>Technology</option>
-                <option>Design</option>
-                <option>Business</option>
-                <option>Marketing</option>
+                <option value="">Select Category</option>
+                {existingCategories.map((cat) => (
+                  <option key={cat} value={cat}>
+                    {cat}
+                  </option>
+                ))}
               </select>
             </div>
             <div className="form-group">
               <label className="form-label block text-sm text-[#888] mb-2">Status</label>
               <select
                 name="status"
-                className="form-input-plain w-full bg-[#1a1a1a] border border-[#2a2a2a] rounded-md px-4 py-2 text-white focus:border-[#ff7a18] outline-none"
+                className="form-input-plain w-full bg-[#1a1a1a] border border-[#2a2a2a] rounded-md  text-white focus:border-[#ff7a18] outline-none"
                 value={formData.status}
                 onChange={handleInputChange}
               >
-                <option>Draft</option>
                 <option>Published</option>
+                <option>Not Published</option>
               </select>
             </div>
           </div>
+
+
 
           {/* Excerpt */}
           <div className="form-group">
             <label className="form-label block text-sm text-[#888] mb-2">Excerpt</label>
             <textarea
               name="excerpt"
-              className="form-input-plain w-full bg-[#1a1a1a] border border-[#2a2a2a] rounded-md px-4 py-2 text-white focus:border-[#ff7a18] outline-none"
+              className="form-input-plain w-full bg-[#1a1a1a] border border-[#2a2a2a] rounded-md  text-white focus:border-[#ff7a18] outline-none"
               rows={3}
               placeholder="Short summary of the post…"
               value={formData.excerpt}
@@ -206,7 +270,7 @@ export default function AddBlogPage() {
             <label className="form-label block text-sm text-[#888] mb-2">Content *</label>
             <textarea
               name="content"
-              className={`form-input-plain w-full bg-[#1a1a1a] border border-[#2a2a2a] rounded-md px-4 py-2 text-white focus:border-[#ff7a18] outline-none ${errors.content ? 'border-red-500' : ''}`}
+              className={`form-input-plain w-full bg-[#1a1a1a] border border-[#2a2a2a] rounded-md  text-white focus:border-[#ff7a18] outline-none ${errors.content ? 'border-red-500' : ''}`}
               rows={6}
               placeholder="Write your post content here…"
               value={formData.content}
@@ -238,7 +302,7 @@ export default function AddBlogPage() {
                 </div>
               ) : (
                 <div className="text-[#888]">
-                  <div className="text-3xl mb-2"><Icon name="cloud-arrow-up" /></div>
+                  <div className="text-3xl mb-2 flex justify-center"><Icon name="cloud-arrow-up" /></div>
                   <p className="mb-2">Drag & drop or click to upload</p>
                   <span className="text-xs">PNG, JPG, WebP up to 5MB</span>
                 </div>
@@ -287,23 +351,23 @@ export default function AddBlogPage() {
             >
               <Icon name="arrow-left" className="mr-2" /> Cancel
             </button>
-            <button
+            {/* <button
               type="button"
-              className="px-4 py-2 bg-[#222] border border-[#2a2a2a] hover:bg-[#333] rounded-md transition-colors"
+              className=" px-4 py-2 bg-[#222] border border-[#2a2a2a] hover:bg-[#333] rounded-md transition-colors"
               onClick={handleSaveDraft}
               disabled={loading}
             >
               <Icon name="floppy-disk" className="mr-2" />
               {loading ? 'Saving...' : 'Save Draft'}
-            </button>
+            </button> */}
             <button
               type="button"
-              className="px-4 py-2 bg-gradient-to-r from-[#ff7a18] to-[#ff3d00] hover:opacity-90 rounded-md transition-opacity"
+              className="px-4 py-2  bg-gradient-to-r from-[#ff7a18] to-[#ff3d00] hover:opacity-90 rounded-md transition-opacity"
               onClick={handlePublish}
               disabled={loading}
             >
               <Icon name="paper-plane" className="mr-2" />
-              {loading ? 'Publishing...' : 'Publish'}
+              {loading ? 'Submitting...' : 'Submit'}
             </button>
           </div>
         </div>

@@ -39,6 +39,15 @@ const BlogSchema = new mongoose.Schema({
     required: [true, 'Please provide a slug for this blog post.'],
     unique: true,
   },
+  status: {
+    type: String,
+    enum: ['Published', 'Not Published'],
+    default: 'Published',
+  },
+  isFeatured: {
+    type: Boolean,
+    default: false,
+  },
 }, { timestamps: true });
 
 export default mongoose.models.Blog || mongoose.model('Blog', BlogSchema);

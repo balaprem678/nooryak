@@ -62,7 +62,7 @@ export default function DashboardPage() {
         ))}
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 mb-5">
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 mb-5  mt-4">
         <Card className="lg:col-span-2 bg-[#111111] border-[#2a2a2a]">
           <CardHeader>
             <div className="flex items-start justify-between">

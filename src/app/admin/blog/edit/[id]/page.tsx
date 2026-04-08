@@ -16,7 +16,9 @@ export default function EditBlogPage() {
   const [formData, setFormData] = useState({
     title: '',
     slug: '',
-    category: 'Technology',
+    category: 'Select Category',
+    status: 'Published',
+    isFeatured: false,
     excerpt: '',
     content: '',
   });
@@ -24,10 +26,31 @@ export default function EditBlogPage() {
   const [tagInput, setTagInput] = useState('');
   const [imagePreview, setImagePreview] = useState<string | null>(null);
   const [errors, setErrors] = useState<Record<string, string>>({});
+  const [existingCategories, setExistingCategories] = useState([
+    "Select Category",
+    "Digital Marketing",
+    "Web Development",
+    "UI/UX Design",
+    "Business Strategy",
+    "SEO",
+    "Technology",
+    "Growth",
+  ]);
 
   /* ── Load existing blog ── */
   useEffect(() => {
     if (!id) return;
+
+    // Fetch existing categories first
+    fetch('/api/admin/blogs')
+      .then(res => res.json())
+      .then(data => {
+        const blogs = data.blogs || [];
+        const cats = Array.from(new Set(blogs.map((b: any) => b.category))).filter(Boolean) as string[];
+        setExistingCategories(prev => [...new Set([...prev, ...cats])]);
+      });
+
+    // Fetch the specific blog
     fetch(`/api/admin/blogs/${id}`)
       .then((res) => res.json())
       .then(({ blog }) => {
@@ -35,7 +58,9 @@ export default function EditBlogPage() {
         setFormData({
           title: blog.title || '',
           slug: blog.slug || '',
-          category: blog.category || 'Technology',
+          category: blog.category || 'Select Category',
+          status: blog.status || 'Published',
+          isFeatured: blog.isFeatured || false,
           excerpt: blog.excerpt || '',
           content: blog.content || '',
         });
@@ -84,7 +109,7 @@ export default function EditBlogPage() {
   const validateForm = () => {
     const newErrors: Record<string, string> = {};
     if (!formData.title.trim()) newErrors.title = 'Post title is required';
-    if (!formData.slug.trim())  newErrors.slug  = 'Slug is required';
+    if (!formData.slug.trim()) newErrors.slug = 'Slug is required';
     if (!formData.content.trim()) newErrors.content = 'Content is required';
     if (!imagePreview) newErrors.featuredImage = 'Image is required';
     setErrors(newErrors);
@@ -104,6 +129,8 @@ export default function EditBlogPage() {
           content: formData.content,
           excerpt: formData.excerpt,
           category: formData.category,
+          status: formData.status,
+          isFeatured: formData.isFeatured,
           tags,
           image: imagePreview || '',
           author: 'Admin',
@@ -146,9 +173,26 @@ export default function EditBlogPage() {
   return (
     <AppShell title="Edit Blog Post" breadcrumb="Blog / Edit">
       <div className="add-blog-form text-white">
-        <div className="page-header mb-6">
-          <h2 className="text-xl font-bold">Edit Blog Post</h2>
-          <p className="text-[#888] text-sm">Update and republish your content</p>
+        <div className='flex justify-between items-between
+        '>
+          <div className="page-header mb-6">
+            <h2 className="text-xl font-bold">Edit Blog Post</h2>
+            <p className="text-[#888] text-sm">Update and republish your content</p>
+          </div>
+          <div className="form-group mb-5">
+            <label className="toggle-container" htmlFor="featured-toggle">
+              <input
+                id="featured-toggle"
+                type="checkbox"
+                name="isFeatured"
+                className="sr-only"
+                checked={formData.isFeatured}
+                onChange={(e) => setFormData(prev => ({ ...prev, isFeatured: e.target.checked }))}
+              />
+              <div className="toggle-switch"></div>
+              <span className="toggle-label">Mark as Featured Post</span>
+            </label>
+          </div>
         </div>
 
         <div className="form-card bg-[#111] border border-[#2a2a2a] p-6 rounded-xl">
@@ -168,7 +212,7 @@ export default function EditBlogPage() {
           </div>
 
           {/* Slug */}
-          <div className="form-group mb-5">
+          <div className="form-group mb-5 mt-5">
             <label className="form-label block text-sm text-[#888] mb-2">Slug</label>
             <input
               type="text"
@@ -181,8 +225,8 @@ export default function EditBlogPage() {
             {errors.slug && <span className="form-error text-red-500 text-xs mt-1">{errors.slug}</span>}
           </div>
 
-          {/* Category */}
-          <div className="form-grid grid grid-cols-1 md:grid-cols-2 gap-5 mb-5">
+          {/* Category and Status Grid */}
+          <div className="form-grid grid grid-cols-1 md:grid-cols-2 gap-5 mb-5 mt-5">
             <div className="form-group">
               <label className="form-label block text-sm text-[#888] mb-2">Category</label>
               <select
@@ -191,13 +235,28 @@ export default function EditBlogPage() {
                 value={formData.category}
                 onChange={handleInputChange}
               >
-                <option>Technology</option>
-                <option>Design</option>
-                <option>Business</option>
-                <option>Marketing</option>
+                {existingCategories.map((cat) => (
+                  <option key={cat} value={cat}>
+                    {cat}
+                  </option>
+                ))}
+              </select>
+            </div>
+            <div className="form-group ">
+              <label className="form-label block text-sm text-[#888] mb-2">Status</label>
+              <select
+                name="status"
+                className="form-input-plain w-full bg-[#1a1a1a] border border-[#2a2a2a] rounded-md px-4 py-2 text-white focus:border-[#ff7a18] outline-none"
+                value={formData.status}
+                onChange={handleInputChange}
+              >
+                <option>Published</option>
+                <option>Not Published</option>
               </select>
             </div>
           </div>
+
+
 
           {/* Excerpt */}
           <div className="form-group mb-5">

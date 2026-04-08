@@ -21,7 +21,7 @@ export function Topbar({ title, breadcrumb }: TopbarProps) {
   return (
     <header className="sticky top-0 z-40 h-16 bg-[#111111] border-b border-[#2a2a2a] flex items-center justify-between px-6 text-white">
       <div>
-        <h1 className="text-[16px] font-bold">{title}</h1>
+        <h1 className="text-[16px] font-bold text-white">{title}</h1>
         <div className="flex items-center gap-1.5 text-[11px] text-[#888] mt-0.5">
           <span>Home</span>
           <span>›</span>

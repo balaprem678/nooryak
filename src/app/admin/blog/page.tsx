@@ -6,7 +6,7 @@ import { Card } from '@/components/admin/ui/card';
 import { Input } from '@/components/admin/ui/input';
 import { Button } from '@/components/admin/ui/button';
 import { Badge } from '@/components/admin/ui/badge';
-import { Search, Plus, Edit, Trash2, Newspaper, Tag, User, FileText } from 'lucide-react';
+import { Search, Plus, Edit, Trash2, Newspaper, Tag, User, FileText, Star, X } from 'lucide-react';
 import { toast } from 'sonner';
 import { useRouter } from 'next/navigation';
 import "./blog.scss";
@@ -21,6 +21,8 @@ interface Blog {
   author: string;
   image: string;
   tags: string[];
+  status?: string;
+  isFeatured?: boolean;
   date: string;
   createdAt: string;
 }
@@ -86,7 +88,7 @@ export default function BlogListPage() {
       {/* Header */}
       <div className="flex items-center justify-between mb-6 text-white">
         <div>
-          <h2 className="text-xl font-bold flex items-center gap-2">
+          <h2 className="text-xl font-bold flex items-center gap-2 text-white">
             <Newspaper className="text-[#ff7a18]" size={20} />
             Blog Posts
           </h2>
@@ -95,20 +97,29 @@ export default function BlogListPage() {
         <div className='flex gap-10'>
           {/* Search */}
           <div className="flex items-center gap-3 mb-5">
-            <div className="relative flex-1 max-w-[400px]">
-              <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-[#888]" size={14} />
-              <Input
-                placeholder="Search..."
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                className="bg-[#111111] border-[#2a2a2a] pl-9 h-10 text-[13px] text-white focus:border-[#ff7a18]"
-              />
-            </div>
             {searchQuery && (
               <span className="text-xs text-[#888]">
                 {filteredBlogs.length} result{filteredBlogs.length !== 1 ? 's' : ''}
               </span>
             )}
+            <div className="relative flex-1 max-w-[400px]">
+              <Search className="absolute right-3 top-1/2 -translate-y-1/2 text-[#888]" size={14} />
+              <Input
+                placeholder="Search..."
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                className="bg-[#111111] border-[#2a2a2a] pl-9 pr-9 h-10 text-[13px] text-white"
+               
+              />
+              {searchQuery && (
+                <button
+                  onClick={() => setSearchQuery('')}
+                  className="absolute right-8 top-1/2 -translate-y-1/2 text-[#888] hover:text-white transition-colors"
+                >
+                  <X size={14} />
+                </button>
+              )}
+            </div>
           </div>
 
           <Button
@@ -122,9 +133,10 @@ export default function BlogListPage() {
       </div>
 
       {/* Stats Bar */}
-      <div className="grid grid-cols-3 gap-4 mb-6">
+      <div className="grid grid-cols-4 gap-4 mb-6">
         {[
           { icon: FileText, label: 'Total Posts', value: blogs.length, color: '#ff7a18' },
+          { icon: Star, label: 'Featured', value: blogs.filter(b => b.isFeatured).length, color: '#f59e0b' },
           { icon: Tag, label: 'Categories', value: new Set(blogs.map(b => b.category)).size, color: '#3b82f6' },
           { icon: User, label: 'Authors', value: new Set(blogs.map(b => b.author)).size, color: '#10b981' },
         ].map(({ icon: Icon, label, value, color }) => (
@@ -149,8 +161,8 @@ export default function BlogListPage() {
               <tr className="bg-[#1a1a1a] border-b border-[#2a2a2a]">
                 <th className="px-6 py-4 text-[11px] font-bold text-[#888] uppercase tracking-wider">Post</th>
                 <th className="px-6 py-4 text-[11px] font-bold text-[#888] uppercase tracking-wider">Category</th>
-                <th className="px-6 py-4 text-[11px] font-bold text-[#888] uppercase tracking-wider">Tags</th>
-                <th className="px-6 py-4 text-[11px] font-bold text-[#888] uppercase tracking-wider">Read Time</th>
+                <th className="px-6 py-4 text-[11px] font-bold text-[#888] uppercase tracking-wider">Status</th>
+                {/* <th className="px-6 py-4 text-[11px] font-bold text-[#888] uppercase tracking-wider">Read Time</th> */}
                 <th className="px-6 py-4 text-[11px] font-bold text-[#888] uppercase tracking-wider">Created</th>
                 <th className="px-6 py-4 text-[11px] font-bold text-[#888] uppercase tracking-wider text-right">Actions</th>
               </tr>
@@ -191,7 +203,7 @@ export default function BlogListPage() {
                   <tr key={blog._id} className="hover:bg-[#161616] transition-colors group">
 
                     {/* Post Details */}
-                    <td className="px-6 py-4">
+                    <td className="px-4 py-2">
                       <div className="flex items-center gap-3">
                         <div className="w-12 h-12 rounded-lg bg-[#222] border border-[#2a2a2a] overflow-hidden flex-shrink-0">
                           {blog.image
@@ -200,8 +212,16 @@ export default function BlogListPage() {
                           }
                         </div>
                         <div>
-                          <div className="font-semibold text-[13px] text-white leading-tight max-w-[220px] truncate">{blog.title}</div>
-                          <div className="text-[11px] text-[#555] mt-0.5 font-mono max-w-[220px] truncate">/{blog.slug}</div>
+                          <div className="font-semibold text-[13px] text-white leading-tight max-w-[150px] truncate">
+                            {blog.isFeatured && (
+                              <Badge className="bg-[#ff7a1822] text-[#ff7a18] border-[#ff7a1844] text-[9px] h-4 px-1.5 uppercase font-bold">
+                                Featured
+                              </Badge>
+                            )}
+                            <h6 className='text-white mt-2'>  {blog.title}</h6>
+
+                          </div>
+                          {/* <div className="text-[11px] text-[#555] mt-0.5 font-mono max-w-[220px] truncate">/{blog.slug}</div> */}
                           {blog.excerpt && (
                             <div className="text-[11px] text-[#666] mt-0.5 max-w-[220px] truncate">{blog.excerpt}</div>
                           )}
@@ -210,41 +230,39 @@ export default function BlogListPage() {
                     </td>
 
                     {/* Category */}
-                    <td className="px-6 py-4">
+                    <td className="px-4 py-2">
                       <Badge variant="outline" className="border-[#2a2a2a] text-[#ccc] text-[11px]">
                         {blog.category || '—'}
                       </Badge>
                     </td>
 
-                    {/* Tags */}
-                    <td className="px-6 py-4">
-                      <div className="flex flex-wrap gap-1 max-w-[160px]">
-                        {blog.tags?.length
-                          ? blog.tags.slice(0, 3).map((tag) => (
-                            <span key={tag} className="text-[10px] px-2 py-0.5 rounded-full bg-[#1a1a1a] border border-[#2a2a2a] text-[#888]">
-                              {tag}
-                            </span>
-                          ))
-                          : <span className="text-[#555] text-[11px]">—</span>
-                        }
-                        {(blog.tags?.length || 0) > 3 && (
-                          <span className="text-[10px] text-[#555]">+{blog.tags.length - 3}</span>
-                        )}
-                      </div>
+                    {/* Status */}
+                    <td className="px-4 py-2">
+                      {blog.status === 'Published' ? (
+                        <Badge className="bg-[#10b98122] text-[#10b981] border-[#10b98144] hover:bg-[#10b98133] text-[10px] font-medium transition-all">
+                          <span className="w-1.5 h-1.5 rounded-full bg-[#10b981] mr-1.5 animate-pulse"></span>
+                          Published
+                        </Badge>
+                      ) : (
+                        <Badge className="bg-[#f59e0b22] text-[#f59e0b] border-[#f59e0b44] hover:bg-[#f59e0b33] text-[10px] font-medium transition-all">
+                          <span className="w-1.5 h-1.5 rounded-full bg-[#f59e0b] mr-1.5"></span>
+                          {blog.status || 'Not Published'}
+                        </Badge>
+                      )}
                     </td>
 
                     {/* Read Time */}
-                    <td className="px-6 py-4 text-[12px] text-[#888]">
+                    {/* <td className="px-6 py-4 text-[12px] text-[#888]">
                       {readTime(blog.content)}
-                    </td>
+                    </td> */}
 
                     {/* Date */}
-                    <td className="px-6 py-4 text-[12px] text-[#888] font-mono whitespace-nowrap">
+                    <td className="px-4 py-2 text-[12px] text-[#888] font-mono whitespace-nowrap">
                       {formatDate(blog.createdAt || blog.date)}
                     </td>
 
                     {/* Actions */}
-                    <td className="px-6 py-4 text-right">
+                    <td className="px-4 py-2 text-right">
                       <div className="flex justify-end gap-2">
                         <button
                           onClick={() => router.push(`/admin/blog/edit/${blog._id}`)}
@@ -263,8 +281,6 @@ export default function BlogListPage() {
                         </button>
                       </div>
                     </td>
-
-
                   </tr>
                 ))
               )}

@@ -27,6 +27,8 @@ export async function GET(req: Request, { params }: { params: Promise<{ id: stri
     await dbConnect();
     const { id } = await params;
     const blog = await Blog.findById(id);
+    console.log(blog, "blog");
+
     if (!blog) return NextResponse.json({ message: 'Blog not found' }, { status: 404 });
     return NextResponse.json({ blog });
   } catch (error: any) {
@@ -44,7 +46,9 @@ export async function PUT(req: Request, { params }: { params: Promise<{ id: stri
 
     await dbConnect();
     const { id } = await params;
+    console.log(params, "boddyyy");
     const body = await req.json();
+
     const blog = await Blog.findByIdAndUpdate(id, body, { new: true, runValidators: true });
     if (!blog) return NextResponse.json({ message: 'Blog not found' }, { status: 404 });
     return NextResponse.json({ blog });
