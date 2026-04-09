@@ -154,7 +154,7 @@ export default function BlogPage() {
                                     </p>
                                 </div>
                                 <h3>{b.title}</h3>
-                                <p className="desc">{b.excerpt || (b.content ? b.content.slice(0, 100) + "..." : "")}</p>
+                                <p className="desc">{b.excerpt || (b.content ? b.content.replace(/<[^>]*>?/gm, '').slice(0, 100) + "..." : "")}</p>
                                 <div className="bottom">
                                     <Link href={`/blog/${b.slug}`}>Read More →</Link>
                                     {/* <span>{estimateReadTime(b.content)}</span> */}
