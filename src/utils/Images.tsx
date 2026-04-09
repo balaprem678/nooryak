@@ -9,6 +9,7 @@ import linkedin from "../../public/assets/images/common/linkedin.png";
 import youtube from "../../public/assets/images/common/youtube.png";
 import trustpilot from "../../public/assets/images/common/trustpilot.png";
 import mobile from "../../public/assets/images/mobile.png";
+import favicon from "../../public/assets/images/common/favicon.png";
 
 // Home Images Import Here
 import herobanner from "../../public/assets/images/home/herobanner.webp";
@@ -69,7 +70,7 @@ import blog_banner from "../../public/assets/images/blog/blog_banner.png";
 export const Images = {
 
     // Common Images Import Here
-    logo, gmail, instagram, whatsapp, twitter, facebook, linkedin, youtube, mobile, trustpilot,
+    logo, gmail, instagram, whatsapp, twitter, facebook, linkedin, youtube, mobile, trustpilot,favicon,
 
     // Home Images Import here
     herobanner, herobanner1, herobanner_person, about_1, about_2, abt_sec, services_1, services_2, services_3, services_4, craftingwebsite_banner, why_choose_card_icon_1, why_choose_card_icon_2, why_choose_card_icon_3, why_choose_card_icon_4, project_1, project_2, project_3, project_4, project_5, project_6, clientlogo_1, clientlogo_2, clientlogo_3, clientlogo_4, clientlogo_5, clientlogo_6, clientlogo_7, clientlogo_8, clientlogo_9, clientlogo_10, clientlogo_11, clientlogo_12, clientlogo_13, clientlogo_14, clientlogo_15, clientlogo_16, clientlogo_17, clientlogo_18, clientlogo_19,

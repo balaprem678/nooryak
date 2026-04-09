@@ -39,6 +39,7 @@ export default function AddBlogPage() {
     "Business Strategy",
     "SEO",
     "Technology",
+    "Business Strategy",
     "Growth",
   ]);
 
@@ -103,14 +104,21 @@ export default function AddBlogPage() {
   };
 
   const addTag = (e: React.KeyboardEvent<HTMLInputElement>) => {
-    if (e.key !== 'Enter') return;
-    e.preventDefault();
-    const val = tagInput.trim();
-    if (!val) return;
-    if (!tags.includes(val)) {
-      setTags([...tags, val]);
+    if (e.key === 'Enter' || e.key === ',') {
+      e.preventDefault();
+      const val = tagInput.trim();
+      if (!val) return;
+
+      // Split by comma to handle bulk pasting or comma separation
+      const newTagsFromInput = val.split(',')
+        .map(t => t.trim())
+        .filter(t => t.length > 0 && !tags.includes(t));
+
+      if (newTagsFromInput.length > 0) {
+        setTags([...tags, ...newTagsFromInput]);
+      }
+      setTagInput('');
     }
-    setTagInput('');
   };
 
   const removeTag = (indexToRemove: number) => {
@@ -136,7 +144,7 @@ export default function AddBlogPage() {
         title: formData.title,
         slug: formData.slug,
         content: formData.content,
-        excerpt: formData.excerpt,
+        // excerpt: formData.excerpt,
         category: formData.category,
         status: formData.status,
         isFeatured: formData.isFeatured,
@@ -271,7 +279,7 @@ export default function AddBlogPage() {
 
 
           {/* Excerpt */}
-          <div className="form-group">
+          {/* <div className="form-group">
             <label className="form-label block text-sm text-[#888] mb-2">Excerpt</label>
             <textarea
               name="excerpt"
@@ -281,7 +289,7 @@ export default function AddBlogPage() {
               value={formData.excerpt}
               onChange={handleInputChange}
             />
-          </div>
+          </div> */}
 
           {/* Content */}
           <div className="form-group">
@@ -338,7 +346,16 @@ export default function AddBlogPage() {
 
           {/* Tags */}
           <div className="form-group mb-8">
-            <label className="form-label block text-sm text-[#888] mb-2">Tags</label>
+            <div className="flex justify-between items-center mb-2">
+              <label className="form-label block text-sm text-[#888]">Tags</label>
+              {tags.length > 0 && (
+                <button
+                  type="button"
+                  onClick={() => setTags([])}
+                  className="text-red-500 hover:text-red-400 text-xs flex items-center gap-1"
+                ><Icon name="trash" className="mr-1" /> Remove All</button>
+              )}
+            </div>
             <div className="tag-wrap flex flex-wrap gap-2 p-2 bg-[#1a1a1a] border border-[#2a2a2a] rounded-md">
               {tags.map((tag, index) => (
                 <span key={index} className="tag flex items-center gap-1 bg-[#222] px-2 py-1 rounded text-sm group">

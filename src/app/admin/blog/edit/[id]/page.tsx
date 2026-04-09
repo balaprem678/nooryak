@@ -96,12 +96,21 @@ export default function EditBlogPage() {
   };
 
   const addTag = (e: React.KeyboardEvent<HTMLInputElement>) => {
-    if (e.key !== 'Enter') return;
-    e.preventDefault();
-    const val = tagInput.trim();
-    if (!val || tags.includes(val)) return;
-    setTags([...tags, val]);
-    setTagInput('');
+    if (e.key === 'Enter' || e.key === ',') {
+      e.preventDefault();
+      const val = tagInput.trim();
+      if (!val) return;
+
+      // Split by comma to handle multiple tags at once
+      const newTagsFromInput = val.split(',')
+        .map(t => t.trim())
+        .filter(t => t.length > 0 && !tags.includes(t));
+
+      if (newTagsFromInput.length > 0) {
+        setTags([...tags, ...newTagsFromInput]);
+      }
+      setTagInput('');
+    }
   };
 
   const removeTag = (i: number) => setTags(tags.filter((_, idx) => idx !== i));
@@ -127,7 +136,7 @@ export default function EditBlogPage() {
           title: formData.title,
           slug: formData.slug,
           content: formData.content,
-          excerpt: formData.excerpt,
+          // excerpt: formData.excerpt,
           category: formData.category,
           status: formData.status,
           isFeatured: formData.isFeatured,
@@ -196,35 +205,35 @@ export default function EditBlogPage() {
         </div>
 
         <div className="form-card bg-[#111] border border-[#2a2a2a] p-6 rounded-xl">
+          <div className="form-grid grid grid-cols-1 md:grid-cols-2 gap-5 mb-5 mt-5">
+            {/* Title */}
+            <div className="form-group mb-5">
+              <label className="form-label block text-sm text-[#888] mb-2">Post Title *</label>
+              <input
+                type="text"
+                name="title"
+                className={`form-input-plain w-full bg-[#1a1a1a] border border-[#2a2a2a] rounded-md px-4 py-2 text-white focus:border-[#ff7a18] outline-none ${errors.title ? 'border-red-500' : ''}`}
+                placeholder="Enter post title…"
+                value={formData.title}
+                onChange={handleInputChange}
+              />
+              {errors.title && <span className="form-error text-red-500 text-xs mt-1">{errors.title}</span>}
+            </div>
 
-          {/* Title */}
-          <div className="form-group mb-5">
-            <label className="form-label block text-sm text-[#888] mb-2">Post Title *</label>
-            <input
-              type="text"
-              name="title"
-              className={`form-input-plain w-full bg-[#1a1a1a] border border-[#2a2a2a] rounded-md px-4 py-2 text-white focus:border-[#ff7a18] outline-none ${errors.title ? 'border-red-500' : ''}`}
-              placeholder="Enter post title…"
-              value={formData.title}
-              onChange={handleInputChange}
-            />
-            {errors.title && <span className="form-error text-red-500 text-xs mt-1">{errors.title}</span>}
+            {/* Slug */}
+            <div className="form-group mb-5 mt-5">
+              <label className="form-label block text-sm text-[#888] mb-2">Slug</label>
+              <input
+                type="text"
+                name="slug"
+                className={`form-input-plain w-full bg-[#1a1a1a] border border-[#2a2a2a] rounded-md px-4 py-2 text-white focus:border-[#ff7a18] outline-none ${errors.slug ? 'border-red-500' : ''}`}
+                placeholder="post-url-slug"
+                value={formData.slug}
+                onChange={handleInputChange}
+              />
+              {errors.slug && <span className="form-error text-red-500 text-xs mt-1">{errors.slug}</span>}
+            </div>
           </div>
-
-          {/* Slug */}
-          <div className="form-group mb-5 mt-5">
-            <label className="form-label block text-sm text-[#888] mb-2">Slug</label>
-            <input
-              type="text"
-              name="slug"
-              className={`form-input-plain w-full bg-[#1a1a1a] border border-[#2a2a2a] rounded-md px-4 py-2 text-white focus:border-[#ff7a18] outline-none ${errors.slug ? 'border-red-500' : ''}`}
-              placeholder="post-url-slug"
-              value={formData.slug}
-              onChange={handleInputChange}
-            />
-            {errors.slug && <span className="form-error text-red-500 text-xs mt-1">{errors.slug}</span>}
-          </div>
-
           {/* Category and Status Grid */}
           <div className="form-grid grid grid-cols-1 md:grid-cols-2 gap-5 mb-5 mt-5">
             <div className="form-group">
@@ -259,7 +268,7 @@ export default function EditBlogPage() {
 
 
           {/* Excerpt */}
-          <div className="form-group mb-5">
+          {/* <div className="form-group mb-5">
             <label className="form-label block text-sm text-[#888] mb-2">Excerpt</label>
             <textarea
               name="excerpt"
@@ -269,7 +278,7 @@ export default function EditBlogPage() {
               value={formData.excerpt}
               onChange={handleInputChange}
             />
-          </div>
+          </div> */}
 
           {/* Content */}
           <div className="form-group mb-5">
