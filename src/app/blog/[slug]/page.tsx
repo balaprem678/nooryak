@@ -174,7 +174,7 @@ export default function BlogDetailPage() {
 
             {/* 🔹 Description */}
             <p className="desc">
-              {blog.excerpt || (blog.content ? blog.content.slice(0, 160) + "..." : "")}
+              {blog.excerpt || (blog.content ? blog.content.replace(/<[^>]*>?/gm, '').slice(0, 160) + "..." : "")}
             </p>
 
             {/* 🔹 Author + Share */}
