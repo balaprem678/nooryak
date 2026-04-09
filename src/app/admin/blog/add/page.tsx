@@ -145,7 +145,7 @@ export default function AddBlogPage() {
         title: formData.title,
         slug: formData.slug,
         content: formData.content,
-        // excerpt: formData.excerpt,
+        excerpt: formData.excerpt,
         category: formData.category,
         status: formData.status,
         isFeatured: formData.isFeatured,
