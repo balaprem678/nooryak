@@ -1,11 +1,12 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useMemo } from 'react';
 import { useParams, useRouter } from 'next/navigation';
 import Link from 'next/link';
 import "./blogdetail.scss"
 import BlogSidebar from '../blogsidebar';
 import FeatureProject from '../featureproject';
+import { toast } from 'sonner';
 import { Images } from '@/utils/Images';
 
 interface Blog {
@@ -22,13 +23,14 @@ interface Blog {
   tags: string[];
   isFeatured?: boolean;
   status?: string;
+  views?: number;
 }
 
 export default function BlogDetailPage() {
   const params = useParams();
   const slug = params ? (params as any).slug : null;
   const [blog, setBlog] = useState<Blog | null>(null);
-  const [featuredBlogs, setFeaturedBlogs] = useState<Blog[]>([]);
+  const [allBlogs, setAllBlogs] = useState<Blog[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
 
@@ -53,21 +55,43 @@ export default function BlogDetailPage() {
     if (slug) fetchBlog();
   }, [slug]);
 
-  // Fetch featured blogs for the bottom section
+  // Fetch blogs for sidebar and bottom section
   useEffect(() => {
     fetch("/api/admin/blogs")
       .then((res) => res.json())
       .then((data) => {
-        const fetchedBlogs = data.blogs || [];
-        const featured = fetchedBlogs.filter(
-          (b: Blog) =>
-            (b.isFeatured === true || String(b.isFeatured) === "true") &&
-            (!b.status || b.status === "Published")
-        );
-        setFeaturedBlogs(featured);
+        setAllBlogs(data.blogs || []);
       })
-      .catch((err) => console.error("Error fetching featured blogs:", err));
+      .catch((err) => console.error("Error fetching blogs:", err));
   }, []);
+
+  const publishedBlogs = useMemo(() =>
+    allBlogs.filter(b => !b.status || b.status === "Published"),
+    [allBlogs]);
+
+  const featuredBlogs = useMemo(() =>
+    publishedBlogs.filter(b => b.isFeatured === true || String(b.isFeatured) === "true"),
+    [publishedBlogs]);
+
+  const categories = useMemo(() => {
+    const counts: Record<string, number> = {};
+    publishedBlogs.forEach((b) => {
+      if (b.category) {
+        counts[b.category] = (counts[b.category] || 0) + 1;
+      }
+    });
+    return Object.keys(counts).map((key) => ({
+      name: key,
+      count: counts[key],
+    }));
+  }, [publishedBlogs]);
+
+  const popular = useMemo(() => {
+    return [...publishedBlogs]
+      .filter((b: Blog) => (b.views || 0) > 1)
+      .sort((a: Blog, b: Blog) => (b.views || 0) - (a.views || 0))
+      .slice(0, 4);
+  }, [publishedBlogs]);
 
   // Reading Progress Logic
   useEffect(() => {
@@ -95,6 +119,11 @@ export default function BlogDetailPage() {
     const words = content.trim().split(/\s+/).length || 0;
     const minutes = Math.max(1, Math.ceil(words / 200));
     return `${minutes} min read`;
+  };
+
+  const handleCopyLink = () => {
+    navigator.clipboard.writeText(window.location.href);
+    toast.success('Link copied to clipboard!');
   };
 
   if (loading) {
@@ -128,7 +157,7 @@ export default function BlogDetailPage() {
 
       <div className="blog-detail">
         <div className="row">
-          <div className="col-lg-8 col-md-12 col-sm-12">
+          <div className="col-lg-8 col-md-12 col-sm-12 details_sec">
             {/* 🔹 Breadcrumb */}
             <div className="breadcrumb">
               <Link href="/">Home</Link> › <Link href="/blog">Blog</Link> › <span>{blog.category}</span> ›
@@ -159,9 +188,17 @@ export default function BlogDetailPage() {
 
               <div className="share">
                 <span>Share:</span>
-                <i className="fa-brands fa-facebook"></i>
-                <i className="fa-brands fa-x-twitter"></i>
-                <i className="fa-brands fa-linkedin"></i>
+                <a href="">
+                  <i className="fa-brands fa-facebook"></i>
+
+                </a>
+                <a href="">
+                  <i className="fa-brands fa-x-twitter"></i>
+                </a>
+                <a href="">
+                  <i className="fa-brands fa-linkedin"></i>
+                </a>
+                <i className="fa-solid fa-link" onClick={handleCopyLink} title="Copy Link"></i>
               </div>
             </div>
 
@@ -182,9 +219,9 @@ export default function BlogDetailPage() {
             <BlogSidebar
               search=""
               setSearch={() => { }}
-              categories={[]}
-              popular={[]}
-              activeTab=""
+              categories={categories}
+              popular={popular}
+              activeTab={blog?.category || ""}
               setActiveTab={() => { }}
             />
           </div>
