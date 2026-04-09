@@ -3,6 +3,7 @@
 import React, { useEffect, useState } from 'react';
 import { useRouter, useParams } from 'next/navigation';
 import { AppShell } from '@/components/admin/layout/AppShell';
+import RichTextEditor from '@/components/admin/RichTextEditor';
 import { toast } from 'sonner';
 import '../../blog.scss';
 
@@ -267,9 +268,9 @@ export default function EditBlogPage() {
 
 
 
-          {/* Excerpt */}
-          {/* <div className="form-group mb-5">
-            <label className="form-label block text-sm text-[#888] mb-2">Excerpt</label>
+          {/* Description (Excerpt) */}
+          <div className="form-group mb-5">
+            <label className="form-label block text-sm text-[#888] mb-2">Description</label>
             <textarea
               name="excerpt"
               className="form-input-plain w-full bg-[#1a1a1a] border border-[#2a2a2a] rounded-md px-4 py-2 text-white focus:border-[#ff7a18] outline-none"
@@ -278,18 +279,15 @@ export default function EditBlogPage() {
               value={formData.excerpt}
               onChange={handleInputChange}
             />
-          </div> */}
+          </div>
 
           {/* Content */}
           <div className="form-group mb-5">
             <label className="form-label block text-sm text-[#888] mb-2">Content *</label>
-            <textarea
-              name="content"
-              className={`form-input-plain w-full bg-[#1a1a1a] border border-[#2a2a2a] rounded-md px-4 py-2 text-white focus:border-[#ff7a18] outline-none ${errors.content ? 'border-red-500' : ''}`}
-              rows={8}
-              placeholder="Write your post content here…"
+            <RichTextEditor
               value={formData.content}
-              onChange={handleInputChange}
+              onChange={(content) => setFormData(prev => ({ ...prev, content }))}
+              error={errors.content}
             />
             {errors.content && <span className="form-error text-red-500 text-xs mt-1">{errors.content}</span>}
           </div>
