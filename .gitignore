@@ -40,6 +40,6 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 # local testing
-scripts/seedData.mjs
+# scripts/seedData.mjs
 #evn
 next-env.d.ts
