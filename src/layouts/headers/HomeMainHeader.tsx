@@ -16,7 +16,7 @@ const HomeMainHeader = () => {
 
     return (
         <>
-            <header className={`custom-header ${isSticky ? "sticky" : ""}`}>
+            <header className={`custom-header ${isSticky ? "sticky fadeInDown animated" : ""}`}>
                 <div className="header-inner">
 
                     {/* Logo */}

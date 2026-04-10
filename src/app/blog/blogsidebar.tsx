@@ -46,7 +46,7 @@ export default function BlogSidebar({
     setActiveTab
 }: BlogSidebarProps) {
     return (
-        <div>
+        <div className="sidebar">
             <div className="search">
                 <input
                     placeholder="Search blogs..."

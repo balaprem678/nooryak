@@ -129,7 +129,7 @@ export default function BlogDetailPage() {
   if (loading) {
     return (
       <div className="min-h-screen bg-[#0a0a0a] flex flex-col items-center justify-center text-white gap-4">
-        <div className="w-12 h-12 border-4 border-t-[#ff7a18] border-[#1a1a1a] rounded-full animate-spin"></div>
+        <div className="w-100 h-100 border-4 border-t-[#ff7a18] border-[#1a1a1a] rounded-full animate-spin"></div>
         <p className="text-[#888] animate-pulse">Loading story…</p>
       </div>
     );
@@ -215,7 +215,7 @@ export default function BlogDetailPage() {
 
             </div>
           </div>
-          <div className="sidebar col-lg-4 col-md-12 col-sm-12">
+          <div className=" col-lg-4 col-md-12 col-sm-12">
             <BlogSidebar
               search=""
               setSearch={() => { }}
@@ -225,7 +225,7 @@ export default function BlogDetailPage() {
               setActiveTab={() => { }}
             />
           </div>
-          <div className="col-lg-12 featured_section">
+          <div className="col-lg-12 ">
             <FeatureProject blogs={featuredBlogs} />
           </div>
         </div>

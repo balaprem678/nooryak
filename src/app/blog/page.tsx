@@ -167,7 +167,7 @@ export default function BlogPage() {
                 </div>
 
 
-                <div className="sidebar col-lg-4 col-md-12">
+                <div className=" col-lg-4 col-md-12">
                     <BlogSidebar
                         search={search}
                         setSearch={setSearch}
@@ -226,7 +226,7 @@ export default function BlogPage() {
                 </div>
 
                 {/* Featured Section */}
-                <div className="col-lg-12 featured_section">
+                <div className="col-lg-12 ">
                     <FeatureProject blogs={featuredBlogs} />
                 </div>
             </div>

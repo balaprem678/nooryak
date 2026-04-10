@@ -32,7 +32,7 @@ export default function FeatureProject({ blogs }: FeatureProjectProps) {
     if (blogs.length === 0) return null;
 
     return (
-        <div className="row">
+        <div className="row featured_section">
             <div className="featured_projects mb-10 w-full">
                 <div className="section-title-wrap mb-6">
                     <h3 className="section-title text-2xl font-bold">
@@ -43,7 +43,7 @@ export default function FeatureProject({ blogs }: FeatureProjectProps) {
 
                 <div className="featured_projects_child row">
                     {blogs.map((b) => (
-                        <div className="col-md-3 col-sm-12" key={b._id}>
+                        <div className="col-lg-3 col-md-4 col-sm-12" key={b._id}>
                             <div className="card">
                                 <div className="img">
                                     <img src={b.image} alt={b.title} />

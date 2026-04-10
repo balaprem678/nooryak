@@ -295,7 +295,7 @@ export default function BlogListPage() {
                           </div>
                           {/* <div className="text-[11px] text-[#555] mt-0.5 font-mono max-w-[220px] truncate">/{blog.slug}</div> */}
                           {blog.excerpt && (
-                            <div className="text-[11px] text-[#666] mt-0.5 max-w-[220px] truncate">{blog.excerpt}</div>
+                            <div className="text-[11px] text-[#666] mt-0.5 max-w-[150px] truncate">{blog.excerpt}</div>
                           )}
                         </div>
                       </div>

@@ -1,15 +1,11 @@
 .blog-detail {
-    padding: 120px 20px 40px 20px;
+    padding: 120px 80px 40px;
     color: #111;
     max-width: 1300px;
     margin: 0 auto;
 
-    @media (min-width: 768px) {
-        padding: 140px 40px 40px 40px;
-    }
-
-    @media (min-width: 1200px) {
-        padding: 160px 80px 40px 80px;
+    .row {
+        position: relative;
     }
 
     .breadcrumb {
@@ -218,28 +214,5 @@
         }
     }
 
-    .sidebar-col {
-        margin-top: 50px;
 
-        @media (min-width: 992px) {
-            margin-top: 0;
-        }
-    }
-}
-
-
-@media screen and (max-width:767px) {
-
-
-    .details_sec {
-        order: 1;
-    }
-
-    .featured_section {
-        order: 2;
-    }
-
-    .sidebar {
-        order: 3;
-    }
 }
