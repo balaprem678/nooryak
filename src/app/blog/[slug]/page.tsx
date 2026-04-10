@@ -128,7 +128,7 @@ export default function BlogDetailPage() {
 
   if (loading) {
     return (
-      <div className="min-h-screen bg-[#0a0a0a] flex flex-col items-center justify-center text-white gap-4">
+      <div className="min-h-screen bg-[#0a0a0a] flex flex-col items-center justify-center text-white gap-4 loadingstory">
         <div className="w-100 h-100 border-4 border-t-[#ff7a18] border-[#1a1a1a] rounded-full animate-spin"></div>
         <p className="text-[#888] animate-pulse">Loading story…</p>
       </div>
@@ -211,8 +211,54 @@ export default function BlogDetailPage() {
             <div className="contents" dangerouslySetInnerHTML={{ __html: blog.content }}>
             </div>
 
-            <div className="widget">
+            <div className="cta-wrapper">
+              <div className="cta-banner">
+                <div className="cta-content">
+                  <h3>Ready to scale your business with digital marketing?</h3>
+                  <p>
+                    Let Nooryak Technologies help you create strategies that deliver
+                    measurable results.
+                  </p>
+                </div>
 
+                <button className="cta-btn">
+                  Start a Project <span>→</span>
+                </button>
+              </div>
+
+              {/* Share Section */}
+              <div className="share-section">
+                <span>Share this article:</span>
+
+                <div className="icons">
+                  <button className="icon fb">f</button>
+                  <button className="icon x">x</button>
+                  <button className="icon in">in</button>
+                  <button className="icon link">🔗</button>
+                </div>
+              </div>
+
+              {/* Author Card */}
+              <div className="author-card">
+                <div className="author-left">
+                  <div className="logo">
+                    <img src={Images.favicon.src} alt="Nooryak" />
+                  </div>
+
+                  <div>
+                    <h4>Nooryak Team</h4>
+                    <p>
+                      We are a team of digital experts passionate about helping
+                      businesses grow through innovative technology and data-driven
+                      strategies.
+                    </p>
+                  </div>
+                </div>
+
+                <button className="view-posts">
+                  View all posts →
+                </button>
+              </div>
             </div>
           </div>
           <div className=" col-lg-4 col-md-12 col-sm-12">
@@ -233,3 +279,6 @@ export default function BlogDetailPage() {
     </>
   );
 }
+
+
+
