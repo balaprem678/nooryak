@@ -172,9 +172,8 @@ export default function NavMenus() {
       {menuData.map((menu) => (
         <li
           key={menu.id}
-          className={`has-dropdown ${
-            menu.megaMenu || menu.smallMenu || menu.mediumMenu ? "p-static active" : ""
-          } ${hoveredMenu === menu.id ? "active" : ""}`}
+          className={`has-dropdown ${menu.megaMenu || menu.smallMenu || menu.mediumMenu ? "p-static active" : ""
+            } ${hoveredMenu === menu.id ? "active" : ""}`}
           onMouseEnter={() => setHoveredMenu(menu.id)}
         >
           <Link href={menu.link}>
@@ -192,7 +191,9 @@ export default function NavMenus() {
                   <div key={i} className={`tp-megamenu-list ${getColumnClass(menu)}`}>
 
                     {submenu.title && (
-                      <h4 className="tp-megamenu-title">{submenu.title}</h4>
+                      <ThemeLink href={submenu.link || "#"}>
+                        <h4 className="tp-megamenu-title">{submenu.title}</h4>
+                      </ThemeLink>
                     )}
 
                     {submenu.megaMenu && (

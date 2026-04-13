@@ -129,8 +129,39 @@ export default function BlogDetailPage() {
   if (loading) {
     return (
       <div className="min-h-screen bg-[#0a0a0a] flex flex-col items-center justify-center text-white gap-4 loadingstory">
-        <div className="w-100 h-100 border-4 border-t-[#ff7a18] border-[#1a1a1a] rounded-full animate-spin"></div>
-        <p className="text-[#888] animate-pulse">Loading story…</p>
+        {/* <div className="w-100 h-100 border-4 border-t-[#ff7a18] border-[#1a1a1a] rounded-full animate-spin"></div> */}
+        <svg
+          viewBox="0 0 24 24"
+          width="50"
+          height="50"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <style>
+            {`
+          @keyframes loader8 {
+            0% { transform: scale(1) rotateZ(0); }
+            50% { transform: scale(1.5) rotateZ(180deg); }
+            100% { transform: scale(1) rotateZ(360deg); }
+          }
+        `}
+          </style>
+
+          <g
+            style={{
+              animation: "loader8 1s cubic-bezier(.72,.08,.38,.87) infinite both",
+              transformOrigin: "center",
+            }}
+          >
+            <path
+              d="M12.035 8v8M16 12H8"
+              stroke="#ff7a18"
+              strokeWidth="2"
+              strokeLinecap="round"
+            />
+            <circle cx="12" cy="12" r="1.635" fill="#ff7a18" />
+          </g>
+        </svg>
       </div>
     );
   }
@@ -231,17 +262,17 @@ export default function BlogDetailPage() {
                 <span>Share this article:</span>
 
                 <div className="icons">
-                  <button className="icon fb">f</button>
-                  <button className="icon x">x</button>
-                  <button className="icon in">in</button>
-                  <button className="icon link">🔗</button>
+                  <a href='' className="icon fb">f</a>
+                  <a href='' className="icon x">x</a>
+                  <a href='' className="icon in">in</a>
+                  <a href='' className="icon link">🔗</a>
                 </div>
               </div>
 
               {/* Author Card */}
               <div className="author-card">
                 <div className="author-left">
-                  <div className="logo">
+                  <div className="logos">
                     <img src={Images.favicon.src} alt="Nooryak" />
                   </div>
 

@@ -10,6 +10,20 @@ import youtube from "../../public/assets/images/common/youtube.png";
 import trustpilot from "../../public/assets/images/common/trustpilot.png";
 import mobile from "../../public/assets/images/mobile.png";
 import favicon from "../../public/assets/images/common/favicon.png";
+import dashboard from "../../public/assets/images/common/dashboard.png";
+import optimization from "../../public/assets/images/common/optimization.png";
+import support from "../../public/assets/images/common/support.png";
+import setting from "../../public/assets/images/common/setting.png";
+import next from "../../public/assets/images/common/next.png";
+import programming from "../../public/assets/images/common/programming.png";
+import wordpress from "../../public/assets/images/common/wordpress.png";
+import shoppingcart from "../../public/assets/images/common/shopping-cart.png";
+import shopify from "../../public/assets/images/common/shopify.png";
+import php from "../../public/assets/images/common/php.png";
+import react from "../../public/assets/images/common/react.png";
+import customwebsite from "../../public/assets/images/common/customwebsite.png";
+import websitedevelopment from "../../public/assets/images/common/websitedevelopment.png";
+
 
 // Home Images Import Here
 import herobanner from "../../public/assets/images/home/herobanner.webp";
@@ -67,10 +81,14 @@ import avaterFive from "../../public/assets/images/home/client5.webp";
 // Blog Images Import Here
 import blog_banner from "../../public/assets/images/blog/blog_banner.png";
 
+// Services Images Import Here
+import Webdevelopment from "../../public/assets/images/servives/webdevelopment.png";
+import Appdevlopment from "../../public/assets/images/servives/appdevlopment.png";
+
 export const Images = {
 
     // Common Images Import Here
-    logo, gmail, instagram, whatsapp, twitter, facebook, linkedin, youtube, mobile, trustpilot,favicon,
+    logo, gmail, instagram, whatsapp, twitter, facebook, linkedin, youtube, mobile, trustpilot, favicon, next, programming, wordpress, shoppingcart, shopify, php, customwebsite, websitedevelopment,
 
     // Home Images Import here
     herobanner, herobanner1, herobanner_person, about_1, about_2, abt_sec, services_1, services_2, services_3, services_4, craftingwebsite_banner, why_choose_card_icon_1, why_choose_card_icon_2, why_choose_card_icon_3, why_choose_card_icon_4, project_1, project_2, project_3, project_4, project_5, project_6, clientlogo_1, clientlogo_2, clientlogo_3, clientlogo_4, clientlogo_5, clientlogo_6, clientlogo_7, clientlogo_8, clientlogo_9, clientlogo_10, clientlogo_11, clientlogo_12, clientlogo_13, clientlogo_14, clientlogo_15, clientlogo_16, clientlogo_17, clientlogo_18, clientlogo_19,
@@ -78,5 +96,8 @@ export const Images = {
     avaterOne, avaterTwo, avaterThree, avaterFour, avaterFive,
 
     // Blog Images Import Here
-    blog_banner,    
+    blog_banner,
+
+    // Services Images Import Here
+    Webdevelopment, Appdevlopment, optimization, setting, dashboard, support, react,
 };

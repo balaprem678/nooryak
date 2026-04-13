@@ -36,7 +36,8 @@
     "src/components/shared/Parallax/useParallax.js",
     ".next\\dev/types/**/*.ts",
     ".next\\dev/types/**/*.ts",
-    ".next/dev/types/**/*.ts"
+    ".next/dev/types/**/*.ts",
+    "src/app/services/submenu/ourprocess.tsx"
   ],
   "exclude": [
     "node_modules"

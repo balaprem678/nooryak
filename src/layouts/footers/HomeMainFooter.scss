@@ -69,6 +69,14 @@
             will-change: transform;
             font-size: 350px;
 
+            @media screen and (max-width:992px) {
+                font-size: 200px;
+            }
+            @media screen and (max-width:678px) {
+                font-size: 150px;
+            }
+
+
             &:hover {
                 transform: translateY(5%) scaleY(1.1);
             }

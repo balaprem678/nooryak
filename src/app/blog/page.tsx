@@ -43,12 +43,11 @@ export default function BlogPage() {
     const [activeTab, setActiveTab] = useState("All Articles");
     const [search, setSearch] = useState("");
     const [tabs, setTabs] = useState<string[]>(["All Articles"]);
-    const [currentPage, setCurrentPage] = useState(1);
-    const itemsPerPage = 6;
+    const [visibleCount, setVisibleCount] = useState(9);
 
     // Reset page when tab or search changes
     useEffect(() => {
-        setCurrentPage(1);
+        setVisibleCount(9);
     }, [activeTab, search]);
 
     useEffect(() => {
@@ -83,8 +82,7 @@ export default function BlogPage() {
         });
     }, [publishedBlogs, search, activeTab]);
 
-    const totalPages = Math.ceil(regularBlogs.length / itemsPerPage);
-    const displayedRegularBlogs = regularBlogs.slice((currentPage - 1) * itemsPerPage, currentPage * itemsPerPage);
+    const displayedRegularBlogs = regularBlogs.slice(0, visibleCount);
 
     /* 📊 Category Count */
     const categories = useMemo(() => {
@@ -137,7 +135,7 @@ export default function BlogPage() {
             <div className="content row">
 
 
-                <div className="blogs col-lg-8 col-md-12">
+                <div className="blogs col-xl-8 col-lg-12 col-md-12">
                     {displayedRegularBlogs.length === 0 && <p className="noblogfound">No regular articles found</p>}
 
                     {displayedRegularBlogs.map((b) => (
@@ -167,7 +165,7 @@ export default function BlogPage() {
                 </div>
 
 
-                <div className=" col-lg-4 col-md-12">
+                <div className="col-xl-4 col-lg-12 col-md-12 sidebar_main">
                     <BlogSidebar
                         search={search}
                         setSearch={setSearch}
@@ -178,55 +176,21 @@ export default function BlogPage() {
                     />
                 </div>
 
-                <div className="col-12">
-                    {totalPages > 1 && (
-                        <div className="pagination-container d-flex justify-content-center w-100 mt-5">
+                <div className="col-12 load_more_main">
+                    {visibleCount < regularBlogs.length && (
+                        <div className="load-more-container d-flex justify-content-center w-100 mt-10 pt-10">
                             <button
-                                className={`page-btn prev ${currentPage === 1 ? 'disabled' : ''}`}
-                                onClick={() => setCurrentPage(prev => Math.max(1, prev - 1))}
-                                disabled={currentPage === 1}
+                                className="header-btn"
+                                style={{ border: 'none', cursor: 'pointer' }}
+                                onClick={() => setVisibleCount(prev => prev + 6)}
                             >
-                                <i className="fa-solid fa-chevron-left"></i>
-                            </button>
-
-                            {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => {
-                                // Simple logic to show a few pages around current page
-                                if (
-                                    page === 1 ||
-                                    page === totalPages ||
-                                    (page >= currentPage - 1 && page <= currentPage + 1)
-                                ) {
-                                    return (
-                                        <button
-                                            key={page}
-                                            className={`page-btn ${currentPage === page ? 'active' : ''}`}
-                                            onClick={() => setCurrentPage(page)}
-                                        >
-                                            {page}
-                                        </button>
-                                    );
-                                } else if (
-                                    page === currentPage - 2 ||
-                                    page === currentPage + 2
-                                ) {
-                                    return <span key={page} className="pagination-dots">...</span>;
-                                }
-                                return null;
-                            })}
-
-                            <button
-                                className={`page-btn next ${currentPage === totalPages ? 'disabled' : ''}`}
-                                onClick={() => setCurrentPage(prev => Math.min(totalPages, prev + 1))}
-                                disabled={currentPage === totalPages}
-                            >
-                                <i className="fa-solid fa-chevron-right"></i>
+                                <span className="btn-text">Load More Articles</span>
                             </button>
                         </div>
                     )}
                 </div>
-
                 {/* Featured Section */}
-                <div className="col-lg-12 ">
+                <div className="col-lg-12 featured_main">
                     <FeatureProject blogs={featuredBlogs} />
                 </div>
             </div>

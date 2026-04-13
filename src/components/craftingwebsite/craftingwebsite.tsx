@@ -47,7 +47,7 @@ export default function CraftingWebsite() {
           </div>
 
           <h1 className="ds-title">
-            Crafting Websites <span className="highlight">with
+            Crafting Websites with<span className="highlight">
               <br />
               Purpose and Passion</span>
           </h1>

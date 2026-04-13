@@ -2,6 +2,7 @@
     background: radial-gradient(circle at right, rgba(255, 102, 0, 0.25), transparent 40%), #000;
     padding-top: 120px;
     padding-inline: 50px;
+    padding-bottom: 40px;
 
     @media screen and (max-width: 767px) {
         padding-inline: 10px;
@@ -492,6 +493,10 @@
         box-shadow: 0 0 4px 0px #ccc;
         padding: 10px;
 
+        @media screen and (max-width:1200px) {
+            margin-top: 20px;
+        }
+
         input {
             flex: 1;
             border-radius: 8px;
@@ -840,21 +845,24 @@ img[alt="blog_banner"] {
 }
 
 
-
-@media screen and (max-width:767px) {
-
+@media (max-width: 1200px) {
     .content {
 
         .blogs {
             order: 1;
         }
 
-        .featured_section {
+        .load_more_main {
             order: 2;
         }
 
-        .sidebar {
+        .featured_main {
             order: 3;
         }
+
+        .sidebar_main {
+            order: 4;
+        }
     }
+
 }

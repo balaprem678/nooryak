@@ -25,10 +25,11 @@ const headerMenuData: MenuItem[] = [
     title: "Services",
     pluseIncon: true,
     megaMenu: true,
-    link: "/404",
+    link: "/services",
     submenus: [
       {
         title: "Web Development",
+        link: "/services/submenu",
         megaMenu: [
           { title: "Web Developer", link: "/404" },
           { title: "Website Development", link: "/404" },
@@ -46,7 +47,7 @@ const headerMenuData: MenuItem[] = [
       },
       {
         title: "App Development",
-        link: "#",
+        link: "/services/subtitle",
         pluseIncon: true,
         megaMenu: [
           { title: "Android Application", link: "/404" },
@@ -226,4 +227,3 @@ const headerMenuData: MenuItem[] = [
   }
 ];
 export default headerMenuData;
-
