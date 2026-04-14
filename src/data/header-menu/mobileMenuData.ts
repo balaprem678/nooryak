@@ -14,6 +14,7 @@ interface SubMenuItem extends MenuLink {
 
 interface MenuColumn {
     title: string;
+    link?: string;
     links: MenuLink[];
 }
 
@@ -43,6 +44,7 @@ const mobileMenuData: MenuItem[] = [
         columns: [
             {
                 title: "Web Development",
+                link: "/services/submenu/web-development",
                 links: [
                     { title: "Web Developer", link: "/404" },
                     { title: "Website Development", link: "/404" },
