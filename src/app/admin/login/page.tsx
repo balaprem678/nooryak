@@ -44,7 +44,7 @@ export default function LoginPage() {
             </div>
           </div>
 
-          <h1 className="text-[38px] font-extrabold leading-tight mb-5">
+          <h1 className="text-[38px] font-extrabold leading-tight mb-5 text-white">
             The modern
             <br />
             admin <span className="bg-gradient-to-r from-[#ff7a18] to-[#ff3d00] bg-clip-text text-transparent">dashboard</span>
@@ -78,9 +78,9 @@ export default function LoginPage() {
       <div className="flex-1 flex items-center justify-center px-6 py-10 relative">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,122,24,.05)_0%,transparent_100%)] pointer-events-none" />
         
-        <div className="w-full max-w-[420px] bg-[#111111] border border-[#2a2a2a] rounded-2xl p-8 lg:p-10 shadow-2xl relative z-10">
-          <div className="mb-8">
-            <h2 className="text-[26px] font-extrabold mb-1.5">Sign In</h2>
+        <div className="w-full max-w-[500px] bg-[#111111] border border-[#2a2a2a] rounded-2xl p-8 lg:p-10 shadow-2xl relative z-10">
+          <div className="mb-8 ">
+            <h2 className="text-white text-[26px] font-extrabold mb-1.5">Sign In</h2>
             <p className="text-[13px] text-[#888]">
               Authenticate to access the administrative panel.
             </p>
@@ -96,7 +96,7 @@ export default function LoginPage() {
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder="admin@example.com"
-                  className="w-full bg-[#1a1a1a] border border-[#2a2a2a] rounded-xl py-3.5 px-4 pl-10 text-sm text-white placeholder:text-[#888] focus:outline-none focus:border-[#ff7a18] focus:ring-4 focus:ring-[rgba(255,122,24,.08)] transition-all"
+                  className="w-full bg-[#1a1a1a] border border-[#2a2a2a] rounded-xl py-3.5 px-5 pl-10 text-sm text-black placeholder:text-[#888] focus:outline-none focus:border-[#ff7a18] focus:ring-4 focus:ring-[rgba(255,122,24,.08)] transition-all"
                   required
                 />
               </div>
@@ -114,7 +114,7 @@ export default function LoginPage() {
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
                   placeholder="••••••••"
-                  className="w-full bg-[#1a1a1a] border border-[#2a2a2a] rounded-xl py-3.5 px-4 pl-10 pr-10 text-sm text-white placeholder:text-[#888] focus:outline-none focus:border-[#ff7a18] focus:ring-4 focus:ring-[rgba(255,122,24,.08)] transition-all"
+                  className="w-full bg-[#1a1a1a] border border-[#2a2a2a] rounded-xl py-3.5 px-5 pl-10 pr-10 text-sm text-black placeholder:text-[#888] focus:outline-none focus:border-[#ff7a18] focus:ring-4 focus:ring-[rgba(255,122,24,.08)] transition-all"
                   required
                 />
                 <button
