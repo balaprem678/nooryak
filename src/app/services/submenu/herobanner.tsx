@@ -1,10 +1,25 @@
+'use client';
 import React from "react";
+import { useParams } from "next/navigation";
 import "../submenu.scss";
-import { Images } from "@/utils/Images";
 import { WebDevelopmentHeroData } from "./herobanner/webdevelopment";
+import { AppDevelopmentHeroData } from "./herobanner/appdevelopment";
+
+const heroDataMap = {
+    web: WebDevelopmentHeroData,
+    app: AppDevelopmentHeroData,
+};
+
+const slugToKey = {
+    'web-development': 'web',
+    'app-development': 'app',
+};
 
 export default function ServicesHeroBanner() {
-    const data = WebDevelopmentHeroData;
+    const { type } = useParams();
+    const key = slugToKey[type] || 'web';
+
+    const data = heroDataMap[key] || WebDevelopmentHeroData;
 
     return (
         <section className="hero">

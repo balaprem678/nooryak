@@ -2,6 +2,11 @@
      max-width: 1280px;
      margin: auto;
      padding: 0 10px;
+
+     @media screen and (min-width:1500px) {
+         max-width: 1350px;
+
+     }
  }
 
  // Hero Banner -- Start
@@ -39,11 +44,11 @@
      padding: 120px 0 50px;
 
      @include respond-to(lg) {
-         padding: 50px 0 40px;
+         padding: 90px 0 40px;
      }
 
      @include respond-to(md) {
-         padding: 40px 0 30px;
+         padding: 90px 0 30px;
          min-height: auto;
      }
  }
@@ -107,6 +112,14 @@
      color: #555555;
      margin-bottom: 30px;
 
+     @media screen and (max-width:992px) {
+         width: 60%;
+     }
+
+     @media screen and (max-width:678px) {
+         width: 100%;
+     }
+
      @include respond-to(md) {
          max-width: 100%;
      }
@@ -130,6 +143,11 @@
      cursor: pointer;
      transition: all 0.22s ease;
      white-space: nowrap;
+
+     @media screen and (max-width: 678px) {
+
+         padding: 6px 12px;
+     }
 
      &--secondary {
          border-radius: 6px;
@@ -384,6 +402,12 @@
          display: grid;
          grid-template-columns: repeat(4, 1fr);
          gap: 20px;
+         width: 85%;
+         margin: auto;
+
+         @media screen and (max-width:768px) {
+             width: 100%;
+         }
      }
 
      .card {
@@ -418,6 +442,10 @@
              color: #666;
              line-height: 1.5;
              margin: 0;
+
+             @media screen and (max-width:768px) {
+                 font-size: 11px;
+             }
          }
      }
 
@@ -504,6 +532,10 @@
                  height: 20px;
                  top: 40%;
                  right: -25px;
+             }
+
+             @media screen and (max-width:992px) {
+                 display: none;
              }
          }
 

@@ -172,9 +172,9 @@ export default function NavMenus() {
       {menuData.map((menu) => (
         <li
           key={menu.id}
-          className={`has-dropdown ${menu.megaMenu || menu.smallMenu || menu.mediumMenu ? "p-static active" : ""
-            } ${hoveredMenu === menu.id ? "active" : ""}`}
+          className={`has-dropdown ${menu.megaMenu || menu.smallMenu || menu.mediumMenu ? "p-static" : ""} ${hoveredMenu === menu.id ? "active" : ""}`}
           onMouseEnter={() => setHoveredMenu(menu.id)}
+          onMouseLeave={() => setHoveredMenu(null)}
         >
           <Link href={menu.link}>
             {menu.title}

@@ -29,7 +29,7 @@ const headerMenuData: MenuItem[] = [
     submenus: [
       {
         title: "Web Development",
-        link: "/services/submenu",
+        link: "/services/submenu/web-development",
         megaMenu: [
           { title: "Web Developer", link: "/404" },
           { title: "Website Development", link: "/404" },
@@ -47,7 +47,7 @@ const headerMenuData: MenuItem[] = [
       },
       {
         title: "App Development",
-        link: "/services/subtitle",
+        link: "/services/submenu/app-development",
         pluseIncon: true,
         megaMenu: [
           { title: "Android Application", link: "/404" },
@@ -75,14 +75,14 @@ const headerMenuData: MenuItem[] = [
       },
       {
         title: "Digital Marketing",
-        link: "#",
+        link: "/services/submenu/digital-marketing",
         pluseIncon: true,
         megaMenu: [
           { title: "Search Engine Optimization", link: "/404" },
           { title: "Search Engine Marketing", link: "/404" },
           { title: "Social Media Marketing", link: "/404" },
           { title: "SMS Marketing", link: "/404" },
-          { title: "Facebook Marketing", link: "/f404" },
+          { title: "Facebook Marketing", link: "/404" },
           { title: "Content Marketing", link: "/404" },
           { title: "On-Page Optimization", link: "/404" },
           { title: "Off-Page Optimization", link: "/404" },
@@ -95,7 +95,7 @@ const headerMenuData: MenuItem[] = [
       },
       {
         title: "Social Media Marketing",
-        link: "#",
+        link: "/services/submenu/social-media-marketing",
         pluseIncon: true,
         megaMenu: [
           { title: "Facebook Marketing", link: "/404" },
@@ -119,7 +119,7 @@ const headerMenuData: MenuItem[] = [
 
       {
         title: "Graphic Designing",
-        link: "#",
+        link: "/services/submenu/graphic-designing",
         pluseIncon: true,
         megaMenu: [
           { title: "Logo Designs", link: "/404" },
@@ -138,8 +138,8 @@ const headerMenuData: MenuItem[] = [
         ]
       },
       {
-        title: "",
-        link: "#",
+        title: "Additional Services",
+        link: "/services/submenu/additional-services",
         pluseIncon: true,
         megaMenu: [
           { title: "Strategy Report Design", link: "/404" },

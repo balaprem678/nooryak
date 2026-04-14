@@ -12,7 +12,8 @@
   display: none;
 }
 
-.has-dropdown:hover .tp-megamenu-wrapper {
+.has-dropdown:hover .tp-megamenu-wrapper,
+.has-dropdown.active .tp-megamenu-wrapper {
   display: block;
 }
 

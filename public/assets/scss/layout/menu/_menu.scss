@@ -1,4 +1,4 @@
-@use '../../utils'as *;
+@use '../../utils' as *;
 
 /*----------------------------------------*/
 /*  4.1 Main Menu
@@ -433,7 +433,7 @@
         border-bottom: 1px solid #ffffff0f;
         margin-bottom: 0 !important;
         padding-bottom: 10px !important;
-        font-size: 15px;
+        font-size: 14px;
         font-weight: 700;
         line-height: 1;
         position: relative;
@@ -447,11 +447,19 @@
             content: "";
             background-color: #ff5722;
             border-radius: 50px;
-            width: 50px;
+            width: 10px;
             height: 2px;
             position: absolute;
             bottom: 5px;
             left: 0;
+            transition: all 0.3s ease-out;
+        }
+        
+        &:hover {
+            &::after {
+                content: "";
+                width: 50px;
+            }
         }
 
         // @media #{$xxl} {
