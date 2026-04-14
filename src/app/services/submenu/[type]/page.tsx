@@ -1,6 +1,6 @@
 import React from 'react'
 import ServicesHeroBanner from '../herobanner'
-import ServicesSection from '../ourservices/OurServicesSection'
+import ServicesSection from '../OurServicesSection'
 import WhyChooseNooryak from '../whychoosenooryak'
 import OurProcess from '../ourprocess'
 

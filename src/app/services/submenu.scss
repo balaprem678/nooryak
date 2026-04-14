@@ -190,6 +190,8 @@
      align-items: center;
      justify-content: center;
      min-height: 360px;
+     border-radius: 30px;
+     overflow: hidden;
 
      @include respond-to(md) {
          width: 100%;
@@ -298,7 +300,7 @@
          }
 
          @media (max-width: 480px) {
-             grid-template-columns: 1fr;
+             //  grid-template-columns: 1fr;
              gap: 14px;
          }
      }
@@ -307,7 +309,7 @@
          background: #ffffff;
          border: 1px solid #eeeeee;
          border-radius: 12px;
-         padding: 10px;
+         padding: 15px;
          display: flex;
          flex-direction: column;
          align-items: flex-start;
@@ -316,6 +318,7 @@
          &:hover {
              box-shadow: 0 8px 32px rgba(0, 0, 0, 0.09);
              transform: translateY(-3px);
+             border: 1px solid #ff5722;
 
              .service-card__link {
                  color: #d84300;
@@ -438,10 +441,11 @@
          }
 
          p {
-             font-size: 13px;
+             font-size: 14px;
              color: #666;
              line-height: 1.5;
              margin: 0;
+             margin-top: 10px;
 
              @media screen and (max-width:768px) {
                  font-size: 11px;
@@ -532,11 +536,12 @@
                  height: 20px;
                  top: 40%;
                  right: -25px;
+
+                 @media screen and (max-width:992px) {
+                     display: none;
+                 }
              }
 
-             @media screen and (max-width:992px) {
-                 display: none;
-             }
          }
 
          .number {
@@ -553,9 +558,13 @@
          }
 
          p {
-             font-size: 13px;
+             font-size: 15px;
              color: #666;
              margin: 0;
+
+             @media screen and (max-width:768px) {
+                 font-size: 11px;
+             }
          }
      }
 
@@ -612,9 +621,13 @@
          }
 
          p {
-             font-size: 13px;
+             font-size: 15px;
              margin: 0;
              color: #fff;
+
+             @media screen and (max-width:768px) {
+                 font-size: 12px;
+             }
          }
 
 

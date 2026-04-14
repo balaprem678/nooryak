@@ -23,6 +23,9 @@ import php from "../../public/assets/images/common/php.png";
 import react from "../../public/assets/images/common/react.png";
 import customwebsite from "../../public/assets/images/common/customwebsite.png";
 import websitedevelopment from "../../public/assets/images/common/websitedevelopment.png";
+import flutter from "../../public/assets/images/common/flutter.png";
+import apple from "../../public/assets/images/common/apple.png";
+import android from "../../public/assets/images/common/android.png";
 
 
 // Home Images Import Here
@@ -88,7 +91,7 @@ import Appdevlopment from "../../public/assets/images/servives/appdevlopment.png
 export const Images = {
 
     // Common Images Import Here
-    logo, gmail, instagram, whatsapp, twitter, facebook, linkedin, youtube, mobile, trustpilot, favicon, next, programming, wordpress, shoppingcart, shopify, php, customwebsite, websitedevelopment,
+    logo, gmail, instagram, whatsapp, twitter, facebook, linkedin, youtube, mobile, trustpilot, favicon, next, programming, wordpress, shoppingcart, shopify, php, customwebsite, websitedevelopment, flutter, apple, android,
 
     // Home Images Import here
     herobanner, herobanner1, herobanner_person, about_1, about_2, abt_sec, services_1, services_2, services_3, services_4, craftingwebsite_banner, why_choose_card_icon_1, why_choose_card_icon_2, why_choose_card_icon_3, why_choose_card_icon_4, project_1, project_2, project_3, project_4, project_5, project_6, clientlogo_1, clientlogo_2, clientlogo_3, clientlogo_4, clientlogo_5, clientlogo_6, clientlogo_7, clientlogo_8, clientlogo_9, clientlogo_10, clientlogo_11, clientlogo_12, clientlogo_13, clientlogo_14, clientlogo_15, clientlogo_16, clientlogo_17, clientlogo_18, clientlogo_19,

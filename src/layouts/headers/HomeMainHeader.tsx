@@ -6,7 +6,7 @@ import "./HomeMainHeader.scss"
 
 import OffCanvasPanel from "@/components/offcanvas/OffCanvasPanel";
 import useStickyHeader from "../../hooks/useStickyHeader";
-import { ArrowSvg, ButtonBlurFilter } from "@/svg";
+import { ArrowSvg } from "@/svg";
 import NavMenus from "../subComponents/NavMenus";
 import { Images } from "@/utils/Images";
 

@@ -1,7 +1,7 @@
 "use client";
 import headerMenuData from "@/data/header-menu/menuData";
 import ThemeLink from "@/components/ThemeLink";
-import { Submenu } from "@/types/menu-d-t";
+// import { Submenu } from "@/types/menu-d-t";
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import "./NavMenus.scss";
@@ -167,7 +167,7 @@ export default function NavMenus() {
   return (
     <ul
       className="main-menu"
-      onMouseLeave={() => setHoveredMenu(null)} // ✅ CLOSE OUTSIDE
+      onMouseLeave={() => setHoveredMenu(null)} 
     >
       {menuData.map((menu) => (
         <li
@@ -191,7 +191,7 @@ export default function NavMenus() {
                   <div key={i} className={`tp-megamenu-list ${getColumnClass(menu)}`}>
 
                     {submenu.title && (
-                      <ThemeLink href={submenu.link || "#"}>
+                      <ThemeLink href={submenu.link || "#"} onClick={() => setHoveredMenu(null)}>
                         <h4 className="tp-megamenu-title">{submenu.title}</h4>
                       </ThemeLink>
                     )}
@@ -210,7 +210,7 @@ export default function NavMenus() {
 
                           return (
                             <li key={j}>
-                              <ThemeLink href={item.link || "#"} className="menu-link">
+                              <ThemeLink href={item.link || "#"} className="menu-link" onClick={() => setHoveredMenu(null)}>
 
                                 <span className="menu-icon">
                                   {getIcon(item.title)}
