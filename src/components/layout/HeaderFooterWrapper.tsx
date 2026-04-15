@@ -9,6 +9,7 @@ import ScrollSmoothProvider from '@/components/provider/ScrollSmoothProvider';
 import CursorAndBackgroundProvider from '@/components/provider/CustomCursorProvider';
 import AnimationWrapper from '@/components/shared/Animation/AnimationWrapper';
 import BackToTop from '@/components/shared/BackToTop/BackToTop';
+import EnquiryForm from '../forms/EnquiryFrom';
 
 export default function HeaderFooterWrapper({
   children,
@@ -29,6 +30,8 @@ export default function HeaderFooterWrapper({
   return (
     <>
       <HomeMainHeader />
+      <EnquiryForm />
+
       <ScrollSmoothProvider>
         <CursorAndBackgroundProvider>
           <AnimationWrapper>

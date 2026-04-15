@@ -3,7 +3,6 @@
 import { useEffect, useState } from "react";
 import "./HomeMainHero.scss";
 import { Images } from "@/utils/Images";
-// import Bganimation from "../bganimation/Bganimation";
 
 /* ── TEXTS ── */
 const texts = [
@@ -73,7 +72,6 @@ export default function HomeMainHero() {
     return (
 
         <section className="hero" style={{ position: "relative", overflow: "hidden" }}>
-
             {/* 🔥 MAIN CONTENT */}
             <div className="main" style={{ position: "relative", zIndex: 2 }}>
 
@@ -119,7 +117,7 @@ export default function HomeMainHero() {
                 {/* RIGHT — desktop: panel image | tablet+mobile: full bg image */}
                 <div className="right">
                     <div className="imageWrap">
-                        <img src={Images.herobanner.src} alt="Hero" className="herobanner_1"/>
+                        <img src={Images.herobanner.src} alt="Hero" className="herobanner_1" />
                         {/* <img src={Images.herobanner_person.src} alt="Hero" className="herobanner_3"/> */}
                         {/* <img src={Images.herobanner1.src} alt="Hero" className="herobanner_2"/> */}
                     </div>
