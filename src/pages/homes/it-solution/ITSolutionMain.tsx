@@ -1,6 +1,5 @@
 import CursorAndBackgroundProvider from '@/components/provider/CustomCursorProvider';
 import ITSolutionTestimonial from '@/components/testimonial/ITSolutionTestimonial';
-import ITSolutionComparison from '@/components/comparison/ITSolutionComparison';
 import ScrollSmoothProvider from '@/components/provider/ScrollSmoothProvider';
 import AnimationWrapper from '@/components/shared/Animation/AnimationWrapper';
 import ITSolutionBenifit from '@/components/benefits/ITSolutionBenifit';
@@ -39,7 +38,6 @@ const ITSolutionMain = () => {
                                 <ITSolutionProject />
                                 <ITSolutionBrandTwo />
                                 <ITSolutionTestimonial />
-                                <ITSolutionComparison />
                                 <ITSolutionBenifit />
                                 <ITSolutionFaq />
                             </main>

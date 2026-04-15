@@ -8,18 +8,24 @@ import { AppDevelopmentHeroData } from "./herobanner/appdevelopment";
 const heroDataMap = {
     web: WebDevelopmentHeroData,
     app: AppDevelopmentHeroData,
-};
+} as const;
 
 const slugToKey = {
-    'web-development': 'web',
-    'app-development': 'app',
-};
+    "web-development": "web",
+    "app-development": "app",
+} as const;
+
+type HeroKey = keyof typeof heroDataMap;
+type ServiceSlug = keyof typeof slugToKey;
 
 export default function ServicesHeroBanner() {
-    const { type } = useParams();
-    const key = slugToKey[type] || 'web';
+    const params = useParams();
+    const type = params?.type;
+    const slug = Array.isArray(type) ? type[0] : type;
+    const key: HeroKey =
+        slug && slug in slugToKey ? slugToKey[slug as ServiceSlug] : "web";
 
-    const data = heroDataMap[key] || WebDevelopmentHeroData;
+    const data = heroDataMap[key];
 
     return (
         <section className="hero">

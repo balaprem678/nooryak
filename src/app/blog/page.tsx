@@ -1,12 +1,10 @@
 "use client";
 import { useEffect, useState, useMemo } from "react";
-import Image from "next/image";
 import Link from "next/link";
 import "./blogmain.scss";
 import BlogBanner from "./blog-banner";
 import FeatureProject from "./featureproject";
 import BlogSidebar from "./blogsidebar";
-import { cover } from "three/src/extras/TextureUtils.js";
 
 interface Blog {
     _id: string;
