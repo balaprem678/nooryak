@@ -6,6 +6,7 @@ import "./blogmain.scss";
 import BlogBanner from "./blog-banner";
 import FeatureProject from "./featureproject";
 import BlogSidebar from "./blogsidebar";
+import { cover } from "three/src/extras/TextureUtils.js";
 
 interface Blog {
     _id: string;
@@ -141,7 +142,7 @@ export default function BlogPage() {
                     {displayedRegularBlogs.map((b) => (
                         <div className="card fade-in" key={b._id}>
                             <div className="img">
-                                <img src={b.image} alt={b.title} />
+                                <img src={b.image} alt={b.title} width="100%" height="100%" style={{ objectFit: "cover" }} />
                             </div>
 
                             <div className="card-body">

@@ -5,18 +5,16 @@ import Link from "next/link";
 import "./HomeMainHeader.scss"
 
 import OffCanvasPanel from "@/components/offcanvas/OffCanvasPanel";
-import useStickyHeader from "../../hooks/useStickyHeader";
 import { ArrowSvg } from "@/svg";
 import NavMenus from "../subComponents/NavMenus";
 import { Images } from "@/utils/Images";
 
 const HomeMainHeader = () => {
     const [openOffCanvas, setOpenOffCanvas] = useState(false);
-    const isSticky = useStickyHeader(20);
 
     return (
         <>
-            <header className={`custom-header ${isSticky ? "sticky fadeInDown animated" : ""}`}>
+            <header className="custom-header">
                 <div className="header-inner">
 
                     {/* Logo */}

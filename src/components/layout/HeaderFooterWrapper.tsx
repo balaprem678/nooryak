@@ -27,25 +27,27 @@ export default function HeaderFooterWrapper({
   }
 
   return (
-    <ScrollSmoothProvider>
-      <CursorAndBackgroundProvider>
-        <AnimationWrapper>
-          <div id="magic-cursor" className="cursor-white-bg">
-            <div id="ball"></div>
-          </div>
-          <BackToTop />
-          
-          <div id="smooth-wrapper">
-            <div id="smooth-content">
-              <HomeMainHeader />
-              <main style={{ minHeight: '100vh' }}>
-                {children}
-              </main>
-              <HomeMainFooter />
+    <>
+      <HomeMainHeader />
+      <ScrollSmoothProvider>
+        <CursorAndBackgroundProvider>
+          <AnimationWrapper>
+            <div id="magic-cursor" className="cursor-white-bg">
+              <div id="ball"></div>
             </div>
-          </div>
-        </AnimationWrapper>
-      </CursorAndBackgroundProvider>
-    </ScrollSmoothProvider>
+            <BackToTop />
+            
+            <div id="smooth-wrapper">
+              <div id="smooth-content">
+                <main style={{ minHeight: '100vh' }}>
+                  {children}
+                </main>
+                <HomeMainFooter />
+              </div>
+            </div>
+          </AnimationWrapper>
+        </CursorAndBackgroundProvider>
+      </ScrollSmoothProvider>
+    </>
   );
 }
