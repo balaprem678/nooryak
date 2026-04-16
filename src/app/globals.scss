@@ -6,7 +6,7 @@
 @import 'slick-carousel/slick/slick.css';
 @import 'slick-carousel/slick/slick-theme.css';
 
-.tac{
+.tac {
   text-align: center;
 }
 
@@ -411,5 +411,15 @@
 .arrow_trun_up {
   i {
     transform: rotate(-45deg);
+  }
+}
+
+
+// Text Editor Styles
+
+.texteditor_font {
+  height: 45px;
+  input {
+    border: none !important;
   }
 }

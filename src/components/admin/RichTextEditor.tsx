@@ -23,7 +23,7 @@ export default function RichTextEditor({ value, onChange, placeholder, error }: 
     const [editMode, setEditMode] = useState<'visual' | 'html'>('visual');
     const [fontSize, setFontSize] = useState<string>('16');
     const [fontSizeInput, setFontSizeInput] = useState<string>('16');
-    const [currentColor, setCurrentColor] = useState<string>('#ffffff');
+    const [currentColor, setCurrentColor] = useState<string>('#000000');
     
     const editorRef = useRef<HTMLDivElement>(null);
     const textareaRef = useRef<HTMLTextAreaElement>(null);
@@ -156,7 +156,7 @@ export default function RichTextEditor({ value, onChange, placeholder, error }: 
                 </div>
 
                 {/* Central Font Size Display - Redesigned to match Image 1 */}
-                <div className="flex items-center bg-[#111] border border-[#222] rounded-2xl px-4 py-2 gap-3 min-w-[140px] justify-between group focus-within:border-[#ff7a18] transition-all duration-200">
+                <div className=" texteditor_font flex items-center bg-[#111] border border-[#222] rounded-2xl px-4 py-2  w-[150px] justify-between group focus-within:border-[#ff7a18] transition-all duration-200">
                     <Type className="w-4 h-4 text-gray-700 group-hover:text-gray-400 transition-colors" />
                     <input
                         type="text"
@@ -183,7 +183,7 @@ export default function RichTextEditor({ value, onChange, placeholder, error }: 
                                 setFontSizeInput(fontSize);
                             }
                         }}
-                        className="w-10 bg-transparent text-lg font-black text-white text-center outline-none selection:bg-[#ff7a18]"
+                        className="w-10 bg-transparent text-lg font-black text-white text-center outline-none p-0"
                     />
                     <span className="text-[10px] text-gray-700 font-bold uppercase tracking-widest">PX</span>
                 </div>
