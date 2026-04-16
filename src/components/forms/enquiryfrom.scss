@@ -1,5 +1,41 @@
+@keyframes pulse-orange {
+    0% {
+        box-shadow: 0 0 0 0 rgba(255, 122, 24, 0.7);
+    }
+
+    70% {
+        box-shadow: 0 0 0 15px rgba(255, 122, 24, 0);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(255, 122, 24, 0);
+    }
+}
+
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes glow-move {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
 .enquiryform {
-    .gra_btn {
+    .gra_btn.floating-trigger {
         position: fixed;
         z-index: 3;
         position: fixed;
@@ -16,144 +52,280 @@
         cursor: pointer;
         box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
 
+        i {
+            transform: rotate(190deg);
+            font-size: 18px;
+        }
 
+        .btn-text {
+            text-transform: uppercase;
+        }
+
+        &:hover {
+            padding-right: 20px;
+            background: linear-gradient(135deg, #ff8c37, #ff521a);
+            transform: translateY(-50%) scale(1.05);
+        }
     }
 
     .enquiry-overlay {
         position: fixed;
         inset: 0;
-        z-index: 999;
-
-        background: rgba(0, 0, 0, 0.6);
-        backdrop-filter: blur(6px);
-
+        z-index: 2000;
+        background: rgba(0, 0, 0, 0.4);
+        backdrop-filter: blur(8px);
         display: flex;
         justify-content: flex-end;
-
-        transition: opacity 0.3s ease;
-    }
-
-    .enquiry-overlay.closing {
+        transition: all 0.4s ease;
         opacity: 0;
-    }
+        visibility: hidden;
 
-    .enquiry-panel {
-        width: min(100%, 420px);
-        height: 100vh;
-
-        background: rgba(255, 255, 255, 0.08);
-        backdrop-filter: blur(20px);
-
-        border-left: 1px solid rgba(255, 255, 255, 0.2);
-
-        padding: 2rem;
-        position: relative;
-
-        transform: translateX(100%);
-        transition: transform 0.4s ease;
-
-        box-shadow: -20px 0 60px rgba(0, 0, 0, 0.5);
-    }
-
-    .enquiry-panel.open {
-        transform: translateX(0);
-    }
-
-    .enquiry-panel.closing {
-        transform: translateX(100%);
-    }
-
-    .close-btn {
-        position: absolute;
-        top: 20px;
-        right: 20px;
-
-        width: 36px;
-        height: 36px;
-        border-radius: 50%;
-
-        background: rgba(255, 255, 255, 0.1);
-        border: none;
-        color: #fff;
-        cursor: pointer;
-
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-        transition: 0.3s;
-
-        &:hover {
-            background: rgba(255, 255, 255, 0.2);
-            transform: rotate(90deg);
+        &.open {
+            opacity: 1;
+            visibility: visible;
         }
     }
 
-    .title {
-        color: #fff;
-        font-size: 24px;
-        font-weight: bold;
-        margin-bottom: 5px;
-    }
+    .enquiry-panel {
+        overflow-y: auto;
+        width: min(100%, 450px);
+        height: 100vh;
+        background: rgba(15, 23, 42, 0.85);
+        /* Dark slate background */
+        backdrop-filter: blur(25px);
+        border-left: 1px solid rgba(255, 255, 255, 0.1);
+        padding: 2rem;
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        transform: translateX(100%);
+        transition: transform 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+        box-shadow: -15px 0 50px rgba(0, 0, 0, 0.6);
 
-    .subtitle {
-        color: #bbb;
-        font-size: 14px;
-        margin-bottom: 30px;
+        &.open {
+            transform: translateX(0);
+        }
+
+        // Decorative Glows
+        .bg-glow {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, rgba(255, 122, 24, 0.15) 0%, transparent 70%);
+            filter: blur(50px);
+            z-index: -1;
+            animation: glow-move 10s linear infinite;
+
+            &.secondary {
+                bottom: 0;
+                top: auto;
+                left: 20%;
+                background: radial-gradient(circle, rgba(255, 61, 0, 0.1) 0%, transparent 70%);
+                animation-direction: reverse;
+                animation-duration: 15s;
+            }
+        }
+
+        .header-section {
+            animation: slideInUp 0.6s ease forwards;
+        }
+
+        .title {
+            color: #fff;
+            font-size: 32px;
+            font-weight: 800;
+            margin-bottom: 8px;
+            background: linear-gradient(to right, #fff, #ff7a18);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .subtitle {
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 16px;
+            font-weight: 400;
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 25px;
+            right: 25px;
+            width: 40px;
+            height: 40px;
+            border-radius: 12px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: #fff;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            z-index: 10;
+
+            &:hover {
+                background: #ff3d00;
+                border-color: #ff3d00;
+                transform: rotate(180deg) scale(1.1);
+            }
+        }
     }
 
     .form {
+        display: flex;
+        flex-direction: column;
+        gap: 1.2rem;
+
         .input-group {
             position: relative;
-            margin-bottom: 20px;
+            opacity: 0;
+            animation: slideInUp 0.6s ease forwards;
+            animation-delay: calc(var(--idx) * 0.1s);
 
+            select,
             input,
             textarea {
                 width: 100%;
-                padding: 14px;
-                border-radius: 10px !important;
-                resize: none;
-
-                background: rgba(255, 255, 255, 0.05);
-                border: 1px solid rgba(255, 255, 255, 0.2);
+                padding: 20px 16px 10px;
+                background: rgba(255, 255, 255, 0.03);
+                border: 1px solid rgba(255, 255, 255, 0.1);
+                border-radius: 12px !important;
                 color: #fff;
-
+                font-size: 15px;
                 outline: none;
-                transition: 0.3s;
+                transition: all 0.3s ease;
 
                 &:focus {
+                    background: rgba(255, 255, 255, 0.07);
                     border-color: #ff7a18;
-                    box-shadow: 0 0 10px rgba(255, 122, 24, 0.5);
+                    box-shadow: 0 0 20px rgba(255, 122, 24, 0.1);
+                }
+
+                // Focus effect for label
+                &:focus+label,
+                &:not(:placeholder-shown)+label {
+                    transform: translateY(-12px) scale(0.85);
+                    color: #ff7a18;
                 }
             }
 
+            &.services_select {
+                label {
+                    top: -1px;
+                    color: #ff7a18;
+                }
+
+                select {
+                    height: 60px;
+                    // padding-top: 10px;
+                    background: #1d2433;
+                }
+            }
+
+            textarea {
+                min-height: 120px;
+                resize: none;
+            }
+
             label {
-                color: #aaa;
+                position: absolute;
+                left: 16px;
+                top: 15px;
+                color: rgba(255, 255, 255, 0.4);
                 font-size: 14px;
                 pointer-events: none;
-                transition: 0.3s;
+                transition: all 0.3s ease;
+                transform-origin: left top;
+            }
+
+            .bar {
+                position: absolute;
+                bottom: 0;
+                left: 50%;
+                width: 0;
+                height: 2px;
+                background: #ff7a18;
+                transition: all 0.4s ease;
+                transform: translateX(-50%);
+            }
+
+            input:focus~.bar,
+            textarea:focus~.bar {
+                width: 80%;
             }
         }
     }
 
     .submit-btn {
         width: 100%;
-        padding: 14px;
-        border-radius: 12px;
-
+        padding: 18px;
+        border-radius: 14px;
         background: linear-gradient(135deg, #ff7a18, #ff3d00);
         border: none;
         color: white;
-        font-weight: 600;
-
+        font-weight: 700;
+        font-size: 16px;
         cursor: pointer;
-        transition: 0.3s;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+        margin-top: 1rem;
+        box-shadow: 0 10px 30px rgba(255, 61, 0, 0.4);
+        position: relative;
+        overflow: hidden;
+        opacity: 0;
+        animation: slideInUp 0.6s ease forwards;
+        animation-delay: calc(var(--idx) * 0.1s);
+        transition: all 0.3s ease;
 
-        box-shadow: 0 10px 25px rgba(255, 80, 0, 0.4);
+        &::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: 0.5s;
+        }
 
         &:hover {
-            transform: scale(1.05);
-            box-shadow: 0 15px 35px rgba(255, 80, 0, 0.6);
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 15px 40px rgba(255, 61, 0, 0.6);
+
+            &::after {
+                left: 100%;
+            }
+
+            i {
+                transform: translateY(-2px) translateX(5px);
+            }
+        }
+
+        i {
+            transition: all 0.3s ease;
+        }
+    }
+}
+
+// Mobile Adjustments
+@media (max-width: 500px) {
+    .enquiryform {
+        .enquiry-panel {
+            padding: 2.5rem 1.5rem;
+        }
+
+        .title {
+            font-size: 26px;
+        }
+
+        .gra_btn.floating-trigger {
+            padding: 20px 10px;
+            font-size: 14px;
         }
     }
 }

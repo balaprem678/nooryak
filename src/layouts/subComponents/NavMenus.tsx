@@ -26,39 +26,39 @@ export default function NavMenus() {
   const [hoveredMenu, setHoveredMenu] = useState<number | null>(null);
   const [menuData, setMenuData] = useState(headerMenuData);
 
-  useEffect(() => {
-    const fetchDynamicServices = async () => {
-      try {
-        const res = await fetch('/api/admin/services');
-        if (res.ok) {
-          const data = await res.json();
-          if (data.services && data.services.length > 0) {
-            const updatedMenu = headerMenuData.map(menu => {
-              if (menu.title === "Services" && menu.submenus) {
-                const dynamicSubmenu = {
-                  title: "Our Services",
-                  megaMenu: data.services.map((s: any) => ({
-                    title: s.name,
-                    link: `/services/${s.slug}`
-                  }))
-                };
-                return {
-                  ...menu,
-                  submenus: [...menu.submenus, dynamicSubmenu]
-                };
-              }
-              return menu;
-            });
-            setMenuData(updatedMenu);
-          }
-        }
-      } catch (err) {
-        console.error("Failed to fetch dynamic services", err);
-      }
-    };
+  // useEffect(() => {
+  //   const fetchDynamicServices = async () => {
+  //     try {
+  //       const res = await fetch('/api/admin/services');
+  //       if (res.ok) {
+  //         const data = await res.json();
+  //         if (data.services && data.services.length > 0) {
+  //           const updatedMenu = headerMenuData.map(menu => {
+  //             if (menu.title === "Services" && menu.submenus) {
+  //               const dynamicSubmenu = {
+  //                 title: "Our Services",
+  //                 megaMenu: data.services.map((s: any) => ({
+  //                   title: s.name,
+  //                   link: `/serviceshd/${s.slug}`
+  //                 }))
+  //               };
+  //               return {
+  //                 ...menu,
+  //                 submenus: [...menu.submenus, dynamicSubmenu]
+  //               };
+  //             }
+  //             return menu;
+  //           });
+  //           setMenuData(updatedMenu);
+  //         }
+  //       }
+  //     } catch (err) {
+  //       console.error("Failed to fetch dynamic services", err);
+  //     }
+  //   };
 
-    fetchDynamicServices();
-  }, []);
+  //   fetchDynamicServices();
+  // }, []);
 
   // ✅ MENU TYPE CLASS
   const getMenuTypeClass = (menu: any) => {
@@ -172,7 +172,7 @@ export default function NavMenus() {
       {menuData.map((menu) => (
         <li
           key={menu.id}
-          className={`has-dropdown ${menu.megaMenu || menu.smallMenu || menu.mediumMenu ? "p-static" : ""} ${hoveredMenu === menu.id ? "active" : ""}`}
+          className={`has-dropdown ${menu.megaMenu || menu.smallMenu || menu.mediumMenu ? "p-static active" : ""} ${hoveredMenu === menu.id ? "active" : ""}`}
           onMouseEnter={() => setHoveredMenu(menu.id)}
           onMouseLeave={() => setHoveredMenu(null)}
         >

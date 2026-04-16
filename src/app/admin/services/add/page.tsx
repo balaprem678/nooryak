@@ -59,7 +59,7 @@ export default function AddServicePage() {
       <div className="max-w-4xl mx-auto">
         <div className="flex items-center justify-between mb-6">
           <div>
-            <h2 className="text-xl font-bold flex items-center gap-2">
+            <h2 className="text-xl font-bold flex items-center gap-2 text-white">
               <Sparkles className="text-[#ff7a18]" size={20} />
               Create New Service
             </h2>

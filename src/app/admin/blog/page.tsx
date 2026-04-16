@@ -155,7 +155,7 @@ export default function BlogListPage() {
             <Newspaper className="text-[#ff7a18]" size={20} />
             Blog Posts
           </h2>
-          <p className="text-xs text-[#888] mt-1">Manage your site's articles and news.</p>
+          <p className="text-xs text-[#888] mt-1">Manage your site articles and news.</p>
         </div>
         <div className='flex items-center gap-4'>
           {/* Search */}

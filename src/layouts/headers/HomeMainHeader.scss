@@ -218,7 +218,7 @@ header .tp-megamenu-wrapper.megamenu-white-bg {
     visibility: hidden;
     opacity: 0;
     transform-origin: top center;
-    transition: transform 1s ease;
+    transition: transform 0.30s ease;
     pointer-events: none; // prevent hover glitch
 
     &.small-menu {

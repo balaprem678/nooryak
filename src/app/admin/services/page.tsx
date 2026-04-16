@@ -10,9 +10,16 @@ import { Search, Plus, Edit, Trash2, Layers } from 'lucide-react';
 import { toast } from 'sonner';
 import { useRouter } from 'next/navigation';
 
+interface AdminService {
+  _id: string;
+  name: string;
+  description: string;
+  slug: string;
+}
+
 export default function ServicesListPage() {
   const router = useRouter();
-  const [services, setServices] = useState<any[]>([]);
+  const [services, setServices] = useState<AdminService[]>([]);
   const [loading, setLoading] = useState(true);
   const [searchQuery, setSearchQuery] = useState('');
 
@@ -20,8 +27,13 @@ export default function ServicesListPage() {
     try {
       const res = await fetch('/api/admin/services');
       const data = await res.json();
-      setServices(Array.isArray(data) ? data : []);
-    } catch (err) {
+      const items = Array.isArray(data)
+        ? data
+        : Array.isArray(data?.services)
+        ? data.services
+        : [];
+      setServices(items);
+    } catch {
       toast.error('Failed to load services');
     } finally {
       setLoading(false);
@@ -43,7 +55,7 @@ export default function ServicesListPage() {
       } else {
         toast.error('Failed to delete');
       }
-    } catch (err) {
+    } catch {
       toast.error('Network error');
     }
   };
@@ -56,8 +68,8 @@ export default function ServicesListPage() {
     <AppShell title="Services Management" breadcrumb="Services / List">
       <div className="flex items-center justify-between mb-6 text-white">
         <div>
-          <h2 className="text-xl font-bold flex items-center gap-2">
-            <Layers className="text-[#ff7a18]" size={20} />
+          <h2 className="text-xl font-bold flex items-center gap-2 text-white">
+            <Layers className="text-[#fff]" size={20} />
             Service Offerings
           </h2>
           <p className="text-xs text-[#888] mt-1">View and manage all services currently active on your site.</p>
@@ -71,14 +83,14 @@ export default function ServicesListPage() {
         </Button>
       </div>
 
-      <div className="flex items-center gap-3 mb-5">
+      <div className="flex items-center gap-3 mb-10">
         <div className="relative flex-1 max-w-[400px]">
           <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-[#888]" size={14} />
           <Input
             placeholder="Search services by name..."
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
-            className="bg-[#111111] border-[#2a2a2a] pl-9 h-10 text-[13px] text-white focus:border-[#ff7a18]"
+            className="bg-[#111111] border-[#2a2a2a] pl-9 px-5 h-10 text-[13px] text-white focus:border-[#ff7a18]"
           />
         </div>
       </div>
@@ -117,7 +129,7 @@ export default function ServicesListPage() {
                     <td className="px-6 py-4 text-right">
                       <div className="flex justify-end gap-2">
                         <button
-                          onClick={() => toast.info('Editing feature coming soon')}
+                          onClick={() => router.push(`/admin/services/edit/${service._id}`)}
                           className="w-8 h-8 rounded-lg border border-[#2a2a2a] text-[#888] hover:border-[#ff7a18] hover:text-[#ff7a18] flex items-center justify-center transition-all bg-[#111111]"
                         >
                           <Edit size={14} />
