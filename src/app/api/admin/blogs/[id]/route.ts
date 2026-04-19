@@ -1,21 +1,34 @@
 import { NextResponse } from 'next/server';
 import dbConnect from '@/lib/mongodb';
 import Blog from '@/models/Blog';
-import { cookies } from 'next/headers';
-import { verifyToken } from '@/utils/auth';
+import { getSession } from '@/lib/auth-check';
+import { logActivity } from '@/lib/activity';
 
 export async function DELETE(req: Request, { params }: { params: Promise<{ id: string }> }) {
   try {
-    const cookieStore = await cookies();
-    const token = cookieStore.get('admin_token')?.value;
+    const session = await getSession();
 
-    if (!token || !verifyToken(token)) {
+    if (!session) {
       return NextResponse.json({ message: 'Unauthorized' }, { status: 401 });
     }
 
     await dbConnect();
     const { id } = await params;
-    await Blog.findByIdAndDelete(id);
+    const user = session; // for activity logging
+
+    const blog = await Blog.findByIdAndDelete(id);
+    if (blog) {
+      await logActivity({
+        userId: user.id,
+        userName: user.name,
+        userEmail: user.email,
+        action: 'Deleted Blog Post',
+        targetType: 'Blog',
+        targetId: id,
+        details: `Deleted blog: ${blog.title}`
+      });
+    }
+
     return NextResponse.json({ message: 'Blog deleted successfully' });
   } catch (error: any) {
     return NextResponse.json({ message: error.message }, { status: 500 });
@@ -38,9 +51,8 @@ export async function GET(req: Request, { params }: { params: Promise<{ id: stri
 
 export async function PUT(req: Request, { params }: { params: Promise<{ id: string }> }) {
   try {
-    const cookieStore = await cookies();
-    const token = cookieStore.get('admin_token')?.value;
-    if (!token || !verifyToken(token)) {
+    const session = await getSession();
+    if (!session) {
       return NextResponse.json({ message: 'Unauthorized' }, { status: 401 });
     }
 
@@ -51,6 +63,18 @@ export async function PUT(req: Request, { params }: { params: Promise<{ id: stri
 
     const blog = await Blog.findByIdAndUpdate(id, body, { new: true, runValidators: true });
     if (!blog) return NextResponse.json({ message: 'Blog not found' }, { status: 404 });
+
+    // Log Activity
+    await logActivity({
+      userId: session.id,
+      userName: session.name,
+      userEmail: session.email,
+      action: 'Updated Blog Post',
+      targetType: 'Blog',
+      targetId: id,
+      details: `Updated blog: ${blog.title}`
+    });
+
     return NextResponse.json({ blog });
   } catch (error: any) {
     return NextResponse.json({ message: error.message }, { status: 500 });

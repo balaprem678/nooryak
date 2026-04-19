@@ -19,11 +19,21 @@ export async function POST(req: Request) {
       return NextResponse.json({ message: 'Invalid credentials' }, { status: 401 });
     }
 
-    const token = signToken({ id: user._id, email: user.email });
+    const token = signToken({ 
+      id: user._id, 
+      email: user.email,
+      role: user.role,
+      name: user.name
+    });
 
     const response = NextResponse.json({
       message: 'Login successful',
-      user: { id: user._id, email: user.email }
+      user: { 
+        id: user._id, 
+        email: user.email,
+        role: user.role,
+        name: user.name
+      }
     });
 
     response.cookies.set('admin_token', token, {

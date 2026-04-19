@@ -16,8 +16,10 @@ dotenv.config({ path: envDefaultPath });
 const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost:27017/nooryak';
 
 const UserSchema = new mongoose.Schema({
+  name: { type: String, required: true },
   email: { type: String, required: true, unique: true },
   password: { type: String, required: true },
+  role: { type: String, enum: ['Admin', 'Editor'], default: 'Admin' },
 });
 
 const User = mongoose.models.User || mongoose.model('User', UserSchema);
@@ -27,8 +29,9 @@ async function createAdmin() {
     await mongoose.connect(MONGODB_URI);
     console.log('Connected to MongoDB');
 
+    const name = 'Administrator';
     const email = 'admin@nooryak.com';
-    const password = 'adminpassword'; // User should change this later
+    const password = 'adminpassword';
 
     const existingUser = await User.findOne({ email });
     if (existingUser) {
@@ -37,7 +40,7 @@ async function createAdmin() {
     }
 
     const hashedPassword = await bcrypt.hash(password, 12);
-    await User.create({ email, password: hashedPassword });
+    await User.create({ name, email, password: hashedPassword, role: 'Admin' });
 
     console.log('Admin user created successfully!');
     console.log('Email:', email);

@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { ChevronLeft, ChevronRight, Zap, LayoutGrid, Layers, Newspaper, Users, Settings } from 'lucide-react';
+import { ChevronLeft, ChevronRight, Zap, LayoutGrid, Layers, Newspaper, Users, Settings, ScrollText } from 'lucide-react';
 import { cn } from '@/lib/admin/utils';
 import { useAuth } from '@/contexts/admin/AuthContext';
 import { Images } from '@/utils/Images';
@@ -25,17 +25,13 @@ const navItems: NavItem[] = [
       { label: 'Services List', href: '/admin/services' },
     ],
   },
-  {
-    label: 'Blog',
-    icon: <Newspaper size={18} />,
-    children: [
-      { label: 'Add Post', href: '/admin/blog/add' },
-      { label: 'Blog List', href: '/admin/blog' },
-    ],
-  },
-  { label: 'Users', icon: <Users size={18} />, href: '/admin/user' },
-  
-  { label: 'Settings', icon: <Settings size={18} />, href: '/admin/setting' },
+  { label: 'Blog', icon: <Newspaper size={18} />, children: [
+    { label: 'Add Post', href: '/admin/blog/add' },
+    { label: 'Blog List', href: '/admin/blog' },
+  ]},
+  { label: 'Users', icon: <Users size={18} />, href: '/admin/user', adminOnly: true },
+  { label: 'Activity Logs', icon: <ScrollText size={18} />, href: '/admin/logs', adminOnly: true },
+  { label: 'Settings', icon: <Settings size={18} />, href: '/admin/setting', adminOnly: true },
 ];
 
 export function Sidebar() {
@@ -51,11 +47,21 @@ export function Sidebar() {
   };
 
   const getInitials = () => {
+    if (user?.name) {
+      return user.name.split(' ').map(n => n[0]).join('').toUpperCase().slice(0, 2);
+    }
     if (user?.email) {
       return user.email.slice(0, 2).toUpperCase();
     }
     return 'AD';
   };
+
+  const filteredNavItems = navItems.filter(item => {
+    if (user?.role === 'Editor') {
+      return item.label === 'Blog';
+    }
+    return true;
+  });
 
   return (
     <aside
@@ -85,7 +91,7 @@ export function Sidebar() {
           <div className={cn('text-[10px] font-bold text-[#888] uppercase tracking-wider px-2.5 py-3', collapsed && 'opacity-0')}>
             Main
           </div>
-          {navItems.map((item) => (
+          {filteredNavItems.map((item) => (
             <div key={item.label}>
               {item.href ? (
                 <Link
@@ -157,9 +163,9 @@ export function Sidebar() {
             {!collapsed && (
               <div className="overflow-hidden text-left">
                 <div className="text-[13px] font-semibold whitespace-nowrap">
-                  {user?.email?.split('@')[0] || 'NK Admin'}
+                  {user?.name || user?.email?.split('@')[0] || 'NK Admin'}
                 </div>
-                <div className="text-[11px] text-[#888] whitespace-nowrap">Administrator</div>
+                <div className="text-[11px] text-[#888] whitespace-nowrap">{user?.role || 'Administrator'}</div>
               </div>
             )}
           </button>
