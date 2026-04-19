@@ -1,4 +1,5 @@
 import { Inter, Besley, Space_Grotesk, Playfair_Display, Satisfy, Teko, Phudu, Poppins, Onest } from "next/font/google";
+import { AnalyticsTracker } from '@/components/common/AnalyticsTracker';
 import GlobalVideoModal from "@/components/Popup/GlobalVideoModal";
 import { VideoProvider } from "@/provider/VideoProvider";
 import AppProvider from "@/provider/AppProvider";
@@ -91,6 +92,7 @@ export default function RootLayout({
      ${besley.variable} ${spaceGrotesk.variable} ${playfairDisplay.variable}
       ${satisfy.variable} ${teko.variable} ${phudu.variable} ${poppins.variable}
        ${onest.variable}`}>
+        <AnalyticsTracker />
         <AppProvider>
           <Wrapper>
             <VideoProvider>

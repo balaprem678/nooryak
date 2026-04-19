@@ -4,13 +4,70 @@ import { useState, useEffect } from 'react';
 import { toast } from 'sonner';
 import { Mail, User, Lock, Bell, Palette, Save, Loader2 } from 'lucide-react';
 import "./setting.scss";
+import { useAuth } from '@/contexts/admin/AuthContext';
 
 type Tab = 'profile' | 'smtp' | 'security' | 'notifications' | 'appearance';
 
 export default function SettingPage() {
+    const { user, setUser } = useAuth();
     const [activeTab, setActiveTab] = useState<Tab>('profile');
     const [loading, setLoading] = useState(false);
     const [saving, setSaving] = useState(false);
+
+    // Profile States
+    const [profileData, setProfileData] = useState({
+        name: '',
+        email: '',
+        currentPassword: '',
+        newPassword: '',
+        confirmPassword: ''
+    });
+
+    useEffect(() => {
+        if (user) {
+            setProfileData(prev => ({
+                ...prev,
+                name: user.name,
+                email: user.email
+            }));
+        }
+    }, [user]);
+
+    const handleSaveProfile = async (e: React.FormEvent) => {
+        e.preventDefault();
+        
+        if (profileData.newPassword && profileData.newPassword !== profileData.confirmPassword) {
+            toast.error('New passwords do not match');
+            return;
+        }
+
+        setSaving(true);
+        try {
+            const res = await fetch('/api/admin/me', {
+                method: 'PUT',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(profileData)
+            });
+
+            const data = await res.json();
+            if (res.ok) {
+                toast.success('Profile updated successfully');
+                setUser(data.user);
+                setProfileData(prev => ({
+                    ...prev,
+                    currentPassword: '',
+                    newPassword: '',
+                    confirmPassword: ''
+                }));
+            } else {
+                toast.error(data.message || 'Failed to update profile');
+            }
+        } catch (err) {
+            toast.error('Network error');
+        } finally {
+            setSaving(false);
+        }
+    };
 
     // SMTP States
     const [smtpConfig, setSmtpConfig] = useState({
@@ -113,20 +170,73 @@ export default function SettingPage() {
                     {/* Content */}
                     <div className="settings__content">
                         {activeTab === 'profile' && (
-                            <div className="settings__section">
+                            <form className="settings__section" onSubmit={handleSaveProfile}>
                                 <h3>Profile Settings</h3>
-                                <div className="form-group">
-                                    <label>Name</label>
-                                    <input type="text" placeholder="Enter name" />
+                                <p className="text-xs text-[#888] mb-6">Manage your account information and password.</p>
+                                
+                                <div className="grid grid-cols-2 gap-4">
+                                    <div className="form-group">
+                                        <label>Full Name</label>
+                                        <input 
+                                            type="text" 
+                                            placeholder="Enter name" 
+                                            value={profileData.name}
+                                            onChange={(e) => setProfileData({...profileData, name: e.target.value})}
+                                            required
+                                        />
+                                    </div>
+                                    <div className="form-group">
+                                        <label>Email Address</label>
+                                        <input 
+                                            type="email" 
+                                            placeholder="Enter email" 
+                                            value={profileData.email}
+                                            onChange={(e) => setProfileData({...profileData, email: e.target.value})}
+                                            required
+                                        />
+                                    </div>
                                 </div>
-                                <div className="form-group">
-                                    <label>Email</label>
-                                    <input type="email" placeholder="Enter email" />
+
+                                <div className="mt-8 pt-8 border-t border-[#2a2a2a]">
+                                    <h4 className="text-white font-medium mb-4">Change Password</h4>
+                                    <div className="form-group">
+                                        <label>Current Password</label>
+                                        <input 
+                                            type="password" 
+                                            placeholder="Confirm existing password" 
+                                            value={profileData.currentPassword}
+                                            onChange={(e) => setProfileData({...profileData, currentPassword: e.target.value})}
+                                        />
+                                    </div>
+                                    <div className="grid grid-cols-2 gap-4">
+                                        <div className="form-group">
+                                            <label>New Password</label>
+                                            <input 
+                                                type="password" 
+                                                placeholder="New password" 
+                                                value={profileData.newPassword}
+                                                onChange={(e) => setProfileData({...profileData, newPassword: e.target.value})}
+                                            />
+                                        </div>
+                                        <div className="form-group">
+                                            <label>Confirm New Password</label>
+                                            <input 
+                                                type="password" 
+                                                placeholder="Confirm new password" 
+                                                value={profileData.confirmPassword}
+                                                onChange={(e) => setProfileData({...profileData, confirmPassword: e.target.value})}
+                                            />
+                                        </div>
+                                    </div>
                                 </div>
+
                                 <div className="btn-row">
-                                    <button className="btn btn--primary"><Save size={16} className="mr-2"/> Save Changes</button>
+                                    <button className="btn btn--primary" type="submit" disabled={saving}>
+                                        {saving ? <Loader2 size={16} className="animate-spin mr-2"/> : <Save size={16} className="mr-2"/>}
+                                        Save Profile
+                                    </button>
                                 </div>
-                            </div>
+                            </form>
                         )}
 
                         {activeTab === 'smtp' && (

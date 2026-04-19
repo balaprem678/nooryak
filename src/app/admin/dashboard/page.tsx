@@ -33,47 +33,7 @@ export default function DashboardPage() {
   const [selectedPeriod, setSelectedPeriod] = useState<TimePeriod>('1Y');
   const [loading, setLoading] = useState(true);
 
-  // Memoized chart data generation
-  const chartData = useMemo(() => {
-    const now = new Date();
-    const dataPoints: ChartData[] = [];
-    let monthsToShow = 12;
-
-    switch (selectedPeriod) {
-      case '1M':
-        monthsToShow = 1;
-        break;
-      case '3M':
-        monthsToShow = 3;
-        break;
-      case '6M':
-        monthsToShow = 6;
-        break;
-      case '1Y':
-        monthsToShow = 12;
-        break;
-    }
-
-    for (let i = monthsToShow - 1; i >= 0; i--) {
-      const date = new Date(now.getFullYear(), now.getMonth() - i, 1);
-      const monthName = date.toLocaleDateString('en-US', { month: 'short' });
-      const year = date.getFullYear();
-
-      // Generate realistic data based on content counts and some randomness
-      const baseValue = (counts.blogs + counts.services + counts.users) * 1000;
-      const randomFactor = 0.7 + Math.random() * 0.6; // 0.7 to 1.3
-      const trendFactor = 1 + (i / monthsToShow) * 0.3; // Slight upward trend
-      const value = Math.round(baseValue * randomFactor * trendFactor);
-
-      dataPoints.push({
-        date: selectedPeriod === '1M' ? `${monthName} ${date.getDate()}` : `${monthName} ${year}`,
-        value,
-        label: monthName
-      });
-    }
-
-    return dataPoints;
-  }, [counts, selectedPeriod]);
+  const [realChartData, setRealChartData] = useState<ChartData[]>([]);
 
   useEffect(() => {
     const fetchCounts = async () => {
@@ -91,6 +51,28 @@ export default function DashboardPage() {
           users: Number(data?.stats?.users ?? 0),
           leads: 0,
         });
+
+        // Process real chart data from backend
+        if (data.chartData && data.chartData.length > 0) {
+          const processedData = data.chartData.map((item: any) => {
+            const date = new Date(item.year, item.month - 1, 1);
+            return {
+              date: date.toLocaleDateString('en-US', { month: 'short', year: 'numeric' }),
+              value: item.value,
+              label: date.toLocaleDateString('en-US', { month: 'short' })
+            };
+          });
+          setRealChartData(processedData);
+        } else {
+          // If no real data yet, provide a single zero point for today's month
+          const now = new Date();
+          setRealChartData([{
+            date: now.toLocaleDateString('en-US', { month: 'short', year: 'numeric' }),
+            value: 0,
+            label: now.toLocaleDateString('en-US', { month: 'short' })
+          }]);
+        }
+
         setLoading(false);
       } catch (err) {
         console.error('Failed to fetch admin stats', err);
@@ -100,6 +82,19 @@ export default function DashboardPage() {
 
     fetchCounts();
   }, []);
+
+  // Use real data in the chart
+  const displayedChartData = useMemo(() => {
+    if (realChartData.length === 0) return [];
+    
+    // Filter based on selectedPeriod
+    let limit = 12;
+    if (selectedPeriod === '1M') limit = 1;
+    if (selectedPeriod === '3M') limit = 3;
+    if (selectedPeriod === '6M') limit = 6;
+    
+    return realChartData.slice(-limit);
+  }, [realChartData, selectedPeriod]);
 
   const handlePeriodChange = (period: TimePeriod) => {
     setSelectedPeriod(period);
@@ -153,7 +148,7 @@ export default function DashboardPage() {
               </div>
             ) : (
               <ResponsiveContainer width="100%" height={240}>
-                <AreaChart data={chartData} margin={{ top: 10, right: 30, left: 0, bottom: 0 }}>
+                <AreaChart data={displayedChartData} margin={{ top: 10, right: 30, left: 0, bottom: 0 }}>
                   <defs>
                     <linearGradient id="activityGradient" x1="0" y1="0" x2="0" y2="1">
                       <stop offset="5%" stopColor="#ff7a18" stopOpacity={0.3} />
