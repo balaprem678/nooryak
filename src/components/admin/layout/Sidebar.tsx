@@ -23,6 +23,7 @@ const navItems: NavItem[] = [
     children: [
       { label: 'Add Service', href: '/admin/services/add' },
       { label: 'Services List', href: '/admin/services' },
+      { label: 'Subcategories', href: '/admin/subcategories' },
     ],
   },
   { label: 'Blog', icon: <Newspaper size={18} />, children: [

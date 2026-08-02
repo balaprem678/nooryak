@@ -25,4 +25,15 @@ const ServiceSchema = new mongoose.Schema({
   },
 }, { timestamps: true });
 
+// Virtual for subcategories
+ServiceSchema.virtual('subcategories', {
+  ref: 'Subcategory',
+  localField: '_id',
+  foreignField: 'service',
+});
+
+// Ensure virtual fields are serialized
+ServiceSchema.set('toJSON', { virtuals: true });
+ServiceSchema.set('toObject', { virtuals: true });
+
 export default mongoose.models.Service || mongoose.model('Service', ServiceSchema);
